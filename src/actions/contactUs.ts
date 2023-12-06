@@ -5,6 +5,9 @@ import { zfd } from 'zod-form-data';
 import { ZodError } from 'zod';
 import { contactUsSchema } from '@/schemas/contactUsSchema';
 import { getValidationErrors } from '@/utils/getValidationErrors';
+import { sendMail } from '@/services/mail.service';
+import { renderAsync } from '@react-email/render';
+import Email from '../emails';
 
 type ContactUsSuccess = {
   status: 'success';
@@ -30,6 +33,10 @@ export async function getContactUs(
       await contactUsFormDataSchema.parseAsync(data);
 
     const fullMessage = `Contacted from ${name} with email ${email} and message: ${message}`;
+
+    const template = await renderAsync(Email({ name, message }));
+
+    await sendMail('Welcome from Lucia Web', email, template);
 
     return {
       status: 'success',
