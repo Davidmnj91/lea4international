@@ -1,0 +1,9 @@
+{
+  "pages": {
+    "home": "Bienvenido",
+    "services": "Nuestros Servicios",
+    "destinations": "Nuestros Destinos",
+    "about": "Sobre Nosotros",
+    "contact": "Contacto"
+  }
+}
