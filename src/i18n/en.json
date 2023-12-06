@@ -6,5 +6,13 @@
     "about": "About",
     "contact": "Contact",
     "404":"FOUR ZERO FOUR"
+  },
+  "contact-form": {
+    "input": {
+      "name": "name",
+      "email": "email",
+      "message": "message"
+    },
+    "submit": "Send"
   }
 }
