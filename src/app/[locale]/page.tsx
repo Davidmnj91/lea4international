@@ -150,7 +150,7 @@ export default function RootLayout() {
               </div>
             </div>
             <div className='relative flex items-center justify-center py-20'>
-              <h3 className='flex w-[776px] items-center text-center font-title text-desktop-h-lg text-basics-white'>
+              <h3 className='flex w-[816px] items-center text-center font-title text-desktop-h-lg text-basics-white'>
                 <span className='text-desktop-h-4xl text-gold-dark'>
                   &ldquo;
                 </span>
