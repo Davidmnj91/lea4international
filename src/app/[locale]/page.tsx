@@ -92,9 +92,12 @@ export default function RootLayout() {
                   {t('our-focus.title')}
                 </h1>
               </div>
-              <p className='font-body text-b-lg text-europe-dark'>
-                {t('our-focus.description')}
-              </p>
+              <p
+                className='font-body text-b-lg text-europe-dark'
+                dangerouslySetInnerHTML={{
+                  __html: t.raw('our-focus.description'),
+                }}
+              ></p>
             </div>
           </div>
         </div>
@@ -102,50 +105,62 @@ export default function RootLayout() {
           style={{
             marginTop: '176px',
             width: '100%',
-            backgroundImage: `url(${our_beliefs_bg.src})`,
           }}
         >
-          <div className='flex w-full justify-center gap-20'>
-            <div className='mt-[-128px] flex  h-[478px] max-w-[490px] flex-col justify-between bg-basics-white p-6'>
-              <div>
-                <span className='font-title text-desktop-h-sm font-bold text-gold-dark'>
-                  Company Name
-                </span>
-                <h1 className='font-title text-desktop-h-xl text-europe-dark'>
-                  {t('our-beliefs.title')}
-                </h1>
+          <div
+            className='bg-europe'
+            style={{
+              width: '100%',
+              backgroundImage: `url(${our_beliefs_bg.src})`,
+              backgroundRepeat: 'no-repeat',
+            }}
+          >
+            <div className='flex w-full justify-center gap-20'>
+              <div className='mt-[-128px] flex  h-[478px] max-w-[490px] flex-col justify-between bg-basics-white p-6'>
+                <div>
+                  <span className='font-title text-desktop-h-sm font-bold text-gold-dark'>
+                    Company Name
+                  </span>
+                  <h1 className='font-title text-desktop-h-xl text-europe-dark'>
+                    {t('our-beliefs.title')}
+                  </h1>
+                </div>
+                <p
+                  className='font-body text-b-lg text-europe-dark'
+                  dangerouslySetInnerHTML={{
+                    __html: t.raw('our-beliefs.description'),
+                  }}
+                ></p>
               </div>
-              <p
-                className='font-body text-b-lg text-europe-dark'
-                dangerouslySetInnerHTML={{
-                  __html: t.raw('our-beliefs.description'),
-                }}
-              ></p>
+              <div className='flex h-[542px] max-w-[490px] flex-col justify-between bg-basics-white p-6'>
+                <div>
+                  <span className='font-title  text-desktop-h-sm font-bold text-gold-dark'>
+                    Company Name
+                  </span>
+                  <h1 className='font-title text-desktop-h-xl text-europe-dark'>
+                    {t('coming-challenges.title')}
+                  </h1>
+                </div>
+                <p
+                  className='fon t-body text-b-lg text-europe-dark'
+                  dangerouslySetInnerHTML={{
+                    __html: t.raw('coming-challenges.description'),
+                  }}
+                ></p>
+              </div>
             </div>
-            <div className='flex h-[478px] max-w-[490px] flex-col justify-between bg-basics-white p-6'>
-              <div>
-                <span className='font-title  text-desktop-h-sm font-bold text-gold-dark'>
-                  Company Name
+            <div className='relative flex items-center justify-center py-20'>
+              <h3 className='flex w-[776px] items-center text-center font-title text-desktop-h-lg text-basics-white'>
+                <span className='text-desktop-h-4xl text-gold-dark'>
+                  &ldquo;
                 </span>
-                <h1 className='font-title text-desktop-h-xl text-europe-dark'>
-                  {t('coming-challenges.title')}
-                </h1>
-              </div>
-              <p
-                className='fon t-body text-b-lg text-europe-dark'
-                dangerouslySetInnerHTML={{
-                  __html: t.raw('coming-challenges.description'),
-                }}
-              ></p>
+                {t('help-you')}
+                <span className='text-desktop-h-4xl text-gold-dark'>
+                  &rdquo;
+                </span>
+              </h3>
             </div>
           </div>
-        </div>
-        <div className='flex h-[434px] items-center justify-center bg-europe py-20'>
-          <h3 className='flex w-[776px] items-center text-center font-title text-desktop-h-lg text-basics-white'>
-            <span className='text-desktop-h-4xl text-gold-dark'>&ldquo;</span>
-            {t('help-you')}
-            <span className='text-desktop-h-4xl text-gold-dark'>&rdquo;</span>
-          </h3>
         </div>
       </section>
     </>
