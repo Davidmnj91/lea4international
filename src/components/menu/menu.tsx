@@ -5,12 +5,28 @@ export const Menu = () => {
   const t = useTranslations('pages');
 
   return (
-    <nav style={{ display: 'flex', gap: '1em' }}>
-      <Link href={`/`}>{t('home')}</Link>
-      <Link href={`/services`}>{t('services')}</Link>
-      <Link href={`/destinations`}>{t('destinations')}</Link>
-      <Link href={`/about`}>{t('about')}</Link>
-      <Link href={`/contact`}>{t('contact')}</Link>
+    <nav className='flex items-center gap-[70px]'>
+      <Link className='font-body text-b-lg text-basics-white' href={`/`}>
+        {t('home')}
+      </Link>
+      <Link
+        className='font-body text-b-lg text-basics-white'
+        href={`/services`}
+      >
+        {t('services')}
+      </Link>
+      <Link
+        className='font-body text-b-lg text-basics-white'
+        href={`/destinations`}
+      >
+        {t('destinations')}
+      </Link>
+      <Link className='font-body text-b-lg text-basics-white' href={`/about`}>
+        {t('about')}
+      </Link>
+      <Link className='font-body text-b-lg text-basics-white' href={`/contact`}>
+        {t('contact')}
+      </Link>
     </nav>
   );
 };

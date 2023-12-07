@@ -5,7 +5,35 @@
     "destinations": "Our Destinations",
     "about": "About",
     "contact": "Contact",
-    "404":"FOUR ZERO FOUR"
+    "404": "FOUR ZERO FOUR"
+  },
+  "home-page": {
+    "language": "Language.",
+    "education": "Education.",
+    "travel": "Travel.",
+    "slogan": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac justo ac metus convallis posuere. Fusce eu massa eu est tincidunt feugiat.",
+    "more-info": "Request more information",
+    "who-we-are": {
+      "title": "Who We Are",
+      "description": "Discover a leading project management and consulting company dedicated to creating <b>transformative educational experiences</b>. We focus on organizing and delivering a variety of educational projects."
+    },
+    "our-focus": {
+      "title": "Our Focus",
+      "description": "Organizing and Delivering a Variety of Educational Projects. Our main goal is to help people gain meaningful life experiences abroad that will help them grow, both professionally and personally."
+    },
+    "our-beliefs": {
+      "title": "Our Beliefs",
+      "description": "At *** We believe that having an experience abroad is a great opportunity to open your mind, explore <b>different cultures and speak other languages.</b>\n Thanks to globalization, we live in a connected world that offers many opportunities to <b>travel and explore</b> outside of our home country."
+    },
+    "coming-challenges": {
+      "title": "Superando Desafíos",
+      "description": "Salir de tu zona de confort e ir al extranjero puede resultar estresante y desafiante.\nPor eso en *** queremos <b>hacer más fácil tu experiencia en el extranjero</b>. Apoyamos su proyecto realizando todos los trámites necesarios."
+    },
+    "help-you": "We are looking forward to helping you enjoy your educational adventure",
+    "see-more": "See more"
+  },
+  "contact-us": {
+    "text": "Contact us"
   },
   "contact-form": {
     "input": {
@@ -14,5 +42,9 @@
       "message": "message"
     },
     "submit": "Send"
+  },
+  "locale-switcher": {
+    "en": "English",
+    "es": "Spanish"
   }
 }

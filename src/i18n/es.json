@@ -5,7 +5,35 @@
     "destinations": "Nuestros Destinos",
     "about": "Sobre Nosotros",
     "contact": "Contacto",
-    "404":"CUATRO ZERO CUATRO"
+    "404": "CUATRO ZERO CUATRO"
+  },
+  "home-page": {
+    "language": "Idioma.",
+    "education": "Educación.",
+    "travel": "Viajar.",
+    "slogan": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac justo ac metus convallis posuere. Fusce eu massa eu est tincidunt feugiat.",
+    "more-info": "Infórmate",
+    "who-we-are": {
+      "title": "Quienes Somos",
+      "description": "Descubra una empresa líder en consultoría y gestión de proyectos dedicada a crear <b>experiencias educativas transformadoras</b>. Nos enfocamos en organizar y entregar una variedad de proyectos educativos."
+    },
+    "our-focus": {
+      "title": "Nuestra mision",
+      "description": "Organización y ejecución de una variedad de proyectos educativos. Nuestro principal objetivo es ayudar a las personas a adquirir experiencias de vida significativas en el extranjero que les ayudarán a crecer, tanto a nivel profesional como personal."
+    },
+    "our-beliefs": {
+      "title": "Nuestras Creencias",
+      "description": "En *** Creemos que tener una experiencia en el extranjero es una gran oportunidad para abrir la mente, explorar <b>diferentes culturas y hablar otros idiomas.</b>\n Gracias a la globalización, vivimos en un mundo conectado que ofrece muchas oportunidades para <b>viajar y explorar</b> fuera de nuestro país de origen. "
+    },
+    "coming-challenges": {
+      "title": "Overcoming Challenges",
+      "description": "Leaving your comfort zone and going abroad can be stressful and challenging.\nThis is why at *** We want to <b>make your experience abroad easier</b>. We support your project by making all the necessary arrangements."
+    },
+    "help-you": "Esperamos poder ayudarte a disfrutar de tu aventura educativa.",
+    "see-more": "Saber más"
+  },
+  "contact-us": {
+    "text": "Contáctanos"
   },
   "contact-form": {
     "input": {
@@ -14,5 +42,9 @@
       "message": "mensaje"
     },
     "submit": "Send"
+  },
+  "locale-switcher": {
+    "en": "Inglés",
+    "es": "Español"
   }
 }
