@@ -27,15 +27,21 @@ export default function RootLayout({
   const messages = useMessages();
 
   return (
-    <html lang={locale} className={`${cormorant.variable} ${ubuntu.variable}`}>
+    <html
+      style={{ scrollBehavior: 'smooth' }}
+      lang={locale}
+      className={`${cormorant.variable} ${ubuntu.variable}`}
+    >
       <head>
         <title>Lucia Web</title>
       </head>
       <body className='relative mx-auto max-w-[1440px]'>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <header className='flex h-[80px] items-center justify-between bg-transparent px-[40px]'>
+          <header className='flex h-[80px] items-center justify-between bg-europe px-[40px]'>
             <h1 className='font-body text-b-xxl text-basics-white'>LOGO</h1>
-            <Menu />
+            <nav className='flex items-center gap-[70px]'>
+              <Menu />
+            </nav>
             <LocaleSwitcher />
           </header>
           <main>{children}</main>

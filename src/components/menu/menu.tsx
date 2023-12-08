@@ -1,32 +1,36 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import clsx from 'clsx';
 
-export const Menu = () => {
+type MenuProps = {
+  itemClassNames?: string;
+};
+
+export const Menu = ({ itemClassNames }: MenuProps) => {
   const t = useTranslations('pages');
 
+  const fullClassName = clsx(
+    'font-body text-b-lg text-basics-white',
+    itemClassNames
+  );
+
   return (
-    <nav className='flex items-center gap-[70px]'>
-      <Link className='font-body text-b-lg text-basics-white' href={`/`}>
+    <>
+      <Link className={fullClassName} href={`/`}>
         {t('home')}
       </Link>
-      <Link
-        className='font-body text-b-lg text-basics-white'
-        href={`/services`}
-      >
+      <Link className={fullClassName} href={`/services`}>
         {t('services')}
       </Link>
-      <Link
-        className='font-body text-b-lg text-basics-white'
-        href={`/destinations`}
-      >
+      <Link className={fullClassName} href={`/destinations`}>
         {t('destinations')}
       </Link>
-      <Link className='font-body text-b-lg text-basics-white' href={`/about`}>
-        {t('about')}
+      <Link className={fullClassName} href={`/faq`}>
+        {t('faq')}
       </Link>
-      <Link className='font-body text-b-lg text-basics-white' href={`/contact`}>
+      <Link className={fullClassName} href={`/contact`}>
         {t('contact')}
       </Link>
-    </nav>
+    </>
   );
 };

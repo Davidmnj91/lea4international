@@ -9,7 +9,7 @@ import {
   TwitterIcon,
   YoutubeIcon,
 } from '@/components/icons/social-icons';
-import Link from 'next/link';
+import { Menu } from '@/components/menu/menu';
 
 export const Footer = () => {
   const t = useTranslations('footer');
@@ -40,36 +40,7 @@ export const Footer = () => {
         <div className='flex flex-col items-end justify-between'>
           <LocaleSwitcher />
           <nav className='mt-4 flex flex-col justify-between gap-4'>
-            <Link
-              className='text-right font-body text-b-lg text-basics-white'
-              href={`/`}
-            >
-              {t('pages.home')}
-            </Link>
-            <Link
-              className='text-right font-body text-b-lg text-basics-white'
-              href={`/services`}
-            >
-              {t('pages.services')}
-            </Link>
-            <Link
-              className='text-right font-body text-b-lg text-basics-white'
-              href={`/destinations`}
-            >
-              {t('pages.destinations')}
-            </Link>
-            <Link
-              className='text-right font-body text-b-lg text-basics-white'
-              href={`/about`}
-            >
-              {t('pages.about')}
-            </Link>
-            <Link
-              className='text-right font-body text-b-lg text-basics-white'
-              href={`/contact`}
-            >
-              {t('pages.contact')}
-            </Link>
+            <Menu itemClassNames='text-right' />
           </nav>
         </div>
       </div>

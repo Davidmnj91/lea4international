@@ -3,7 +3,7 @@
     "home": "Welcome",
     "services": "Our Services",
     "destinations": "Our Destinations",
-    "about": "About",
+    "faq": "FAQ",
     "contact": "Contact",
     "404": "FOUR ZERO FOUR"
   },
@@ -57,6 +57,14 @@
     "help-you": "We Are Looking Forward To Helping You Enjoy Your Educational Adventure",
     "see-more": "See more"
   },
+  "faq-page": {
+    "title": "Frequently Asked Questions",
+    "categories": {
+      "erasmus": "Erasmus Program",
+      "language-courses": "Language courses & Training",
+      "concierge": "Concierge services"
+    }
+  },
   "not-found-page": {
     "back-to-home": "Back to home"
   },
@@ -97,25 +105,39 @@
     "spain": "Spain"
   },
   "faqs": {
-    "what-is-erasmus-plus": {
-      "title": "What is Erasmus+?",
-      "description": "Erasmus+ is the EU's programme to support education, training, youth and sport in Europe. This program offers mobility opportunities in European Union countries and partner countries, allowing you to have a unique experience abroad."
+    "erasmus": {
+      "what-is-erasmus-plus": {
+        "title": "What is Erasmus+?",
+        "description": "Erasmus+ is the EU's programme to support education, training, youth and sport in Europe. This program offers mobility opportunities in European Union countries and partner countries, allowing you to have a unique experience abroad."
+      },
+      "how-to-erasmus-plus": {
+        "title": "How to establish an Erasmus+ mobility project with a partner mobility agency?",
+        "description": "Contact us now to discover more about our services, the host companies and schools we collaborate with and how we can help you achieve your Erasmus+ mobility project. You can request your free quote on our website."
+      },
+      "how-to-organize": {
+        "title": "What steps do I need to take to organize an Erasmus+ mobility with a partner mobility agency?",
+        "description": "The first step is to contact us, we will evaluate your Erasmus+ mobility project with a customized approach to meet your needs and expectations. Our team of mobility experts will support you throughout the entire process."
+      },
+      "why-erasmus-plus": {
+        "title": "Why contact a partner mobility agency to organize my Erasmus+ mobility?",
+        "description": "*** guarantees a successful Erasmus+ mobility project in various professional sectors and destinations. We collaborate with a variety of companies, schools, institutions and accommodation services that have been carefully selected to provide you with a high quality Erasmus+ experience. Additionally, we arrange transportation, cultural activities and we provide local support and tutoring services to ensure the participants are feeling supported."
+      }
     },
-    "how-to-erasmus-plus": {
-      "title": "How to establish an Erasmus+ mobility project with a partner mobility agency?",
-      "description": "Contact us now to discover more about our services, the host companies and schools we collaborate with and how we can help you achieve your Erasmus+ mobility project. You can request your free quote on our website."
+    "language-courses": {
+      "language-courses-offer": {
+        "title": "What kind of language courses do we offer?",
+        "description": "We offer a variety of personalized language courses. We assess your language level and put you at the correct level from the start to ensure that your language skills will improve. We work with a team of passionate native teachers that will make sure you will get the best results."
+      }
     },
-    "why-erasmus-plus": {
-      "title": "Why contact a partner mobility agency to organize my Erasmus+ mobility?",
-      "description": "*** guarantees a successful Erasmus+ mobility project in various professional sectors and destinations. We collaborate with a variety of companies, schools, institutions and accommodation services that have been carefully selected to provide you with a high quality Erasmus+ experience. Additionally, we arrange transportation, cultural activities and we provide local support and tutoring services to ensure the participants are feeling supported."
-    },
-    "languages-courses-offer": {
-      "title": "What kind of language courses do we offer?",
-      "description": "We offer a variety of personalized language courses. We assess your language level and put you at the correct level from the start to ensure that your language skills will improve. We work with a team of passionate native teachers that will make sure you will get the best results."
-    },
-    "what-included": {
-      "title": "What is included in concierge services for students?",
-      "description": "Student Concierge Services provides personalized support services for international students studying in a foreign country. Our aim is to provide the student with the best and most comfortable living abroad experience. We know letting your child go abroad to study in a foreign country can be stressful, to ease this process we stay connected with the student."
+    "concierge": {
+      "what-it-is": {
+        "title": "What is a student exchange program?",
+        "description": "A student exchange program is a program in which students from a secondary school or higher education study abroad at one of their institution's partner institutions. These programs involve the student attending classes at a foreign institution, living with a local family in some cases, and taking part in activities that are unique to the culture of the foreign country."
+      },
+      "what-included": {
+        "title": "What is included in concierge services for students?",
+        "description": "Student Concierge Services provides personalized support services for international students studying in a foreign country. Our aim is to provide the student with the best and most comfortable living abroad experience. We know letting your child go abroad to study in a foreign country can be stressful, to ease this process we stay connected with the student."
+      }
     }
   },
   "footer": {
@@ -126,7 +148,7 @@
       "home": "Welcome",
       "services": "Our Services",
       "destinations": "Our Destinations",
-      "about": "About",
+      "faq": "FAQ",
       "contact": "Contact",
       "404": "FOUR ZERO FOUR"
     }

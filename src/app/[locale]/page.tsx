@@ -11,14 +11,18 @@ import clsx from 'clsx';
 import { CommitmentsCarousel } from '@/components/commitments-carousel/commitments-carousel';
 import { DestinationCard } from '@/components/destination-card/destination-card';
 import { FaqList } from '@/components/faq-list/faq-list';
+import { FAQCategories, Faqs } from '@/types/faq';
+import { Subset } from '@/types/types';
 
-const FaqsHome: string[] = [
-  'what-is-erasmus-plus',
-  'how-to-erasmus-plus',
-  'why-erasmus-plus',
-  'languages-courses-offer',
-  'what-included',
-];
+const FaqsHome: Subset<typeof Faqs> = {
+  [FAQCategories.erasmus]: [
+    'what-is-erasmus-plus',
+    'how-to-erasmus-plus',
+    'why-erasmus-plus',
+  ],
+  [FAQCategories.languageCourses]: ['language-courses-offer'],
+  [FAQCategories.concierge]: ['what-included'],
+};
 
 export default function RootLayout() {
   const t = useTranslations('home-page');
@@ -250,14 +254,18 @@ export default function RootLayout() {
             <span className='h-1 w-[250px] border-b border-b-europe' />
           </div>
           <div className='my-14 w-full'>
-            {FaqsHome.map((faq) => (
-              <div
-                key={faq}
-                className='border-b-2 border-t-0 border-basics-disabled px-12 py-6 first-of-type:border-t-2'
-              >
-                <FaqList faqKey={faq} />
-              </div>
-            ))}
+            {Object.entries(FaqsHome)
+              .flatMap(([category, faqs]) =>
+                faqs.map((faq) => `${category}.${faq}`)
+              )
+              .map((faq) => (
+                <div
+                  key={faq}
+                  className='border-b-2 border-t-0 border-basics-disabled px-12 py-6 first-of-type:border-t-2'
+                >
+                  <FaqList faqKey={faq} />
+                </div>
+              ))}
           </div>
         </div>
       </section>
