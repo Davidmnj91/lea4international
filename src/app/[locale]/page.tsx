@@ -30,17 +30,14 @@ export default function RootLayout() {
           position: 'absolute',
           height: '100vh',
           width: '100%',
-          marginTop: '-80px',
           zIndex: '-1',
-          background: `#172c48`,
-          backgroundImage: `url(${hero_bg.src})`,
+          backgroundImage: `url(${hero_bg.src}), linear-gradient(#0308227F,#0308227F)`,
+          backgroundBlendMode: 'overlay',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
         }}
-      >
-        <div className='absolute top-0 h-full w-full bg-[#0308227F]'></div>
-      </div>
-      <div className='m-auto mt-[-80px] flex h-screen w-full flex-col items-center justify-center pt-[80px]'>
+      />
+      <div className='m-auto mt-[-80px] flex h-screen w-full flex-col items-center justify-center'>
         <div>
           <h1 className='text-center font-title text-desktop-h-4xl text-basics-disabled'>
             {t('language')}
@@ -66,7 +63,7 @@ export default function RootLayout() {
       <section id='who-we-are'>
         <div
           style={{
-            marginTop: '16px',
+            marginTop: '56px',
             width: '100%',
             backgroundImage: `url(${who_we_are_bg.src})`,
           }}
@@ -277,17 +274,17 @@ export default function RootLayout() {
             </div>
             <div className='flex w-full justify-between gap-[30px]'>
               {['more-info', 'request-quote', 'host-family'].map((title) => (
-                <div
+                <button
                   key={title}
-                  className='flex h-[158px] w-[310px] flex-col justify-between border border-basics-white p-2.5'
+                  className='group flex h-[158px] w-[310px] flex-col justify-between border border-basics-white p-2.5 hover:border-star-dark'
                 >
-                  <h4 className='font-title text-desktop-h-lg font-bold text-basics-white'>
+                  <h4 className='text-left font-title text-desktop-h-lg font-bold text-basics-white'>
                     {t.rich(`more-info.${title}`)}
                   </h4>
-                  <span className='text-right font-title text-desktop-h-sm text-basics-white'>
+                  <span className='self-end font-title text-desktop-h-sm text-basics-white group-hover:text-star-dark'>
                     {t('more-info.contact-us')}
                   </span>
-                </div>
+                </button>
               ))}
             </div>
           </div>
