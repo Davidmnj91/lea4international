@@ -1,7 +1,7 @@
 import { cva } from 'class-variance-authority';
 
 export const buttonTypes = cva(
-  'inline-flex justify-center items-center gap-2 h-[40px] min-w-[116px] px-3 py-2 rounded-[30px] font-body',
+  'inline-flex justify-center items-center gap-2 font-body',
   {
     variants: {
       intent: {
@@ -36,13 +36,17 @@ export const buttonTypes = cva(
           'focus:text-europe-dark focus:border focus:border-europe-dark focus:ring-1 focus:ring-offset-2 focus:ring-europe-dark',
         ],
       },
+      type: {
+        button: 'h-[40px] min-w-[116px] rounded-[30px] px-3 py-2',
+        icon: 'p-0.5 rounded-full',
+      },
     },
     defaultVariants: {
       intent: 'primary',
+      type: 'button',
     },
   }
 );
-
 export const linkTypes = cva('inline-flex items-start', {
   variants: {
     intent: {

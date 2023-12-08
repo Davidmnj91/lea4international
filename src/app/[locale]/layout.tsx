@@ -6,6 +6,7 @@ import { cormorant, ubuntu } from '@/app/fonts';
 import LocaleSwitcher from '@/components/locale-switcher/locale-switcher';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
 import { ContactUs } from '@/components/contact-us/contact-us';
+import { Footer } from '@/components/footer/footer';
 
 export async function generateStaticParams() {
   return languages.map((locale) => ({ locale }));
@@ -30,15 +31,16 @@ export default function RootLayout({
       <head>
         <title>Lucia Web</title>
       </head>
-      <body>
+      <body className='relative mx-auto max-w-[1440px]'>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <header className='flex h-[80px] items-center justify-between bg-transparent px-[40px]'>
             <h1 className='font-body text-b-xxl text-basics-white'>LOGO</h1>
             <Menu />
             <LocaleSwitcher />
           </header>
-          {children}
+          <main>{children}</main>
           <ContactUs />
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

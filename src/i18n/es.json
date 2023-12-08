@@ -12,13 +12,13 @@
     "education": "Educación.",
     "travel": "Viajar.",
     "slogan": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac justo ac metus convallis posuere. Fusce eu massa eu est tincidunt feugiat.",
-    "more-info": "Infórmate",
+    "request-more-info": "Infórmate",
     "who-we-are": {
       "title": "Quienes Somos",
       "description": "Descubra una empresa líder en consultoría y gestión de proyectos dedicada a crear <b>experiencias educativas transformadoras</b>. Nos enfocamos en organizar y entregar una variedad de proyectos educativos."
     },
     "our-focus": {
-      "title": "Nuestra mision",
+      "title": "Nuestra misión",
       "description": "Organización y ejecución de una variedad de <b>proyectos educativos</b>. Nuestro principal objetivo es ayudar a las personas a adquirir <b>experiencias de vida significativas</b> en el extranjero que les ayudarán a crecer, tanto a nivel profesional como personal."
     },
     "our-beliefs": {
@@ -29,6 +29,31 @@
       "title": "Overcoming Challenges",
       "description": "Leaving your comfort zone and going abroad can be stressful and challenging.\nThis is why at *** We want to <b>make your experience abroad easier</b>. We support your project by making all the necessary arrangements."
     },
+    "our-commitment": {
+      "title": "Nuestro compromiso"
+    },
+    "top-destinations": {
+      "title": "Nuestros mejores destinos",
+      "see-all": "Ver todos los destinos"
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "see-more": "Ver más preguntas"
+    },
+    "more-info": {
+      "title": "¿Busca más <br>información?</br>",
+      "questions": "Estamos aquí para responder a todas tus preguntas. <br></br> <br>¡Contáctenos hoy!</br>",
+      "more-info": "Más Información",
+      "request-quote": "Solicitar <br>Presupuesto</br>",
+      "host-family": "Conviértete en una <br>Familia Anfitriona</br>" ,
+      "contact-us": "Contáctanos"
+    },
+    "our-partners": {
+      "title": "Nuestros compañeros",
+      "partners": {
+        "name": "Erasmus+"
+      }
+    },
     "help-you": "Esperamos Poder Ayudarte A Disfrutar De Tu Aventura Educativa.",
     "see-more": "Saber más"
   },
@@ -37,14 +62,70 @@
   },
   "contact-form": {
     "input": {
-      "name": "nombre",
-      "email": "email",
-      "message": "mensaje"
+      "name": "Nombre",
+      "email": "Email",
+      "message": "Mensaje"
     },
     "submit": "Send"
   },
   "locale-switcher": {
     "en": "Inglés",
     "es": "Español"
+  },
+  "commitments-carousel": {
+    "standards": {
+      "title": "Los más altos estándares de calidad",
+      "description": "<b>Trabajamos duro para brindar la más alta calidad</b> en cada proyecto que entregamos. Creemos firmemente que brindar servicios de alta calidad conducirá a la satisfacción del cliente."
+    },
+    "team": {
+      "title": "Equipo dedicado",
+      "description": "Nuestro equipo siempre se asegurará de <b>comprender completamente sus necesidades</b>, superar sus expectativas y garantizar los <b>mejores resultados</b> en su proyecto."
+    },
+    "approach": {
+      "title": "Enfoque personalizado",
+      "description": "No todos los proyectos son iguales y lo sabemos, en *** recibirás un trato totalmente personalizado. <b>Trabajamos duro para que puedas disfrutar de los resultados</b>"
+    }
+  },
+  "destinations": {
+    "madrid": "Madrid",
+    "prague": "Praga",
+    "malaga": "Malaga",
+    "czech": "República Checa",
+    "spain": "España"
+  },
+  "faqs": {
+    "what-is-erasmus-plus": {
+      "title": "Que es Erasmus+?",
+      "description": "Erasmus+ es el programa de la UE para apoyar la educación, la formación, la juventud y el deporte en Europa. Este programa ofrece oportunidades de movilidad en países de la Unión Europea y países socios, permitiéndote tener una experiencia única en el extranjero."
+    },
+    "how-to-erasmus-plus": {
+      "title": "¿Cómo establecer un proyecto de movilidad Erasmus+ con una agencia de movilidad asociada?",
+      "description": "Contáctanos ahora para descubrir más sobre nuestros servicios, las empresas de acogida y escuelas con las que colaboramos y cómo podemos ayudarte a realizar tu proyecto de movilidad Erasmus+. Puedes solicitar tu presupuesto gratuito en nuestra web."
+    },
+    "why-erasmus-plus": {
+      "title": "¿Por qué contactar con una agencia de movilidad colaboradora para organizar mi movilidad Erasmus+?",
+      "description": "*** garantiza un proyecto de movilidad Erasmus+ exitoso en diversos sectores profesionales y destinos. Colaboramos con una variedad de empresas, escuelas, instituciones y servicios de alojamiento que han sido cuidadosamente seleccionados para brindarte una experiencia Erasmus+ de alta calidad. Además, organizamos transporte, actividades culturales y brindamos apoyo local y servicios de tutoría para garantizar que los participantes se sientan apoyados."
+    },
+    "languages-courses-offer": {
+      "title": "¿Qué tipo de cursos de idiomas ofrecemos?",
+      "description": "Ofrecemos una variedad de cursos de idiomas personalizados. Evaluamos su nivel de idioma y lo ubicamos en el nivel correcto desde el principio para garantizar que sus habilidades lingüísticas mejoren. Trabajamos con un equipo de profesores nativos apasionados que se asegurarán de que obtengas los mejores resultados."
+    },
+    "what-included": {
+      "title": "¿Qué está incluido en los servicios de conserjería para estudiantes?",
+      "description": "Student Concierge Services brinda servicios de apoyo personalizados para estudiantes internacionales que estudian en un país extranjero. Nuestro objetivo es brindar al estudiante la mejor y más cómoda experiencia de vida en el extranjero. Sabemos que dejar que su hijo vaya al extranjero para estudiar en un país extranjero puede ser estresante, para facilitar este proceso nos mantenemos conectados con el estudiante."
+    }
+  },
+  "footer": {
+    "follow-us" : "Síguenos en",
+    "copyright": "Copyright © 2024. Nombre de la empresa. Todos los derechos reservados.",
+    "privacy-policy": "Política de rivacidad",
+    "pages": {
+      "home": "Bienvenido",
+      "services": "Nuestros Servicios",
+      "destinations": "Nuestros Destinos",
+      "about": "Sobre Nosotros",
+      "contact": "Contacto",
+      "404": "CUATRO ZERO CUATRO"
+    }
   }
 }

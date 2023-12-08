@@ -8,7 +8,7 @@ export const ContactUs = () => {
   return (
     <button
       className={clsx(
-        'fixed bottom-10 right-10',
+        'sticky bottom-10 left-[100%] mr-10',
         buttonTypes({ intent: 'primary' })
       )}
     >

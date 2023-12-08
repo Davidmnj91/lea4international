@@ -2,8 +2,23 @@ import { useTranslations } from 'next-intl';
 import hero_bg from '../../../public/hero_bg.png';
 import who_we_are_bg from '../../../public/who_we_are_bg.png';
 import our_beliefs_bg from '../../../public/our_beliefs_bg.png';
+import our_commitment_bg from '../../../public/our_commitment_bg.png';
+import praga_bg from '../../../public/praga_bg.png';
+import madrid_bg from '../../../public/madrid_bg.png';
+import malaga_bg from '../../../public/malaga_bg.png';
 import { buttonTypes } from '@/components/button/button';
 import clsx from 'clsx';
+import { CommitmentsCarousel } from '@/components/commitments-carousel/commitments-carousel';
+import { DestinationCard } from '@/components/destination-card/destination-card';
+import { FaqList } from '@/components/faq-list/faq-list';
+
+const FaqsHome: string[] = [
+  'what-is-erasmus-plus',
+  'how-to-erasmus-plus',
+  'why-erasmus-plus',
+  'languages-courses-offer',
+  'what-included',
+];
 
 export default function RootLayout() {
   const t = useTranslations('home-page');
@@ -45,13 +60,13 @@ export default function RootLayout() {
         <button
           className={clsx('mt-[60px]', buttonTypes({ intent: 'primary' }))}
         >
-          {t('more-info')}
+          {t('request-more-info')}
         </button>
       </div>
       <section id='who-we-are'>
         <div
           style={{
-            marginTop: '84px',
+            marginTop: '16px',
             width: '100%',
             backgroundImage: `url(${who_we_are_bg.src})`,
           }}
@@ -160,6 +175,135 @@ export default function RootLayout() {
                 </span>
               </h3>
             </div>
+          </div>
+        </div>
+      </section>
+      <section id='our-commitment'>
+        <div className='mx-12 my-14'>
+          <div className='flex justify-between'>
+            <CommitmentsCarousel />
+            <div>
+              <h3 className='border-b-2 border-b-europe-light font-title text-desktop-h-2xl'>
+                {t('our-commitment.title')}
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          style={{
+            width: '100%',
+            height: '496px',
+            backgroundImage: `url(${our_commitment_bg.src})`,
+            backgroundRepeat: 'no-repeat',
+            marginTop: '-280px',
+          }}
+        ></div>
+      </section>
+      <section id='top-destinations'>
+        <div className='mt-14 flex h-[410px] flex-col items-center justify-start bg-europe pt-14'>
+          <h3 className='font-title text-desktop-h-2xl text-basics-white'>
+            {t('top-destinations.title')}
+          </h3>
+          <div className='mt-6 flex items-center justify-center'>
+            <span className='h-1 w-[250px] border-b border-b-europe-light' />
+            <button
+              className={clsx(
+                'mx-4',
+                buttonTypes({ intent: 'secondary-dark' })
+              )}
+            >
+              {t('top-destinations.see-all')}
+            </button>
+            <span className='h-1 w-[250px] border-b border-b-europe-light' />
+          </div>
+        </div>
+        <div className='mt mt-[-152px] flex justify-center gap-4'>
+          <DestinationCard
+            imgSrc={praga_bg.src}
+            city='prague'
+            country='czech'
+          />
+          <DestinationCard
+            imgSrc={madrid_bg.src}
+            city='madrid'
+            country='spain'
+          />
+          <DestinationCard
+            imgSrc={malaga_bg.src}
+            city='malaga'
+            country='spain'
+          />
+        </div>
+      </section>
+      <section id='faq'>
+        <div className='mt-14 flex flex-col items-center justify-center pt-16'>
+          <h3 className='font-title text-desktop-h-2xl text-europe-dark'>
+            {t('faq.title')}
+          </h3>
+          <div className='mt-14 flex items-center justify-center'>
+            <span className='h-1 w-[250px] border-b border-b-europe' />
+            <button
+              className={clsx(
+                'mx-4',
+                buttonTypes({ intent: 'secondary-light' })
+              )}
+            >
+              {t('faq.see-more')}
+            </button>
+            <span className='h-1 w-[250px] border-b border-b-europe' />
+          </div>
+          <div className='my-14 w-full'>
+            {FaqsHome.map((faq) => (
+              <div
+                key={faq}
+                className='border-b-2 border-t-0 border-basics-disabled px-12 py-6 first-of-type:border-t-2'
+              >
+                <FaqList faqKey={faq} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section id='more-info'>
+        <div className='my-14 flex items-center justify-center'>
+          <div className='m-auto flex flex-col gap-9 bg-europe p-14'>
+            <h3 className='font-title text-desktop-h-2xl text-basics-white'>
+              {t.rich('more-info.title')}
+            </h3>
+            <div>
+              <p className='font-body text-b-lg font-light text-basics-white'>
+                {t.rich('more-info.questions')}
+              </p>
+            </div>
+            <div className='flex w-full justify-between gap-[30px]'>
+              {['more-info', 'request-quote', 'host-family'].map((title) => (
+                <div
+                  key={title}
+                  className='flex h-[158px] w-[310px] flex-col justify-between border border-basics-white p-2.5'
+                >
+                  <h4 className='font-title text-desktop-h-lg font-bold text-basics-white'>
+                    {t.rich(`more-info.${title}`)}
+                  </h4>
+                  <span className='text-right font-title text-desktop-h-sm text-basics-white'>
+                    {t('more-info.contact-us')}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id='our-partners'>
+        <div className='my-14 flex flex-col items-center justify-center gap-14 pt-14'>
+          <h2 className='font-title text-desktop-h-2xl text-europe-dark'>
+            {t('our-partners.title')}
+          </h2>
+          <div className='flex justify-center gap-14'>
+            {Array.from(Array(5).keys()).map((index) => (
+              <span key={index} className='font-body text-b-xl text-europe'>
+                {t('our-partners.partners.name')}
+              </span>
+            ))}
           </div>
         </div>
       </section>

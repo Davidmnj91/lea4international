@@ -12,7 +12,7 @@
     "education": "Education.",
     "travel": "Travel.",
     "slogan": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac justo ac metus convallis posuere. Fusce eu massa eu est tincidunt feugiat.",
-    "more-info": "Request more information",
+    "request-more-info": "Request more information",
     "who-we-are": {
       "title": "Who We Are",
       "description": "Discover a leading project management and consulting company dedicated to creating <b>transformative educational experiences</b>. We focus on organizing and delivering a variety of educational projects."
@@ -28,6 +28,31 @@
     "coming-challenges": {
       "title": "Superando Desafíos",
       "description": "Salir de tu zona de confort e ir al extranjero puede resultar estresante y desafiante.\nPor eso en *** queremos <b>hacer más fácil tu experiencia en el extranjero</b>. Apoyamos su proyecto realizando todos los trámites necesarios."
+    },
+    "our-commitment": {
+      "title": "Our Commitment"
+    },
+    "top-destinations": {
+      "title": "Our Top destinations",
+      "see-all": "See all destinations"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "see-more": "See more questions"
+    },
+    "more-info": {
+      "title": "Looking For More <br>Information?</br>",
+      "questions": "We are here to answer all your questions. <br></br> <br>Contact us today!</br>",
+      "more-info": "More Information",
+      "request-quote": "Request <br>A Quote</br>",
+      "host-family": "Become A <br>Host Family</br>",
+      "contact-us": "Contact Us"
+    },
+    "our-partners": {
+      "title": "Our Partners",
+      "partners": {
+        "name": "Erasmus+"
+      }
     },
     "help-you": "We Are Looking Forward To Helping You Enjoy Your Educational Adventure",
     "see-more": "See more"
@@ -46,5 +71,61 @@
   "locale-switcher": {
     "en": "English",
     "es": "Spanish"
+  },
+  "commitments-carousel": {
+    "standards": {
+      "title": "Highest quality standards",
+      "description": "We <b>work hard to provide the highest quality</b>  in every project we deliver. We firmly believe that delivering high quality services will lead to customer satisfaction."
+    },
+    "team": {
+      "title": "Dedicated team",
+      "description": "Our team will always make sure to fully <b>understand your needs</b>, exceed your expectations and ensure the <b>best results</b> in your project."
+    },
+    "approach": {
+      "title": "Customized approach",
+      "description": "Not every project is the same and we know it, at *** you will receive A fully customized approach. We <b>work hard for your to/so you can enjoy the results</b>"
+    }
+  },
+  "destinations": {
+    "madrid": "Madrid",
+    "prague": "Prague",
+    "malaga": "Malaga",
+    "czech": "Czech Republic",
+    "spain": "Spain"
+  },
+  "faqs": {
+    "what-is-erasmus-plus": {
+      "title": "What is Erasmus+?",
+      "description": "Erasmus+ is the EU's programme to support education, training, youth and sport in Europe. This program offers mobility opportunities in European Union countries and partner countries, allowing you to have a unique experience abroad."
+    },
+    "how-to-erasmus-plus": {
+      "title": "How to establish an Erasmus+ mobility project with a partner mobility agency?",
+      "description": "Contact us now to discover more about our services, the host companies and schools we collaborate with and how we can help you achieve your Erasmus+ mobility project. You can request your free quote on our website."
+    },
+    "why-erasmus-plus": {
+      "title": "Why contact a partner mobility agency to organize my Erasmus+ mobility?",
+      "description": "*** guarantees a successful Erasmus+ mobility project in various professional sectors and destinations. We collaborate with a variety of companies, schools, institutions and accommodation services that have been carefully selected to provide you with a high quality Erasmus+ experience. Additionally, we arrange transportation, cultural activities and we provide local support and tutoring services to ensure the participants are feeling supported."
+    },
+    "languages-courses-offer": {
+      "title": "What kind of language courses do we offer?",
+      "description": "We offer a variety of personalized language courses. We assess your language level and put you at the correct level from the start to ensure that your language skills will improve. We work with a team of passionate native teachers that will make sure you will get the best results."
+    },
+    "what-included": {
+      "title": "What is included in concierge services for students?",
+      "description": "Student Concierge Services provides personalized support services for international students studying in a foreign country. Our aim is to provide the student with the best and most comfortable living abroad experience. We know letting your child go abroad to study in a foreign country can be stressful, to ease this process we stay connected with the student."
+    }
+  },
+  "footer": {
+    "follow-us": "Follow us on",
+    "copyright": "Copyright © 2024. Company name. All right reserved.",
+    "privacy-policy": "Privacy Policy",
+    "pages": {
+      "home": "Welcome",
+      "services": "Our Services",
+      "destinations": "Our Destinations",
+      "about": "About",
+      "contact": "Contact",
+      "404": "FOUR ZERO FOUR"
+    }
   }
 }
