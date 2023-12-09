@@ -1,17 +1,13 @@
-import { useTranslations } from 'next-intl';
-
 type DestinationCardProps = {
   imgSrc: string;
-  city: string;
-  country: string;
+  title: string;
+  caption: string;
 };
-export const DestinationCard = ({
+export const AnimatedCard = ({
   imgSrc,
-  city,
-  country,
+  title,
+  caption,
 }: DestinationCardProps) => {
-  const t = useTranslations('destinations');
-
   return (
     <div className='group h-[510px] w-[328px] overflow-hidden'>
       <div
@@ -26,10 +22,10 @@ export const DestinationCard = ({
       >
         <div className='flex h-[192px] w-[174px] flex-col justify-between border border-basics-white p-2.5'>
           <span className='text-start font-title text-desktop-h-lg font-bold text-basics-white'>
-            {t(city)}
+            {title}
           </span>
           <span className='text-end font-title text-desktop-h-sm font-bold text-basics-white'>
-            {t(country)}
+            {caption}
           </span>
         </div>
       </div>

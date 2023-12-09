@@ -19,7 +19,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
           {t('title')}
         </h1>
       </div>
-      <div className='flex items-center justify-center gap-6 border-y border-y-basics-disabled px-12 py-6'>
+      <div className='sticky top-0 flex items-center justify-center gap-6 border-y border-y-basics-disabled bg-basics-white px-12 py-6'>
         {Object.values(FAQCategories).map((category) => (
           <Link
             href={`#${category}`}

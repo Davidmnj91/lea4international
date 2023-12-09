@@ -9,10 +9,11 @@ import malaga_bg from '../../../public/malaga_bg.png';
 import { buttonTypes } from '@/components/button/button';
 import clsx from 'clsx';
 import { CommitmentsCarousel } from '@/components/commitments-carousel/commitments-carousel';
-import { DestinationCard } from '@/components/destination-card/destination-card';
+import { AnimatedCard } from '@/components/destination-card/animated-card';
 import { FaqList } from '@/components/faq-list/faq-list';
 import { FAQCategories, Faqs } from '@/types/faq';
 import { Subset } from '@/types/types';
+import { Partners } from '@/components/partners/partners';
 
 const FaqsHome: Subset<typeof Faqs> = {
   [FAQCategories.erasmus]: [
@@ -219,20 +220,20 @@ export default function RootLayout() {
           </div>
         </div>
         <div className='mt mt-[-152px] flex justify-center gap-4'>
-          <DestinationCard
+          <AnimatedCard
             imgSrc={praga_bg.src}
-            city='prague'
-            country='czech'
+            title={t('top-destinations.destinations.prague')}
+            caption={t('top-destinations.destinations.czech')}
           />
-          <DestinationCard
+          <AnimatedCard
             imgSrc={madrid_bg.src}
-            city='madrid'
-            country='spain'
+            title={t('top-destinations.destinations.madrid')}
+            caption={t('top-destinations.destinations.spain')}
           />
-          <DestinationCard
+          <AnimatedCard
             imgSrc={malaga_bg.src}
-            city='malaga'
-            country='spain'
+            title={t('top-destinations.destinations.malaga')}
+            caption={t('top-destinations.destinations.spain')}
           />
         </div>
       </section>
@@ -299,18 +300,7 @@ export default function RootLayout() {
         </div>
       </section>
       <section id='our-partners'>
-        <div className='my-14 flex flex-col items-center justify-center gap-14 pt-14'>
-          <h2 className='font-title text-desktop-h-2xl text-europe-dark'>
-            {t('our-partners.title')}
-          </h2>
-          <div className='flex justify-center gap-14'>
-            {Array.from(Array(5).keys()).map((index) => (
-              <span key={index} className='font-body text-b-xl text-europe'>
-                {t('our-partners.partners.name')}
-              </span>
-            ))}
-          </div>
-        </div>
+        <Partners />
       </section>
     </>
   );

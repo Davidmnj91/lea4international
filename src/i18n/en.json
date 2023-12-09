@@ -34,7 +34,14 @@
     },
     "top-destinations": {
       "title": "Our Top destinations",
-      "see-all": "See all destinations"
+      "see-all": "See all destinations",
+      "destinations": {
+        "madrid": "Madrid",
+        "prague": "Prague",
+        "malaga": "Malaga",
+        "czech": "Czech Republic",
+        "spain": "Spain"
+      }
     },
     "faq": {
       "title": "Frequently Asked Questions",
@@ -48,14 +55,82 @@
       "host-family": "Become A <br>Host Family</br>",
       "contact-us": "Contact Us"
     },
-    "our-partners": {
-      "title": "Our Partners",
-      "partners": {
-        "name": "Erasmus+"
-      }
-    },
     "help-you": "We Are Looking Forward To Helping You Enjoy Your Educational Adventure",
     "see-more": "See more"
+  },
+  "services-page": {
+    "title": "Our Services",
+    "message": "Select & discover from our services to learn <br>more about them.</br>",
+    "services": {
+      "see-more": "See More",
+      "back-to-services": "Back to our services",
+      "other-services": {
+        "title": "Other services",
+        "description": "Select & discover from our services to learn <br>more about them.</br>"
+      },
+      "erasmus": {
+        "title": "Erasmus+ Projects",
+        "overview": "Overview",
+        "categories": {
+          "work-experience": {
+            "title": "Work Experience",
+            "description": "Erasmus+ can help you gain valuable work experience abroad. By participating in the Erasmus+ traineeship program you will improve your interpersonal and foreign language skills, and you will develop intercultural skills that will help you find a job after your studies. \nErasmus+ supports work placements or study periods abroad for students currently enrolled in vocational education and training (VET) and for recent graduates.",
+            "with": "Work <br>experience</br> <br>with</br> <br>*****</br>",
+            "message": "At *** We offer a variety of professional sectors in which you can do your internship experience. We know how important it is to gain some professional work experience that is why we offer high quality internships tailored to every individual. \nWe have a team of experts that will review and study your CV and motivational letter to match you with the right company. You will get support through the interviewing process, you will get a supervisor assigned to you to monitor your performance and make sure you achieve the best results. We will provide you with the learning agreement and all the help you need before and during your internship.",
+            "we-offer": {
+              "title": "Find out what professional sector we offer",
+              "IT": {
+                "title": "IT and Multimedia Professions",
+                "description": "IT - Information technology (IT) is the use of any computers, storage, networking and other physical devices, infrastructure and processes to create, process, store, secure and exchange all forms of electronic data.\nMultimedia is a growing field that is part of the technology sector and includes professional opportunities as graphic design, marketing, product development, multimedia designer etc."
+              },
+              "business": {
+                "title": "Business Administration",
+                "description": "Business administration is a broad field that includes many different roles, professional settings and opportunities for growth. In simple terms, business administration is the work of managing an organization's resources, time and people. This professional sector includes professional opportunities such as working in the sales, finance or administrative department."
+              },
+              "tourism": {
+                "title": "Tourism & Hospitality Industry",
+                "description": "The Tourism and Hospitality industry is a broad industry that includes many sectors, including hotels, restaurants, travel agencies, theme parks, museums, etc. Tourism and hospitality are rewarding industries with growing job opportunities. An internship in this field will allow the apprentice to improve customer service and communication skills, practice a foreign language and learn new techniques."
+              },
+              "beauty": {
+                "title": "Beauty Professions",
+                "description": "This sector includes various professions related to aesthetics, hairdressing, cosmetics and nails. This professional sector includes opportunities such as working in a beauty salon, hair salon, nail salon, spa center, cosmetics store etc. An internship in this field will allow the apprentice to discover new techniques in a foreign language."
+              }
+            }
+          },
+          "job-shadowing": {
+            "title": "Job Shadowing",
+            "description": "Job shadowing programmes offer participants the chance to spend a period of time at a hosting organization in another country. The aim of this program is to learn new practices and gather new ideas through observation and interaction with peers, experts or other practitioners in their daily work at the hosting organization.\nEligible participants include teachers, trainers, and all other non-teaching experts and staff in adult education.\nEligible non-teaching staff includes staff working in adult education, either in adult education providers or in other organizations active in adult education.",
+            "with": "Job <br>shadowing</br> <br>with</br> <br>*****</br>",
+            "message": "At *** We collaborate with a large number of hosting job shadowing schools that have been carefully selected, these schools include primary, secondary and high schools. Additionally we collaborate with technical and vocational schools and schools with special needs. \nThe topics of the job shadowing can include, inclusion, diversity, digitization in schools, teaching sustainability, promoting STEM. \nBy the end of the job shadowing programme participants get exposed to several teaching practices focused on the chosen topics. \nThey acquire new teaching techniques, and discover resources that they can apply to their teaching practices.\nAt *** We also provide the sending organizations with the necessary learning agreement."
+          },
+          "school-exchange": {
+            "title": "School Exchange",
+            "description": "Youth exchanges allow groups of young people from different countries to meet, live together and work on shared projects for short periods. Youth exchanges take place outside the school environment. On a youth exchange, you can expect to participate in activities such as workshops, exercises, debates, role-plays, outdoor activities and more.",
+            "with": "School <br>Exchange</br> <br>with</br> <br>*****</br>",
+            "message": "At *** We collaborate with a large number of hosting schools for school exchange that have been carefully selected, these schools include primary, secondary and high schools. School Exchange is a great opportunity for the foreign students to do a wide range of activities that include country presentations, cultural workshops or language sessions with local students.\nAt *** We also provide logistic and local support through the school exchange program."
+          },
+          "erasmus-mundus": {
+            "title": "Erasmus Mundus",
+            "description": "This action aims at fostering excellence and worldwide internationalization of higher education institutions via study programmes – at Master course level – jointly delivered and jointly recognised by higher education institutions (HEIs) established in Europe, and open to institutions in other countries of the world.",
+            "with": "Erasmus <br>Mundus</br> <br>with</br> <br>*****</br>",
+            "message": "We know the challenges of finding a new home abroad as an international students, at *** We help international students to find accommodation that meets your expectations and it is suitable with your budget. We assist international students with questions, general advice. We provide support and useful information to international students by organizing Pre-Departure Orientation seminars."
+          },
+          "KA-2": {
+            "title": "KA2 - We look for partners",
+            "description": "KA2 action projects are a combination of decentralized projects run by the National Agencies and centralised activities managed by the European Commission’s Executive Agency."
+          }
+        }
+      },
+      "language-courses": {
+        "title": "English & Spanish Courses",
+        "categories": {}
+      },
+      "concierge": {
+        "title": "Concierge Tutoring Services",
+        "categories": {
+        }
+      }
+    }
   },
   "faq-page": {
     "title": "Frequently Asked Questions",
@@ -63,6 +138,16 @@
       "erasmus": "Erasmus Program",
       "language-courses": "Language courses & Training",
       "concierge": "Concierge services"
+    }
+  },
+  "contact-page": {
+    "title": "Contact",
+    "message": "The simplest way to commence is by initiating contact.",
+    "who-are-you": "Who are you?",
+    "roles": {
+      "company": "Company",
+      "host-family": "Host family",
+      "institutions": "Schools or institutions"
     }
   },
   "not-found-page": {
@@ -73,11 +158,37 @@
   },
   "contact-form": {
     "input": {
-      "name": "name",
-      "email": "email",
-      "message": "message"
+      "service": {
+        "label": "What type of service are you interested in?",
+        "placeholder": "Enter What type of service are you interested in?"
+      },
+      "name": {
+        "label": "Name",
+        "placeholder": "Enter Name"
+      },
+      "last-name": {
+        "label": "Last name",
+        "placeholder": "Enter your last name"
+      },
+      "email": {
+        "label": "Email address",
+        "placeholder": "Enter Email address"
+      },
+      "phone": {
+        "label": "Phone",
+        "placeholder": "Enter Phone"
+      },
+      "nationality": {
+        "label": "Nationality",
+        "placeholder": "Enter Nationality"
+      },
+      "message": {
+        "label": "Tell us more, what would you like to know?",
+        "placeholder": "Enter your message"
+      },
+      "terms": "I accept to acknowledge that I have read and agree to the privacy policies before submitting the form"
     },
-    "submit": "Send"
+    "submit": "Send form"
   },
   "locale-switcher": {
     "en": "English",
@@ -97,12 +208,11 @@
       "description": "Not every project is the same and we know it, at *** you will receive A fully customized approach. We <b>work hard for your to/so you can enjoy the results</b>"
     }
   },
-  "destinations": {
-    "madrid": "Madrid",
-    "prague": "Prague",
-    "malaga": "Malaga",
-    "czech": "Czech Republic",
-    "spain": "Spain"
+  "our-partners": {
+    "title": "Our Partners",
+    "partners": {
+      "name": "Erasmus+"
+    }
   },
   "faqs": {
     "erasmus": {
@@ -143,14 +253,6 @@
   "footer": {
     "follow-us": "Follow us on",
     "copyright": "Copyright © 2024. Company name. All right reserved.",
-    "privacy-policy": "Privacy Policy",
-    "pages": {
-      "home": "Welcome",
-      "services": "Our Services",
-      "destinations": "Our Destinations",
-      "faq": "FAQ",
-      "contact": "Contact",
-      "404": "FOUR ZERO FOUR"
-    }
+    "privacy-policy": "Privacy Policy"
   }
 }

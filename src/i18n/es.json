@@ -3,7 +3,7 @@
     "home": "Bienvenido",
     "services": "Nuestros Servicios",
     "destinations": "Nuestros Destinos",
-    "about": "Sobre Nosotros",
+    "faq": "FAQ",
     "contact": "Contacto",
     "404": "CUATRO ZERO CUATRO"
   },
@@ -34,7 +34,14 @@
     },
     "top-destinations": {
       "title": "Nuestros mejores destinos",
-      "see-all": "Ver todos los destinos"
+      "see-all": "Ver todos los destinos",
+      "destinations": {
+        "madrid": "Madrid",
+        "prague": "Praga",
+        "malaga": "Malaga",
+        "czech": "República Checa",
+        "spain": "España"
+      }
     },
     "faq": {
       "title": "Preguntas frecuentes",
@@ -45,7 +52,7 @@
       "questions": "Estamos aquí para responder a todas tus preguntas. <br></br> <br>¡Contáctenos hoy!</br>",
       "more-info": "Más Información",
       "request-quote": "Solicitar <br>Presupuesto</br>",
-      "host-family": "Conviértete en una <br>Familia Anfitriona</br>" ,
+      "host-family": "Conviértete en una <br>Familia Anfitriona</br>",
       "contact-us": "Contáctanos"
     },
     "our-partners": {
@@ -57,8 +64,87 @@
     "help-you": "Esperamos Poder Ayudarte A Disfrutar De Tu Aventura Educativa.",
     "see-more": "Saber más"
   },
+  "services-page": {
+    "title": "Nuestros Servicios",
+    "message": "Seleccione y descubra nuestros servicios para conocer <br>más sobre ellos.</br>",
+    "services": {
+      "see-more": "Ver más",
+      "back-to-services": "Volver a nuestros servicios",
+      "other-services": {
+        "title": "Otros servicios",
+        "description": "Seleccione y descubra nuestros servicios para conocer <br>más sobre ellos.</br>"
+      },
+      "erasmus": {
+        "title": "Proyectos Erasmus+",
+        "overview": "Descripción general",
+        "categories": {
+          "work-experience": {
+            "title": "Experiencia laboral",
+            "description": "Erasmus+ puede ayudarte a adquirir una valiosa experiencia laboral en el extranjero. Al participar en el programa de prácticas Erasmus+ mejorarás tus habilidades interpersonales y de idiomas extranjeros, y desarrollarás habilidades interculturales que te ayudarán a encontrar un trabajo después de tus estudios.\nErasmus+ apoya las prácticas laborales o los períodos de estudio en el extranjero para estudiantes actualmente matriculados en educación y formación profesional (FP) y para recién graduados.",
+            "with": "Experiencia <br>laboral</br> <br>con</br> <br>*****</br>",
+            "message": "En *** Ofrecemos una variedad de sectores profesionales en los que podrás realizar tu experiencia de prácticas. Sabemos lo importante que es adquirir experiencia laboral profesional, por eso ofrecemos pasantías de alta calidad adaptadas a cada individuo.\nContamos con un equipo de expertos que revisarán y estudiarán tu CV y \u200B\u200Bcarta de motivación para encontrarte con la empresa adecuada. Recibirá apoyo durante el proceso de entrevista, se le asignará un supervisor para monitorear su desempeño y asegurarse de lograr los mejores resultados. Te proporcionaremos el acuerdo de aprendizaje y toda la ayuda que necesites antes y durante tus prácticas.",
+            "we-offer": {
+              "title": "Descubra qué sector profesional ofrecemos",
+              "IT": {
+                "title": "Profesiones IT y multimedia",
+                "description": "IT: la tecnología de la información (TI) es el uso de computadoras, almacenamiento, redes y otros dispositivos, infraestructuras y procesos físicos para crear, procesar, almacenar, proteger e intercambiar todas las formas de datos electrónicos.\nMultimedia es un campo en crecimiento que forma parte del sector tecnológico e incluye oportunidades profesionales como diseño gráfico, marketing, desarrollo de productos, diseñador multimedia, etc."
+              },
+              "business": {
+                "title": "Administración de Empresas",
+                "description": "La administración de empresas es un campo amplio que incluye muchos roles, entornos profesionales y oportunidades de crecimiento diferentes. En términos simples, la administración de empresas es el trabajo de gestionar los recursos, el tiempo y las personas de una organización. Este sector profesional incluye salidas profesionales como trabajar en el departamento comercial, financiero o administrativo."
+              },
+              "tourism": {
+                "title": "Turismo e industria hotelera",
+                "description": "La industria del turismo y la hostelería es una industria amplia que incluye muchos sectores, incluidos hoteles, restaurantes, agencias de viajes, parques temáticos, museos, etc. El turismo y la hostelería son industrias gratificantes con crecientes oportunidades laborales. Una pasantía en este campo permitirá al aprendiz mejorar el servicio al cliente y sus habilidades de comunicación, practicar un idioma extranjero y aprender nuevas técnicas."
+              },
+              "beauty": {
+                "title": "Profesiones de belleza",
+                "description": "Este sector engloba diversas profesiones relacionadas con la estética, la peluquería, la cosmética y las uñas. Este sector profesional incluye oportunidades como trabajar en un salón de belleza, peluquería, salón de uñas, centro de spa, tienda de cosméticos, etc. Una pasantía en este campo permitirá al aprendiz descubrir nuevas técnicas en un idioma extranjero."
+              }
+            }
+          },
+          "job-shadowing": {
+            "title": "Observación de profesionales",
+            "description": "Los programas de observación laboral ofrecen a los participantes la oportunidad de pasar un período de tiempo en una organización de acogida en otro país. El objetivo de este programa es aprender nuevas prácticas y recopilar nuevas ideas a través de la observación y la interacción con pares, expertos u otros profesionales en su trabajo diario en la organización anfitriona.\nLos participantes elegibles incluyen profesores, formadores y todos los demás expertos y personal no docente en educación de adultos.\nEl personal no docente elegible incluye el personal que trabaja en la educación de adultos, ya sea en proveedores de educación de adultos o en otras organizaciones activas en la educación de adultos.",
+            "with": "Trabajo <br>seguimiento</br> <br>con</br> <br>******</br>",
+            "message": "En *** Colaboramos con un gran número de escuelas de observación laboral que han sido cuidadosamente seleccionadas; estas escuelas incluyen escuelas primarias, secundarias y preparatorias. Además colaboramos con escuelas técnicas y vocacionales y escuelas con necesidades especiales.\nLos temas del seguimiento laboral pueden incluir inclusión, diversidad, digitalización en las escuelas, enseñanza de la sostenibilidad y promoción de STEM.\nAl final del programa de seguimiento laboral, los participantes quedan expuestos a varias prácticas docentes centradas en los temas elegidos.\nAdquieren nuevas técnicas de enseñanza y descubren recursos que pueden aplicar a sus prácticas docentes.\nEn *** También proporcionamos a las organizaciones de envío el acuerdo de aprendizaje necesario."
+          },
+          "school-exchange": {
+            "title": "Intercambio escolar",
+            "description": "Los intercambios juveniles permiten que grupos de jóvenes de diferentes países se reúnan, convivan y trabajen en proyectos compartidos durante períodos cortos. Los intercambios juveniles se llevan a cabo fuera del entorno escolar. En un intercambio juvenil, puedes esperar participar en actividades como talleres, ejercicios, debates, juegos de roles, actividades al aire libre y más.",
+            "with": "<br>Intercambio escolar</br> <br>con</br> <br>*****</br>",
+            "message": "En *** Colaboramos con un gran número de escuelas anfitrionas para intercambio escolar que han sido cuidadosamente seleccionadas, estas escuelas incluyen escuelas primarias, secundarias y preparatorias. El intercambio escolar es una gran oportunidad para que los estudiantes extranjeros realicen una amplia gama de actividades que incluyen presentaciones de países, talleres culturales o sesiones de idiomas con estudiantes locales.\nEn *** También brindamos apoyo logístico y local a través del programa de intercambio escolar."
+          },
+          "erasmus-mundus": {
+            "title": "Erasmus Mundus",
+            "description": "Esta acción tiene como objetivo fomentar la excelencia y la internacionalización mundial de las instituciones de educación superior a través de programas de estudio (a nivel de maestría) impartidos y reconocidos conjuntamente por instituciones de educación superior (IES) establecidas en Europa y abiertos a instituciones de otros países del mundo.",
+            "with": "Erasmus <br>Mundus</br> <br>con</br> <br>*****</br>",
+            "message": "Conocemos los desafíos de encontrar un nuevo hogar en el extranjero como estudiante internacional, en *** Ayudamos a los estudiantes internacionales a encontrar un alojamiento que cumpla con sus expectativas y se ajuste a su presupuesto. Asistimos a estudiantes internacionales con preguntas, consejos generales. Brindamos apoyo e información útil a los estudiantes internacionales mediante la organización de seminarios de orientación previa a la salida."
+          },
+          "KA-2": {
+            "title": "KA2 - Buscamos socios",
+            "description": "Los proyectos de acción KA2 son una combinación de proyectos descentralizados gestionados por las agencias nacionales y actividades centralizadas gestionadas por la Agencia Ejecutiva de la Comisión Europea."
+          }
+        }
+      },
+      "language-courses": {
+        "title": "Cursos de inglés y español",
+        "categories": {}
+      },
+      "concierge": {
+        "title": "Servicios de tutoría de conserjería",
+        "categories": {
+        }
+      }
+    }
+  },
   "faq-page": {
-    "title": "Preguntas frecuentes"
+    "title": "Preguntas frecuentes",
+    "categories": {
+      "erasmus": "Programas Erasmus",
+      "language-courses": "Cursos de idiomas y formación",
+      "concierge": "Servicios de conserjería"
+    }
   },
   "not-found-page": {
     "back-to-home": "Vuelta a casa"
@@ -92,46 +178,45 @@
       "description": "No todos los proyectos son iguales y lo sabemos, en *** recibirás un trato totalmente personalizado. <b>Trabajamos duro para que puedas disfrutar de los resultados</b>"
     }
   },
-  "destinations": {
-    "madrid": "Madrid",
-    "prague": "Praga",
-    "malaga": "Malaga",
-    "czech": "República Checa",
-    "spain": "España"
-  },
   "faqs": {
-    "what-is-erasmus-plus": {
-      "title": "Que es Erasmus+?",
-      "description": "Erasmus+ es el programa de la UE para apoyar la educación, la formación, la juventud y el deporte en Europa. Este programa ofrece oportunidades de movilidad en países de la Unión Europea y países socios, permitiéndote tener una experiencia única en el extranjero."
+    "erasmus": {
+      "what-is-erasmus-plus": {
+        "title": "Que es Erasmus+?",
+        "description": "Erasmus+ es el programa de la UE para apoyar la educación, la formación, la juventud y el deporte en Europa. Este programa ofrece oportunidades de movilidad en países de la Unión Europea y países socios, permitiéndote tener una experiencia única en el extranjero."
+      },
+      "how-to-erasmus-plus": {
+        "title": "¿Cómo establecer un proyecto de movilidad Erasmus+ con una agencia de movilidad asociada?",
+        "description": "Contáctanos ahora para descubrir más sobre nuestros servicios, las empresas de acogida y escuelas con las que colaboramos y cómo podemos ayudarte a realizar tu proyecto de movilidad Erasmus+. Puedes solicitar tu presupuesto gratuito en nuestra web."
+      },
+      "how-to-organize": {
+        "title": "¿Qué pasos debo seguir para organizar una movilidad Erasmus+ con una agencia de movilidad colaboradora?",
+        "description": "El primer paso es contactar con nosotros, evaluaremos tu proyecto de movilidad Erasmus+ con un enfoque personalizado para satisfacer tus necesidades y expectativas. Nuestro equipo de expertos en movilidad te apoyará durante todo el proceso."
+      },
+      "why-erasmus-plus": {
+        "title": "¿Por qué contactar con una agencia de movilidad colaboradora para organizar mi movilidad Erasmus+?",
+        "description": "*** garantiza un proyecto de movilidad Erasmus+ exitoso en diversos sectores profesionales y destinos. Colaboramos con una variedad de empresas, escuelas, instituciones y servicios de alojamiento que han sido cuidadosamente seleccionados para brindarte una experiencia Erasmus+ de alta calidad. Además, organizamos transporte, actividades culturales y brindamos apoyo local y servicios de tutoría para garantizar que los participantes se sientan apoyados."
+      }
     },
-    "how-to-erasmus-plus": {
-      "title": "¿Cómo establecer un proyecto de movilidad Erasmus+ con una agencia de movilidad asociada?",
-      "description": "Contáctanos ahora para descubrir más sobre nuestros servicios, las empresas de acogida y escuelas con las que colaboramos y cómo podemos ayudarte a realizar tu proyecto de movilidad Erasmus+. Puedes solicitar tu presupuesto gratuito en nuestra web."
+    "language-courses": {
+      "language-courses-offer": {
+        "title": "¿Qué tipo de cursos de idiomas ofrecemos?",
+        "description": "Ofrecemos una variedad de cursos de idiomas personalizados. Evaluamos su nivel de idioma y lo ubicamos en el nivel correcto desde el principio para garantizar que sus habilidades lingüísticas mejoren. Trabajamos con un equipo de profesores nativos apasionados que se asegurarán de que obtengas los mejores resultados."
+      }
     },
-    "why-erasmus-plus": {
-      "title": "¿Por qué contactar con una agencia de movilidad colaboradora para organizar mi movilidad Erasmus+?",
-      "description": "*** garantiza un proyecto de movilidad Erasmus+ exitoso en diversos sectores profesionales y destinos. Colaboramos con una variedad de empresas, escuelas, instituciones y servicios de alojamiento que han sido cuidadosamente seleccionados para brindarte una experiencia Erasmus+ de alta calidad. Además, organizamos transporte, actividades culturales y brindamos apoyo local y servicios de tutoría para garantizar que los participantes se sientan apoyados."
-    },
-    "languages-courses-offer": {
-      "title": "¿Qué tipo de cursos de idiomas ofrecemos?",
-      "description": "Ofrecemos una variedad de cursos de idiomas personalizados. Evaluamos su nivel de idioma y lo ubicamos en el nivel correcto desde el principio para garantizar que sus habilidades lingüísticas mejoren. Trabajamos con un equipo de profesores nativos apasionados que se asegurarán de que obtengas los mejores resultados."
-    },
-    "what-included": {
-      "title": "¿Qué está incluido en los servicios de conserjería para estudiantes?",
-      "description": "Student Concierge Services brinda servicios de apoyo personalizados para estudiantes internacionales que estudian en un país extranjero. Nuestro objetivo es brindar al estudiante la mejor y más cómoda experiencia de vida en el extranjero. Sabemos que dejar que su hijo vaya al extranjero para estudiar en un país extranjero puede ser estresante, para facilitar este proceso nos mantenemos conectados con el estudiante."
+    "concierge": {
+      "what-it-is": {
+        "title": "¿Qué es un programa de intercambio de estudiantes?",
+        "description": "Un programa de intercambio de estudiantes es un programa en el que estudiantes de una escuela secundaria o de educación superior estudian en el extranjero en una de las instituciones asociadas de su institución. Estos programas implican que el estudiante asista a clases en una institución extranjera, viva con una familia local en algunos casos y participe en actividades que son exclusivas de la cultura del país extranjero."
+      },
+      "what-included": {
+        "title": "¿Qué está incluido en los servicios de conserjería para estudiantes?",
+        "description": "Student Concierge Services brinda servicios de apoyo personalizados para estudiantes internacionales que estudian en un país extranjero. Nuestro objetivo es brindar al estudiante la mejor y más cómoda experiencia de vida en el extranjero. Sabemos que dejar que su hijo vaya al extranjero para estudiar en un país extranjero puede ser estresante, para facilitar este proceso que nos mantengamos conectados con el estudiante."
+      }
     }
   },
   "footer": {
-    "follow-us" : "Síguenos en",
+    "follow-us": "Síguenos en",
     "copyright": "Copyright © 2024. Nombre de la empresa. Todos los derechos reservados.",
-    "privacy-policy": "Política de rivacidad",
-    "pages": {
-      "home": "Bienvenido",
-      "services": "Nuestros Servicios",
-      "destinations": "Nuestros Destinos",
-      "about": "Sobre Nosotros",
-      "contact": "Contacto",
-      "404": "CUATRO ZERO CUATRO"
-    }
+    "privacy-policy": "Política de rivacidad"
   }
 }
