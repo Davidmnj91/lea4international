@@ -178,6 +178,12 @@
       "description": "No todos los proyectos son iguales y lo sabemos, en *** recibirás un trato totalmente personalizado. <b>Trabajamos duro para que puedas disfrutar de los resultados</b>"
     }
   },
+  "our-partners": {
+    "title": "Nuestros compañeros",
+    "partners": {
+      "name": "Erasmus+"
+    }
+  },
   "faqs": {
     "erasmus": {
       "what-is-erasmus-plus": {

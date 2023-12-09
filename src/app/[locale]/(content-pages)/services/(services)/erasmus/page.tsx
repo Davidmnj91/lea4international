@@ -4,11 +4,11 @@ import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { buttonTypes } from '@/components/button/button';
 import { Services } from '@/types/services';
-import work_experience_bg from '../../../../../../public/work_experience_bg.png';
-import we_offer_bg from '../../../../../../public/we_offer_bg.png';
-import job_shadowing_bg from '../../../../../../public/job_shadowing_bg.png';
-import school_exchange_bg from '../../../../../../public/school_exchange_bg.png';
-import erasmus_mundus_bg from '../../../../../../public/erasmus_mundus_bg.png';
+import work_experience_bg from '../../../../../../../public/work_experience_bg.png';
+import we_offer_bg from '../../../../../../../public/we_offer_bg.png';
+import job_shadowing_bg from '../../../../../../../public/job_shadowing_bg.png';
+import school_exchange_bg from '../../../../../../../public/school_exchange_bg.png';
+import erasmus_mundus_bg from '../../../../../../../public/erasmus_mundus_bg.png';
 import { Airplane } from '@phosphor-icons/react/dist/ssr/Airplane';
 import { Bank } from '@phosphor-icons/react/dist/ssr/Bank';
 import { FlowerLotus } from '@phosphor-icons/react/dist/ssr/FlowerLotus';
@@ -35,7 +35,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
           {t('title')}
         </h1>
       </div>
-      <div className='sticky top-0 z-20 flex items-center justify-center gap-6 border-y border-y-basics-disabled bg-basics-white px-12 py-6'>
+      <div className='sticky top-[80px] z-20 flex items-center justify-center gap-6 border-y border-y-basics-disabled bg-basics-white px-12 py-6'>
         {erasmusServices.map((service) => (
           <Link
             href={`#${service}`}

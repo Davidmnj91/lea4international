@@ -2,9 +2,9 @@ import { LanguagePageProps } from '@/i18n';
 import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { AnimatedCard } from '@/components/destination-card/animated-card';
-import concierge_bg from '../../../../public/concierge_bg.png';
-import erasmus_bg from '../../../../public/erasmus_bg.png';
-import language_courses_bg from '../../../../public/language_courses_bg.png';
+import concierge_bg from '../../../../../public/concierge_bg.png';
+import erasmus_bg from '../../../../../public/erasmus_bg.png';
+import language_courses_bg from '../../../../../public/language_courses_bg.png';
 import { Partners } from '@/components/partners/partners';
 import Link from 'next/link';
 

@@ -2,9 +2,9 @@ import Link from 'next/link';
 import { CaretLeft } from '@phosphor-icons/react/dist/ssr/CaretLeft';
 import { useTranslations } from 'next-intl';
 import { AnimatedCard } from '@/components/destination-card/animated-card';
-import language_courses_bg from '../../../../../public/language_courses_bg.png';
-import concierge_bg from '../../../../../public/concierge_bg.png';
-import erasmus_bg from '../../../../../public/erasmus_bg.png';
+import language_courses_bg from '../../../../../../public/language_courses_bg.png';
+import concierge_bg from '../../../../../../public/concierge_bg.png';
+import erasmus_bg from '../../../../../../public/erasmus_bg.png';
 import { headers } from 'next/headers';
 
 type RootServicesLayoutProps = {
@@ -38,7 +38,7 @@ export default function RootServicesLayout({
           {t.rich('other-services.description')}
         </p>
       </div>
-      <div className='mt-[-180px] flex h-[560px] items-center justify-center gap-4'>
+      <div className='mb-6 mt-[-180px] flex h-[584px] items-center justify-center gap-4'>
         {pathname !== 'erasmus' && (
           <Link href={'erasmus'}>
             <AnimatedCard
