@@ -1,4 +1,6 @@
 import clsx from 'clsx';
+import { ErrorMessage } from '@hookform/error-message';
+import { FieldErrors } from 'react-hook-form';
 
 export const labelStyles = clsx('font-body text-b-md text-europe-dark');
 export const inputStyles = clsx(
@@ -11,9 +13,27 @@ export const inputStyles = clsx(
 
 export const checkboxStyles = clsx(
   'w-5 h-5 mr-2 accent-europe-dark bg-europe-light border-europe-light outline-0',
-  ['focus:ring-europe-dark focus:ring-1']
+  ['focus:ring-europe-dark  focus:outline-none']
 );
 
 export const errorHintStyles = clsx(
   'font-body font-normal text-b-sm text-status-error'
 );
+
+export const ErrorField = ({
+  name,
+  errors,
+  message,
+}: {
+  name: string;
+  errors: FieldErrors;
+  message: string;
+}) => {
+  return (
+    <ErrorMessage
+      name={name}
+      errors={errors}
+      render={() => <span className={errorHintStyles}>{message}</span>}
+    />
+  );
+};

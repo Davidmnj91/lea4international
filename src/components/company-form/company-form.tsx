@@ -1,33 +1,34 @@
 'use client';
 
-import { FieldPath, useForm } from 'react-hook-form';
+import { Controller, FieldPath, useForm } from 'react-hook-form';
 import { useFormState, useFormStatus } from 'react-dom';
 import { useTranslations } from 'next-intl';
 import { ContactUsState, getContactUs } from '@/actions/contactUs';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useEffect } from 'react';
-import { ErrorMessage } from '@hookform/error-message';
-import { contactUsSchema } from '@/schemas/contactUsSchema';
+import { CompanyContactSchema } from '@/schemas/contactSchemas';
 import {
   checkboxStyles,
-  errorHintStyles,
+  ErrorField,
   inputStyles,
   labelStyles,
 } from '@/components/form/form';
 import { buttonTypes } from '@/components/button/button';
 import clsx from 'clsx';
+import ComboBoxWrapper from '@/components/select/select';
+import countries from '../../../public/countries.json';
 
 type ContactFormValues = {
   service: string;
   name: string;
-  lastName: string;
+  lastname: string;
   email: string;
   phone: string;
   nationality: string;
   message: string;
   terms: boolean;
 };
-export const ContactForm = () => {
+export const CompanyForm = () => {
   const { pending } = useFormStatus();
   const [state, formAction] = useFormState<ContactUsState, FormData>(
     getContactUs,
@@ -35,14 +36,15 @@ export const ContactForm = () => {
   );
   const {
     register,
+    control,
     formState: { isValid, errors },
     setError,
   } = useForm<ContactFormValues>({
     mode: 'all',
-    resolver: zodResolver(contactUsSchema),
+    resolver: zodResolver(CompanyContactSchema),
   });
 
-  const t = useTranslations('contact-form');
+  const t = useTranslations('company-form');
 
   useEffect(() => {
     if (!state) {
@@ -67,21 +69,40 @@ export const ContactForm = () => {
         <div className='flex gap-16'>
           <div className='flex flex-[0_0_50%] flex-col gap-9'>
             <div>
-              <label htmlFor='service' className={labelStyles}>
-                {t('input.service.label')}
-              </label>
-              <input
-                id='service'
-                {...register('service')}
-                className={inputStyles}
-                placeholder={t('input.service.placeholder')}
+              <Controller
+                name='service'
+                control={control}
+                render={({ field: { onChange, value, onBlur } }) => (
+                  <ComboBoxWrapper
+                    label={t('input.service.label')}
+                    placeholder={t('input.service.placeholder')}
+                    value={value}
+                    onChange={onChange}
+                    onBlur={onBlur}
+                    options={[
+                      {
+                        id: 'erasmus',
+                        label: t('input.service.options.erasmus'),
+                        value: 'erasmus',
+                      },
+                      {
+                        id: 'language-courses',
+                        label: t('input.service.options.language-courses'),
+                        value: 'language-courses',
+                      },
+                      {
+                        id: 'concierge',
+                        label: t('input.service.options.concierge'),
+                        value: 'concierge',
+                      },
+                    ]}
+                  />
+                )}
               />
-              <ErrorMessage
+              <ErrorField
                 name='service'
                 errors={errors}
-                render={({ message }) => (
-                  <span className={errorHintStyles}>{message}</span>
-                )}
+                message={t('input.service.error')}
               />
             </div>
             <div>
@@ -94,30 +115,26 @@ export const ContactForm = () => {
                 className={inputStyles}
                 placeholder={t('input.name.placeholder')}
               />
-              <ErrorMessage
+              <ErrorField
                 name='name'
                 errors={errors}
-                render={({ message }) => (
-                  <span className={errorHintStyles}>{message}</span>
-                )}
+                message={t('input.name.error')}
               />
             </div>
             <div>
-              <label htmlFor='lastName' className={labelStyles}>
-                {t('input.last-name.label')}
+              <label htmlFor='lastname' className={labelStyles}>
+                {t('input.lastname.label')}
               </label>
               <input
-                id='lastName'
-                {...register('lastName')}
+                id='lastname'
+                {...register('lastname')}
                 className={inputStyles}
-                placeholder={t('input.last-name.placeholder')}
+                placeholder={t('input.lastname.placeholder')}
               />
-              <ErrorMessage
-                name='lastName'
+              <ErrorField
+                name='lastname'
                 errors={errors}
-                render={({ message }) => (
-                  <span className={errorHintStyles}>{message}</span>
-                )}
+                message={t('input.lastname.error')}
               />
             </div>
             <div>
@@ -130,12 +147,10 @@ export const ContactForm = () => {
                 className={inputStyles}
                 placeholder={t('input.email.placeholder')}
               />
-              <ErrorMessage
+              <ErrorField
                 name='email'
                 errors={errors}
-                render={({ message }) => (
-                  <span className={errorHintStyles}>{message}</span>
-                )}
+                message={t('input.email.error')}
               />
             </div>
             <div>
@@ -148,16 +163,39 @@ export const ContactForm = () => {
                 className={inputStyles}
                 placeholder={t('input.phone.placeholder')}
               />
-              <ErrorMessage
+              <ErrorField
                 name='phone'
                 errors={errors}
-                render={({ message }) => (
-                  <span className={errorHintStyles}>{message}</span>
-                )}
+                message={t('input.phone.error')}
               />
             </div>
           </div>
           <div className='flex flex-[0_0_50%] flex-col gap-9'>
+            <div>
+              <Controller
+                name='nationality'
+                control={control}
+                render={({ field: { onChange, value, onBlur } }) => (
+                  <ComboBoxWrapper
+                    label={t('input.nationality.label')}
+                    placeholder={t('input.nationality.placeholder')}
+                    value={value}
+                    onChange={onChange}
+                    onBlur={onBlur}
+                    options={countries.map(({ name, code }) => ({
+                      id: code,
+                      value: name,
+                      label: name,
+                    }))}
+                  />
+                )}
+              />
+              <ErrorField
+                name='nationality'
+                errors={errors}
+                message={t('input.nationality.error')}
+              />
+            </div>
             <div>
               <label htmlFor='message' className={labelStyles}>
                 {t('input.message.label')}
@@ -169,31 +207,32 @@ export const ContactForm = () => {
                 className={clsx('h-[250px]', inputStyles)}
                 placeholder={t('input.message.placeholder')}
               />
-              <ErrorMessage
+              <ErrorField
                 name='message'
                 errors={errors}
-                render={({ message }) => (
-                  <span className={errorHintStyles}>{message}</span>
-                )}
+                message={t('input.message.error')}
               />
             </div>
 
-            <div>
-              <input
-                type='checkbox'
-                id='terms'
-                {...register('terms')}
-                className={checkboxStyles}
-              />
-              <label htmlFor='terms' className={clsx('text-b-sm', labelStyles)}>
-                {t('input.terms')}
-              </label>
-              <ErrorMessage
+            <div className='flex flex-col'>
+              <div className='flex items-center gap-2'>
+                <input
+                  type='checkbox'
+                  id='terms'
+                  {...register('terms')}
+                  className={checkboxStyles}
+                />
+                <label
+                  htmlFor='terms'
+                  className={clsx('text-b-sm', labelStyles)}
+                >
+                  {t('input.terms.label')}
+                </label>
+              </div>
+              <ErrorField
                 name='terms'
                 errors={errors}
-                render={({ message }) => (
-                  <span className={errorHintStyles}>{message}</span>
-                )}
+                message={t('input.terms.error')}
               />
             </div>
             <button

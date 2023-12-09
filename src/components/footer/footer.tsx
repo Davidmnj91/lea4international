@@ -6,10 +6,10 @@ import { Envelope, Phone } from '@phosphor-icons/react';
 import {
   FacebookIcon,
   InstagramIcon,
-  TwitterIcon,
   YoutubeIcon,
 } from '@/components/icons/social-icons';
 import { Menu } from '@/components/menu/menu';
+import { Contact } from '@/types/contact';
 
 export const Footer = () => {
   const t = useTranslations('footer');
@@ -19,21 +19,22 @@ export const Footer = () => {
       <div className='flex w-full justify-between gap-11'>
         <div className='flex flex-col justify-between gap-12'>
           <h1 className='font-body text-b-xxl text-basics-white'>LOGO</h1>
-          <div>
-            <div className='flex gap-6 text-basics-white'>
+          <div className='flex flex-col gap-2'>
+            <div className='flex items-center  gap-6 text-basics-white'>
               <Envelope size={32} />
               <span className='font-body text-b-md'>[mail]@[mail]</span>
             </div>
-            <div className='flex gap-6 text-basics-white'>
+            <div className='flex items-center  gap-6 text-basics-white'>
               <Phone size={32} />
-              <span className='font-body text-b-md'>+00 000 00 000</span>
+              <a href={`tel:${Contact.phone}`} className='font-body text-b-md'>
+                {Contact.phone}
+              </a>
             </div>
           </div>
           <div className='flex gap-4 text-basics-white'>
             <span className='font-body text-b-md'>{t('follow-us')}</span>
             <InstagramIcon size={24} />
             <FacebookIcon size={24} />
-            <TwitterIcon size={24} />
             <YoutubeIcon size={24} />
           </div>
         </div>

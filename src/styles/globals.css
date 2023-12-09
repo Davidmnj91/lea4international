@@ -2,26 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.react-datepicker__input-container > input {
+    border-bottom: 1px solid #45586A !important;
+    height: 40px !important;
+    width: 100% !important;
+    background-color: transparent !important;
+    color: #45586A !important;
+
+    &:focus, &:hover {
+        border-bottom: 2px solid #030822 !important;
+        color: #030822;
+        outline: none;
+    }
 }
 
-/*@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}*/
+.react-datepicker__day--selected, .react-datepicker__day--in-range {
+    background-color: #2E3B48 !important;
+}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  /*background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));*/
+.react-datepicker__day--in-selecting-range {
+    background-color: #45586A !important;
 }

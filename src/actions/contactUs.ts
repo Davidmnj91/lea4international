@@ -3,7 +3,7 @@
 import { Nullable, ValidationErrors } from '@/types/types';
 import { zfd } from 'zod-form-data';
 import { ZodError } from 'zod';
-import { contactUsSchema } from '@/schemas/contactUsSchema';
+import { contactSchemas } from '@/schemas/contactSchemas';
 import { getValidationErrors } from '@/utils/getValidationErrors';
 import { sendMail } from '@/services/mail.service';
 import { renderAsync } from '@react-email/render';
@@ -22,7 +22,7 @@ type ContactUsError = {
 
 export type ContactUsState = Nullable<ContactUsSuccess | ContactUsError>;
 
-const contactUsFormDataSchema = zfd.formData(contactUsSchema);
+const contactUsFormDataSchema = zfd.formData(contactSchemas);
 
 export async function getContactUs(
   prevState: ContactUsState | null,

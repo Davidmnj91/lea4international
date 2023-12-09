@@ -147,7 +147,8 @@
     "roles": {
       "company": "Company",
       "host-family": "Host family",
-      "institutions": "Schools or institutions"
+      "institutions": "Schools or institutions",
+      "partner": "Become a partner"
     }
   },
   "not-found-page": {
@@ -156,37 +157,253 @@
   "contact-us": {
     "text": "Contact us"
   },
-  "contact-form": {
+  "company-form": {
     "input": {
       "service": {
         "label": "What type of service are you interested in?",
-        "placeholder": "Enter What type of service are you interested in?"
+        "placeholder": "Choose one",
+        "options": {
+          "erasmus": "Erasmus+ Projects",
+          "language-courses": "Language courses",
+          "concierge": "Concierge & Tutoring Services"
+        },
+        "error": "Please select a service you are interested of"
       },
       "name": {
         "label": "Name",
-        "placeholder": "Enter Name"
+        "placeholder": "Enter Name",
+        "error": "Please provide a name"
       },
-      "last-name": {
+      "lastname": {
         "label": "Last name",
-        "placeholder": "Enter your last name"
+        "placeholder": "Enter your last name",
+        "error": "Please provide a last name"
       },
       "email": {
         "label": "Email address",
-        "placeholder": "Enter Email address"
+        "placeholder": "Enter Email address",
+        "error": "Please provide a valid email"
       },
       "phone": {
         "label": "Phone",
-        "placeholder": "Enter Phone"
+        "placeholder": "Enter Phone",
+        "error": "Please provide a valid phone"
       },
       "nationality": {
         "label": "Nationality",
-        "placeholder": "Enter Nationality"
+        "placeholder": "Enter Nationality",
+        "error": "Please select a nationality"
       },
       "message": {
         "label": "Tell us more, what would you like to know?",
-        "placeholder": "Enter your message"
+        "placeholder": "Enter your message",
+        "error": "Please provide a message"
       },
-      "terms": "I accept to acknowledge that I have read and agree to the privacy policies before submitting the form"
+      "terms": {
+        "label": "I accept to acknowledge that I have read and agree to the privacy policies before submitting the form",
+        "error": "You must accept the terms and conditions"
+      }
+    },
+    "submit": "Send form"
+  },
+  "family-form": {
+    "input": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Enter Name",
+        "error": "Please provide a name"
+      },
+      "lastname": {
+        "label": "Last name",
+        "placeholder": "Enter your last name",
+        "error": "Please provide a last name"
+      },
+      "email": {
+        "label": "Email address",
+        "placeholder": "Enter Email address",
+        "error": "Please provide a valid email"
+      },
+      "phone": {
+        "label": "Phone",
+        "placeholder": "Enter Phone",
+        "error": "Please provide a valid phone"
+      },
+      "city": {
+        "label": "City where you live",
+        "placeholder": "Enter city name",
+        "error": "Please provide a city"
+      },
+      "zipCode": {
+        "label": "ZIP code",
+        "placeholder": "Enter ZIP code",
+        "error": "Please provide a ZIP code"
+      },
+      "hostSize": {
+        "label": "How many students can you host?",
+        "placeholder": "Add a number",
+        "error": "Please provide your student capacity"
+      },
+      "message": {
+        "label": "Tell us more, what would you like to know?",
+        "placeholder": "Enter your message",
+        "error": "Please provide a message"
+      },
+      "terms": {
+        "label": "I accept to acknowledge that I have read and agree to the privacy policies before submitting the form",
+        "error": "You must accept the terms and conditions"
+      }
+    },
+    "submit": "Send form"
+  },
+  "institution-form": {
+    "input": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Enter Name",
+        "error": "Please provide a name"
+      },
+      "lastname": {
+        "label": "Last name",
+        "placeholder": "Enter your last name",
+        "error": "Please provide a last name"
+      },
+      "email": {
+        "label": "Email address",
+        "placeholder": "Enter Email address",
+        "error": "Please provide a valid email"
+      },
+      "phone": {
+        "label": "Phone",
+        "placeholder": "Enter Phone",
+        "error": "Please provide a valid phone"
+      },
+      "nationality": {
+        "label": "Nationality",
+        "placeholder": "Enter Nationality",
+        "error": "Please select a nationality"
+      },
+      "institutionName": {
+        "label": "Name of your school / institution",
+        "placeholder": "Enter Name",
+        "error": "Please provide a name"
+      },
+      "city": {
+        "label": "Destination city",
+        "placeholder": "Enter destination city",
+        "error": "Please provide a destination city"
+      },
+      "hostSize": {
+        "label": "How many students can you host?",
+        "placeholder": "Enter a number",
+        "error": "Please provide your student capacity"
+      },
+      "dateRange": {
+        "label": "Expected date",
+        "placeholder": "00/00/0000 - 00/00/0000",
+        "error": "Please provide a valid range"
+      },
+      "supervisorNumber": {
+        "label": "Number of accompanying persons",
+        "placeholder": "Enter a number",
+        "error": "Please provide your supervisor amount"
+      },
+      "accommodationType": {
+        "label": "Type of accommodation",
+        "placeholder": "Choose one",
+        "error": "Please specify the accommodation type",
+        "options": {
+          "apartment": "Apartment",
+          "student-residence": "Student residence",
+          "hotel": "Hotel",
+          "hostel": "Hostel",
+          "host-family": "Host Family"
+        }
+      },
+      "roomType": {
+        "label": "Type of room",
+        "placeholder": "Choose one",
+        "error": "Please specify the room type",
+        "options": {
+          "single": "Single room",
+          "double": "Double room",
+          "triple": "Triple room",
+          "quadruple": "Quadruple room"
+        }
+      },
+      "boardType": {
+        "label": "Type of board",
+        "placeholder": "Choose one",
+        "error": "Please specify the board type",
+        "options": {
+          "self-catering": "Self-catering",
+          "Breakfast": "Breakfast included",
+          "half-board": "Half-board",
+          "full-board": "Full-board"
+        }
+      },
+      "roundTripIncluded": {
+        "label": "Would you like to include a round trip airport transfer in your quote?",
+        "placeholder": "Choose one",
+        "error": "Please specify if transport is included",
+        "options": {
+          "yes": "Arrival & departure included",
+          "arrival": "Arrival included",
+          "departure": "Departure included",
+          "no": "None included"
+        }
+      },
+      "culturalActivitiesIncluded": {
+        "label": "Do you want to include any type of cultural activities?",
+        "placeholder": "Choose one",
+        "error": "Please specify if cultural activities are included",
+        "options": {
+          "yes": "Yes",
+          "no": "No"
+        }
+      },
+      "terms": {
+        "label": "I accept to acknowledge that I have read and agree to the privacy policies before submitting the form",
+        "error": "You must accept the terms and conditions"
+      }
+    },
+    "submit": "Send form"
+  },
+  "partner-form": {
+    "input": {
+      "service": {
+        "label": "What type of service are you interested in?",
+        "placeholder": "Choose one",
+        "options": {
+          "erasmus": "Erasmus+ Projects",
+          "language-courses": "Language courses",
+          "concierge": "Concierge & Tutoring Services"
+        },
+        "error": "Please select a service you are interested of"
+      },
+      "name": {
+        "label": "Name",
+        "placeholder": "Enter Name",
+        "error": "Please provide a name"
+      },
+      "lastname": {
+        "label": "Last name",
+        "placeholder": "Enter your last name",
+        "error": "Please provide a last name"
+      },
+      "applicantName": {
+        "label": "Name of the applicant",
+        "placeholder": "Enter applicant name",
+        "error": "Please provide a valid name"
+      },
+      "email": {
+        "label": "Email address",
+        "placeholder": "Enter Email address",
+        "error": "Please provide a valid email"
+      },
+      "terms": {
+        "label": "I accept to acknowledge that I have read and agree to the privacy policies before submitting the form",
+        "error": "You must accept the terms and conditions"
+      }
     },
     "submit": "Send form"
   },

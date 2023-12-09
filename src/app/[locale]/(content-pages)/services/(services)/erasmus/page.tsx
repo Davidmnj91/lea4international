@@ -117,10 +117,11 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
             </ul>
           </div>
           <div
-            className='sticky top-0 flex-[0_0_40%]'
+            className='flex-[0_0_40%]'
             style={{
               backgroundImage: `url(${we_offer_bg.src})`,
               backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover',
             }}
           />
         </div>

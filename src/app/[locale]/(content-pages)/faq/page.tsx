@@ -1,7 +1,7 @@
 import { LanguagePageProps } from '@/i18n';
 import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
-import { buttonTypes } from '@/components/button/button';
+import { tagButtonTypes } from '@/components/button/button';
 import { FaqList } from '@/components/faq-list/faq-list';
 import Link from 'next/link';
 import { FAQCategories, Faqs } from '@/types/faq';
@@ -19,13 +19,13 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
           {t('title')}
         </h1>
       </div>
-      <div className='sticky top-0 flex items-center justify-center gap-6 border-y border-y-basics-disabled bg-basics-white px-12 py-6'>
+      <div className='sticky top-20 flex items-center justify-center gap-6 border-y border-y-basics-disabled bg-basics-white px-12 py-6'>
         {Object.values(FAQCategories).map((category) => (
           <Link
             href={`#${category}`}
             scroll={true}
             key={category}
-            className={buttonTypes({ intent: 'secondary-light' })}
+            className={tagButtonTypes()}
           >
             {t(`categories.${category}`)}
           </Link>
