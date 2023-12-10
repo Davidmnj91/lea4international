@@ -7,7 +7,7 @@ type BigButtonProps = {
 };
 export const BigButton = ({ title, caption }: BigButtonProps) => {
   return (
-    <button className='group flex h-[158px] w-[310px] flex-col justify-between border border-basics-white p-2.5 hover:border-star-dark'>
+    <button className='group flex h-[158px] flex-col justify-between border border-basics-white p-2.5 hover:border-star-dark desktop:w-[310px]'>
       <h4 className='text-left font-title text-desktop-h-lg font-bold text-basics-white'>
         {title}
       </h4>

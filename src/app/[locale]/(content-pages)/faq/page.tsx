@@ -22,7 +22,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
         </h1>
       </div>
       <section id='faq' className='relative'>
-        <div className='sticky top-20 flex items-center gap-6 overflow-auto border-y border-y-basics-disabled bg-basics-white px-6 py-6 desktop:justify-center desktop:px-12'>
+        <div className='sticky top-20 flex items-center gap-6 overflow-auto border-y border-y-basics-disabled bg-basics-white px-6 py-6 desktop:justify-center desktop:overflow-hidden desktop:px-12'>
           {Object.values(FAQCategories).map((category) => (
             <Link
               href={`#${category}`}

@@ -8,11 +8,9 @@ type ServiceItemProps = {
 };
 export const ServiceItem = ({ title, description, icon }: ServiceItemProps) => {
   return (
-    <li className='flex items-center border border-gold'>
-      <div className='flex h-full items-center border-r border-r-gold p-4'>
-        {icon}
-      </div>
-      <div className='p-4'>
+    <li className='flex flex-col items-center border border-gold desktop:flex-row'>
+      <div className='flex h-full items-center p-4'>{icon}</div>
+      <div className='border-t border-t-gold p-4 desktop:border-r desktop:border-t-0 desktop:border-r-gold'>
         <h3 className='font-title text-desktop-h-md text-europe-dark'>
           {title}
         </h3>

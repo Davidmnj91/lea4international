@@ -16,7 +16,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
 
   return (
     <div>
-      <div className='flex h-[410px] flex-col items-center gap-6 bg-europe px-2.5 py-14'>
+      <div className='flex h-[410px] flex-col items-center gap-6 bg-europe px-2.5 py-8 desktop:py-14'>
         <h1 className='font-title text-desktop-h-2xl text-basics-white'>
           {t('title')}
         </h1>
@@ -24,7 +24,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
           {t.rich('message')}
         </span>
       </div>
-      <div className='mt-[-160px] flex items-center justify-center gap-4'>
+      <div className='mt-[-180px] flex items-center gap-4 overflow-auto p-6 desktop:mt-[-160px] desktop:justify-center desktop:overflow-hidden'>
         <Link href={'services/erasmus'}>
           <AnimatedCard
             imgSrc={erasmus_bg.src}

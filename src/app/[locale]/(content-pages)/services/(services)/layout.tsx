@@ -30,7 +30,7 @@ export default function RootServicesLayout({
         </Link>
       </div>
       {children}
-      <div className='flex h-[400px] flex-col items-center gap-6 bg-europe px-2.5 py-14'>
+      <div className='flex h-[410px] flex-col items-center gap-6 bg-europe px-2.5 py-8 text-center desktop:py-14 desktop:text-left'>
         <h3 className='font-title text-desktop-h-2xl text-basics-white'>
           {t('other-services.title')}
         </h3>
@@ -38,7 +38,7 @@ export default function RootServicesLayout({
           {t.rich('other-services.description')}
         </p>
       </div>
-      <div className='mb-6 mt-[-180px] flex h-[584px] items-center justify-center gap-4'>
+      <div className='mt-[-80px] flex items-center gap-4 overflow-auto p-6 desktop:mt-[-160px] desktop:justify-center desktop:overflow-hidden'>
         {pathname !== 'erasmus' && (
           <Link href={'erasmus'}>
             <AnimatedCard
