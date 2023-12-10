@@ -26,8 +26,8 @@
       "description": "At *** We believe that having an experience abroad is a great opportunity to open your mind, explore <b>different cultures and speak other languages.</b>\n Thanks to globalization, we live in a connected world that offers many opportunities to <b>travel and explore</b> outside of our home country."
     },
     "coming-challenges": {
-      "title": "Superando Desafíos",
-      "description": "Salir de tu zona de confort e ir al extranjero puede resultar estresante y desafiante.\nPor eso en *** queremos <b>hacer más fácil tu experiencia en el extranjero</b>. Apoyamos su proyecto realizando todos los trámites necesarios."
+      "title": "Overcoming Challenges",
+      "description": "Leaving your comfort zone and going abroad can be stressful and challenging.<br></br>This is why at *** We want to make your experience abroad easier. We support your project by making all the necessary arrangements."
     },
     "our-commitment": {
       "title": "Our Commitment"
@@ -48,11 +48,11 @@
       "see-more": "See more questions"
     },
     "more-info": {
-      "title": "Looking For More <br>Information?</br>",
-      "questions": "We are here to answer all your questions. <br></br> <br>Contact us today!</br>",
+      "title": "Looking For More</br>Information?",
+      "questions": "We are here to answer all your questions. </br></br> Contact us today!",
       "more-info": "More Information",
-      "request-quote": "Request <br>A Quote</br>",
-      "host-family": "Become A <br>Host Family</br>",
+      "request-quote": "Request </br>A Quote",
+      "host-family": "Become A </br>Host Family",
       "contact-us": "Contact Us"
     },
     "help-you": "We Are Looking Forward To Helping You Enjoy Your Educational Adventure",
@@ -60,7 +60,7 @@
   },
   "services-page": {
     "title": "Our Services",
-    "message": "Select & discover from our services to learn <br>more about them.</br>",
+    "message": "Select & discover from our services to learn <br></br>more about them.",
     "services": {
       "see-more": "See More",
       "back-to-services": "Back to our services",

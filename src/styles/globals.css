@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    scroll-margin-top: 80px;
+}
+
 .react-datepicker__input-container > input {
     border-bottom: 1px solid #45586A !important;
     height: 40px !important;

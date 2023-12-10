@@ -20,7 +20,6 @@ import { Menu } from '@/components/menu/menu';
 import LocaleSwitcher from '@/components/locale-switcher/locale-switcher';
 import React, { useRef } from 'react';
 import { motion, useInView, Variants } from 'framer-motion';
-import { BigButton } from '@/components/button/big-button';
 
 const FaqsHome: Subset<typeof Faqs> = {
   [FAQCategories.erasmus]: [
@@ -307,21 +306,36 @@ export default function HomePage() {
         <section id='more-info'>
           <div className='my-14 flex items-center justify-center'>
             <div className='m-auto flex flex-col gap-9 bg-europe p-14'>
-              <h3 className='font-title text-desktop-h-2xl text-basics-white'>
-                {t.rich('more-info.title')}
-              </h3>
+              <h3
+                className='font-title text-desktop-h-2xl text-basics-white'
+                dangerouslySetInnerHTML={{
+                  __html: t.raw('more-info.title'),
+                }}
+              />
               <div>
-                <p className='font-body text-b-lg font-light text-basics-white'>
-                  {t.rich('more-info.questions')}
-                </p>
+                <p
+                  className='font-body text-b-lg font-light text-basics-white'
+                  dangerouslySetInnerHTML={{
+                    __html: t.raw('more-info.questions'),
+                  }}
+                />
               </div>
               <div className='flex w-full justify-between gap-[30px]'>
                 {['more-info', 'request-quote', 'host-family'].map((title) => (
-                  <BigButton
+                  <button
                     key={title}
-                    title={t.rich(`more-info.${title}`)}
-                    caption={t('more-info.contact-us')}
-                  />
+                    className='group flex h-[158px] w-[310px] flex-col justify-between border border-basics-white p-2.5 hover:border-star-dark'
+                  >
+                    <h4
+                      className='text-left font-title text-desktop-h-lg font-bold text-basics-white'
+                      dangerouslySetInnerHTML={{
+                        __html: t.raw(`more-info.${title}`),
+                      }}
+                    />
+                    <span className='self-end font-title text-desktop-h-sm text-basics-white group-hover:text-star-dark'>
+                      {t('more-info.contact-us')}
+                    </span>
+                  </button>
                 ))}
               </div>
             </div>

@@ -49,7 +49,7 @@ export const buttonTypes = cva(
 );
 
 export const tagButtonTypes = cva(
-  'inline-flex px-1 py-2.5 justify-center items-center rounded-[30px] font-body text-b-md border border-europe-dark text-europe-dark hover:bg-star-light hover:font-normal',
+  'inline-flex py-1 px-2.5 justify-center items-center rounded-[30px] font-body text-b-md border border-europe-dark text-europe-dark hover:bg-star-light hover:font-normal',
   {
     variants: {
       intent: {

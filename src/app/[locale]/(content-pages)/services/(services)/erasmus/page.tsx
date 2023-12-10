@@ -75,7 +75,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
             }}
           >
             <div className='absolute right-[-90px] top-16 flex h-[240px] w-[245px] flex-[0_0_40%] items-center justify-center bg-europe p-6'>
-              <div className='flex-grow border border-basics-white'>
+              <div className='flex-grow border border-basics-white p-2.5'>
                 <span className='font-title text-desktop-h-lg text-basics-white'>
                   {t.rich('categories.work-experience.with')}
                 </span>
@@ -146,7 +146,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
             }}
           >
             <div className='absolute right-[-90px] top-16 flex h-[240px] w-[245px] flex-[0_0_40%] items-center justify-center bg-europe p-6'>
-              <div className='flex-grow border border-basics-white'>
+              <div className='flex-grow border border-basics-white p-2.5'>
                 <span className='font-title text-desktop-h-lg text-basics-white'>
                   {t.rich('categories.job-shadowing.with')}
                 </span>
@@ -188,7 +188,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
             }}
           >
             <div className='absolute right-[-90px] top-16 flex h-[240px] w-[245px] flex-[0_0_40%] items-center justify-center bg-europe p-6'>
-              <div className='flex-grow border border-basics-white'>
+              <div className='flex-grow border border-basics-white p-2.5'>
                 <span className='font-title text-desktop-h-lg text-basics-white'>
                   {t.rich('categories.school-exchange.with')}
                 </span>
@@ -230,7 +230,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
             }}
           >
             <div className='absolute right-[-90px] top-16 flex h-[240px] w-[245px] flex-[0_0_40%] items-center justify-center bg-europe p-6'>
-              <div className='flex-grow border border-basics-white'>
+              <div className='flex-grow border border-basics-white p-2.5'>
                 <span className='font-title text-desktop-h-lg text-basics-white'>
                   {t.rich('categories.erasmus-mundus.with')}
                 </span>
