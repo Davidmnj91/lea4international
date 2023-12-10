@@ -19,5 +19,11 @@ export default getRequestConfig(async ({ locale }: { locale: string }) => ({
         {chunks}
       </>
     ),
+    li: (chunks) => (
+      <li>
+        <span className='mr-2'>&#8226;</span>
+        <span>{chunks}</span>
+      </li>
+    ),
   },
 }));

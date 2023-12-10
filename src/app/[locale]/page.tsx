@@ -16,11 +16,11 @@ import { FaqList } from '@/components/faq-list/faq-list';
 import { FAQCategories, Faqs } from '@/types/faq';
 import { Subset } from '@/types/types';
 import { Partners } from '@/components/partners/partners';
-import { Language } from '@/i18n';
 import { Menu } from '@/components/menu/menu';
 import LocaleSwitcher from '@/components/locale-switcher/locale-switcher';
 import React, { useRef } from 'react';
 import { motion, useInView, Variants } from 'framer-motion';
+import { BigButton } from '@/components/button/big-button';
 
 const FaqsHome: Subset<typeof Faqs> = {
   [FAQCategories.erasmus]: [
@@ -30,10 +30,6 @@ const FaqsHome: Subset<typeof Faqs> = {
   ],
   [FAQCategories.languageCourses]: ['language-courses-offer'],
   [FAQCategories.concierge]: ['what-included'],
-};
-
-type HomePageProps = {
-  params: { locale: Language };
 };
 
 export default function HomePage() {
@@ -321,17 +317,11 @@ export default function HomePage() {
               </div>
               <div className='flex w-full justify-between gap-[30px]'>
                 {['more-info', 'request-quote', 'host-family'].map((title) => (
-                  <button
+                  <BigButton
                     key={title}
-                    className='group flex h-[158px] w-[310px] flex-col justify-between border border-basics-white p-2.5 hover:border-star-dark'
-                  >
-                    <h4 className='text-left font-title text-desktop-h-lg font-bold text-basics-white'>
-                      {t.rich(`more-info.${title}`)}
-                    </h4>
-                    <span className='self-end font-title text-desktop-h-sm text-basics-white group-hover:text-star-dark'>
-                      {t('more-info.contact-us')}
-                    </span>
-                  </button>
+                    title={t.rich(`more-info.${title}`)}
+                    caption={t('more-info.contact-us')}
+                  />
                 ))}
               </div>
             </div>

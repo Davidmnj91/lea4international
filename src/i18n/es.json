@@ -118,12 +118,105 @@
           "KA-2": {
             "title": "KA2 - Buscamos socios",
             "description": "Los proyectos de acción KA2 son una combinación de proyectos descentralizados gestionados por las agencias nacionales y actividades centralizadas gestionadas por la Agencia Ejecutiva de la Comisión Europea."
+          },
+          "become-partner": {
+            "title": "Convertirse en un compañero",
+            "description": "Estamos aquí para responder a todas tus preguntas. <br></br><br></br>¡Contáctenos hoy!",
+            "button": {
+              "title": "Conviértase en<br></br>socio",
+              "caption": "Contacta con nosotros"
+            }
           }
         }
       },
       "language-courses": {
-        "title": "Cursos de inglés y español",
-        "categories": {}
+        "title": "Cursos de idiomas y capacitaciones en IA",
+        "sub-title": "Cursos de idioma",
+        "description": "En *** Podrás aprender inglés o español con nuestros profesores nativos titulados. Las lecciones interesantes y dinámicas te harán sentir cómodo desde el principio. Aprende y mejora tus habilidades lingüísticas mientras te diviertes.",
+        "overview": "Descripción general",
+        "categories": {
+          "english-courses": {
+            "title": "Cursos de Inglés",
+            "description": "¿Has pasado años aprendiendo inglés en la escuela pero aún te falta fluidez y confianza para hablar inglés? <br></br><br></br> Entonces este es el curso adecuado para ti.",
+            "we-offer": {
+              "focus": {
+                "title": "Durante este curso nuestros profesores de inglés<br></br>Se centrarán en:",
+                "description": "<li>Identifica tus dificultades habladas y desafíos de pronunciación.</li><li>Elimina cualquier error gramatical o de pronunciación.</li><li>Te brinda temas para practicar la conversación.</li><li>Amplía tu vocabulario. enseñándote frases comunes.</li>"
+              },
+              "help": {
+                "title": "Este curso te ayudará a:",
+                "description": "<li>Mejora tu fluidez al hablar inglés</li><li>Aumenta tu confianza al hablar inglés.</li><li>Mejora tu pronunciación y acento.</li><li>Amplía tu vocabulario en inglés.</li>"
+              },
+              "details": {
+                "title": "Detalles:",
+                "description": "<li>Horario flexible cursos de mañana, tarde, noche y fin de semana.</li><li>Tamaño del grupo máximo 10 estudiantes por clase</li><li>Duración de 1 a 20 semanas.</li><li>Precio: </li>"
+              }
+            }
+          },
+          "business-english-courses": {
+            "title": "Cursos de inglés de negocios",
+            "description": "¿Sientes que te falta confianza y vocabulario cuando tienes que hablar inglés en tu lugar de trabajo?<br></br><br></br>Entonces este es el curso adecuado para ti.",
+            "we-offer": {
+              "focus": {
+                "title": "Durante este curso nuestros profesores de inglés <br>Se centrarán en:</br>",
+                "description": "<li>Eliminar cualquier error gramatical o de pronunciación.</li><li>Proporcionarle escenarios de la vida real en el lugar de trabajo para practicar la conversación.</li><li>Ampliar su vocabulario empresarial.</li><li>Escribir negocios informes y notas.</li>"
+              },
+              "help": {
+                "title": "Este curso te ayudará a:",
+                "description": "<li>Mejora tu fluidez al hablar inglés en el lugar de trabajo.</li><li>Aumenta tu confianza al hablar inglés en el lugar de trabajo.</li><li>Mejora tu pronunciación y acento.</li><li> Amplíe su vocabulario relacionado con los negocios en inglés.</li>"
+              },
+              "details": {
+                "title": "Detalles:",
+                "description": "<li>Horario flexible cursos de mañana, tarde, noche y fin de semana.</li><li>Tamaño del grupo máximo 10 estudiantes por clase</li><li>Duración de 1 a 20 semanas.</li><li>Precio :</li>"
+              }
+            }
+          },
+          "spanish-courses": {
+            "title": "Cursos de Español",
+            "description": "Curso de español conversacional<br></br><br></br>¿Has pasado años aprendiendo español en la escuela pero aún te falta fluidez y confianza para hablar español?<br></br><br></br>Entonces este es el curso adecuado para ti",
+            "we-offer": {
+              "focus": {
+                "title": "Durante este curso nuestros profesores de español <br>Se centrarán en:</br>",
+                "description": "<li>Identifica tus dificultades habladas y desafíos de pronunciación.</li><li>Elimina cualquier error gramatical o de pronunciación.</li><li>Te brinda temas para practicar la conversación.</li><li>Amplía tu vocabulario. enseñándote frases comunes.</li>"
+              },
+              "help": {
+                "title": "Este curso te ayudará a:",
+                "description": "<li>Mejora tu fluidez al hablar español</li><li>Aumenta tu confianza al hablar español.</li><li>Mejora tu pronunciación y acento.</li><li>Amplía tu vocabulario en español.</li>"
+              },
+              "details": {
+                "title": "Detalles:",
+                "description": "<li>Horario flexible cursos de mañana, tarde, noche y fin de semana.</li><li>Tamaño del grupo máximo 10 estudiantes por clase</li><li>Duración de 1 a 20 semanas.</li><li>Precio : </li>"
+              }
+            }
+          },
+          "business-spanish-courses": {
+            "title": "Cursos de Español de Negocios",
+            "description": "¿Sientes que te falta confianza y vocabulario cuando tienes que hablar español en tu lugar de trabajo?<br></br><br></br>Entonces este es el curso adecuado para ti.",
+            "we-offer": {
+              "focus": {
+                "title": "Durante este curso nuestros profesores de español <br>Se centrarán en:</br>",
+                "description": "<li>Identifica tus dificultades habladas y desafíos de pronunciación.</li><li>Elimina cualquier error gramatical o de pronunciación.</li><li>Te brinda temas para practicar la conversación.</li><li>Amplía tu vocabulario. enseñándote frases comunes.</li>"
+              },
+              "help": {
+                "title": "Este curso te ayudará a:",
+                "description": "<li>Mejora tu fluidez al hablar español</li><li>Aumenta tu confianza al hablar español.</li><li>Mejora tu pronunciación y acento.</li><li>Amplía tu vocabulario en español.</li>"
+              },
+              "details": {
+                "title": "Detalles:",
+                "description": "<li>Horario flexible cursos de mañana, tarde, noche y fin de semana.</li><li>Tamaño del grupo máximo 10 estudiantes por clase</li><li>Duración de 1 a 20 semanas.</li><li>Precio : </li>"
+              }
+            }
+          },
+          "ai-trainings": {
+            "title": "Entrenamientos de IA",
+            "description": "Se puede negar que la Inteligencia Artificial (IA) es la inteligencia de las máquinas o del software. Es un campo de estudio de la informática que desarrolla y estudia máquinas inteligentes.<br></br>La IA está cambiando casi todas las industrias y tendrá un impacto masivo en el mercado laboral y la sociedad en los próximos años.",
+            "we-offer": {
+              "machine-learning": "Machine learning",
+              "data-mining": "Data Mining",
+              "ai-for-business": "AI For Business"
+            }
+          }
+        }
       },
       "concierge": {
         "title": "Servicios de tutoría de conserjería",

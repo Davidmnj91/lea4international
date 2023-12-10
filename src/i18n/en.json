@@ -118,12 +118,105 @@
           "KA-2": {
             "title": "KA2 - We look for partners",
             "description": "KA2 action projects are a combination of decentralized projects run by the National Agencies and centralised activities managed by the European Commission’s Executive Agency."
+          },
+          "become-partner":{
+            "title": "Become A Partner",
+            "description": "We are here to answer all your questions. <br></br><br></br>Contact us today!",
+            "button": {
+              "title": "Become a <br>Partner</br>",
+              "caption": "Contact Us"
+            }
           }
         }
       },
       "language-courses": {
-        "title": "English & Spanish Courses",
-        "categories": {}
+        "title": "Language Courses & AI Trainings",
+        "sub-title": "Language courses",
+        "description": "At *** You can learn English or Spanish with our qualified native teachers. Engaging and dynamic lessons will make you feel comfortable from the beginning. Learn and improve your language skills while having fun.",
+        "overview": "Overview",
+        "categories": {
+          "english-courses": {
+            "title": "English courses",
+            "description": "Have you spent years learning English at school but still lack fluency and confidence to speak English? <br></br><br></br> Then this is the right course for you.",
+            "we-offer": {
+              "focus": {
+                "title": "During this course our English teachers will<br></br>focus on:",
+                "description": "<li>Identify your spoken difficulties and pronunciation challenges.</li><li>Eliminate any grammatical or pronunciation mistakes.</li><li>Giving you topics to practice conversation.</li><li>Expanding your vocabulary, teaching you common phrases.</li>"
+              },
+              "help": {
+                "title": "This course will help you:",
+                "description": "<li>Improve your fluency speaking English</li><li>Increase your confidence in speaking English.</li><li>Improve your pronunciation and accent.</li><li>Expand your vocabulary in English.</li>"
+              },
+              "details": {
+                "title": "Details:",
+                "description": "<li>Flexible schedule morning, afternoon, evening, weekend courses.</li><li>Group size max 10 students per class</li><li>Duration from 1 to 20 weeks.</li><li>Price: </li>"
+              }
+            }
+          },
+          "business-english-courses": {
+            "title": "Business English courses",
+            "description": "Do you feel like you lack confidence and vocabulary when you have to speak English at your workplace?<br></br><br></br>Then this is the right course for you.",
+            "we-offer": {
+              "focus": {
+                "title": "During this course our English teachers will <br>focus on:</br>",
+                "description": "<li>Eliminate any grammatical or pronunciation mistakes.</li><li>Giving you real life scenarios at the workplace to practice conversation.</li><li>Expanding your business vocabulary.</li><li>Writing business reports and memos.</li>"
+              },
+              "help": {
+                "title": "This course will help you:",
+                "description": "<li>Improve your fluency in speaking English at the workplace.</li><li>Increase your confidence in speaking English at the workplace.</li><li>Improve your pronunciation and accent.</li><li>Expand your business related vocabulary in English.</li>"
+              },
+              "details": {
+                "title": "Details:",
+                "description": "<li>Flexible schedule morning, afternoon, evening, weekend courses.</li><li>Group size max 10 students per class</li><li>Duration from 1 to 20 weeks.</li><li>Price:</li>"
+              }
+            }
+          },
+          "spanish-courses": {
+            "title": "Spanish courses",
+            "description": "Conversational Spanish Course<br>Have you spent years learning Spanish at school but still lack fluency and confidence to speak Spanish?</br></br><br></br>Then this is the right course for you",
+            "we-offer": {
+              "focus": {
+                "title": "During this course our Spanish teachers will <br>focus on:</br>",
+                "description": "<li>Identify your spoken difficulties and pronunciation challenges.</li><li>Eliminate any grammatical or pronunciation mistakes.</li><li>Giving you topics to practice conversation.</li><li>Expanding your vocabulary, teaching you common phrases.</li>"
+              },
+              "help": {
+                "title": "This course will help you:",
+                "description": "<li>Improve your fluency speaking Spanish</li><li>Increase your confidence in speaking Spanish.</li><li>Improve your pronunciation and accent.</li><li>Expand your vocabulary in Spanish.</li>"
+              },
+              "details": {
+                "title": "Details:",
+                "description": "<li>Flexible schedule morning, afternoon, evening, weekend courses.</li><li>Group size max 10 students per class</li><li>Duration from 1 to 20 weeks.</li><li>Price: </li>"
+              }
+            }
+          },
+          "business-spanish-courses": {
+            "title": "Business Spanish courses",
+            "description": "Do you feel like you lack confidence and vocabulary when you have to speak Spanish at your workplace?<br></br><br></br>Then this is the right course for you.",
+            "we-offer": {
+              "focus": {
+                "title": "During this course our Spanish teachers will <br>focus on:</br>",
+                "description": "<li>Identify your spoken difficulties and pronunciation challenges.</li><li>Eliminate any grammatical or pronunciation mistakes.</li><li>Giving you topics to practice conversation.</li><li>Expanding your vocabulary, teaching you common phrases.</li>"
+              },
+              "help": {
+                "title": "This course will help you:",
+                "description": "<li>Improve your fluency speaking Spanish</li><li>Increase your confidence in speaking Spanish.</li><li>Improve your pronunciation and accent.</li><li>Expand your vocabulary in Spanish.</li>"
+              },
+              "details": {
+                "title": "Details:",
+                "description": "<li>Flexible schedule morning, afternoon, evening, weekend courses.</li><li>Group size max 10 students per class</li><li>Duration from 1 to 20 weeks.</li><li>Price: </li>"
+              }
+            }
+          },
+          "ai-trainings": {
+            "title": "AI Trainings",
+            "description": "Artificial Intelligence (AI) can be denied as the intelligence of machines or software. It is a field of study in computer science which develops and studies intelligent machines.<br></br>AI is changing nearly every industry and will have a massive impact in the labor market and society in the upcoming years.",
+            "we-offer": {
+              "machine-learning": "Machine learning",
+              "data-mining": "Data Mining",
+              "ai-for-business": "AI For Business"
+            }
+          }
+        }
       },
       "concierge": {
         "title": "Concierge Tutoring Services",

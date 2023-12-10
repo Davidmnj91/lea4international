@@ -14,6 +14,8 @@ import { Bank } from '@phosphor-icons/react/dist/ssr/Bank';
 import { FlowerLotus } from '@phosphor-icons/react/dist/ssr/FlowerLotus';
 import { Monitor } from '@phosphor-icons/react/dist/ssr/Monitor';
 import { JSX } from 'react';
+import { ServiceItem } from '@/components/service-item/service-item';
+import { BigButton } from '@/components/button/big-button';
 
 export default function Page({ params: { locale } }: LanguagePageProps) {
   // Enable static rendering
@@ -95,24 +97,16 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
             </h2>
             <ul className='flex flex-col gap-4'>
               {Object.entries(professions).map(([title, icon]) => (
-                <li
+                <ServiceItem
                   key={title}
-                  className='flex items-center border border-gold'
-                >
-                  <div className='flex h-full items-center border-r border-r-gold p-4'>
-                    {icon}
-                  </div>
-                  <div className='p-4'>
-                    <h3 className='font-title text-desktop-h-md text-europe-dark'>
-                      {t(`categories.work-experience.we-offer.${title}.title`)}
-                    </h3>
-                    <p className='mt-2.5 font-body text-b-lg text-europe-dark'>
-                      {t(
-                        `categories.work-experience.we-offer.${title}.description`
-                      )}
-                    </p>
-                  </div>
-                </li>
+                  icon={icon}
+                  title={t(
+                    `categories.work-experience.we-offer.${title}.title`
+                  )}
+                  description={t(
+                    `categories.work-experience.we-offer.${title}.description`
+                  )}
+                />
               ))}
             </ul>
           </div>
@@ -265,6 +259,22 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
           <span className='text-center font-body text-b-lg text-europe-dark'>
             {t('categories.KA-2.description')}
           </span>
+        </div>
+      </section>
+      <section id='become-partner'>
+        <div className='flex justify-center py-14'>
+          <div className='flex flex-col gap-9 bg-europe p-14'>
+            <h2 className='font-title text-desktop-h-2xl text-basics-white'>
+              {t('categories.become-partner.title')}
+            </h2>
+            <p className='font-body text-b-lg text-basics-white'>
+              {t.rich('categories.become-partner.description')}
+            </p>
+            <BigButton
+              title={t.rich('categories.become-partner.button.title')}
+              caption={t('categories.become-partner.button.caption')}
+            />
+          </div>
         </div>
       </section>
     </div>

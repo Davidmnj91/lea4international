@@ -14,3 +14,11 @@ export type Subset<K> = {
         ? Subset<K[attr]> | null | undefined
         : K[attr];
 };
+
+export type RichTranslation =
+  | string
+  | import('react').ReactElement<
+      any,
+      string | import('react').JSXElementConstructor<any>
+    >
+  | import('react').ReactNodeArray;

@@ -11,6 +11,12 @@ export const Services: Record<ServicesCategories, string[]> = {
     'school-exchange',
     'erasmus-mundus',
   ],
-  [ServicesCategories.LanguageCourses]: [],
+  [ServicesCategories.LanguageCourses]: [
+    'english-courses',
+    'business-english-courses',
+    'spanish-courses',
+    'business-spanish-courses',
+    'ai-trainings',
+  ],
   [ServicesCategories.Concierge]: [],
 };
