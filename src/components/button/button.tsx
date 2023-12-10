@@ -38,7 +38,7 @@ export const buttonTypes = cva(
       },
       type: {
         button: 'h-[40px] min-w-[116px] rounded-[30px] px-3 py-2',
-        icon: 'p-0.5 rounded-full',
+        icon: 'h-[40px] w-[40px] rounded-full',
       },
     },
     defaultVariants: {
@@ -49,7 +49,7 @@ export const buttonTypes = cva(
 );
 
 export const tagButtonTypes = cva(
-  'inline-flex py-1 px-2.5 justify-center items-center rounded-[30px] font-body text-b-md border border-europe-dark text-europe-dark hover:bg-star-light hover:font-normal',
+  'flex flex-[1_0_auto] desktop:flex-initial py-1 px-2.5 justify-center items-center rounded-[30px] font-body text-b-md border border-europe-dark text-europe-dark hover:bg-star-light hover:font-normal',
   {
     variants: {
       intent: {

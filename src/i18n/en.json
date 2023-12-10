@@ -1,7 +1,13 @@
 {
   "pages": {
     "home": "Welcome",
-    "services": "Our Services",
+    "services": {
+      "main": "Our Services",
+      "erasmus": "Erasmus+ Projects",
+      "language-courses": "Englsh & Spanish courses",
+      "student-exchange": "Student exchange & Immersion programs",
+      "concierge": "Student concierge services"
+    },
     "destinations": "Our Destinations",
     "faq": "FAQ",
     "contact": "Contact",
@@ -46,14 +52,6 @@
     "faq": {
       "title": "Frequently Asked Questions",
       "see-more": "See more questions"
-    },
-    "more-info": {
-      "title": "Looking For More</br>Information?",
-      "questions": "We are here to answer all your questions. </br></br> Contact us today!",
-      "more-info": "More Information",
-      "request-quote": "Request </br>A Quote",
-      "host-family": "Become A </br>Host Family",
-      "contact-us": "Contact Us"
     },
     "help-you": "We Are Looking Forward To Helping You Enjoy Your Educational Adventure",
     "see-more": "See more"
@@ -517,6 +515,14 @@
       "title": "Customized approach",
       "description": "Not every project is the same and we know it, at *** you will receive A fully customized approach. We <b>work hard for your to/so you can enjoy the results</b>"
     }
+  },
+  "more-info": {
+    "title": "Looking For More</br>Information?",
+    "questions": "We are here to answer all your questions. </br></br> Contact us today!",
+    "more-info": "More Information",
+    "request-quote": "Request </br>A Quote",
+    "host-family": "Become A </br>Host Family",
+    "contact-us": "Contact Us"
   },
   "our-partners": {
     "title": "Our Partners",

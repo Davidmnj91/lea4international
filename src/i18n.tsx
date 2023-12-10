@@ -18,7 +18,7 @@ export const defaultTranslationVales: RichTranslationValues = {
     </>
   ),
   li: (chunks: ReactNode) => (
-    <li>
+    <li className='flex'>
       <span className='mr-2'>&#8226;</span>
       <span>{chunks}</span>
     </li>

@@ -6,7 +6,6 @@ import { tagButtonTypes } from '@/components/button/button';
 import { FamilyForm } from '@/components/family-form/family-form';
 import { InstitutionForm } from '@/components/institution-form/institution-form';
 import { Envelope } from '@phosphor-icons/react/dist/ssr/Envelope';
-import { NavigationArrow } from '@phosphor-icons/react/dist/ssr/NavigationArrow';
 import { Phone } from '@phosphor-icons/react/dist/ssr/Phone';
 import { useState } from 'react';
 import { AnimatePresence, motion, Variants } from 'framer-motion';
@@ -41,27 +40,31 @@ export default function Page() {
 
   return (
     <div>
-      <div className='justify -center my-24 flex flex-col items-center gap-1.5'>
+      <div className='my-14 flex flex-col items-center justify-center gap-6  desktop:my-24 desktop:gap-1.5'>
         <h1 className='font-title text-desktop-h-2xl text-europe-dark'>
           {t('title')}
         </h1>
-        <p className='font-body text-b-lg text-europe-dark'>{t('message')}</p>
+        <p className='text-center font-body text-b-lg text-europe-dark desktop:text-left'>
+          {t('message')}
+        </p>
       </div>
-      <div className='sticky top-0 flex items-center justify-center gap-6 border-y border-y-basics-disabled bg-basics-white px-12 py-6'>
-        <span className='font-body text-b-lg text-europe-dark'>
+      <div className='sticky top-0 flex flex-col justify-start gap-6 overflow-auto border-y border-y-basics-disabled bg-basics-white px-6 py-6 desktop:flex-row desktop:items-center desktop:justify-center desktop:px-12'>
+        <span className='sticky left-0 font-body text-b-lg text-europe-dark'>
           {t('who-are-you')}
         </span>
-        {Object.keys(roles).map((role) => (
-          <button
-            onClick={() => setActiveRole(role as keyof typeof roles)}
-            key={role}
-            className={tagButtonTypes({
-              intent: role === activeRole ? 'selected' : 'enabled',
-            })}
-          >
-            {t(`roles.${role}`)}
-          </button>
-        ))}
+        <div className='flex gap-6'>
+          {Object.keys(roles).map((role) => (
+            <button
+              onClick={() => setActiveRole(role as keyof typeof roles)}
+              key={role}
+              className={tagButtonTypes({
+                intent: role === activeRole ? 'selected' : 'enabled',
+              })}
+            >
+              {t(`roles.${role}`)}
+            </button>
+          ))}
+        </div>
       </div>
       <AnimatePresence mode='wait'>
         <motion.section
@@ -73,22 +76,12 @@ export default function Page() {
           transition={{
             duration: 0.3,
           }}
-          className='flex justify-center p-24'
+          className='flex justify-center p-6 desktop:p-24'
         >
           {roles[activeRole]}
         </motion.section>
       </AnimatePresence>
-      <div className='flex flex-col items-center justify-center gap-3 pb-24 pt-8'>
-        <div className='flex items-center justify-center gap-6'>
-          <NavigationArrow size={32} />
-          <a
-            href='https://maps.app.goo.gl/R1eMyu6Mp7up3DSb8'
-            target='_blank'
-            className='font-body text-b-lg text-europe-dark'
-          >
-            Street X, Prague, Czech Republic
-          </a>
-        </div>
+      <div className='flex flex-col items-center justify-center gap-3 pb-14 pt-8 desktop:pb-24'>
         <div className='flex items-center justify-center gap-6'>
           <Envelope size={32} />
           <a

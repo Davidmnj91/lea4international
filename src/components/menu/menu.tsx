@@ -20,7 +20,7 @@ export const Menu = ({ itemClassNames }: MenuProps) => {
         {t('home')}
       </Link>
       <Link className={fullClassName} href={`/services`}>
-        {t('services')}
+        {t('services.main')}
       </Link>
       <Link className={fullClassName} href={`/destinations`}>
         {t('destinations')}
