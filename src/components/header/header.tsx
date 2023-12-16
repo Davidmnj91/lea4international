@@ -77,9 +77,14 @@ export const Header = () => {
                         {t('services.concierge')}
                       </Link>
                     </div>
-
+                    <Link className={fullClassName} href={`/about-us`}>
+                      {t('about-us')}
+                    </Link>
                     <Link className={fullClassName} href={`/destinations`}>
                       {t('destinations')}
+                    </Link>
+                    <Link className={fullClassName} href={`/accommodations`}>
+                      {t('accommodations')}
                     </Link>
                     <Link className={fullClassName} href={`/faq`}>
                       {t('faq')}

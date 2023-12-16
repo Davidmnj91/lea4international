@@ -20,8 +20,8 @@ export const AnimatedCard = ({
           backgroundRepeat: 'no-repeat',
         }}
       >
-        <div className='flex h-[192px] w-[174px] flex-col justify-between border border-basics-white p-2.5'>
-          <span className='text-start font-title text-desktop-h-lg font-bold text-basics-white'>
+        <div className='flex h-[230px] w-[200px] flex-col justify-between border border-basics-white p-2.5'>
+          <span className='text-start font-title text-desktop-h-md font-bold text-basics-white'>
             {title}
           </span>
           <span className='text-end font-title text-desktop-h-sm font-bold text-basics-white'>

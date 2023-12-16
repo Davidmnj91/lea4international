@@ -22,14 +22,17 @@ export const Menu = ({ itemClassNames }: MenuProps) => {
       <Link className={fullClassName} href={`/services`}>
         {t('services.main')}
       </Link>
+      <Link className={fullClassName} href={`/about-us`}>
+        {t('about-us')}
+      </Link>
       <Link className={fullClassName} href={`/destinations`}>
         {t('destinations')}
       </Link>
+      <Link className={fullClassName} href={`/accommodations`}>
+        {t('accommodations')}
+      </Link>
       <Link className={fullClassName} href={`/faq`}>
         {t('faq')}
-      </Link>
-      <Link className={fullClassName} href={`/contact`}>
-        {t('contact')}
       </Link>
     </>
   );

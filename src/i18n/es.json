@@ -1,8 +1,16 @@
 {
   "pages": {
     "home": "Bienvenido",
-    "services": "Nuestros Servicios",
+    "services": {
+      "main": "Nuestros Servicios",
+      "erasmus": "Proyectos Erasmus+",
+      "language-courses": "Cursos de inglés y español",
+      "student-exchange": "Programas de intercambio e inmersión de estudiantes",
+      "concierge": "Servicios de conserjería para estudiantes"
+    },
+    "about-us": "Sobre nosotros",
     "destinations": "Nuestros Destinos",
+    "accommodations": "Alojamientos",
     "faq": "FAQ",
     "contact": "Contacto",
     "404": "CUATRO ZERO CUATRO"
@@ -117,7 +125,15 @@
           },
           "KA-2": {
             "title": "KA2 - Buscamos socios",
-            "description": "Los proyectos de acción KA2 son una combinación de proyectos descentralizados gestionados por las agencias nacionales y actividades centralizadas gestionadas por la Agencia Ejecutiva de la Comisión Europea."
+            "description": "Los proyectos de acción KA2 son una combinación de proyectos descentralizados gestionados por las agencias nacionales y actividades centralizadas gestionadas por la Agencia Ejecutiva de la Comisión Europea.",
+            "priority-topics": {
+              "title": "Temas prioritarios",
+              "description": "<li>Educación y formación</li><li>Empleo</li><li>Investigación, Desarrollo Tecnológico e Innovación</li><li>Deportes</li><li>Juventud</li>"
+            },
+            "eligible": {
+              "title": "Quién es puede aplicar?",
+              "description": "<li>Instituciones educativas</li><li>Autoridades locales</li><li>Organizaciones sin fines de lucro</li><li>Pequeñas y medianas empresas (PYMES)</li><li>Empresas estatales</li>"
+            }
           },
           "become-partner": {
             "title": "Convertirse en un compañero",
@@ -218,11 +234,63 @@
           }
         }
       },
+      "student-exchange": {
+        "title": "Programas de intercambio e inmersión de estudiantes",
+        "overview": "Descripción general",
+        "categories": {
+          "immersion-program": {
+            "title": "Programa de inmersión",
+            "description": "Un programa de inmersión es una gran oportunidad para que los estudiantes exploren una cultura diferente y practiquen un nuevo idioma con hablantes nativos. Durante el programa de inmersión, los estudiantes vivirán completamente inmersos en una nueva cultura, vivirán con una familia anfitriona que les enseñará más sobre su país y sus tradiciones.",
+            "includes": "Programa de inmersión en **** Incluye:"
+          },
+          "exchange-program": {
+            "title": "Programa de intercambio de estudiantes",
+            "description": "Un Programa de Intercambio de Estudiantes es una gran oportunidad para estudiar en el extranjero, descubrir una nueva cultura y practicar un nuevo idioma. Participar en un Programa de Intercambio de Estudiantes es un paso importante en tu educación que puede cambiar tu vida. Esta experiencia te hará crecer y te ayudará a adquirir habilidades que utilizarás más adelante en la vida.",
+            "includes": "Programa de Intercambio de Estudiantes en **** Incluye:"
+          }
+        },
+        "services": {
+          "round-trip": "Pasaje aereo de ida y vuelta",
+          "airport": "Traslado aeropuerto ida y vuelta.",
+          "local-transport": "Transporte local",
+          "accommodation": "Alojamiento y Pensión Completa",
+          "cultural": "Viajes y actividades culturales."
+        }
+      },
       "concierge": {
         "title": "Servicios de tutoría de conserjería",
-        "categories": {
+        "description": "Estudiar en el extranjero es una experiencia emocionante, pero puede ser un viaje preocupante para muchos estudiantes internacionales. Los participantes y sus familias suelen estar preocupados y un poco estresados por la incertidumbre de la nueva experiencia en el extranjero.\nNuestro compromiso es ayudar a los estudiantes y sus familias a familiarizarse con el nuevo país y sus costumbres. Ofrecemos soporte de emergencia 24 horas al día, 7 días a la semana a nuestros estudiantes.",
+        "includes": "Nuestros servicios incluyen:",
+        "services": {
+          "meeting-greeting": "Encuentro y saludo a la llegada.",
+          "airport-transfer": "Transferencia de aeropuerto",
+          "local-transport": "Boletos de transporte local",
+          "immigration-services": "Servicios de inmigración",
+          "city-tour": "Tours y guías locales de la ciudad.",
+          "emergency-support": "Soporte de emergencia 24 horas al día, 7 días a la semana",
+          "language-support": "Ayuda de idioma"
         }
       }
+    }
+  },
+  "about-us-page": {
+    "title": "Sobre nosotros",
+    "role": {
+      "director": "Director",
+      "partner": "Partner"
+    },
+    "description": "Encontré esta empresa inspirada por las muchas experiencias que tuve en el extranjero y cómo abrieron mi mente y enriquecieron mi vida. Mi primera experiencia en el extranjero fue bajo el programa Eramus. Durante mis estudios universitarios tuve la oportunidad de ser estudiante Erasmus en la Facultad de Derecho de la Universidad La Sapienza de Roma, fue un año maravilloso que definitivamente cambió el rumbo de mi vida. Un par de años después decidí que quería explorar otro país fuera de Europa así que decidí hacer un programa de intercambio en Estados Unidos, y nuevamente fue una experiencia inolvidable para mí. Me convertí en Au Pair y viví con una familia anfitriona durante un año y medio en Nueva York, esto me permitió adquirir conocimientos prácticos del sistema educativo en los Estados Unidos, también me permitió conocer gente de todo el mundo. <br></br> <br></br> Mi objetivo es alentar a los estudiantes a salir de su zona de confort y ayudar a las personas a tener experiencias de vida memorables en el extranjero y, al mismo tiempo, contribuir a mejorar la educación y la comprensión entre culturas.",
+    "quote": "No se puede encontrar pasión jugando en pequeño - <br></br> <b>Conformarse con una vida que es menos <br></br> de la que eres capaz de vivir</b>",
+    "values": {
+      "title": "Nuestros valores",
+      "inclusion": "Inclusion",
+      "diversity": "Diversidad",
+      "respect": "Respeto",
+      "quality": "Calidad",
+      "honesty": "Honestidad",
+      "innovation": "Innovación",
+      "sustainability": "Sostenibilidad",
+      "collaboration": "Colaboración"
     }
   },
   "faq-page": {

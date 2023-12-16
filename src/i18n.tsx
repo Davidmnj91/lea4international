@@ -23,6 +23,7 @@ export const defaultTranslationVales: RichTranslationValues = {
       <span>{chunks}</span>
     </li>
   ),
+  b: (chunks: ReactNode) => <strong>{chunks}</strong>,
 };
 
 export const defaultLanguage: Language = 'en';

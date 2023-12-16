@@ -8,7 +8,9 @@
       "student-exchange": "Student exchange & Immersion programs",
       "concierge": "Student concierge services"
     },
+    "about-us": "About us",
     "destinations": "Our Destinations",
+    "accommodations": "Accommodations",
     "faq": "FAQ",
     "contact": "Contact",
     "404": "FOUR ZERO FOUR"
@@ -115,9 +117,17 @@
           },
           "KA-2": {
             "title": "KA2 - We look for partners",
-            "description": "KA2 action projects are a combination of decentralized projects run by the National Agencies and centralised activities managed by the European Commission’s Executive Agency."
+            "description": "KA2 action projects are a combination of decentralized projects run by the National Agencies and centralised activities managed by the European Commission’s Executive Agency.",
+            "priority-topics": {
+              "title": "Priority Topics",
+              "description": "<li>Education and training</li><li>Employment</li><li>Research, Technological Development and Innovation</li><li>Sports</li><li>Youth</li>"
+            },
+            "eligible": {
+              "title": "Who is eligible to apply?",
+              "description": "<li>Educational Institutions</li><li>Local Authorities</li><li>Non Profit Organisations</li><li>Small and Medium Enterprises (SMEs)</li><li>State-owned Enterprises</li>"
+            }
           },
-          "become-partner":{
+          "become-partner": {
             "title": "Become A Partner",
             "description": "We are here to answer all your questions. <br></br><br></br>Contact us today!",
             "button": {
@@ -216,11 +226,63 @@
           }
         }
       },
-      "concierge": {
-        "title": "Concierge Tutoring Services",
+      "student-exchange": {
+        "title": "Student exchange & Immersion programs",
+        "overview": "Overview",
         "categories": {
+          "immersion-program": {
+            "title": "Immersion program",
+            "description": "An immersion program is a great opportunity for students to explore a different culture and practice a new language with native speakers. During the immersion program learners will live fully immersed in a new culture, they will live with a host family that will teach them more about their country and their traditions.",
+            "includes": "Immersion program at **** Includes:"
+          },
+          "exchange-program": {
+            "title": "Student exchange program",
+            "description": "A Student Exchange Program is a great opportunity to study abroad,discover a new culture and practice a new language. Participating in a Student Exchange Program is an important step in your education that can change your life. This experience will make you grow, and will help you gain skills that you will use later in life.",
+            "includes": "Student Exchange Program at **** Includes:"
+          }
+        },
+        "services": {
+          "round-trip": "Round trip Airfare",
+          "airport": "Round trip airport transfer",
+          "local-transport": "Local transportation",
+          "accommodation": "Accommodation & Full board",
+          "cultural": "Cultural trips and activities"
+        }
+      },
+      "concierge": {
+        "title": "Student concierge services",
+        "description": "Studying abroad is an exciting experience but can be a worrying journey for many international students. The participants as well as their families are often concerned and a bit stressed about the uncertainty of the new experience abroad.\nOur commitment is to help students and their families to get familiar with the new country and its customs. We offer 24/7 emergency support to our students.",
+        "includes": "Our services includes:",
+        "services": {
+          "meeting-greeting": "Meeting and greeting at arrival",
+          "airport-transfer": "Airport transfer",
+          "local-transport": "Local transportation tickets",
+          "immigration-services": "Immigration services",
+          "city-tour": "Local city tours and guides",
+          "emergency-support": "24/7 emergency support",
+          "language-support": "Language support"
         }
       }
+    }
+  },
+  "about-us-page": {
+    "title": "About us",
+    "role": {
+      "director": "Director",
+      "partner": "Partner"
+    },
+    "description": "I found this company inspired by the many experiences I had abroad and how they opened my mind and enriched my life. My first experience abroad was under the Eramus program. During my University studies I had the opportunity to be an Erasmus student at the Faculty of Law at La Sapienza University in Rome, it was a wonderful year that definitely changed the direction of my life. A couple of years after that I decided that I wanted to explore another country outside of Europe so I decided to do an exchange program in the United States, and again it was an unforgettable experience for me. I became an Au Pair and lived with a host family for a year and a half in New York, this allowed me to gain practical knowledge of the educational system in the United States, it also allowed me to meet people from all round the world. <br></br> <br></br> My goal is to encourage students to get out of their comfort zone and to help people having memorable life experiences abroad while at the same time contributing to improving education and understanding across cultures.",
+    "quote": "There is no passion to be found playing small - <br></br> <b>In settling for a life that is less <br></br> than the one you are capable of living</b>",
+    "values": {
+      "title": "Our Values",
+      "inclusion": "Inclusion",
+      "diversity": "Diversity",
+      "respect": "Respect",
+      "quality": "Quality",
+      "honesty": "Honesty",
+      "innovation": "Innovation",
+      "sustainability": "Sustainability",
+      "collaboration": "Collaboration"
     }
   },
   "faq-page": {

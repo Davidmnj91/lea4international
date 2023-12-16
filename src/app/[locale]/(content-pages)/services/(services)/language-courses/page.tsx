@@ -96,11 +96,9 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
               </div>
             </div>
             <div
-              className='flex-[0_0_40%]'
+              className='flex-[0_0_40%] bg-cover bg-no-repeat'
               style={{
                 backgroundImage: `url(${imgSrc})`,
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: 'cover',
               }}
             />
           </div>

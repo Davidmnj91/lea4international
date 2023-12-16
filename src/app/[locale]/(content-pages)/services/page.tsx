@@ -7,6 +7,7 @@ import erasmus_bg from '../../../../../public/erasmus_bg.png';
 import language_courses_bg from '../../../../../public/language_courses_bg.png';
 import { Partners } from '@/components/partners/partners';
 import Link from 'next/link';
+import student_exchange_bg from '../../../../../public/student_exchange_bg.png';
 
 export default function Page({ params: { locale } }: LanguagePageProps) {
   // Enable static rendering
@@ -36,6 +37,13 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
           <AnimatedCard
             imgSrc={language_courses_bg.src}
             title={t('services.language-courses.title')}
+            caption={t('services.see-more')}
+          />
+        </Link>
+        <Link href={'services/student-exchange'}>
+          <AnimatedCard
+            imgSrc={student_exchange_bg.src}
+            title={t('services.student-exchange.title')}
             caption={t('services.see-more')}
           />
         </Link>

@@ -5,6 +5,7 @@ import { AnimatedCard } from '@/components/destination-card/animated-card';
 import language_courses_bg from '../../../../../../public/language_courses_bg.png';
 import concierge_bg from '../../../../../../public/concierge_bg.png';
 import erasmus_bg from '../../../../../../public/erasmus_bg.png';
+import student_exchange_bg from '../../../../../../public/student_exchange_bg.png';
 import { headers } from 'next/headers';
 
 type RootServicesLayoutProps = {
@@ -53,6 +54,15 @@ export default function RootServicesLayout({
             <AnimatedCard
               imgSrc={language_courses_bg.src}
               title={t('language-courses.title')}
+              caption={t('see-more')}
+            />
+          </Link>
+        )}
+        {pathname !== 'student-exchange' && (
+          <Link href={'student-exchange'}>
+            <AnimatedCard
+              imgSrc={student_exchange_bg.src}
+              title={t('student-exchange.title')}
               caption={t('see-more')}
             />
           </Link>

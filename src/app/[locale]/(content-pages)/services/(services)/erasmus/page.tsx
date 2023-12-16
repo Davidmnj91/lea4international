@@ -9,6 +9,7 @@ import we_offer_bg from '../../../../../../../public/we_offer_bg.png';
 import job_shadowing_bg from '../../../../../../../public/job_shadowing_bg.png';
 import school_exchange_bg from '../../../../../../../public/school_exchange_bg.png';
 import erasmus_mundus_bg from '../../../../../../../public/erasmus_mundus_bg.png';
+import ka_2_bg from '../../../../../../../public/ka_2_bg.png';
 import { Airplane } from '@phosphor-icons/react/dist/ssr/Airplane';
 import { Bank } from '@phosphor-icons/react/dist/ssr/Bank';
 import { FlowerLotus } from '@phosphor-icons/react/dist/ssr/FlowerLotus';
@@ -241,6 +242,26 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
           <span className='text-center font-body text-b-lg text-europe-dark'>
             {t('categories.KA-2.description')}
           </span>
+          <div className='mx-auto flex gap-16'>
+            <div
+              className='h-[478px] w-[275px] bg-cover bg-no-repeat'
+              style={{ backgroundImage: `url(${ka_2_bg.src})` }}
+            />
+            <div className='flex flex-col gap-10 py-4'>
+              <div className='flex flex-col gap-6'>
+                <h3 className='font-title text-desktop-h-lg text-europe-dark'>
+                  {t('categories.KA-2.priority-topics.title')}
+                </h3>
+                <ul>{t.rich('categories.KA-2.priority-topics.description')}</ul>
+              </div>
+              <div className='flex flex-col gap-6'>
+                <h3 className='font-title text-desktop-h-lg text-europe-dark'>
+                  {t('categories.KA-2.eligible.title')}
+                </h3>
+                <ul>{t.rich('categories.KA-2.eligible.description')}</ul>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <section id='become-partner'>
