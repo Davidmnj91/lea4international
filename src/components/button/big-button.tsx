@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
 import { RichTranslation } from '@/types/types';
 
 type BigButtonProps = {
   title: RichTranslation;
   caption: RichTranslation;
-};
-export const BigButton = ({ title, caption }: BigButtonProps) => {
+} & DetailedHTMLProps<
+  ButtonHTMLAttributes<HTMLButtonElement>,
+  HTMLButtonElement
+>;
+export const BigButton = ({
+  title,
+  caption,
+  ...buttonProps
+}: BigButtonProps) => {
   return (
-    <button className='group flex h-[158px] flex-col justify-between border border-basics-white p-2.5 hover:border-star-dark desktop:w-[310px]'>
+    <button
+      className='group flex h-[158px] flex-col justify-between border border-basics-white p-2.5 hover:border-star-dark desktop:w-[310px]'
+      {...buttonProps}
+    >
       <h4 className='text-left font-title text-desktop-h-lg font-bold text-basics-white'>
         {title}
       </h4>

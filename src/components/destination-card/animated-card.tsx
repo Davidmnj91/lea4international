@@ -1,15 +1,26 @@
+import clsx from 'clsx';
+
 type DestinationCardProps = {
   imgSrc: string;
   title: string;
   caption: string;
+  containerClasses: string;
+  labelClasses: string;
 };
 export const AnimatedCard = ({
   imgSrc,
   title,
   caption,
+  containerClasses,
+  labelClasses,
 }: DestinationCardProps) => {
   return (
-    <div className='group h-[510px] w-[328px] overflow-hidden'>
+    <div
+      className={clsx(
+        'h-[${size.height}] w-[${size.width}] group overflow-hidden',
+        containerClasses
+      )}
+    >
       <div
         className='flex h-full w-full transform items-center justify-center transition duration-500 group-hover:scale-[1.15]'
         style={{
@@ -20,7 +31,12 @@ export const AnimatedCard = ({
           backgroundRepeat: 'no-repeat',
         }}
       >
-        <div className='flex h-[230px] w-[200px] flex-col justify-between border border-basics-white p-2.5'>
+        <div
+          className={clsx(
+            'h-[${labelSize.height}px] w-[${labelSize.width}px] flex flex-col justify-between border border-basics-white p-2.5',
+            labelClasses
+          )}
+        >
           <span className='text-start font-title text-desktop-h-md font-bold text-basics-white'>
             {title}
           </span>

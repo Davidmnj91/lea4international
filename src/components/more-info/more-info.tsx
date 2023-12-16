@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useTranslations } from 'next-intl';
+import { BigButton } from '@/components/button/big-button';
 
 export const MoreInfo = () => {
   const t = useTranslations('more-info');
@@ -24,20 +25,11 @@ export const MoreInfo = () => {
       </div>
       <div className='flex w-full flex-col justify-between gap-[30px] desktop:flex-row'>
         {['more-info', 'request-quote', 'host-family'].map((title) => (
-          <button
+          <BigButton
             key={title}
-            className='group flex h-[158px] flex-col justify-between border border-basics-white p-2.5 hover:border-star-dark desktop:w-[310px]'
-          >
-            <h4
-              className='text-left font-title text-desktop-h-lg font-bold text-basics-white'
-              dangerouslySetInnerHTML={{
-                __html: t.raw(`${title}`),
-              }}
-            />
-            <span className='self-end font-title text-desktop-h-sm text-basics-white group-hover:text-star-dark'>
-              {t('contact-us')}
-            </span>
-          </button>
+            title={t.raw(`${title}`)}
+            caption={t('contact-us')}
+          />
         ))}
       </div>
     </div>

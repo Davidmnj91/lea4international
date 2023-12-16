@@ -258,16 +258,22 @@ export default function HomePage() {
               imgSrc={praga_bg.src}
               title={t('top-destinations.destinations.prague')}
               caption={t('top-destinations.destinations.czech')}
+              containerClasses='w-[328px] h-[506px]'
+              labelClasses='w-[174px] h-[192px]'
             />
             <AnimatedCard
               imgSrc={madrid_bg.src}
               title={t('top-destinations.destinations.madrid')}
               caption={t('top-destinations.destinations.spain')}
+              containerClasses='w-[328px] h-[506px]'
+              labelClasses='w-[174px] h-[192px]'
             />
             <AnimatedCard
               imgSrc={malaga_bg.src}
               title={t('top-destinations.destinations.malaga')}
               caption={t('top-destinations.destinations.spain')}
+              containerClasses='w-[328px] h-[506px]'
+              labelClasses='w-[174px] h-[192px]'
             />
           </div>
         </section>

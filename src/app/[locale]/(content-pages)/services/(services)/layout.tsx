@@ -2,11 +2,8 @@ import Link from 'next/link';
 import { CaretLeft } from '@phosphor-icons/react/dist/ssr/CaretLeft';
 import { useTranslations } from 'next-intl';
 import { AnimatedCard } from '@/components/destination-card/animated-card';
-import language_courses_bg from '../../../../../../public/language_courses_bg.png';
-import concierge_bg from '../../../../../../public/concierge_bg.png';
-import erasmus_bg from '../../../../../../public/erasmus_bg.png';
-import student_exchange_bg from '../../../../../../public/student_exchange_bg.png';
 import { headers } from 'next/headers';
+import { servicesCardConfig } from '@/types/services';
 
 type RootServicesLayoutProps = {
   children: React.ReactNode;
@@ -40,42 +37,19 @@ export default function RootServicesLayout({
         </p>
       </div>
       <div className='mt-[-80px] flex items-center gap-4 overflow-auto p-6 desktop:mt-[-160px] desktop:justify-center desktop:overflow-hidden'>
-        {pathname !== 'erasmus' && (
-          <Link href={'erasmus'}>
-            <AnimatedCard
-              imgSrc={erasmus_bg.src}
-              title={t('erasmus.title')}
-              caption={t('see-more')}
-            />
-          </Link>
-        )}
-        {pathname !== 'language-courses' && (
-          <Link href={'language-courses'}>
-            <AnimatedCard
-              imgSrc={language_courses_bg.src}
-              title={t('language-courses.title')}
-              caption={t('see-more')}
-            />
-          </Link>
-        )}
-        {pathname !== 'student-exchange' && (
-          <Link href={'student-exchange'}>
-            <AnimatedCard
-              imgSrc={student_exchange_bg.src}
-              title={t('student-exchange.title')}
-              caption={t('see-more')}
-            />
-          </Link>
-        )}
-        {pathname !== 'concierge' && (
-          <Link href={'concierge'}>
-            <AnimatedCard
-              imgSrc={concierge_bg.src}
-              title={t('concierge.title')}
-              caption={t('see-more')}
-            />
-          </Link>
-        )}
+        {Object.entries(servicesCardConfig)
+          .filter(([service, _]) => pathname !== service)
+          .map(([service, imgSrc]) => (
+            <Link key={service} href={service}>
+              <AnimatedCard
+                imgSrc={imgSrc}
+                title={t(`${service}.title`)}
+                caption={t('see-more')}
+                containerClasses='w-[328px] h-[506px]'
+                labelClasses='w-[174px] h-[192px]'
+              />
+            </Link>
+          ))}
       </div>
     </>
   );

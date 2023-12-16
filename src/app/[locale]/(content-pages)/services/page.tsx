@@ -2,12 +2,9 @@ import { LanguagePageProps } from '@/i18n';
 import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { AnimatedCard } from '@/components/destination-card/animated-card';
-import concierge_bg from '../../../../../public/concierge_bg.png';
-import erasmus_bg from '../../../../../public/erasmus_bg.png';
-import language_courses_bg from '../../../../../public/language_courses_bg.png';
 import { Partners } from '@/components/partners/partners';
 import Link from 'next/link';
-import student_exchange_bg from '../../../../../public/student_exchange_bg.png';
+import { servicesCardConfig } from '@/types/services';
 
 export default function Page({ params: { locale } }: LanguagePageProps) {
   // Enable static rendering
@@ -26,34 +23,17 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
         </span>
       </div>
       <div className='mt-[-180px] flex items-center gap-4 overflow-auto p-6 desktop:mt-[-160px] desktop:justify-center desktop:overflow-hidden'>
-        <Link href={'services/erasmus'}>
-          <AnimatedCard
-            imgSrc={erasmus_bg.src}
-            title={t('services.erasmus.title')}
-            caption={t('services.see-more')}
-          />
-        </Link>
-        <Link href={'services/language-courses'}>
-          <AnimatedCard
-            imgSrc={language_courses_bg.src}
-            title={t('services.language-courses.title')}
-            caption={t('services.see-more')}
-          />
-        </Link>
-        <Link href={'services/student-exchange'}>
-          <AnimatedCard
-            imgSrc={student_exchange_bg.src}
-            title={t('services.student-exchange.title')}
-            caption={t('services.see-more')}
-          />
-        </Link>
-        <Link href={'services/concierge'}>
-          <AnimatedCard
-            imgSrc={concierge_bg.src}
-            title={t('services.concierge.title')}
-            caption={t('services.see-more')}
-          />
-        </Link>
+        {Object.entries(servicesCardConfig).map(([service, imgSrc]) => (
+          <Link key={service} href={`services/${service}`}>
+            <AnimatedCard
+              imgSrc={imgSrc}
+              title={t(`services.${service}.title`)}
+              caption={t('services.see-more')}
+              containerClasses='w-[328px] h-[506px]'
+              labelClasses='w-[174px] h-[192px]'
+            />
+          </Link>
+        ))}
       </div>
       <Partners />
     </div>
