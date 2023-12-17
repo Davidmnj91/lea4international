@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import { Typography } from '@/components/typography/typography';
 
 type DestinationCardProps = {
   imgSrc: string;
@@ -37,12 +38,24 @@ export const AnimatedCard = ({
             labelClasses
           )}
         >
-          <span className='text-start font-title text-desktop-h-md font-bold text-basics-white'>
+          <Typography
+            as='span'
+            size='heading-md'
+            color='basics-white'
+            weight='bold'
+            className='text-start'
+          >
             {title}
-          </span>
-          <span className='text-end font-title text-desktop-h-sm font-bold text-basics-white'>
+          </Typography>
+          <Typography
+            as='span'
+            size='heading-sm'
+            color='basics-white'
+            weight='bold'
+            className='text-end'
+          >
             {caption}
-          </span>
+          </Typography>
         </div>
       </div>
     </div>

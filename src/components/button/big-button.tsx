@@ -6,6 +6,7 @@ import React, {
 } from 'react';
 import { RichTranslation } from '@/types/types';
 import { ReactNodeArray } from 'prop-types';
+import { Typography } from '@/components/typography/typography';
 
 type BigButtonProps = {
   title:
@@ -28,12 +29,23 @@ export const BigButton = ({
       className='group flex h-[158px] flex-col justify-between border border-basics-white p-2.5 hover:border-star-dark desktop:w-[310px]'
       {...buttonProps}
     >
-      <h4 className='text-left font-title text-desktop-h-lg font-bold text-basics-white'>
+      <Typography
+        as='h4'
+        size='heading-lg'
+        color='basics-white'
+        weight='bold'
+        className='text-left'
+      >
         {title}
-      </h4>
-      <span className='self-end font-title text-desktop-h-sm text-basics-white group-hover:text-star-dark'>
+      </Typography>
+      <Typography
+        as='span'
+        size='heading-sm'
+        color='basics-white'
+        className='self-end group-hover:text-star-dark'
+      >
         {caption}
-      </span>
+      </Typography>
     </button>
   );
 };

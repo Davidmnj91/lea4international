@@ -5,6 +5,7 @@ import { Combobox, Transition } from '@headlessui/react';
 import { CaretDown, CaretUp, CheckCircle } from '@phosphor-icons/react';
 import { inputStyles, labelStyles } from '@/components/form/form';
 import clsx from 'clsx';
+import { Typography } from '@/components/typography/typography';
 
 type ComboboxProps = {
   value: string | number;
@@ -87,9 +88,14 @@ export default function ComboBoxWrapper({
                       {({ selected, active }) => (
                         <>
                           {selected && (
-                            <span className='absolute inset-y-0 left-0 flex items-center px-2 text-europe-dark'>
+                            <Typography
+                              as='span'
+                              size='body-md'
+                              color='europe-dark'
+                              className='absolute inset-y-0 left-0 flex items-center px-2'
+                            >
                               <CheckCircle size={24} />
-                            </span>
+                            </Typography>
                           )}
                           <span className='block truncate'>{option.label}</span>
                         </>

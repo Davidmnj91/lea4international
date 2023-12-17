@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl';
 import { buttonTypes } from '@/components/button/button';
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useCallback, useEffect, useState } from 'react';
+import { Typography } from '@/components/typography/typography';
 
 export const CommitmentsCarousel = () => {
   const [carouselRef, carouselApi] = useEmblaCarousel();
@@ -53,51 +54,54 @@ export const CommitmentsCarousel = () => {
 
   return (
     <div className='overflow-hidden' ref={carouselRef}>
-      <div className='flex min-h-[425px] w-[440px]'>
+      <div className='flex min-h-[337px] w-[440px]'>
         {slides.map(({ title, description }, index) => (
           <div
             key={index}
             className='flex min-w-0 flex-[0_0_100%] flex-col justify-between bg-basics-gray p-6'
           >
             <div>
-              <span className='font-title text-desktop-h-sm text-gold-dark'>{`${(
-                index + 1
-              ).toLocaleString('en-US', {
-                minimumIntegerDigits: 2,
-                useGrouping: false,
-              })}/${slides.length}`}</span>
-              <h3 className='font-title text-desktop-h-lg text-europe-dark'>
+              <Typography as='span' size='heading-sm' color='gold-dark'>
+                {`${(index + 1).toLocaleString('en-US', {
+                  minimumIntegerDigits: 2,
+                  useGrouping: false,
+                })}/${slides.length}`}
+              </Typography>
+              <Typography as='h3' size='heading-lg' color='europe-dark'>
                 {title}
-              </h3>
-              <p
-                className='mt-9 font-body text-b-lg text-europe-dark'
+              </Typography>
+              <Typography
+                as='p'
+                size='body-lg'
+                color='europe-dark'
+                className='mt-9'
                 dangerouslySetInnerHTML={{ __html: description }}
-              ></p>
-            </div>
-            <div className='flex gap-6'>
-              <button
-                onClick={scrollPrev}
-                disabled={prevBtnDisabled}
-                className={buttonTypes({
-                  intent: 'secondary-light',
-                  type: 'icon',
-                })}
-              >
-                <CaretLeft size={32} />
-              </button>
-              <button
-                onClick={scrollNext}
-                disabled={nextBtnDisabled}
-                className={buttonTypes({
-                  intent: 'secondary-light',
-                  type: 'icon',
-                })}
-              >
-                <CaretRight size={32} />
-              </button>
+              ></Typography>
             </div>
           </div>
         ))}
+      </div>
+      <div className='flex gap-6 bg-basics-gray p-6'>
+        <button
+          onClick={scrollPrev}
+          disabled={prevBtnDisabled}
+          className={buttonTypes({
+            intent: 'secondary-light',
+            type: 'icon',
+          })}
+        >
+          <CaretLeft size={32} />
+        </button>
+        <button
+          onClick={scrollNext}
+          disabled={nextBtnDisabled}
+          className={buttonTypes({
+            intent: 'secondary-light',
+            type: 'icon',
+          })}
+        >
+          <CaretRight size={32} />
+        </button>
       </div>
     </div>
   );

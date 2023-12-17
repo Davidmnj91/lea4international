@@ -2,6 +2,7 @@ import { useTranslations } from 'next-intl';
 import { servicesCardConfig, ServicesCategories } from '@/types/services';
 import Link from 'next/link';
 import { AnimatedCard } from '@/components/destination-card/animated-card';
+import { Typography } from '@/components/typography/typography';
 
 type OtherServicesProps = {
   services: Array<ServicesCategories>;
@@ -12,12 +13,18 @@ export const OtherServices = ({ services }: OtherServicesProps) => {
   return (
     <>
       <div className='flex h-[410px] flex-col items-center gap-6 bg-europe px-2.5 py-8 text-center desktop:py-14 desktop:text-left'>
-        <h3 className='font-title text-desktop-h-2xl text-basics-white'>
+        <Typography as='h3' size='heading-2xl' color='basics-white'>
           {t('other-services.title')}
-        </h3>
-        <p className='text-center font-body text-b-lg font-light text-basics-white'>
+        </Typography>
+        <Typography
+          as='p'
+          size='body-lg'
+          color='basics-white'
+          weight='light'
+          className='text-center'
+        >
           {t.rich('other-services.description')}
-        </p>
+        </Typography>
       </div>
       <div className='mt-[-80px] flex items-center gap-4 overflow-auto p-6 desktop:mt-[-160px] desktop:justify-center desktop:overflow-hidden'>
         {Object.entries(servicesCardConfig)

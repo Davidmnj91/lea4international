@@ -21,6 +21,7 @@ import LocaleSwitcher from '@/components/locale-switcher/locale-switcher';
 import React, { useRef } from 'react';
 import { motion, useInView, Variants } from 'framer-motion';
 import { MoreInfo } from '@/components/more-info/more-info';
+import { Typography } from '@/components/typography/typography';
 
 const FaqsHome: Subset<typeof Faqs> = {
   [FAQCategories.erasmus]: [
@@ -56,7 +57,9 @@ export default function HomePage() {
         animate={inView ? 'transparent' : 'opaque'}
         className='sticky top-0 z-50 flex h-[80px] items-center justify-between bg-europe px-[40px]'
       >
-        <h1 className='font-body text-b-xxl text-basics-white'>LOGO</h1>
+        <Typography as='h1' size='heading-2xl' color='basics-white'>
+          LOGO
+        </Typography>
         <nav className='flex items-center gap-[70px]'>
           <Menu />
         </nav>
@@ -78,20 +81,40 @@ export default function HomePage() {
         />
         <div className='m-auto mt-[-80px] flex h-screen w-full flex-col items-center justify-center'>
           <div>
-            <h1 className='text-center font-title text-desktop-h-4xl text-basics-disabled'>
+            <Typography
+              as='h1'
+              size='heading-4xl'
+              color='basics-disabled'
+              className='text-center'
+            >
               {t('language')}
-            </h1>
-            <h1 className='text-center font-title text-desktop-h-4xl text-basics-disabled'>
+            </Typography>
+            <Typography
+              as='h1'
+              size='heading-4xl'
+              color='basics-disabled'
+              className='text-center'
+            >
               {t('education')}
-            </h1>
-            <h1 className='text-center font-title text-desktop-h-4xl text-basics-disabled'>
+            </Typography>
+            <Typography
+              as='h1'
+              size='heading-4xl'
+              color='basics-disabled'
+              className='text-center'
+            >
               {t('travel')}
-            </h1>
+            </Typography>
           </div>
           <div className='mt-[36px]'>
-            <h2 className='text-desktop-b-xl max-w-[840px] text-center font-body text-basics-white'>
+            <Typography
+              as='h2'
+              size='body-xl'
+              color='basics-white'
+              className='max-w-[840px] text-center'
+            >
               {t('slogan')}
-            </h2>
+            </Typography>
           </div>
           <button
             className={clsx('mt-[60px]', buttonTypes({ intent: 'primary' }))}
@@ -110,12 +133,17 @@ export default function HomePage() {
             <div className='flex w-full justify-center'>
               <div className='mt-[-28px] flex h-[550px] max-w-[416px] flex-col justify-between bg-star-light px-6 py-9'>
                 <div>
-                  <span className='font-title text-desktop-h-sm font-bold text-gold-dark'>
+                  <Typography
+                    as='span'
+                    size='heading-sm'
+                    color='gold-dark'
+                    weight='bold'
+                  >
                     Company Name
-                  </span>
-                  <h1 className='font-title text-desktop-h-xl text-europe-dark'>
+                  </Typography>
+                  <Typography as='h1' size='heading-xl' color='europe-dark'>
                     {t('who-we-are.title')}
-                  </h1>
+                  </Typography>
                 </div>
                 <div>
                   <p
