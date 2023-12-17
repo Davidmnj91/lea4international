@@ -1,8 +1,18 @@
-import React, { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
+import React, {
+  ButtonHTMLAttributes,
+  DetailedHTMLProps,
+  JSXElementConstructor,
+  ReactElement,
+} from 'react';
 import { RichTranslation } from '@/types/types';
+import { ReactNodeArray } from 'prop-types';
 
 type BigButtonProps = {
-  title: RichTranslation;
+  title:
+    | RichTranslation
+    | string
+    | ReactElement<any, string | JSXElementConstructor<any>>
+    | ReactNodeArray;
   caption: RichTranslation;
 } & DetailedHTMLProps<
   ButtonHTMLAttributes<HTMLButtonElement>,

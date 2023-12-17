@@ -16,7 +16,7 @@ import { FlowerLotus } from '@phosphor-icons/react/dist/ssr/FlowerLotus';
 import { Monitor } from '@phosphor-icons/react/dist/ssr/Monitor';
 import { JSX } from 'react';
 import { ServiceItem } from '@/components/service-item/service-item';
-import { BigButton } from '@/components/button/big-button';
+import { BecomePartner } from '@/components/partners/become-partner';
 
 export default function Page({ params: { locale } }: LanguagePageProps) {
   // Enable static rendering
@@ -265,20 +265,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
         </div>
       </section>
       <section id='become-partner'>
-        <div className='flex justify-center bg-europe py-14 desktop:bg-transparent'>
-          <div className='flex flex-col gap-9 bg-europe p-6 desktop:p-14'>
-            <h2 className='text-center font-title text-desktop-h-2xl text-basics-white desktop:text-left'>
-              {t('categories.become-partner.title')}
-            </h2>
-            <p className='font-body text-b-lg text-basics-white'>
-              {t.rich('categories.become-partner.description')}
-            </p>
-            <BigButton
-              title={t.rich('categories.become-partner.button.title')}
-              caption={t('categories.become-partner.button.caption')}
-            />
-          </div>
-        </div>
+        <BecomePartner />
       </section>
     </div>
   );

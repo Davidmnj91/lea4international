@@ -392,6 +392,37 @@
       }
     }
   },
+  "accommodations-page": {
+    "title": "Accommodations",
+    "description": "What is the best accommodation option for my experience abroad? Choosing the type of housing for your experience abroad can be a challenging decision, here we give you useful information and tips to help you pick the right accommodation for you.",
+    "contact-us": "Contact us",
+    "accommodations": {
+      "apartment": {
+        "title": "Apartment",
+        "description": "Choosing an apartment is usually one of the best options for a long term experience abroad, you will have a place to call home in a fully equipped apartment, at the same time you will have the opportunity to live with students from other nationalities and learn about their cultures. It is a great option to have your own space and at the same time share some space and time with your flat mates in the common area."
+      },
+      "student-residence": {
+        "title": "Student Residence",
+        "description": "Choosing a student residence is a suitable option for short and long term experience abroad, some students prefer this option only for short term mobility because after some time they miss the freedom of living in an apartment. One of the benefits of living in a student residence is that you will get to meet a lot of students from different countries, you have a 24 hour reception desk and common amenities that will give you a sense of community. Some campuses have sports facilities which are convenient for some students."
+      },
+      "host-family": {
+        "title": "Host Family",
+        "description": "Choosing to live with a host family is an unique opportunity to immerse yourself in the local culture. A host family can provide a welcoming and supportive environment, therefore you will have a sense of family, your hosts will help you when you have problems or are feeling homesick, you will create a special bond that can last for a lifetime. You will still have your own space if you choose to have a private room, host families are a great option for both short and long term experience abroad."
+      },
+      "hotel": {
+        "title": "Hotel",
+        "description": "Choosing to stay in a hotel is a great option for short term experience abroad. You will have the comfort of having cleaning services everyday, 24 hours reception desk, and an optional cooking service. This option is more expensive therefore is best for short periods."
+      },
+      "hostel": {
+        "title": "Hostel",
+        "description": "Choosing to stay in a hostel is a great option for short term experience abroad. It is a cheaper option than a hotel and still has the services of a 24 hours reception desk and access to all essential amenities. It is great to meet new people and have a social environment."
+      },
+      "airbnb": {
+        "title": "Airbnb",
+        "description": "Choosing to stay in an Airbnb is a great option for short and long term experience abroad. It is generally cheaper than a hotel and it has the advantage of having an equipped kitchen where you can cook your own meals and use the laundry. On the other hand, Airbnb is missing a 24 hours reception desk."
+      }
+    }
+  },
   "faq-page": {
     "title": "Frequently Asked Questions",
     "categories": {
@@ -697,6 +728,14 @@
     "title": "Our Partners",
     "partners": {
       "name": "Erasmus+"
+    }
+  },
+  "become-partner": {
+    "title": "Become A Partner",
+    "description": "We are here to answer all your questions. <br></br><br></br>Contact us today!",
+    "button": {
+      "title": "Become a <br>Partner</br>",
+      "caption": "Contact Us"
     }
   },
   "faqs": {

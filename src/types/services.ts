@@ -10,7 +10,7 @@ export enum ServicesCategories {
   Concierge = 'concierge',
 }
 
-export const servicesCardConfig = {
+export const servicesCardConfig: Record<ServicesCategories, string> = {
   erasmus: erasmus_bg.src,
   'language-courses': language_courses_bg.src,
   'student-exchange': student_exchange_bg.src,

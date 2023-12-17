@@ -21,4 +21,4 @@ export type RichTranslation =
       any,
       string | import('react').JSXElementConstructor<any>
     >
-  | import('react').ReactNodeArray;
+  | import('react').ReactNode[];

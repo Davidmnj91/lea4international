@@ -1,42 +1,16 @@
-import Link from 'next/link';
-import { CaretLeft } from '@phosphor-icons/react/dist/ssr/CaretLeft';
 import { useTranslations } from 'next-intl';
-import { AnimatedCard } from '@/components/destination-card/animated-card';
-import { headers } from 'next/headers';
 import { servicesCardConfig, ServicesCategories } from '@/types/services';
-import { OtherServices } from '@/components/services/services';
-import React from 'react';
+import Link from 'next/link';
+import { AnimatedCard } from '@/components/destination-card/animated-card';
 
-type RootServicesLayoutProps = {
-  children: React.ReactNode;
+type OtherServicesProps = {
+  services: Array<ServicesCategories>;
 };
-
-export default function RootServicesLayout({
-  children,
-}: RootServicesLayoutProps) {
+export const OtherServices = ({ services }: OtherServicesProps) => {
   const t = useTranslations('services-page.services');
-
-  const heads = headers();
-  const pathname = heads.get('next-url')?.split('/').pop();
 
   return (
     <>
-      <div className='flex border-b border-basics-disabled px-12 py-2.5'>
-        <Link href={'/services'} className='flex items-center gap-4'>
-          <CaretLeft size={32} />
-          <span className='font-body text-b-lg text-europe-dark'>
-            {t('back-to-services')}
-          </span>
-        </Link>
-      </div>
-      {children}
-      <section id='other-services'>
-        <OtherServices
-          services={Object.keys(ServicesCategories)
-            .filter((service) => pathname !== service)
-            .map((service) => service as ServicesCategories)}
-        />
-      </section>
       <div className='flex h-[410px] flex-col items-center gap-6 bg-europe px-2.5 py-8 text-center desktop:py-14 desktop:text-left'>
         <h3 className='font-title text-desktop-h-2xl text-basics-white'>
           {t('other-services.title')}
@@ -47,7 +21,9 @@ export default function RootServicesLayout({
       </div>
       <div className='mt-[-80px] flex items-center gap-4 overflow-auto p-6 desktop:mt-[-160px] desktop:justify-center desktop:overflow-hidden'>
         {Object.entries(servicesCardConfig)
-          .filter(([service, _]) => pathname !== service)
+          .filter(([service, _]) =>
+            services.includes(service as ServicesCategories)
+          )
           .map(([service, imgSrc]) => (
             <Link key={service} href={service}>
               <AnimatedCard
@@ -62,4 +38,4 @@ export default function RootServicesLayout({
       </div>
     </>
   );
-}
+};
