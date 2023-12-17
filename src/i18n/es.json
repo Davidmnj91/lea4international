@@ -134,14 +134,6 @@
               "title": "Quién es puede aplicar?",
               "description": "<li>Instituciones educativas</li><li>Autoridades locales</li><li>Organizaciones sin fines de lucro</li><li>Pequeñas y medianas empresas (PYMES)</li><li>Empresas estatales</li>"
             }
-          },
-          "become-partner": {
-            "title": "Convertirse en un compañero",
-            "description": "Estamos aquí para responder a todas tus preguntas. <br></br><br></br>¡Contáctenos hoy!",
-            "button": {
-              "title": "Conviértase en<br></br>socio",
-              "caption": "Contacta con nosotros"
-            }
           }
         }
       },
@@ -397,6 +389,37 @@
           "work-experience": "Experiencia laboral",
           "job-shadowing": "Observación de profesionales"
         }
+      }
+    }
+  },
+  "accommodations-page": {
+    "title": "Alojamientos",
+    "description": "¿Cuál es la mejor opción de alojamiento para mi experiencia en el extranjero? Elegir el tipo de alojamiento para tu experiencia en el extranjero puede ser una decisión desafiante, aquí te brindamos información útil y consejos para ayudarte a elegir el alojamiento adecuado para ti.",
+    "contact-us": "Contactanos",
+    "accommodations": {
+      "apartment": {
+        "title": "Apartamento",
+        "description": "Elegir un apartamento suele ser una de las mejores opciones para una experiencia a largo plazo en el extranjero, tendrás un lugar al que llamar hogar en un apartamento totalmente equipado, al mismo tiempo tendrás la oportunidad de convivir con estudiantes de otras nacionalidades y aprender sobre sus culturas. Es una gran opción tener tu propio espacio y al mismo tiempo compartir espacio y tiempo con tus compañeros de piso en la zona común."
+      },
+      "student-residence": {
+        "title": "Residencia de Estudiantes",
+        "description": "Elegir una residencia de estudiantes es una opción adecuada para experiencias de corta y larga duración en el extranjero, algunos estudiantes prefieren esta opción sólo para movilidades de corta duración porque después de un tiempo pierden la libertad de vivir en un apartamento. Uno de los beneficios de vivir en una residencia de estudiantes es que podrás conocer a muchos estudiantes de diferentes países, tendrás una recepción abierta las 24 horas y comodidades comunes que te darán un sentido de comunidad. Algunos campus cuentan con instalaciones deportivas que resultan convenientes para algunos estudiantes."
+      },
+      "host-family": {
+        "title": "Familia anfitriona",
+        "description": "Elegir vivir con una familia anfitriona es una oportunidad única de sumergirse en la cultura local. Una familia anfitriona puede proporcionar un ambiente acogedor y de apoyo, por lo tanto tendrás un sentido de familia, tus anfitriones te ayudarán cuando tengas problemas o sientas nostalgia, crearás un vínculo especial que puede durar toda la vida. Aún tendrás tu propio espacio si eliges tener una habitación privada; las familias anfitrionas son una excelente opción para experiencias de corta y larga duración en el extranjero."
+      },
+      "hotel": {
+        "title": "Hotel",
+        "description": "Elegir alojarse en un hotel es una excelente opción para una experiencia de corta duración en el extranjero. Tendrá la comodidad de contar con servicio de limpieza todos los días, recepción 24 horas y servicio de cocina opcional. Esta opción es más cara y por tanto es mejor para periodos cortos."
+      },
+      "hostel": {
+        "title": "Hostal",
+        "description": "Elegir alojarse en un albergue es una excelente opción para una experiencia de corta duración en el extranjero. Es una opción más económica que un hotel y aún cuenta con los servicios de recepción las 24 horas y acceso a todos los servicios esenciales. Es genial conocer gente nueva y tener un ambiente social."
+      },
+      "airbnb": {
+        "title": "Airbnb",
+        "description": "Elegir alojarse en un Airbnb es una excelente opción para una experiencia de corto y largo plazo en el extranjero. Generalmente es más barato que un hotel y tiene la ventaja de tener una cocina equipada donde puedes cocinar tus propias comidas y lavar la ropa. Por otro lado, Airbnb carece de una recepción abierta las 24 horas."
       }
     }
   },
@@ -693,10 +716,26 @@
       "description": "No todos los proyectos son iguales y lo sabemos, en *** recibirás un trato totalmente personalizado. <b>Trabajamos duro para que puedas disfrutar de los resultados</b>"
     }
   },
+  "more-info": {
+    "title": "¿Busca más</br>información?",
+    "questions": "Estamos aquí para responder a todas tus preguntas. </br></br> ¡Contáctenos hoy!",
+    "more-info": "Más Información",
+    "request-quote": "Solicitar </br> una cotización",
+    "host-family": "Conviértete en </br>una familia anfitriona",
+    "contact-us": "Contactanos"
+  },
   "our-partners": {
     "title": "Nuestros compañeros",
     "partners": {
       "name": "Erasmus+"
+    }
+  },
+  "become-partner": {
+    "title": "Convertirse en un compañero",
+    "description": "Estamos aquí para responder a todas tus preguntas. <br></br><br></br>¡Contáctenos hoy!",
+    "button": {
+      "title": "Conviértase en<br></br>socio",
+      "caption": "Contacta con nosotros"
     }
   },
   "faqs": {

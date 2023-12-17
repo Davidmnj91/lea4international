@@ -53,7 +53,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
         </div>
       </section>
       <div className='flex items-center justify-center p-6 desktop:px-12 desktop:py-24'>
-        <h2 className='font-body text-b-lg text-europe-dark'>
+        <h2 className='text-center font-body text-b-lg text-europe-dark'>
           {t('description')}
         </h2>
       </div>

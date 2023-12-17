@@ -27,7 +27,7 @@ export const MoreInfo = () => {
         {['more-info', 'request-quote', 'host-family'].map((title) => (
           <BigButton
             key={title}
-            title={t.raw(`${title}`)}
+            title={t.rich(`${title}`)}
             caption={t('contact-us')}
           />
         ))}

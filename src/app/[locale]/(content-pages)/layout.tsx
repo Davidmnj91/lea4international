@@ -1,7 +1,6 @@
 import { Language, languages } from '@/i18n';
 import { notFound } from 'next/navigation';
 import { unstable_setRequestLocale } from 'next-intl/server';
-import { useMessages } from 'next-intl';
 import { Header } from '@/components/header/header';
 
 export async function generateStaticParams() {
@@ -20,7 +19,6 @@ export default function RootLayout({
   if (!languages.includes(locale as any)) notFound();
 
   unstable_setRequestLocale(locale);
-  const messages = useMessages();
 
   return (
     <>
