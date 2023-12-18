@@ -146,12 +146,14 @@ export default function HomePage() {
                   </Typography>
                 </div>
                 <div>
-                  <p
-                    className='font-body text-b-lg text-europe-dark'
+                  <Typography
+                    as='p'
+                    size='body-lg'
+                    color='europe-dark'
                     dangerouslySetInnerHTML={{
                       __html: t.raw('who-we-are.description'),
                     }}
-                  ></p>
+                  />
                   <button
                     className={clsx(
                       'mt-8',
@@ -164,19 +166,26 @@ export default function HomePage() {
               </div>
               <div className='flex h-[550px] max-w-[416px] flex-col justify-between bg-basics-white px-6 py-9'>
                 <div>
-                  <span className='font-title  text-desktop-h-sm font-bold text-gold-dark'>
+                  <Typography
+                    as='span'
+                    size='heading-sm'
+                    color='gold-dark'
+                    weight='bold'
+                  >
                     Company Name
-                  </span>
-                  <h1 className='font-title text-desktop-h-xl text-europe-dark'>
+                  </Typography>
+                  <Typography as='h1' size='heading-xl' color='europe-dark'>
                     {t('our-focus.title')}
-                  </h1>
+                  </Typography>
                 </div>
-                <p
-                  className='font-body text-b-lg text-europe-dark'
+                <Typography
+                  as='p'
+                  size='body-lg'
+                  color='europe-dark'
                   dangerouslySetInnerHTML={{
                     __html: t.raw('our-focus.description'),
                   }}
-                ></p>
+                />
               </div>
             </div>
           </div>
@@ -197,47 +206,66 @@ export default function HomePage() {
               <div className='flex w-full justify-center gap-20'>
                 <div className='mt-[-128px] flex  h-[478px] max-w-[490px] flex-col justify-between bg-basics-white p-6'>
                   <div>
-                    <span className='font-title text-desktop-h-sm font-bold text-gold-dark'>
+                    <Typography
+                      as='span'
+                      size='heading-sm'
+                      color='gold-dark'
+                      weight='bold'
+                    >
                       Company Name
-                    </span>
-                    <h1 className='font-title text-desktop-h-xl text-europe-dark'>
+                    </Typography>
+                    <Typography as='h1' size='heading-xl' color='europe-dark'>
                       {t('our-beliefs.title')}
-                    </h1>
+                    </Typography>
                   </div>
-                  <p
-                    className='font-body text-b-lg text-europe-dark'
+                  <Typography
+                    as='p'
+                    size='body-lg'
+                    color='europe-dark'
                     dangerouslySetInnerHTML={{
                       __html: t.raw('our-beliefs.description'),
                     }}
-                  ></p>
+                  />
                 </div>
                 <div className='flex h-[542px] max-w-[490px] flex-col justify-between bg-basics-white p-6'>
                   <div>
-                    <span className='font-title  text-desktop-h-sm font-bold text-gold-dark'>
+                    <Typography
+                      as='span'
+                      size='heading-sm'
+                      color='gold-dark'
+                      weight='bold'
+                    >
                       Company Name
-                    </span>
-                    <h1 className='font-title text-desktop-h-xl text-europe-dark'>
+                    </Typography>
+                    <Typography as='h1' size='heading-xl' color='europe-dark'>
                       {t('coming-challenges.title')}
-                    </h1>
+                    </Typography>
                   </div>
-                  <p
-                    className='fon t-body text-b-lg text-europe-dark'
+                  <Typography
+                    as='p'
+                    size='body-lg'
+                    color='europe-dark'
                     dangerouslySetInnerHTML={{
                       __html: t.raw('coming-challenges.description'),
                     }}
-                  ></p>
+                  />
                 </div>
               </div>
               <div className='relative flex items-center justify-center py-20'>
-                <h3 className='flex w-[816px] items-center text-center font-title text-desktop-h-lg text-basics-white'>
-                  <span className='text-desktop-h-4xl text-gold-dark'>
+                <Typography
+                  as='h3'
+                  size='heading-lg'
+                  color='basics-white'
+                  className='flex w-[816px] items-center text-center'
+                >
+                  <Typography as='span' size='heading-4xl' color='gold-dark'>
                     &ldquo;
-                  </span>
+                  </Typography>
                   {t('help-you')}
-                  <span className='text-desktop-h-4xl text-gold-dark'>
+                  <Typography as='span' size='heading-4xl' color='gold-dark'>
                     &rdquo;
-                  </span>
-                </h3>
+                  </Typography>
+                </Typography>
               </div>
             </div>
           </div>
@@ -247,9 +275,14 @@ export default function HomePage() {
             <div className='flex justify-between'>
               <CommitmentsCarousel />
               <div>
-                <h3 className='border-b-2 border-b-europe-light font-title text-desktop-h-2xl'>
+                <Typography
+                  as='h3'
+                  size='heading-2xl'
+                  color='europe-dark'
+                  className='border-b-2 border-b-europe-light'
+                >
                   {t('our-commitment.title')}
-                </h3>
+                </Typography>
               </div>
             </div>
           </div>
@@ -261,13 +294,13 @@ export default function HomePage() {
               backgroundRepeat: 'no-repeat',
               marginTop: '-280px',
             }}
-          ></div>
+          />
         </section>
         <section id='top-destinations'>
           <div className='mt-14 flex h-[410px] flex-col items-center justify-start bg-europe pt-14'>
-            <h3 className='font-title text-desktop-h-2xl text-basics-white'>
+            <Typography as='h3' size='heading-2xl' color='basics-white'>
               {t('top-destinations.title')}
-            </h3>
+            </Typography>
             <div className='mt-6 flex items-center justify-center'>
               <span className='h-1 w-[250px] border-b border-b-europe-light' />
               <button
@@ -307,9 +340,9 @@ export default function HomePage() {
         </section>
         <section id='faq'>
           <div className='mt-14 flex flex-col items-center justify-center pt-16'>
-            <h3 className='font-title text-desktop-h-2xl text-europe-dark'>
+            <Typography as='h3' size='heading-2xl' color='europe-dark'>
               {t('faq.title')}
-            </h3>
+            </Typography>
             <div className='mt-14 flex items-center justify-center'>
               <span className='h-1 w-[250px] border-b border-b-europe' />
               <button

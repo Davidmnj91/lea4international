@@ -17,6 +17,7 @@ import { UsersFour } from '@phosphor-icons/react/dist/ssr/UsersFour';
 import React from 'react';
 import { Partners } from '@/components/partners/partners';
 import clsx from 'clsx';
+import { Typography } from '@/components/typography/typography';
 
 export default function Page({ params: { locale } }: LanguagePageProps) {
   // Enable static rendering
@@ -38,9 +39,14 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
   return (
     <div>
       <div className='flex items-center justify-center py-24'>
-        <h1 className='text-center font-title text-desktop-h-2xl text-europe-dark desktop:text-left'>
+        <Typography
+          as='h1'
+          size='heading-2xl'
+          color='europe-dark'
+          className='text-center desktop:text-left'
+        >
           {t('title')}
-        </h1>
+        </Typography>
       </div>
       <div className='mx-24 my-24 flex items-center justify-center gap-14'>
         <div
@@ -66,9 +72,9 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
           <path d='M1 0.234375L1.00002 528.234' stroke='#45586A' />
         </svg>
         <div className='justify-center-center flex flex-[0_0_647px] flex-col gap-8'>
-          <p className='font-body text-b-lg text-europe-dark '>
+          <Typography as='p' size='body-lg' color='europe-dark'>
             {t.rich('description')}
-          </p>
+          </Typography>
           <div>
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -118,28 +124,37 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
         </div>
       </div>
       <div className='flex flex-col items-center gap-14 bg-europe py-14'>
-        <h2 className='font-title text-desktop-h-2xl text-basics-white'>
+        <Typography as='h2' size='heading-2xl' color='basics-white'>
           {t('values.title')}
-        </h2>
+        </Typography>
         <div className='grid grid-cols-4 gap-6'>
           {Object.entries(values).map(([value, icon]) => (
             <div
               key={value}
               className='flex h-[200px] w-[200px] flex-col items-center justify-center gap-2.5 rounded-full border border-dashed border-basics-white'
             >
-              <span className='font-title text-desktop-h-md font-bold text-basics-white'>
+              <Typography as='span' size='heading-md' color='basics-white'>
                 {t(`values.${value}`)}
-              </span>
+              </Typography>
               <div className='text-gold'>{icon}</div>
             </div>
           ))}
         </div>
         <div className='flex items-center justify-center py-20'>
-          <h3 className='flex w-[850px] items-center text-center font-title text-desktop-h-lg text-basics-white'>
-            <span className='text-desktop-h-4xl text-gold-dark'>&ldquo;</span>
+          <Typography
+            as='h3'
+            size='heading-lg'
+            color='basics-white'
+            className='flex w-[850px] items-center text-center'
+          >
+            <Typography as='span' size='heading-4xl' color='gold-dark'>
+              &ldquo;
+            </Typography>
             <span className='w-[706px] capitalize'>{t.rich('quote')}</span>
-            <span className='text-desktop-h-4xl text-gold-dark'>&rdquo;</span>
-          </h3>
+            <Typography as='span' size='heading-4xl' color='gold-dark'>
+              &rdquo;
+            </Typography>
+          </Typography>
         </div>
       </div>
       <Partners />

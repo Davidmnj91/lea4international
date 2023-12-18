@@ -9,6 +9,7 @@ import malaga_bg from '../../../../../public/malaga_bg.png';
 import krakow_bg from '../../../../../public/krakow_bg.png';
 import dublin_bg from '../../../../../public/dublin_bg.png';
 import ghent_bg from '../../../../../public/ghent_bg.png';
+import { Typography } from '@/components/typography/typography';
 
 export default function Page({ params: { locale } }: LanguagePageProps) {
   // Enable static rendering
@@ -28,12 +29,18 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
   return (
     <div>
       <div className='flex h-[410px] flex-col items-center gap-6 bg-europe px-2.5 py-14 desktop:py-14'>
-        <h1 className='font-title text-desktop-h-2xl text-basics-white'>
+        <Typography as='h1' size='heading-2xl' color='basics-white'>
           {t('title')}
-        </h1>
-        <span className='max-w-[386px] text-center font-body text-b-lg font-light text-basics-white'>
+        </Typography>
+        <Typography
+          as='span'
+          size='body-lg'
+          color='basics-white'
+          weight='light'
+          className='max-w-[386px] text-center'
+        >
           {t.rich('message')}
-        </span>
+        </Typography>
       </div>
       <div className='mt-[-180px] flex flex-wrap items-center gap-4 overflow-auto p-6 desktop:mt-[-160px] desktop:justify-center desktop:overflow-hidden'>
         {Object.entries(destinations).map(([destination, imgSrc]) => (

@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { FAQCategories, Faqs } from '@/types/faq';
 import { MoreInfo } from '@/components/more-info/more-info';
 import React from 'react';
+import { Typography } from '@/components/typography/typography';
 
 export default function Page({ params: { locale } }: LanguagePageProps) {
   // Enable static rendering
@@ -17,9 +18,14 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
   return (
     <div>
       <div className='flex items-center justify-center py-14 desktop:py-24'>
-        <h1 className='text-center font-title text-desktop-h-2xl text-europe-dark desktop:text-left'>
+        <Typography
+          as='h1'
+          size='heading-2xl'
+          color='europe-dark'
+          className='text-center desktop:text-left'
+        >
           {t('title')}
-        </h1>
+        </Typography>
       </div>
       <section id='faq' className='sticky top-20'>
         <div className='flex items-center gap-6 overflow-auto border-y border-y-basics-disabled bg-basics-white px-6 py-6 desktop:justify-center desktop:overflow-hidden desktop:px-12'>
@@ -37,9 +43,9 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
         {Object.entries(Faqs).map(([category, items]) => (
           <section key={category} id={category}>
             <div className='border-b border-b-basics-disabled px-6 pb-6 pt-12 desktop:px-12'>
-              <h2 className='font-title text-desktop-h-xl text-europe-dark'>
+              <Typography as='h2' size='heading-xl' color='europe-dark'>
                 {t(`categories.${category}`)}
-              </h2>
+              </Typography>
             </div>
             {items.map((faq) => (
               <div

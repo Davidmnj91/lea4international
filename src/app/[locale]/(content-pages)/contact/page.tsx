@@ -7,10 +7,11 @@ import { FamilyForm } from '@/components/family-form/family-form';
 import { InstitutionForm } from '@/components/institution-form/institution-form';
 import { Envelope } from '@phosphor-icons/react/dist/ssr/Envelope';
 import { Phone } from '@phosphor-icons/react/dist/ssr/Phone';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { AnimatePresence, motion, Variants } from 'framer-motion';
 import { Contact } from '@/types/contact';
 import { PartnerForm } from '@/components/partner-form/partner-form';
+import { Typography } from '@/components/typography/typography';
 
 const roles = {
   company: <CompanyForm />,
@@ -41,17 +42,27 @@ export default function Page() {
   return (
     <div>
       <div className='my-14 flex flex-col items-center justify-center gap-6  desktop:my-24 desktop:gap-1.5'>
-        <h1 className='font-title text-desktop-h-2xl text-europe-dark'>
+        <Typography as='h1' size='heading-2xl' color='europe-dark'>
           {t('title')}
-        </h1>
-        <p className='text-center font-body text-b-lg text-europe-dark desktop:text-left'>
+        </Typography>
+        <Typography
+          as='p'
+          size='body-lg'
+          color='europe-dark'
+          className='text-center desktop:text-left'
+        >
           {t('message')}
-        </p>
+        </Typography>
       </div>
       <div className='sticky top-0 flex flex-col justify-start gap-6 overflow-auto border-y border-y-basics-disabled bg-basics-white px-6 py-6 desktop:flex-row desktop:items-center desktop:justify-center desktop:px-12'>
-        <span className='sticky left-0 font-body text-b-lg text-europe-dark'>
+        <Typography
+          as='span'
+          size='body-lg'
+          color='europe-dark'
+          className='sticky left-0'
+        >
           {t('who-are-you')}
-        </span>
+        </Typography>
         <div className='flex gap-6'>
           {Object.keys(roles).map((role) => (
             <button
@@ -84,21 +95,27 @@ export default function Page() {
       <div className='flex flex-col items-center justify-center gap-3 pb-14 pt-8 desktop:pb-24'>
         <div className='flex items-center justify-center gap-6'>
           <Envelope size={32} />
-          <a
+          <Typography
+            as='a'
+            size='body-lg'
+            color='europe-dark'
             href={`mailto:${Contact.mail}`}
             className='font-body text-b-lg text-europe-dark'
           >
             [mail]@[mail]
-          </a>
+          </Typography>
         </div>
         <div className='flex items-center justify-center gap-6'>
           <Phone size={32} />
-          <a
+          <Typography
+            as='a'
+            size='body-lg'
+            color='europe-dark'
             href={`tel:${Contact.phone}`}
             className='font-body text-b-lg text-europe-dark'
           >
             {Contact.phone}
-          </a>
+          </Typography>
         </div>
       </div>
     </div>

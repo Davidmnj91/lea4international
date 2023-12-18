@@ -15,6 +15,7 @@ import clsx from 'clsx';
 import { BecomePartner } from '@/components/partners/become-partner';
 import { ServicesCategories } from '@/types/services';
 import { OtherServices } from '@/components/services/services';
+import { Typography } from '@/components/typography/typography';
 
 export default function Page({ params: { locale } }: LanguagePageProps) {
   // Enable static rendering
@@ -34,9 +35,14 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
   return (
     <div>
       <div className='flex items-center justify-center py-14 desktop:py-24'>
-        <h1 className='text-center font-title text-desktop-h-2xl text-europe-dark desktop:text-left'>
+        <Typography
+          as='h1'
+          size='heading-2xl'
+          color='europe-dark'
+          className='text-center desktop:text-left'
+        >
           {t('title')}
-        </h1>
+        </Typography>
       </div>
       <section id='accommodations' className='sticky top-20'>
         <div className='flex items-center gap-6 overflow-auto border-y border-y-basics-disabled bg-basics-white px-6 py-6 desktop:justify-center desktop:overflow-hidden desktop:px-12'>
@@ -53,9 +59,14 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
         </div>
       </section>
       <div className='flex items-center justify-center p-6 desktop:px-12 desktop:py-24'>
-        <h2 className='text-center font-body text-b-lg text-europe-dark'>
+        <Typography
+          as='h2'
+          size='body-lg'
+          color='europe-dark'
+          className='text-center'
+        >
           {t('description')}
-        </h2>
+        </Typography>
       </div>
       {Object.entries(accommodations).map(([accommodation, imgSrc], index) => (
         <section key={accommodation} id={accommodation}>
@@ -86,12 +97,17 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
                   />
                 </div>
                 <div className='flex flex-col items-start justify-center gap-2.5 px-6 desktop:max-w-[474px]'>
-                  <h3 className='font-title text-desktop-h-lg font-bold text-europe'>
+                  <Typography
+                    as='h3'
+                    size='heading-lg'
+                    color='europe'
+                    weight='bold'
+                  >
                     {t(`accommodations.${accommodation}.title`)}
-                  </h3>
-                  <p className='font-body text-b-lg text-europe'>
+                  </Typography>
+                  <Typography as='p' size='body-lg' color='europe'>
                     {t(`accommodations.${accommodation}.description`)}
-                  </p>
+                  </Typography>
                   <button className={buttonTypes({ intent: 'primary' })}>
                     {t('contact-us')}
                   </button>
