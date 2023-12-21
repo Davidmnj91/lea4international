@@ -32,7 +32,7 @@ export const MoreInfo = () => {
         {['more-info', 'request-quote', 'host-family'].map((title) => (
           <BigButton
             key={title}
-            title={t.rich(`${title}`)}
+            subject={t.rich(title) as string}
             caption={t('contact-us')}
           />
         ))}

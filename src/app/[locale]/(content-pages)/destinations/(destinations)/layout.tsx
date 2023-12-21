@@ -33,9 +33,9 @@ export default function RootDestinationsLayout({
             {t.rich('inspired.description')}
           </Typography>
           <div className='flex flex-col gap-6 desktop:flex-row desktop:gap-8'>
-            <BigButton title={t('inspired.join')} caption={t('contact-us')} />
+            <BigButton subject={t('inspired.join')} caption={t('contact-us')} />
             <BigButton
-              title={t('inspired.accommodations')}
+              subject={t('inspired.accommodations')}
               caption={t('see-more')}
             />
           </div>

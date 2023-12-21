@@ -20,7 +20,7 @@ export const BecomePartner = () => {
           {t.rich('description')}
         </Typography>
         <BigButton
-          title={t.rich('button.title')}
+          subject={t.rich('button.title')}
           caption={t('button.caption')}
         />
       </div>

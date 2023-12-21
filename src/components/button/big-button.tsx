@@ -1,26 +1,16 @@
-import React, {
-  ButtonHTMLAttributes,
-  DetailedHTMLProps,
-  JSXElementConstructor,
-  ReactElement,
-} from 'react';
+import React, { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
 import { RichTranslation } from '@/types/types';
-import { ReactNodeArray } from 'prop-types';
 import { Typography } from '@/components/typography/typography';
 
 type BigButtonProps = {
-  title:
-    | RichTranslation
-    | string
-    | ReactElement<any, string | JSXElementConstructor<any>>
-    | ReactNodeArray;
+  subject: RichTranslation;
   caption: RichTranslation;
 } & DetailedHTMLProps<
   ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement
 >;
 export const BigButton = ({
-  title,
+  subject,
   caption,
   ...buttonProps
 }: BigButtonProps) => {
@@ -36,7 +26,7 @@ export const BigButton = ({
         weight='bold'
         className='text-left'
       >
-        {title}
+        {subject}
       </Typography>
       <Typography
         as='span'

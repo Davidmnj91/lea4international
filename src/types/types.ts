@@ -1,3 +1,5 @@
+import { ReactElement, ReactNode, ReactNodeArray } from 'react';
+
 export type Nullable<T> = T | null;
 
 export type ValidationErrors = {
@@ -17,8 +19,6 @@ export type Subset<K> = {
 
 export type RichTranslation =
   | string
-  | import('react').ReactElement<
-      any,
-      string | import('react').JSXElementConstructor<any>
-    >
-  | import('react').ReactNode[];
+  | ReactElement
+  | ReactNodeArray
+  | ReactNode[];
