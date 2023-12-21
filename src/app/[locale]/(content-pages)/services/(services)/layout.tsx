@@ -6,6 +6,7 @@ import { headers } from 'next/headers';
 import { servicesCardConfig, ServicesCategories } from '@/types/services';
 import { OtherServices } from '@/components/services/services';
 import React from 'react';
+import { Typography } from '@/components/typography/typography';
 
 type RootServicesLayoutProps = {
   children: React.ReactNode;
@@ -24,9 +25,9 @@ export default function RootServicesLayout({
       <div className='flex border-b border-basics-disabled px-12 py-2.5'>
         <Link href={'/services'} className='flex items-center gap-4'>
           <CaretLeft size={32} />
-          <span className='font-body text-b-lg text-europe-dark'>
+          <Typography as='span' size='body-lg' color='europe-dark'>
             {t('back-to-services')}
-          </span>
+          </Typography>
         </Link>
       </div>
       {children}
@@ -38,12 +39,18 @@ export default function RootServicesLayout({
         />
       </section>
       <div className='flex h-[410px] flex-col items-center gap-6 bg-europe px-2.5 py-8 text-center desktop:py-14 desktop:text-left'>
-        <h3 className='font-title text-desktop-h-2xl text-basics-white'>
+        <Typography as='h3' size='heading-2xl' color='basics-white'>
           {t('other-services.title')}
-        </h3>
-        <p className='text-center font-body text-b-lg font-light text-basics-white'>
+        </Typography>
+        <Typography
+          as='p'
+          size='body-lg'
+          color='basics-white'
+          weight='light'
+          className='text-center'
+        >
           {t.rich('other-services.description')}
-        </p>
+        </Typography>
       </div>
       <div className='mt-[-80px] flex items-center gap-4 overflow-auto p-6 desktop:mt-[-160px] desktop:justify-center desktop:overflow-hidden'>
         {Object.entries(servicesCardConfig)

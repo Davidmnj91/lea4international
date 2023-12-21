@@ -100,7 +100,6 @@ export default function Page() {
             size='body-lg'
             color='europe-dark'
             href={`mailto:${Contact.mail}`}
-            className='font-body text-b-lg text-europe-dark'
           >
             [mail]@[mail]
           </Typography>
@@ -112,7 +111,6 @@ export default function Page() {
             size='body-lg'
             color='europe-dark'
             href={`tel:${Contact.phone}`}
-            className='font-body text-b-lg text-europe-dark'
           >
             {Contact.phone}
           </Typography>

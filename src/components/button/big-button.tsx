@@ -25,9 +25,8 @@ export const BigButton = ({
         color='basics-white'
         weight='bold'
         className='text-left'
-      >
-        {subject}
-      </Typography>
+        dangerouslySetInnerHTML={{ __html: subject }}
+      />
       <Typography
         as='span'
         size='heading-sm'

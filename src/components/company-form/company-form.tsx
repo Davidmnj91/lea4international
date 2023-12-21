@@ -44,7 +44,7 @@ export const CompanyForm = () => {
     resolver: zodResolver(CompanyContactSchema),
   });
 
-  const t = useTranslations('company-form');
+  const t = useTranslations('forms');
 
   useEffect(() => {
     if (!state) {

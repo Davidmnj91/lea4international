@@ -33,9 +33,14 @@ const MobileFooter = () => {
         </div>
         <div className='flex items-center gap-6 text-basics-white'>
           <Phone size={32} />
-          <a href={`tel:${Contact.phone}`} className='font-body text-b-md'>
+          <Typography
+            as='a'
+            size='body-md'
+            color='basics-white'
+            href={`tel:${Contact.phone}`}
+          >
             {Contact.phone}
-          </a>
+          </Typography>
         </div>
       </div>
       <div className='flex gap-4 text-basics-white'>
@@ -84,14 +89,19 @@ const DesktopFooter = () => {
             </div>
             <div className='flex items-center  gap-6 text-basics-white'>
               <Phone size={32} />
-              <a href={`tel:${Contact.phone}`} className='font-body text-b-md'>
+              <Typography
+                as='a'
+                size='body-md'
+                color='basics-white'
+                href={`tel:${Contact.phone}`}
+              >
                 {Contact.phone}
-              </a>
+              </Typography>
             </div>
           </div>
           <div className='flex gap-4 text-basics-white'>
             <Typography as='span' size='body-md' color='basics-white'>
-              {t('follow-"us')}
+              {t('follow-us')}
             </Typography>
             <InstagramIcon size={24} />
             <FacebookIcon size={24} />

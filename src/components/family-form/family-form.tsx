@@ -42,7 +42,7 @@ export const FamilyForm = () => {
     resolver: zodResolver(HostFamilyContactSchema),
   });
 
-  const t = useTranslations('family-form');
+  const t = useTranslations('forms');
 
   useEffect(() => {
     if (!state) {

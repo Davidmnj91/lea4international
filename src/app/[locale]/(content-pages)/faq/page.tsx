@@ -17,18 +17,18 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
 
   return (
     <div>
-      <div className='flex items-center justify-center py-14 desktop:py-24'>
-        <Typography
-          as='h1'
-          size='heading-2xl'
-          color='europe-dark'
-          className='text-center desktop:text-left'
-        >
-          {t('title')}
-        </Typography>
-      </div>
-      <section id='faq' className='sticky top-20'>
-        <div className='flex items-center gap-6 overflow-auto border-y border-y-basics-disabled bg-basics-white px-6 py-6 desktop:justify-center desktop:overflow-hidden desktop:px-12'>
+      <div>
+        <div className='flex items-center justify-center py-14 desktop:py-24'>
+          <Typography
+            as='h1'
+            size='heading-2xl'
+            color='europe-dark'
+            className='text-center desktop:text-left'
+          >
+            {t('title')}
+          </Typography>
+        </div>
+        <div className='sticky top-20 flex items-center gap-6 overflow-auto border-y border-y-basics-disabled bg-basics-white px-6 py-6 desktop:justify-center desktop:overflow-hidden desktop:px-12'>
           {Object.values(FAQCategories).map((category) => (
             <Link
               href={`#${category}`}
@@ -57,7 +57,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
             ))}
           </section>
         ))}
-      </section>
+      </div>
       <section id='more-info'>
         <MoreInfo />
       </section>

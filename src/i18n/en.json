@@ -126,14 +126,6 @@
               "title": "Who is eligible to apply?",
               "description": "<li>Educational Institutions</li><li>Local Authorities</li><li>Non Profit Organisations</li><li>Small and Medium Enterprises (SMEs)</li><li>State-owned Enterprises</li>"
             }
-          },
-          "become-partner": {
-            "title": "Become A Partner",
-            "description": "We are here to answer all your questions. <br></br><br></br>Contact us today!",
-            "button": {
-              "title": "Become a <br>Partner</br>",
-              "caption": "Contact Us"
-            }
           }
         }
       },
@@ -181,7 +173,7 @@
           },
           "spanish-courses": {
             "title": "Spanish courses",
-            "description": "Conversational Spanish Course<br>Have you spent years learning Spanish at school but still lack fluency and confidence to speak Spanish?</br></br><br></br>Then this is the right course for you",
+            "description": "Conversational Spanish Course<br></br>Have you spent years learning Spanish at school but still lack fluency and confidence to speak Spanish?<br></br><br></br>Then this is the right course for you",
             "we-offer": {
               "focus": {
                 "title": "During this course our Spanish teachers will <br>focus on:</br>",
@@ -448,7 +440,7 @@
   "contact-us": {
     "text": "Contact us"
   },
-  "company-form": {
+  "forms": {
     "input": {
       "service": {
         "label": "What type of service are you interested in?",
@@ -493,32 +485,8 @@
       "terms": {
         "label": "I accept to acknowledge that I have read and agree to the privacy policies before submitting the form",
         "error": "You must accept the terms and conditions"
-      }
-    },
-    "submit": "Send form"
-  },
-  "family-form": {
-    "input": {
-      "name": {
-        "label": "Name",
-        "placeholder": "Enter Name",
-        "error": "Please provide a name"
       },
-      "lastname": {
-        "label": "Last name",
-        "placeholder": "Enter your last name",
-        "error": "Please provide a last name"
-      },
-      "email": {
-        "label": "Email address",
-        "placeholder": "Enter Email address",
-        "error": "Please provide a valid email"
-      },
-      "phone": {
-        "label": "Phone",
-        "placeholder": "Enter Phone",
-        "error": "Please provide a valid phone"
-      },
+
       "city": {
         "label": "City where you live",
         "placeholder": "Enter city name",
@@ -534,59 +502,10 @@
         "placeholder": "Add a number",
         "error": "Please provide your student capacity"
       },
-      "message": {
-        "label": "Tell us more, what would you like to know?",
-        "placeholder": "Enter your message",
-        "error": "Please provide a message"
-      },
-      "terms": {
-        "label": "I accept to acknowledge that I have read and agree to the privacy policies before submitting the form",
-        "error": "You must accept the terms and conditions"
-      }
-    },
-    "submit": "Send form"
-  },
-  "institution-form": {
-    "input": {
-      "name": {
-        "label": "Name",
-        "placeholder": "Enter Name",
-        "error": "Please provide a name"
-      },
-      "lastname": {
-        "label": "Last name",
-        "placeholder": "Enter your last name",
-        "error": "Please provide a last name"
-      },
-      "email": {
-        "label": "Email address",
-        "placeholder": "Enter Email address",
-        "error": "Please provide a valid email"
-      },
-      "phone": {
-        "label": "Phone",
-        "placeholder": "Enter Phone",
-        "error": "Please provide a valid phone"
-      },
-      "nationality": {
-        "label": "Nationality",
-        "placeholder": "Enter Nationality",
-        "error": "Please select a nationality"
-      },
       "institutionName": {
         "label": "Name of your school / institution",
         "placeholder": "Enter Name",
         "error": "Please provide a name"
-      },
-      "city": {
-        "label": "Destination city",
-        "placeholder": "Enter destination city",
-        "error": "Please provide a destination city"
-      },
-      "hostSize": {
-        "label": "How many students can you host?",
-        "placeholder": "Enter a number",
-        "error": "Please provide your student capacity"
       },
       "dateRange": {
         "label": "Expected date",
@@ -652,48 +571,10 @@
           "no": "No"
         }
       },
-      "terms": {
-        "label": "I accept to acknowledge that I have read and agree to the privacy policies before submitting the form",
-        "error": "You must accept the terms and conditions"
-      }
-    },
-    "submit": "Send form"
-  },
-  "partner-form": {
-    "input": {
-      "service": {
-        "label": "What type of service are you interested in?",
-        "placeholder": "Choose one",
-        "options": {
-          "erasmus": "Erasmus+ Projects",
-          "language-courses": "Language courses",
-          "concierge": "Concierge & Tutoring Services"
-        },
-        "error": "Please select a service you are interested of"
-      },
-      "name": {
-        "label": "Name",
-        "placeholder": "Enter Name",
-        "error": "Please provide a name"
-      },
-      "lastname": {
-        "label": "Last name",
-        "placeholder": "Enter your last name",
-        "error": "Please provide a last name"
-      },
       "applicantName": {
         "label": "Name of the applicant",
         "placeholder": "Enter applicant name",
         "error": "Please provide a valid name"
-      },
-      "email": {
-        "label": "Email address",
-        "placeholder": "Enter Email address",
-        "error": "Please provide a valid email"
-      },
-      "terms": {
-        "label": "I accept to acknowledge that I have read and agree to the privacy policies before submitting the form",
-        "error": "You must accept the terms and conditions"
       }
     },
     "submit": "Send form"
@@ -720,8 +601,8 @@
     "title": "Looking For More</br>Information?",
     "questions": "We are here to answer all your questions. </br></br> Contact us today!",
     "more-info": "More Information",
-    "request-quote": "Request </br>A Quote",
-    "host-family": "Become A </br>Host Family",
+    "request-quote": "Request <br></br>A Quote",
+    "host-family": "Become A <br></br>Host Family",
     "contact-us": "Contact Us"
   },
   "our-partners": {

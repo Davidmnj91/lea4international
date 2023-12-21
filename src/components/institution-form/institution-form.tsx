@@ -55,7 +55,7 @@ export const InstitutionForm = () => {
     resolver: zodResolver(InstitutionsContactSchema),
   });
 
-  const t = useTranslations('institution-form');
+  const t = useTranslations('forms');
 
   useEffect(() => {
     if (!state) {
@@ -231,7 +231,7 @@ export const InstitutionForm = () => {
               <Controller
                 control={control}
                 name='dateRange'
-                render={({ field: { onChange, value, onBlur } }) => (
+                render={({ field: { onChange, value } }) => (
                   <DatePicker
                     className='block w-full'
                     selected={value ? value[0] : undefined}

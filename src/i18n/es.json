@@ -55,14 +55,6 @@
       "title": "Preguntas frecuentes",
       "see-more": "Ver más preguntas"
     },
-    "more-info": {
-      "title": "¿Busca más <br>información?</br>",
-      "questions": "Estamos aquí para responder a todas tus preguntas. <br></br> <br>¡Contáctenos hoy!</br>",
-      "more-info": "Más Información",
-      "request-quote": "Solicitar <br>Presupuesto</br>",
-      "host-family": "Conviértete en una <br>Familia Anfitriona</br>",
-      "contact-us": "Contáctanos"
-    },
     "help-you": "Esperamos Poder Ayudarte A Disfrutar De Tu Aventura Educativa.",
     "see-more": "Saber más"
   },
@@ -448,7 +440,7 @@
   "contact-us": {
     "text": "Contáctanos"
   },
-  "company-form": {
+  "forms": {
     "input": {
       "service": {
         "label": "¿Qué tipo de servicio está interesado?",
@@ -493,31 +485,6 @@
       "terms": {
         "label": "Acepto reconocer que he leído y acepto las políticas de privacidad antes de enviar el formulario",
         "error": "Debe aceptar los Términos y Condiciones"
-      }
-    },
-    "submit": "Enviar el formulario"
-  },
-  "family-form": {
-    "input": {
-      "name": {
-        "label": "Nombre",
-        "placeholder": "Introduzca su nombre",
-        "error": "Por favor proporcione un nombre"
-      },
-      "lastname": {
-        "label": "Apellido",
-        "placeholder": "Introduzca su apellido",
-        "error": "Por favor proporcione un apellido"
-      },
-      "email": {
-        "label": "Dirección de correo electrónico",
-        "placeholder": "Introduzca su dirección de correo electrónico",
-        "error": "Por favor proporcione un correo electrónico válido"
-      },
-      "phone": {
-        "label": "Teléfono",
-        "placeholder": "Introduzca su teléfono",
-        "error": "Por favor proporcione un teléfono válido"
       },
       "city": {
         "label": "Ciudad donde vives",
@@ -534,59 +501,10 @@
         "placeholder": "Añadir un número",
         "error": "Por favor proporcione su capacidad de estudiantes"
       },
-      "message": {
-        "label": "Cuéntanos más, ¿qué te gustaría saber?",
-        "placeholder": "Introduzca su mensaje",
-        "error": "Por favor proporcione un mensaje"
-      },
-      "terms": {
-        "label": "Acepto reconocer que he leído y acepto las políticas de privacidad antes de enviar el formulario",
-        "error": "Debe aceptar los Términos y Condiciones"
-      }
-    },
-    "submit": "Enviar el formulario"
-  },
-  "institution-form": {
-    "input": {
-      "name": {
-        "label": "Nombre",
-        "placeholder": "Introduzca su nombre",
-        "error": "Por favor proporcione un nombre"
-      },
-      "lastname": {
-        "label": "Apellido",
-        "placeholder": "Introduzca su apellido",
-        "error": "Por favor proporcione un apellido"
-      },
-      "email": {
-        "label": "Dirección de correo electrónico",
-        "placeholder": "Introduzca su dirección de correo electrónico",
-        "error": "Por favor proporcione un correo electrónico válido"
-      },
-      "phone": {
-        "label": "Teléfono",
-        "placeholder": "Introduzca su teléfono",
-        "error": "Por favor proporcione un teléfono válido"
-      },
-      "nationality": {
-        "label": "Nacionalidad",
-        "placeholder": "Introduzca su nacionalidad",
-        "error": "Por favor seleccione una nacionalidad"
-      },
       "institutionName": {
         "label": "Nombre de tu escuela/institución",
         "placeholder": "Introduzca su nombre",
         "error": "Por favor proporcione un nombre"
-      },
-      "city": {
-        "label": "Ciudad de destino",
-        "placeholder": "Introduzca su ciudad de destino",
-        "error": "Please proporcione una ciudad de destino"
-      },
-      "hostSize": {
-        "label": "¿Cuántos estudiantes puedes alojar?",
-        "placeholder": "Introduzca su a number",
-        "error": "Por favor proporcione su capacidad de estudiantes"
       },
       "dateRange": {
         "label": "Fechas previstas",
@@ -652,48 +570,10 @@
           "no": "No"
         }
       },
-      "terms": {
-        "label": "Acepto reconocer que he leído y acepto las políticas de privacidad antes de enviar el formulario",
-        "error": "Debe aceptar los Términos y Condiciones"
-      }
-    },
-    "submit": "Enviar el formulario"
-  },
-  "partner-form": {
-    "input": {
-      "service": {
-        "label": "¿Qué tipo de servicio está interesado?",
-        "placeholder": "Seleccione uno",
-        "options": {
-          "erasmus": "Proyectos Erasmus+",
-          "language-courses": "Cursos de idioma",
-          "concierge": "Servicios de conserjería y tutoría"
-        },
-        "error": "Por favor seleccione un servicio en el que esté interesado"
-      },
-      "name": {
-        "label": "Nombre",
-        "placeholder": "Introduzca su Nombre",
-        "error": "Por favor proporcione un nombre"
-      },
-      "lastname": {
-        "label": "Apellido",
-        "placeholder": "Introduzca su apellido",
-        "error": "Por favor proporcione un apellido"
-      },
-      "email": {
-        "label": "Dirección de correo electrónico",
-        "placeholder": "Introduzca su dirección de correo electrónico",
-        "error": "Por favor proporcione un correo electrónico válido"
-      },
       "applicantName": {
         "label": "Nombre del solicitante",
         "placeholder": "Introduzca el nombre del solicitante",
         "error": "Por favor proporcione un nombre válido"
-      },
-      "terms": {
-        "label": "Acepto reconocer que he leído y acepto las políticas de privacidad antes de enviar el formulario",
-        "error": "Debe aceptar los Términos y Condiciones"
       }
     },
     "submit": "Enviar el formulario"

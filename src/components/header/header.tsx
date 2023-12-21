@@ -7,18 +7,26 @@ import { ArrowDown, CaretRight, List, X } from '@phosphor-icons/react';
 import { Menu } from '@/components/menu/menu';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+import {
+  Typography,
+  typographyClasses,
+} from '@/components/typography/typography';
 import clsx from 'clsx';
 
 const MobileHeader = () => {
   const t = useTranslations('pages');
 
-  const fullClassName = clsx(
-    'font-body text-b-lg font-light text-basics-white'
-  );
+  const fullClassName = typographyClasses({
+    size: 'body-lg',
+    color: 'basics-white',
+    weight: 'light',
+  });
 
   return (
     <header className='sticky top-0 z-50 flex h-[80px] items-center justify-between bg-europe px-6 py-2.5 text-basics-white desktop:hidden'>
-      <h1 className='font-body text-b-xxl text-basics-white'>LOGO</h1>
+      <Typography as='h1' size='body-2xl' color='basics-white'>
+        LOGO
+      </Typography>
       <Popover>
         {({ open }) => (
           <>
@@ -85,7 +93,13 @@ const MobileHeader = () => {
                 </div>
                 <Link
                   href={`/contact`}
-                  className='flex items-center gap-3 bg-star px-9 py-5 font-body text-b-sm text-europe-dark'
+                  className={clsx(
+                    typographyClasses({
+                      size: 'body-sm',
+                      color: 'europe-dark',
+                    }),
+                    'flex items-center gap-3 bg-star px-9 py-5'
+                  )}
                 >
                   <span>Contact us</span>
                   <CaretRight size={16} />
@@ -104,7 +118,9 @@ export const Header = () => {
     <>
       <MobileHeader />
       <header className='sticky top-0 z-50 h-[80px] items-center justify-between bg-europe px-[40px] mobile:hidden desktop:flex'>
-        <h1 className='font-body text-b-xxl text-basics-white'>LOGO</h1>
+        <Typography as='h1' size='body-2xl' color='basics-white'>
+          LOGO
+        </Typography>
         <nav className='flex items-center gap-[70px]'>
           <Menu />
         </nav>
