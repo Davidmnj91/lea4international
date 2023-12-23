@@ -20,7 +20,6 @@ export const FaqList = ({ faqKey }: FaqProps) => {
               as='span'
               size='heading-lg'
               color='europe-dark'
-              weight='bold'
               className='flex-grow-0 text-left'
             >
               {t(`${faqKey}.title`)}

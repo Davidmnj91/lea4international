@@ -42,8 +42,13 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
         </div>
         {Object.entries(Faqs).map(([category, items]) => (
           <section key={category} id={category}>
-            <div className='border-b border-b-basics-disabled px-6 pb-6 pt-12 desktop:px-12'>
-              <Typography as='h2' size='heading-xl' color='europe-dark'>
+            <div className='border-b border-b-basics-disabled px-6 pb-2 pt-6 desktop:px-12 desktop:pb-6 desktop:pt-12'>
+              <Typography
+                as='h2'
+                size='heading-xl'
+                color='europe-dark'
+                weight='bold'
+              >
                 {t(`categories.${category}`)}
               </Typography>
             </div>

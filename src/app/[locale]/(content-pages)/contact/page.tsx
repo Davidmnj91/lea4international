@@ -41,7 +41,7 @@ export default function Page() {
 
   return (
     <div>
-      <div className='my-14 flex flex-col items-center justify-center gap-6  desktop:my-24 desktop:gap-1.5'>
+      <div className='my-14 flex flex-col items-center justify-center gap-6 desktop:my-24 desktop:gap-1.5'>
         <Typography as='h1' size='heading-2xl' color='europe-dark'>
           {t('title')}
         </Typography>
@@ -54,7 +54,7 @@ export default function Page() {
           {t('message')}
         </Typography>
       </div>
-      <div className='sticky top-0 flex flex-col justify-start gap-6 overflow-auto border-y border-y-basics-disabled bg-basics-white px-6 py-6 desktop:flex-row desktop:items-center desktop:justify-center desktop:px-12'>
+      <div className='sticky top-[80px] z-20 flex flex-col items-start gap-6 overflow-auto border-y border-y-basics-disabled bg-basics-white px-6 py-6 desktop:flex-row desktop:overflow-hidden desktop:px-24'>
         <Typography
           as='span'
           size='body-lg'
