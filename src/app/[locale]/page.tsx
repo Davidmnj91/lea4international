@@ -5,7 +5,7 @@ import hero_bg from '../../../public/hero_bg.png';
 import who_we_are_bg from '../../../public/who_we_are_bg.png';
 import our_beliefs_bg from '../../../public/our_beliefs_bg.png';
 import our_commitment_bg from '../../../public/our_commitment_bg.png';
-import praga_bg from '../../../public/praga_bg.png';
+import prague_bg from '../../../public/prague_bg.png';
 import madrid_bg from '../../../public/madrid_bg.png';
 import malaga_bg from '../../../public/malaga_bg.png';
 import { buttonTypes } from '@/components/button/button';
@@ -316,7 +316,7 @@ export default function HomePage() {
           </div>
           <div className='mt mt-[-152px] flex justify-center gap-4'>
             <AnimatedCard
-              imgSrc={praga_bg.src}
+              imgSrc={prague_bg.src}
               title={t('top-destinations.destinations.prague')}
               caption={t('top-destinations.destinations.czech')}
               containerClasses='w-[328px] h-[506px]'
