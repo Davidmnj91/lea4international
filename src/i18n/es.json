@@ -379,24 +379,6 @@
         "title": "Airbnb",
         "description": "Elegir alojarse en un Airbnb es una excelente opción para una experiencia de corto y largo plazo en el extranjero. Generalmente es más barato que un hotel y tiene la ventaja de tener una cocina equipada donde puedes cocinar tus propias comidas y lavar la ropa. Por otro lado, Airbnb carece de una recepción abierta las 24 horas."
       }
-    },
-    "top-destinations": {
-      "title": "Nuestros mejores destinos",
-      "see-all": "Ver todos los destinos",
-      "destinations": {
-        "prague": {
-          "title": "Praga",
-          "country": "República Checa"
-        },
-        "madrid": {
-          "title": "Madrid",
-          "country": "España"
-        },
-        "malaga": {
-          "title": "Málaga",
-          "country": "España"
-        }
-      }
     }
   },
   "faq-page": {
@@ -420,6 +402,36 @@
   },
   "not-found-page": {
     "back-to-home": "Vuelta a casa"
+  },
+  "top-destinations": {
+    "title": "Nuestros mejores destinos",
+    "see-all": "Ver todos los destinos",
+    "destinations": {
+      "prague": {
+        "title": "Praga",
+        "country": "República Checa"
+      },
+      "madrid": {
+        "title": "Madrid",
+        "country": "España"
+      },
+      "malaga": {
+        "title": "Málaga",
+        "country": "España"
+      },
+      "krakow": {
+        "title": "Cracovia",
+        "country": "Polonia"
+      },
+      "dublin": {
+        "title": "Dublin",
+        "country": "Irlanda"
+      },
+      "ghent": {
+        "title": "Gante",
+        "country": "Belgica"
+      }
+    }
   },
   "contact-us": {
     "text": "Contáctanos"

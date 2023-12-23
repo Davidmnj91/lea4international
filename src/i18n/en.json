@@ -418,6 +418,18 @@
       "malaga": {
         "title": "Málaga",
         "country": "España"
+      },
+      "krakow": {
+        "title": "Krakow",
+        "country": "Poland"
+      },
+      "dublin": {
+        "title": "Dublin",
+        "country": "Ireland"
+      },
+      "ghent": {
+        "title": "Ghent",
+        "country": "Belgium"
       }
     }
   },
