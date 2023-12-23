@@ -48,7 +48,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
           {t('title')}
         </Typography>
       </div>
-      <div className='f lex flex-col items-center justify-center gap-14 p-6 desktop:flex-row desktop:p-24'>
+      <div className='flex flex-col items-center justify-center gap-14 p-6 desktop:flex-row desktop:p-24'>
         <div
           className='flex h-[346px] w-[422px] flex-col items-end '
           style={{ backgroundImage: `url(${lucia_bg.src}` }}

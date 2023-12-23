@@ -28,7 +28,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
 
   return (
     <div>
-      <div className='flex h-[410px] flex-col items-center gap-6 bg-europe px-2.5 py-14 desktop:py-14'>
+      <div className='flex h-[410px] flex-col items-center gap-6 bg-europe px-2.5 py-8 text-center desktop:py-14'>
         <Typography as='h1' size='heading-2xl' color='basics-white'>
           {t('title')}
         </Typography>
@@ -37,12 +37,12 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
           size='body-lg'
           color='basics-white'
           weight='light'
-          className='max-w-[386px] text-center'
+          className='text-center'
         >
           {t.rich('message')}
         </Typography>
       </div>
-      <div className='mt-[-180px] flex flex-wrap items-center justify-center gap-4 overflow-auto p-6 desktop:mt-[-160px] desktop:overflow-hidden'>
+      <div className='mt-[-160px] flex flex-wrap items-center justify-center gap-4 overflow-auto p-6 desktop:mt-[-160px] desktop:overflow-hidden'>
         {Object.entries(destinations).map(([destination, imgSrc]) => (
           <Link key={destination} href={`destinations/${destination}`}>
             <AnimatedCard

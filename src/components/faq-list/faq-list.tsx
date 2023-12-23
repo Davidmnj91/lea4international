@@ -1,4 +1,3 @@
-//prettier-ignore
 'use client';
 
 import { useTranslations } from 'next-intl';
@@ -19,14 +18,14 @@ export const FaqList = ({ faqKey }: FaqProps) => {
           <Disclosure.Button className='flex w-full justify-between'>
             <Typography
               as='span'
-              size='heading-md'
+              size='heading-lg'
               color='europe-dark'
               weight='bold'
-              className='text-left'
+              className='flex-grow-0 text-left'
             >
               {t(`${faqKey}.title`)}
             </Typography>
-            {open ? <Minus size={32} /> : <Plus size={32} />}
+            <div>{open ? <Minus size={32} /> : <Plus size={32} />}</div>
           </Disclosure.Button>
           <Disclosure.Panel className='mt-4'>
             <Typography as='p' size='body-lg' color='europe' weight='light'>
