@@ -42,7 +42,9 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
           </Link>
         ))}
       </div>
-      <Partners />
+      <div className='py-16'>
+        <Partners />
+      </div>
     </div>
   );
 }

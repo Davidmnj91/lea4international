@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import clsx from 'clsx';
+import { typographyClasses } from '@/components/typography/typography';
 
 type MenuProps = {
   itemClassNames?: string;
@@ -10,7 +11,7 @@ export const Menu = ({ itemClassNames }: MenuProps) => {
   const t = useTranslations('pages');
 
   const fullClassName = clsx(
-    'font-body text-b-lg text-basics-white',
+    typographyClasses({ size: 'body-lg', color: 'basics-white' }),
     itemClassNames
   );
 

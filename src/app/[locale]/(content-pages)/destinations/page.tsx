@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import { AnimatedCard } from '@/components/destination-card/animated-card';
-import praga_bg from '../../../../../public/praga_bg.png';
+import prague_bg from '../../../../../public/prague_bg.png';
 import madrid_bg from '../../../../../public/madrid_bg.png';
 import malaga_bg from '../../../../../public/malaga_bg.png';
 import krakow_bg from '../../../../../public/krakow_bg.png';
@@ -18,7 +18,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
   const t = useTranslations('destinations-page');
 
   const destinations = {
-    prague: praga_bg.src,
+    prague: prague_bg.src,
     madrid: madrid_bg.src,
     malaga: malaga_bg.src,
     krakow: krakow_bg.src,
@@ -28,7 +28,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
 
   return (
     <div>
-      <div className='flex h-[410px] flex-col items-center gap-6 bg-europe px-2.5 py-14 desktop:py-14'>
+      <div className='flex h-[410px] flex-col items-center gap-6 bg-europe px-2.5 py-8 text-center desktop:py-14'>
         <Typography as='h1' size='heading-2xl' color='basics-white'>
           {t('title')}
         </Typography>
@@ -37,12 +37,12 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
           size='body-lg'
           color='basics-white'
           weight='light'
-          className='max-w-[386px] text-center'
+          className='text-center'
         >
           {t.rich('message')}
         </Typography>
       </div>
-      <div className='mt-[-180px] flex flex-wrap items-center gap-4 overflow-auto p-6 desktop:mt-[-160px] desktop:justify-center desktop:overflow-hidden'>
+      <div className='mt-[-160px] flex flex-wrap items-center justify-center gap-4 overflow-auto p-6 desktop:mt-[-160px] desktop:overflow-hidden'>
         {Object.entries(destinations).map(([destination, imgSrc]) => (
           <Link key={destination} href={`destinations/${destination}`}>
             <AnimatedCard

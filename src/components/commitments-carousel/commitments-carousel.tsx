@@ -54,7 +54,7 @@ export const CommitmentsCarousel = () => {
 
   return (
     <div className='overflow-hidden' ref={carouselRef}>
-      <div className='flex min-h-[337px] w-[440px]'>
+      <div className='flex w-full desktop:min-h-[337px] desktop:w-[440px]'>
         {slides.map(({ title, description }, index) => (
           <div
             key={index}
@@ -81,7 +81,7 @@ export const CommitmentsCarousel = () => {
           </div>
         ))}
       </div>
-      <div className='flex gap-6 bg-basics-gray p-6'>
+      <div className='flex justify-center gap-6 bg-basics-gray p-6 desktop:justify-start'>
         <button
           onClick={scrollPrev}
           disabled={prevBtnDisabled}

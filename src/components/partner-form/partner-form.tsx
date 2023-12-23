@@ -38,7 +38,7 @@ export const PartnerForm = () => {
     resolver: zodResolver(CompanyContactSchema),
   });
 
-  const t = useTranslations('partner-form');
+  const t = useTranslations('forms');
 
   useEffect(() => {
     if (!state) {

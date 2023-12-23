@@ -10,12 +10,11 @@ import host_family_bg from '../../../../../public/host_family_bg.png';
 import hotel_bg from '../../../../../public/hotel_bg.png';
 import hostel_bg from '../../../../../public/hostel_bg.png';
 import airbnb_bg from '../../../../../public/airbnb_bg.png';
-import Image from 'next/image';
 import clsx from 'clsx';
 import { BecomePartner } from '@/components/partners/become-partner';
-import { ServicesCategories } from '@/types/services';
-import { OtherServices } from '@/components/services/services';
 import { Typography } from '@/components/typography/typography';
+import { TopDestinations } from '@/components/top-destinations/top-destinations';
+import { Destinations } from '@/types/destinations';
 
 export default function Page({ params: { locale } }: LanguagePageProps) {
   // Enable static rendering
@@ -82,21 +81,14 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
               >
                 <div
                   className={clsx(
-                    `mb-[-50px] h-[302px] w-[318px] desktop:mb-0 desktop:h-[427px] desktop:w-[675px]`,
+                    'h-[189px] w-full bg-cover bg-no-repeat desktop:mb-0 desktop:h-[427px] desktop:w-[675px]',
                     index % 2 === 0
                       ? 'desktop:ml-[-100px]'
                       : 'desktop:mr-[-100px]'
                   )}
-                >
-                  <Image
-                    src={imgSrc}
-                    alt={accommodation}
-                    width={650}
-                    height={402}
-                    className='h-full w-full desktop:h-[427px] desktop:w-[675px]'
-                  />
-                </div>
-                <div className='flex flex-col items-start justify-center gap-2.5 px-6 desktop:max-w-[474px]'>
+                  style={{ backgroundImage: `url(${imgSrc})` }}
+                />
+                <div className='flex flex-col items-start justify-center gap-2.5 desktop:max-w-[474px] desktop:px-6'>
                   <Typography
                     as='h3'
                     size='heading-lg'
@@ -120,14 +112,16 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
       <section id='become-partner'>
         <BecomePartner />
       </section>
-      <section id='other-services'>
-        <OtherServices
-          services={[
-            ServicesCategories.LanguageCourses,
-            ServicesCategories.StudentExchange,
-            ServicesCategories.Concierge,
-          ]}
-        />
+      <section id='top-destinations'>
+        <div className='mb-16'>
+          <TopDestinations
+            destinations={[
+              Destinations.PRAGUE,
+              Destinations.MADRID,
+              Destinations.MALAGA,
+            ]}
+          />
+        </div>
       </section>
     </div>
   );

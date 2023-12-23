@@ -38,7 +38,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
 
   return (
     <div>
-      <div className='flex items-center justify-center py-24'>
+      <div className='flex items-center justify-center py-14 desktop:py-24'>
         <Typography
           as='h1'
           size='heading-2xl'
@@ -48,22 +48,22 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
           {t('title')}
         </Typography>
       </div>
-      <div className='mx-24 my-24 flex items-center justify-center gap-14'>
+      <div className='flex flex-col items-center justify-center gap-14 p-6 desktop:flex-row desktop:p-24'>
         <div
-          className='flex h-[346px] w-[422px] flex-col items-end'
+          className='flex h-[272px] w-full flex-col items-end desktop:h-[346px] desktop:w-[422px] '
           style={{ backgroundImage: `url(${lucia_bg.src}` }}
         >
           <span
             className={clsx(
               tagButtonTypes({ intent: 'selected' }),
-              'mr-5 mt-5'
+              'mr-5 mt-5 flex-grow-0'
             )}
           >
             {t('role.director')}
           </span>
         </div>
         <svg
-          xmlns='http://www.w3.org/2000/svg'
+          className='hidden desktop:inline-block'
           width='2'
           height='569'
           viewBox='0 0 2 569'
@@ -71,7 +71,16 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
         >
           <path d='M1 0.234375L1.00002 528.234' stroke='#45586A' />
         </svg>
-        <div className='justify-center-center flex flex-[0_0_647px] flex-col gap-8'>
+        <svg
+          className='desktop:hidden'
+          width='175'
+          height='2'
+          viewBox='0 0 175 2'
+          fill='none'
+        >
+          <path d='M175 1L-2.29478e-06 0.999985' stroke='#45586A' />
+        </svg>
+        <div className='flex flex-col items-center gap-8 desktop:flex-[0_0_647px] desktop:items-start desktop:justify-center'>
           <Typography as='p' size='body-lg' color='europe-dark'>
             {t.rich('description')}
           </Typography>
@@ -127,11 +136,11 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
         <Typography as='h2' size='heading-2xl' color='basics-white'>
           {t('values.title')}
         </Typography>
-        <div className='grid grid-cols-4 gap-6'>
+        <div className='grid grid-cols-2 gap-6 desktop:grid-cols-4'>
           {Object.entries(values).map(([value, icon]) => (
             <div
               key={value}
-              className='flex h-[200px] w-[200px] flex-col items-center justify-center gap-2.5 rounded-full border border-dashed border-basics-white'
+              className='flex h-[120px] w-[120px] flex-col items-center justify-center gap-2.5 rounded-full border border-dashed border-basics-white desktop:h-[200px] desktop:w-[200px]'
             >
               <Typography as='span' size='heading-md' color='basics-white'>
                 {t(`values.${value}`)}
@@ -145,41 +154,54 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
             as='h3'
             size='heading-lg'
             color='basics-white'
-            className='flex w-[850px] items-center text-center'
+            className='flex flex-col items-center text-center desktop:w-[850px] desktop:flex-row'
           >
             <Typography as='span' size='heading-4xl' color='gold-dark'>
               &ldquo;
             </Typography>
-            <span className='w-[706px] capitalize'>{t.rich('quote')}</span>
+            <span className='w-[297px] capitalize desktop:w-[706px]'>
+              {t.rich('quote')}
+            </span>
             <Typography as='span' size='heading-4xl' color='gold-dark'>
               &rdquo;
             </Typography>
           </Typography>
         </div>
       </div>
-      <Partners />
-      <div className='flex items-center justify-center gap-12 px-12 py-24'>
-        <div className='flex flex-col items-end gap-8'>
-          <div
-            className='flex h-[346px] w-[236px] flex-col'
-            style={{ backgroundImage: `url(${partner_1_bg.src})` }}
+      <div className='py-14'>
+        <Partners />
+        <div className='flex flex-col items-center justify-center gap-12 px-12 py-4 desktop:flex-row desktop:py-24'>
+          <div className='flex flex-col items-end gap-8'>
+            <div
+              className='flex h-[346px] w-[236px] flex-col'
+              style={{ backgroundImage: `url(${partner_1_bg.src})` }}
+            />
+          </div>
+          <svg
+            className='hidden desktop:inline-block'
+            width='2'
+            height='343'
+            viewBox='0 0 2 343 '
+            fill='none'
+          >
+            <path d='M1 0.234375L1.00002 528.234' stroke='#45586A' />
+          </svg>
+          <svg
+            className='desktop:hidden'
+            width='175'
+            height='2'
+            viewBox='0 0 175 2'
+            fill='none'
+          >
+            <path d='M175 1L-2.29478e-06 0.999985' stroke='#45586A' />
+          </svg>
+          <Image
+            src={my_abroad_ally.src}
+            alt='my_abroad_ally'
+            width='200'
+            height='200'
           />
         </div>
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          width='2'
-          height='342'
-          viewBox='0 0 2 342'
-          fill='none'
-        >
-          <path d='M1 0.234375L1.00002 528.234' stroke='#45586A' />
-        </svg>
-        <Image
-          src={my_abroad_ally.src}
-          alt='my_abroad_ally'
-          width='200'
-          height='200'
-        />
       </div>
     </div>
   );

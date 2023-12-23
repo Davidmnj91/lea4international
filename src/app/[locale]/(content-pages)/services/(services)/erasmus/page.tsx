@@ -2,7 +2,7 @@ import { LanguagePageProps } from '@/i18n';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { tagButtonTypes } from '@/components/button/button';
+import { buttonTypes, tagButtonTypes } from '@/components/button/button';
 import { Services } from '@/types/services';
 import work_experience_bg from '../../../../../../../public/work_experience_bg.png';
 import we_offer_bg from '../../../../../../../public/we_offer_bg.png';
@@ -17,6 +17,7 @@ import { Monitor } from '@phosphor-icons/react/dist/ssr/Monitor';
 import { JSX } from 'react';
 import { ServiceItem } from '@/components/service-item/service-item';
 import { BecomePartner } from '@/components/partners/become-partner';
+import { Typography } from '@/components/typography/typography';
 
 export default function Page({ params: { locale } }: LanguagePageProps) {
   // Enable static rendering
@@ -33,10 +34,15 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
   };
   return (
     <div>
-      <div className='flex items-center justify-center py-24'>
-        <h1 className='text-center font-title text-desktop-h-2xl text-europe-dark desktop:text-left'>
+      <div className='flex items-center justify-center px-2.5 py-16 desktop:py-24'>
+        <Typography
+          as='h1'
+          size='heading-2xl'
+          color='europe-dark'
+          className='text-center '
+        >
           {t('title')}
-        </h1>
+        </Typography>
       </div>
       <div className='sticky top-[80px] z-20 flex items-center gap-6 overflow-auto border-y border-y-basics-disabled bg-basics-white px-6 py-6 desktop:justify-center desktop:overflow-hidden desktop:px-12'>
         {erasmusServices.map((service) => (
@@ -51,47 +57,57 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
         ))}
       </div>
       <section id='work-experience'>
-        <div className='flex flex-col items-center justify-center gap-28 p-6 desktop:px-12 desktop:py-24'>
+        <div className='flex flex-col items-center justify-center gap-8 p-6 desktop:gap-28 desktop:px-12 desktop:py-24'>
           <div className='text-center'>
-            <span className='font-title text-desktop-h-sm font-bold text-gold-dark'>
+            <Typography
+              as='span'
+              size='heading-sm'
+              color='gold-dark'
+              weight='bold'
+            >
               {t('overview')}
-            </span>
-            <h2 className='font-title text-desktop-h-xl text-europe-dark'>
+            </Typography>
+            <Typography as='h2' size='heading-xl' color='europe-dark'>
               {t('categories.work-experience.title')}
-            </h2>
+            </Typography>
           </div>
-          <span className='text-center font-body text-b-lg text-europe-dark'>
+          <Typography
+            as='span'
+            size='body-lg'
+            color='europe-dark'
+            className='text-center'
+          >
             {t('categories.work-experience.description')}
-          </span>
+          </Typography>
         </div>
         <div className='flex flex-col desktop:h-[893px] desktop:flex-row'>
           <div
-            className='relative h-[380px] bg-cover bg-center desktop:flex-[0_0_60%]'
+            className='relative h-[380px] bg-cover bg-center desktop:h-full desktop:flex-[0_0_60%]'
             style={{
               backgroundImage: `url(${work_experience_bg.src})`,
             }}
           >
-            <div className='absolute left-[50%] top-[50%] flex h-[240px] w-[245px] flex-[0_0_40%] translate-x-[-50%] translate-y-[-50%] items-center justify-center bg-europe p-6 desktop:right-[-90px] desktop:top-16 desktop:translate-x-0 desktop:translate-y-0'>
+            <div className='absolute left-[50%] top-[50%] flex h-[240px] w-[245px] flex-[0_0_40%] translate-x-[-50%] translate-y-[-50%] items-center justify-center bg-europe p-6 desktop:left-auto desktop:right-[-90px] desktop:top-16 desktop:translate-x-0 desktop:translate-y-0'>
               <div className='flex-grow border border-basics-white p-2.5'>
-                <span className='font-title text-desktop-h-lg text-basics-white'>
+                <Typography as='span' size='heading-lg' color='basics-white'>
                   {t.rich('categories.work-experience.with')}
-                </span>
+                </Typography>
               </div>
             </div>
           </div>
           <div className='flex flex-col justify-end p-6 text-center desktop:flex-[0_0_40%] desktop:px-12 desktop:py-24 desktop:text-left'>
             <div className='z-10 bg-basics-white'>
-              <p className='font-body text-b-lg text-europe-dark'>
+              <Typography as='p' size='body-lg' color='europe-dark'>
                 {t.rich('categories.work-experience.message')}
-              </p>
+              </Typography>
             </div>
           </div>
         </div>
         <div className='flex'>
-          <div className='flex flex-col gap-8 p-6 desktop:flex-[0_0_60%] desktop:gap-24 desktop:px-12 desktop:py-24'>
-            <h2 className='font-title text-desktop-h-xl text-europe-dark'>
+          <div className='flex flex-col gap-8 p-6 desktop:flex-[0_0_60%] desktop:justify-between desktop:px-12 desktop:py-24'>
+            <Typography as='h2' size='heading-xl' color='europe-dark'>
               {t('categories.work-experience.we-offer.title')}
-            </h2>
+            </Typography>
             <ul className='flex flex-col gap-4'>
               {Object.entries(professions).map(([title, icon]) => (
                 <ServiceItem
@@ -100,12 +116,17 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
                   title={t(
                     `categories.work-experience.we-offer.${title}.title`
                   )}
-                  description={t(
+                  description={t.rich(
                     `categories.work-experience.we-offer.${title}.description`
                   )}
                 />
               ))}
             </ul>
+            <div>
+              <button className={buttonTypes({ intent: 'primary' })}>
+                {t('categories.work-experience.know-more')}
+              </button>
+            </div>
           </div>
           <div
             className='hidden bg-cover bg-no-repeat desktop:block desktop:flex-[0_0_40%]'
@@ -118,16 +139,26 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
       <section id='job-shadowing'>
         <div className='flex flex-col items-center justify-center gap-8 p-6 desktop:gap-28 desktop:px-12 desktop:py-24'>
           <div className='text-center'>
-            <span className='font-title text-desktop-h-sm font-bold text-gold-dark'>
+            <Typography
+              as='span'
+              size='heading-sm'
+              color='gold-dark'
+              weight='bold'
+            >
               {t('overview')}
-            </span>
-            <h2 className='font-title text-desktop-h-xl text-europe-dark'>
+            </Typography>
+            <Typography as='h2' size='heading-xl' color='europe-dark'>
               {t('categories.job-shadowing.title')}
-            </h2>
+            </Typography>
           </div>
-          <span className='text-center font-body text-b-lg text-europe-dark'>
-            {t('categories.job-shadowing.description')}
-          </span>
+          <Typography
+            as='span'
+            size='body-lg'
+            color='europe-dark'
+            className='text-center'
+          >
+            {t.rich('categories.job-shadowing.description')}
+          </Typography>
         </div>
         <div className='flex flex-col desktop:h-[1012px] desktop:flex-row'>
           <div
@@ -136,19 +167,19 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
               backgroundImage: `url(${job_shadowing_bg.src})`,
             }}
           >
-            <div className='absolute left-[50%] top-[50%] flex h-[240px] w-[245px] flex-[0_0_40%] translate-x-[-50%] translate-y-[-50%] items-center justify-center bg-europe p-6 desktop:right-[-90px] desktop:top-16 desktop:translate-x-0 desktop:translate-y-0'>
+            <div className='absolute left-[50%] top-[50%] flex h-[240px] w-[245px] flex-[0_0_40%] translate-x-[-50%] translate-y-[-50%] items-center justify-center bg-europe p-6 desktop:left-auto desktop:right-[-90px] desktop:top-16 desktop:translate-x-0 desktop:translate-y-0'>
               <div className='flex-grow border border-basics-white p-2.5'>
-                <span className='font-title text-desktop-h-lg text-basics-white'>
+                <Typography as='span' size='heading-lg' color='basics-white'>
                   {t.rich('categories.job-shadowing.with')}
-                </span>
+                </Typography>
               </div>
             </div>
           </div>
           <div className='flex flex-col justify-end p-6 text-center desktop:flex-[0_0_40%] desktop:px-12 desktop:py-24 desktop:text-left'>
             <div className='z-10 bg-basics-white'>
-              <p className='font-body text-b-lg text-europe-dark'>
-                {t('categories.job-shadowing.message')}
-              </p>
+              <Typography as='p' size='body-lg' color='europe-dark'>
+                {t.rich('categories.job-shadowing.message')}
+              </Typography>
             </div>
           </div>
         </div>
@@ -156,16 +187,21 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
       <section id='school-exchange'>
         <div className='flex flex-col items-center justify-center gap-8 p-6 desktop:gap-28 desktop:px-12 desktop:py-24'>
           <div className='text-center'>
-            <span className='font-title text-desktop-h-sm font-bold text-gold-dark'>
+            <Typography
+              as='span'
+              size='heading-sm'
+              color='gold-dark'
+              weight='bold'
+            >
               {t('overview')}
-            </span>
-            <h2 className='font-title text-desktop-h-xl text-europe-dark'>
+            </Typography>
+            <Typography as='h2' size='heading-xl' color='europe-dark'>
               {t('categories.school-exchange.title')}
-            </h2>
+            </Typography>
           </div>
-          <span className='text-center font-body text-b-lg text-europe-dark'>
+          <Typography as='span' size='body-lg' color='europe-dark'>
             {t('categories.school-exchange.description')}
-          </span>
+          </Typography>
         </div>
         <div className='flex flex-col desktop:h-[782px] desktop:flex-row'>
           <div
@@ -174,19 +210,19 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
               backgroundImage: `url(${school_exchange_bg.src})`,
             }}
           >
-            <div className='absolute left-[50%] top-[50%] flex h-[240px] w-[245px] flex-[0_0_40%] translate-x-[-50%] translate-y-[-50%] items-center justify-center bg-europe p-6 desktop:right-[-90px] desktop:top-16 desktop:translate-x-0 desktop:translate-y-0'>
+            <div className='absolute left-[50%] top-[50%] flex h-[240px] w-[245px] flex-[0_0_40%] translate-x-[-50%] translate-y-[-50%] items-center justify-center bg-europe p-6 desktop:left-auto desktop:right-[-90px] desktop:top-16 desktop:translate-x-0 desktop:translate-y-0'>
               <div className='flex-grow border border-basics-white p-2.5'>
-                <span className='font-title text-desktop-h-lg text-basics-white'>
+                <Typography as='span' size='heading-lg' color='basics-white'>
                   {t.rich('categories.school-exchange.with')}
-                </span>
+                </Typography>
               </div>
             </div>
           </div>
           <div className='flex flex-col justify-end p-6 text-center desktop:flex-[0_0_40%] desktop:px-12 desktop:py-24 desktop:text-left'>
             <div className='z-10 bg-basics-white'>
-              <p className='font-body text-b-lg text-europe-dark'>
-                {t('categories.school-exchange.message')}
-              </p>
+              <Typography as='p' size='body-lg' color='europe-dark'>
+                {t.rich('categories.school-exchange.message')}
+              </Typography>
             </div>
           </div>
         </div>
@@ -194,16 +230,26 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
       <section id='erasmus-mundus'>
         <div className='flex flex-col items-center justify-center gap-8 p-6 desktop:gap-28 desktop:px-12 desktop:py-24'>
           <div className='text-center'>
-            <span className='font-title text-desktop-h-sm font-bold text-gold-dark'>
+            <Typography
+              as='span'
+              size='heading-sm'
+              color='gold-dark'
+              weight='bold'
+            >
               {t('overview')}
-            </span>
-            <h2 className='font-title text-desktop-h-xl text-europe-dark'>
+            </Typography>
+            <Typography as='h2' size='heading-xl' color='europe-dark'>
               {t('categories.erasmus-mundus.title')}
-            </h2>
+            </Typography>
           </div>
-          <span className='text-center font-body text-b-lg text-europe-dark'>
+          <Typography
+            as='span'
+            size='body-lg'
+            color='europe-dark'
+            className='text-center'
+          >
             {t('categories.erasmus-mundus.description')}
-          </span>
+          </Typography>
         </div>
         <div className='flex flex-col desktop:h-[698px] desktop:flex-row'>
           <div
@@ -212,19 +258,19 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
               backgroundImage: `url(${erasmus_mundus_bg.src})`,
             }}
           >
-            <div className='absolute left-[50%] top-[50%] flex h-[240px] w-[245px] flex-[0_0_40%] translate-x-[-50%] translate-y-[-50%] items-center justify-center bg-europe p-6 desktop:right-[-90px] desktop:top-16 desktop:translate-x-0 desktop:translate-y-0'>
+            <div className='absolute left-[50%] top-[50%] flex h-[240px] w-[245px] flex-[0_0_40%] translate-x-[-50%] translate-y-[-50%] items-center justify-center bg-europe p-6 desktop:left-auto desktop:right-[-90px] desktop:top-16 desktop:translate-x-0 desktop:translate-y-0'>
               <div className='flex-grow border border-basics-white p-2.5'>
-                <span className='font-title text-desktop-h-lg text-basics-white'>
+                <Typography as='span' size='heading-lg' color='basics-white'>
                   {t.rich('categories.erasmus-mundus.with')}
-                </span>
+                </Typography>
               </div>
             </div>
           </div>
           <div className='flex flex-col justify-end p-6 text-center desktop:flex-[0_0_40%] desktop:px-12 desktop:py-24 desktop:text-left'>
             <div className='z-10 bg-basics-white'>
-              <p className='font-body text-b-lg text-europe-dark'>
+              <Typography as='p' size='body-lg' color='europe-dark'>
                 {t('categories.erasmus-mundus.message')}
-              </p>
+              </Typography>
             </div>
           </div>
         </div>
@@ -232,32 +278,42 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
       <section id='KA-2'>
         <div className='flex flex-col items-center justify-center gap-8 p-6 desktop:gap-28 desktop:px-12 desktop:py-24'>
           <div className='text-center'>
-            <span className='font-title text-desktop-h-sm font-bold text-gold-dark'>
+            <Typography
+              as='span'
+              size='heading-sm'
+              color='gold-dark'
+              weight='bold'
+            >
               {t('overview')}
-            </span>
-            <h2 className='font-title text-desktop-h-xl text-europe-dark'>
+            </Typography>
+            <Typography as='h2' size='heading-xl' color='europe-dark'>
               {t('categories.KA-2.title')}
-            </h2>
+            </Typography>
           </div>
-          <span className='text-center font-body text-b-lg text-europe-dark'>
+          <Typography
+            as='span'
+            size='body-lg'
+            color='europe-dark'
+            className='text-center'
+          >
             {t('categories.KA-2.description')}
-          </span>
-          <div className='mx-auto flex gap-16'>
+          </Typography>
+          <div className='mx-auto flex flex-col gap-8 desktop:flex-row desktop:gap-16'>
             <div
-              className='h-[478px] w-[275px] bg-cover bg-no-repeat'
+              className='mx-auto h-[153px] w-[325px] bg-cover bg-no-repeat desktop:h-[478px] desktop:w-[275px]'
               style={{ backgroundImage: `url(${ka_2_bg.src})` }}
             />
-            <div className='flex flex-col gap-10 py-4'>
+            <div className='flex flex-col gap-8 desktop:py-4'>
               <div className='flex flex-col gap-6'>
-                <h3 className='font-title text-desktop-h-lg text-europe-dark'>
+                <Typography as='h3' size='heading-lg' color='europe-dark'>
                   {t('categories.KA-2.priority-topics.title')}
-                </h3>
+                </Typography>
                 <ul>{t.rich('categories.KA-2.priority-topics.description')}</ul>
               </div>
               <div className='flex flex-col gap-6'>
-                <h3 className='font-title text-desktop-h-lg text-europe-dark'>
+                <Typography as='h3' size='heading-lg' color='europe-dark'>
                   {t('categories.KA-2.eligible.title')}
-                </h3>
+                </Typography>
                 <ul>{t.rich('categories.KA-2.eligible.description')}</ul>
               </div>
             </div>

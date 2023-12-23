@@ -40,7 +40,7 @@ export const AnimatedCard = ({
         >
           <Typography
             as='span'
-            size='heading-md'
+            size='heading-lg'
             color='basics-white'
             weight='bold'
             className='text-start'

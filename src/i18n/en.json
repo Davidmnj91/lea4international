@@ -31,7 +31,7 @@
     },
     "our-beliefs": {
       "title": "Our Beliefs",
-      "description": "At *** We believe that having an experience abroad is a great opportunity to open your mind, explore <b>different cultures and speak other languages.</b>\n Thanks to globalization, we live in a connected world that offers many opportunities to <b>travel and explore</b> outside of our home country."
+      "description": "At *** We believe that having an experience abroad is a great opportunity to open your mind, explore <b>different cultures and speak other languages.</b><br></br> Thanks to globalization, we live in a connected world that offers many opportunities to <b>travel and explore</b> outside of our home country."
     },
     "coming-challenges": {
       "title": "Overcoming Challenges",
@@ -81,7 +81,7 @@
               "title": "Find out what professional sector we offer",
               "IT": {
                 "title": "IT and Multimedia Professions",
-                "description": "IT - Information technology (IT) is the use of any computers, storage, networking and other physical devices, infrastructure and processes to create, process, store, secure and exchange all forms of electronic data.\nMultimedia is a growing field that is part of the technology sector and includes professional opportunities as graphic design, marketing, product development, multimedia designer etc."
+                "description": "IT - Information technology (IT) is the use of any computers, storage, networking and other physical devices, infrastructure and processes to create, process, store, secure and exchange all forms of electronic data.<br></br>Multimedia is a growing field that is part of the technology sector and includes professional opportunities as graphic design, marketing, product development, multimedia designer etc."
               },
               "business": {
                 "title": "Business Administration",
@@ -95,19 +95,20 @@
                 "title": "Beauty Professions",
                 "description": "This sector includes various professions related to aesthetics, hairdressing, cosmetics and nails. This professional sector includes opportunities such as working in a beauty salon, hair salon, nail salon, spa center, cosmetics store etc. An internship in this field will allow the apprentice to discover new techniques in a foreign language."
               }
-            }
+            },
+            "know-more": "Do you want to know more?"
           },
           "job-shadowing": {
             "title": "Job Shadowing",
-            "description": "Job shadowing programmes offer participants the chance to spend a period of time at a hosting organization in another country. The aim of this program is to learn new practices and gather new ideas through observation and interaction with peers, experts or other practitioners in their daily work at the hosting organization.\nEligible participants include teachers, trainers, and all other non-teaching experts and staff in adult education.\nEligible non-teaching staff includes staff working in adult education, either in adult education providers or in other organizations active in adult education.",
+            "description": "Job shadowing programmes offer participants the chance to spend a period of time at a hosting organization in another country. The aim of this program is to learn new practices and gather new ideas through observation and interaction with peers, experts or other practitioners in their daily work at the hosting organization.<br></br>Eligible participants include teachers, trainers, and all other non-teaching experts and staff in adult education.<br></br>Eligible non-teaching staff includes staff working in adult education, either in adult education providers or in other organizations active in adult education.",
             "with": "Job <br>shadowing</br> <br>with</br> <br>*****</br>",
-            "message": "At *** We collaborate with a large number of hosting job shadowing schools that have been carefully selected, these schools include primary, secondary and high schools. Additionally we collaborate with technical and vocational schools and schools with special needs. \nThe topics of the job shadowing can include, inclusion, diversity, digitization in schools, teaching sustainability, promoting STEM. \nBy the end of the job shadowing programme participants get exposed to several teaching practices focused on the chosen topics. \nThey acquire new teaching techniques, and discover resources that they can apply to their teaching practices.\nAt *** We also provide the sending organizations with the necessary learning agreement."
+            "message": "At *** We collaborate with a large number of hosting job shadowing schools that have been carefully selected, these schools include primary, secondary and high schools. Additionally we collaborate with technical and vocational schools and schools with special needs.<br></br>The topics of the job shadowing can include, inclusion, diversity, digitization in schools, teaching sustainability, promoting STEM. <br></br>By the end of the job shadowing programme participants get exposed to several teaching practices focused on the chosen topics. <br></br>They acquire new teaching techniques, and discover resources that they can apply to their teaching practices.<br></br>At *** We also provide the sending organizations with the necessary learning agreement."
           },
           "school-exchange": {
             "title": "School Exchange",
             "description": "Youth exchanges allow groups of young people from different countries to meet, live together and work on shared projects for short periods. Youth exchanges take place outside the school environment. On a youth exchange, you can expect to participate in activities such as workshops, exercises, debates, role-plays, outdoor activities and more.",
             "with": "School <br>Exchange</br> <br>with</br> <br>*****</br>",
-            "message": "At *** We collaborate with a large number of hosting schools for school exchange that have been carefully selected, these schools include primary, secondary and high schools. School Exchange is a great opportunity for the foreign students to do a wide range of activities that include country presentations, cultural workshops or language sessions with local students.\nAt *** We also provide logistic and local support through the school exchange program."
+            "message": "At *** We collaborate with a large number of hosting schools for school exchange that have been carefully selected, these schools include primary, secondary and high schools. School Exchange is a great opportunity for the foreign students to do a wide range of activities that include country presentations, cultural workshops or language sessions with local students.<br></br>At *** We also provide logistic and local support through the school exchange program."
           },
           "erasmus-mundus": {
             "title": "Erasmus Mundus",
@@ -125,14 +126,6 @@
             "eligible": {
               "title": "Who is eligible to apply?",
               "description": "<li>Educational Institutions</li><li>Local Authorities</li><li>Non Profit Organisations</li><li>Small and Medium Enterprises (SMEs)</li><li>State-owned Enterprises</li>"
-            }
-          },
-          "become-partner": {
-            "title": "Become A Partner",
-            "description": "We are here to answer all your questions. <br></br><br></br>Contact us today!",
-            "button": {
-              "title": "Become a <br>Partner</br>",
-              "caption": "Contact Us"
             }
           }
         }
@@ -181,7 +174,7 @@
           },
           "spanish-courses": {
             "title": "Spanish courses",
-            "description": "Conversational Spanish Course<br>Have you spent years learning Spanish at school but still lack fluency and confidence to speak Spanish?</br></br><br></br>Then this is the right course for you",
+            "description": "Conversational Spanish Course<br></br>Have you spent years learning Spanish at school but still lack fluency and confidence to speak Spanish?<br></br><br></br>Then this is the right course for you",
             "we-offer": {
               "focus": {
                 "title": "During this course our Spanish teachers will <br>focus on:</br>",
@@ -251,7 +244,7 @@
       },
       "concierge": {
         "title": "Student concierge services",
-        "description": "Studying abroad is an exciting experience but can be a worrying journey for many international students. The participants as well as their families are often concerned and a bit stressed about the uncertainty of the new experience abroad.\nOur commitment is to help students and their families to get familiar with the new country and its customs. We offer 24/7 emergency support to our students.",
+        "description": "Studying abroad is an exciting experience but can be a worrying journey for many international students. The participants as well as their families are often concerned and a bit stressed about the uncertainty of the new experience abroad.<br></br>Our commitment is to help students and their families to get familiar with the new country and its customs. We offer 24/7 emergency support to our students.",
         "includes": "Our services includes:",
         "services": {
           "meeting-greeting": "Meeting and greeting at arrival",
@@ -304,15 +297,7 @@
         "destinations": "Destinations",
         "choose": "Why choose Prague?",
         "reason": "There are numerous reasons to have your experience abroad in the Capital of the Czech Republic, some of them include: affordable housing, reliable and cheap public transportation, a city full of expats and international students with opportunities to meet people from different countries.",
-        "know": "Know Prague",
-        "services": {
-          "title": "Services available in Prague",
-          "see-more": "See more about this service ",
-          "work-experience": "Work Experience",
-          "job-shadowing": "Job Shadowing",
-          "language-courses": "Language courses & AI Training",
-          "concierge": "Student concierge Services"
-        }
+        "know": "Know Prague"
       },
       "madrid": {
         "title": "Madrid",
@@ -320,16 +305,7 @@
         "destinations": "Destinations",
         "choose": "Why choose Madrid?",
         "reason": "There are several reasons to have your experience abroad in the Capital of Spain, some of them include : affordable housing, extensive public transport, living in a multicultural and vibrant city with plenty of things to do, great nightlife full of options, nice weather, delicious food. Madrid has some of the best universities in Spain.",
-        "know": "Know Madrid",
-        "services": {
-          "title": "Services available in Madrid",
-          "see-more": "See more about this service ",
-          "work-experience": "Work Experience",
-          "job-shadowing": "Job Shadowing",
-          "language-courses": "Language courses & AI Training",
-          "student-exchange": "School Exchange & Immersions Programs",
-          "concierge": "Student concierge Services"
-        }
+        "know": "Know Madrid"
       },
       "malaga": {
         "title": "Málaga",
@@ -337,15 +313,7 @@
         "destinations": "Destinations",
         "choose": "Why choose Málaga?",
         "reason": "There are different reasons to have your experience abroad in Malaga, some of them include : affordable housing, cheap public transport, delicious food, nice weather during most of the year, which together with the open and cheerful character of the locals, creates a city with a lot of atmosphere. The streets are always full of people gathering together. Malaga has a vibrant nightlife and a rich history.",
-        "know": "Know Málaga",
-        "services": {
-          "title": "Services available in Málaga",
-          "see-more": "See more about this service ",
-          "work-experience": "Work Experience",
-          "job-shadowing": "Job Shadowing",
-          "language-courses": "Language courses & AI Training",
-          "concierge": "Student concierge Services"
-        }
+        "know": "Know Málaga"
       },
       "krakow": {
         "title": "Krakow",
@@ -353,13 +321,7 @@
         "destinations": "Destinations",
         "choose": "Why choose Krakow?",
         "reason": "There are several reasons to choose Krakow for your experience abroad. It is a very affordable and safe city with a historical university and beautiful architecture, UNESCO designated its old town area a World Heritage site in 1978. This city is full of international students so you will have the opportunity to have a multicultural experience.",
-        "know": "Know Krakow",
-        "services": {
-          "title": "Services available in Krakow",
-          "see-more": "See more about this service ",
-          "work-experience": "Work Experience",
-          "job-shadowing": "Job Shadowing"
-        }
+        "know": "Know Krakow"
       },
       "dublin": {
         "title": "Dublin",
@@ -367,14 +329,7 @@
         "destinations": "Destinations",
         "choose": "Why choose Dublin?",
         "reason": "There are different reasons to choose the capital or Ireland for your experience abroad, it is a welcoming and vibrant city, full of museums, galleries, bars and restaurants. Dublin is one of 6 UNESCO cities of literature.",
-        "know": "Know Dublin",
-        "services": {
-          "title": "Services available in Dublin",
-          "see-more": "See more about this service ",
-          "work-experience": "Work Experience",
-          "job-shadowing": "Job Shadowing",
-          "language-courses": "Language courses & AI Training"
-        }
+        "know": "Know Dublin"
       },
       "ghent": {
         "title": "Ghent",
@@ -382,14 +337,17 @@
         "destinations": "Destinations",
         "choose": "Why choose Ghent?",
         "reason": "There are different reasons to choose Ghent to have your experience abroad, it is a multicultural city with an international student community. It has one of the most prestigious universities in Europe. It is an affordable city with good public transport and a bicycle-friendly city. It is one of the Belgian cities with the most historical and cultural buildings.",
-        "know": "Know Ghent",
-        "services": {
-          "title": "Services available in Ghent",
-          "see-more": "See more about this service ",
-          "work-experience": "Work Experience",
-          "job-shadowing": "Job Shadowing"
-        }
+        "know": "Know Ghent"
       }
+    },
+    "services": {
+      "title": "Services available in {city}",
+      "work-experience": "Work Experience",
+      "job-shadowing": "Job Shadowing",
+      "language-courses": "Language courses & AI Training",
+      "student-exchange": "School Exchange & Immersions Programs",
+      "concierge": "Student concierge Services",
+      "see-more": "See more about this service"
     }
   },
   "accommodations-page": {
@@ -445,10 +403,40 @@
   "not-found-page": {
     "back-to-home": "Back to home"
   },
+  "top-destinations": {
+    "title": "Our Top destinations",
+    "see-all": "See all destinations",
+    "destinations": {
+      "prague": {
+        "title": "Prague",
+        "country": "República Checa"
+      },
+      "madrid": {
+        "title": "Madrid",
+        "country": "España"
+      },
+      "malaga": {
+        "title": "Málaga",
+        "country": "España"
+      },
+      "krakow": {
+        "title": "Krakow",
+        "country": "Poland"
+      },
+      "dublin": {
+        "title": "Dublin",
+        "country": "Ireland"
+      },
+      "ghent": {
+        "title": "Ghent",
+        "country": "Belgium"
+      }
+    }
+  },
   "contact-us": {
     "text": "Contact us"
   },
-  "company-form": {
+  "forms": {
     "input": {
       "service": {
         "label": "What type of service are you interested in?",
@@ -493,31 +481,6 @@
       "terms": {
         "label": "I accept to acknowledge that I have read and agree to the privacy policies before submitting the form",
         "error": "You must accept the terms and conditions"
-      }
-    },
-    "submit": "Send form"
-  },
-  "family-form": {
-    "input": {
-      "name": {
-        "label": "Name",
-        "placeholder": "Enter Name",
-        "error": "Please provide a name"
-      },
-      "lastname": {
-        "label": "Last name",
-        "placeholder": "Enter your last name",
-        "error": "Please provide a last name"
-      },
-      "email": {
-        "label": "Email address",
-        "placeholder": "Enter Email address",
-        "error": "Please provide a valid email"
-      },
-      "phone": {
-        "label": "Phone",
-        "placeholder": "Enter Phone",
-        "error": "Please provide a valid phone"
       },
       "city": {
         "label": "City where you live",
@@ -534,59 +497,10 @@
         "placeholder": "Add a number",
         "error": "Please provide your student capacity"
       },
-      "message": {
-        "label": "Tell us more, what would you like to know?",
-        "placeholder": "Enter your message",
-        "error": "Please provide a message"
-      },
-      "terms": {
-        "label": "I accept to acknowledge that I have read and agree to the privacy policies before submitting the form",
-        "error": "You must accept the terms and conditions"
-      }
-    },
-    "submit": "Send form"
-  },
-  "institution-form": {
-    "input": {
-      "name": {
-        "label": "Name",
-        "placeholder": "Enter Name",
-        "error": "Please provide a name"
-      },
-      "lastname": {
-        "label": "Last name",
-        "placeholder": "Enter your last name",
-        "error": "Please provide a last name"
-      },
-      "email": {
-        "label": "Email address",
-        "placeholder": "Enter Email address",
-        "error": "Please provide a valid email"
-      },
-      "phone": {
-        "label": "Phone",
-        "placeholder": "Enter Phone",
-        "error": "Please provide a valid phone"
-      },
-      "nationality": {
-        "label": "Nationality",
-        "placeholder": "Enter Nationality",
-        "error": "Please select a nationality"
-      },
       "institutionName": {
         "label": "Name of your school / institution",
         "placeholder": "Enter Name",
         "error": "Please provide a name"
-      },
-      "city": {
-        "label": "Destination city",
-        "placeholder": "Enter destination city",
-        "error": "Please provide a destination city"
-      },
-      "hostSize": {
-        "label": "How many students can you host?",
-        "placeholder": "Enter a number",
-        "error": "Please provide your student capacity"
       },
       "dateRange": {
         "label": "Expected date",
@@ -652,48 +566,10 @@
           "no": "No"
         }
       },
-      "terms": {
-        "label": "I accept to acknowledge that I have read and agree to the privacy policies before submitting the form",
-        "error": "You must accept the terms and conditions"
-      }
-    },
-    "submit": "Send form"
-  },
-  "partner-form": {
-    "input": {
-      "service": {
-        "label": "What type of service are you interested in?",
-        "placeholder": "Choose one",
-        "options": {
-          "erasmus": "Erasmus+ Projects",
-          "language-courses": "Language courses",
-          "concierge": "Concierge & Tutoring Services"
-        },
-        "error": "Please select a service you are interested of"
-      },
-      "name": {
-        "label": "Name",
-        "placeholder": "Enter Name",
-        "error": "Please provide a name"
-      },
-      "lastname": {
-        "label": "Last name",
-        "placeholder": "Enter your last name",
-        "error": "Please provide a last name"
-      },
       "applicantName": {
         "label": "Name of the applicant",
         "placeholder": "Enter applicant name",
         "error": "Please provide a valid name"
-      },
-      "email": {
-        "label": "Email address",
-        "placeholder": "Enter Email address",
-        "error": "Please provide a valid email"
-      },
-      "terms": {
-        "label": "I accept to acknowledge that I have read and agree to the privacy policies before submitting the form",
-        "error": "You must accept the terms and conditions"
       }
     },
     "submit": "Send form"
@@ -717,11 +593,11 @@
     }
   },
   "more-info": {
-    "title": "Looking For More</br>Information?",
+    "title": "Looking For More <br></br>Information?",
     "questions": "We are here to answer all your questions. </br></br> Contact us today!",
     "more-info": "More Information",
-    "request-quote": "Request </br>A Quote",
-    "host-family": "Become A </br>Host Family",
+    "request-quote": "Request A Quote",
+    "host-family": "Become A Host Family",
     "contact-us": "Contact Us"
   },
   "our-partners": {
@@ -734,7 +610,7 @@
     "title": "Become A Partner",
     "description": "We are here to answer all your questions. <br></br><br></br>Contact us today!",
     "button": {
-      "title": "Become a <br>Partner</br>",
+      "title": "Become a Partner",
       "caption": "Contact Us"
     }
   },

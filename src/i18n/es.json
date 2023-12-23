@@ -55,14 +55,6 @@
       "title": "Preguntas frecuentes",
       "see-more": "Ver más preguntas"
     },
-    "more-info": {
-      "title": "¿Busca más <br>información?</br>",
-      "questions": "Estamos aquí para responder a todas tus preguntas. <br></br> <br>¡Contáctenos hoy!</br>",
-      "more-info": "Más Información",
-      "request-quote": "Solicitar <br>Presupuesto</br>",
-      "host-family": "Conviértete en una <br>Familia Anfitriona</br>",
-      "contact-us": "Contáctanos"
-    },
     "help-you": "Esperamos Poder Ayudarte A Disfrutar De Tu Aventura Educativa.",
     "see-more": "Saber más"
   },
@@ -82,14 +74,14 @@
         "categories": {
           "work-experience": {
             "title": "Experiencia laboral",
-            "description": "Erasmus+ puede ayudarte a adquirir una valiosa experiencia laboral en el extranjero. Al participar en el programa de prácticas Erasmus+ mejorarás tus habilidades interpersonales y de idiomas extranjeros, y desarrollarás habilidades interculturales que te ayudarán a encontrar un trabajo después de tus estudios.\nErasmus+ apoya las prácticas laborales o los períodos de estudio en el extranjero para estudiantes actualmente matriculados en educación y formación profesional (FP) y para recién graduados.",
+            "description": "Erasmus+ puede ayudarte a adquirir una valiosa experiencia laboral en el extranjero. Al participar en el programa de prácticas Erasmus+ mejorarás tus habilidades interpersonales y de idiomas extranjeros, y desarrollarás habilidades interculturales que te ayudarán a encontrar un trabajo después de tus estudios.<br></br>Erasmus+ apoya las prácticas laborales o los períodos de estudio en el extranjero para estudiantes actualmente matriculados en educación y formación profesional (FP) y para recién graduados.",
             "with": "Experiencia <br>laboral</br> <br>con</br> <br>*****</br>",
-            "message": "En *** Ofrecemos una variedad de sectores profesionales en los que podrás realizar tu experiencia de prácticas. Sabemos lo importante que es adquirir experiencia laboral profesional, por eso ofrecemos pasantías de alta calidad adaptadas a cada individuo.\nContamos con un equipo de expertos que revisarán y estudiarán tu CV y \u200B\u200Bcarta de motivación para encontrarte con la empresa adecuada. Recibirá apoyo durante el proceso de entrevista, se le asignará un supervisor para monitorear su desempeño y asegurarse de lograr los mejores resultados. Te proporcionaremos el acuerdo de aprendizaje y toda la ayuda que necesites antes y durante tus prácticas.",
+            "message": "En *** Ofrecemos una variedad de sectores profesionales en los que podrás realizar tu experiencia de prácticas. Sabemos lo importante que es adquirir experiencia laboral profesional, por eso ofrecemos pasantías de alta calidad adaptadas a cada individuo.<br></br>Contamos con un equipo de expertos que revisarán y estudiarán tu CV y \u200B\u200Bcarta de motivación para encontrarte con la empresa adecuada. Recibirá apoyo durante el proceso de entrevista, se le asignará un supervisor para monitorear su desempeño y asegurarse de lograr los mejores resultados. Te proporcionaremos el acuerdo de aprendizaje y toda la ayuda que necesites antes y durante tus prácticas.",
             "we-offer": {
               "title": "Descubra qué sector profesional ofrecemos",
               "IT": {
                 "title": "Profesiones IT y multimedia",
-                "description": "IT: la tecnología de la información (TI) es el uso de computadoras, almacenamiento, redes y otros dispositivos, infraestructuras y procesos físicos para crear, procesar, almacenar, proteger e intercambiar todas las formas de datos electrónicos.\nMultimedia es un campo en crecimiento que forma parte del sector tecnológico e incluye oportunidades profesionales como diseño gráfico, marketing, desarrollo de productos, diseñador multimedia, etc."
+                "description": "IT: la tecnología de la información (TI) es el uso de computadoras, almacenamiento, redes y otros dispositivos, infraestructuras y procesos físicos para crear, procesar, almacenar, proteger e intercambiar todas las formas de datos electrónicos.<br></br>Multimedia es un campo en crecimiento que forma parte del sector tecnológico e incluye oportunidades profesionales como diseño gráfico, marketing, desarrollo de productos, diseñador multimedia, etc."
               },
               "business": {
                 "title": "Administración de Empresas",
@@ -103,19 +95,20 @@
                 "title": "Profesiones de belleza",
                 "description": "Este sector engloba diversas profesiones relacionadas con la estética, la peluquería, la cosmética y las uñas. Este sector profesional incluye oportunidades como trabajar en un salón de belleza, peluquería, salón de uñas, centro de spa, tienda de cosméticos, etc. Una pasantía en este campo permitirá al aprendiz descubrir nuevas técnicas en un idioma extranjero."
               }
-            }
+            },
+            "know-more": "Do you want to know more?"
           },
           "job-shadowing": {
             "title": "Observación de profesionales",
-            "description": "Los programas de observación laboral ofrecen a los participantes la oportunidad de pasar un período de tiempo en una organización de acogida en otro país. El objetivo de este programa es aprender nuevas prácticas y recopilar nuevas ideas a través de la observación y la interacción con pares, expertos u otros profesionales en su trabajo diario en la organización anfitriona.\nLos participantes elegibles incluyen profesores, formadores y todos los demás expertos y personal no docente en educación de adultos.\nEl personal no docente elegible incluye el personal que trabaja en la educación de adultos, ya sea en proveedores de educación de adultos o en otras organizaciones activas en la educación de adultos.",
+            "description": "Los programas de observación laboral ofrecen a los participantes la oportunidad de pasar un período de tiempo en una organización de acogida en otro país. El objetivo de este programa es aprender nuevas prácticas y recopilar nuevas ideas a través de la observación y la interacción con pares, expertos u otros profesionales en su trabajo diario en la organización anfitriona.<br></br>Los participantes elegibles incluyen profesores, formadores y todos los demás expertos y personal no docente en educación de adultos.<br></br>El personal no docente elegible incluye el personal que trabaja en la educación de adultos, ya sea en proveedores de educación de adultos o en otras organizaciones activas en la educación de adultos.",
             "with": "Trabajo <br>seguimiento</br> <br>con</br> <br>******</br>",
-            "message": "En *** Colaboramos con un gran número de escuelas de observación laboral que han sido cuidadosamente seleccionadas; estas escuelas incluyen escuelas primarias, secundarias y preparatorias. Además colaboramos con escuelas técnicas y vocacionales y escuelas con necesidades especiales.\nLos temas del seguimiento laboral pueden incluir inclusión, diversidad, digitalización en las escuelas, enseñanza de la sostenibilidad y promoción de STEM.\nAl final del programa de seguimiento laboral, los participantes quedan expuestos a varias prácticas docentes centradas en los temas elegidos.\nAdquieren nuevas técnicas de enseñanza y descubren recursos que pueden aplicar a sus prácticas docentes.\nEn *** También proporcionamos a las organizaciones de envío el acuerdo de aprendizaje necesario."
+            "message": "En *** Colaboramos con un gran número de escuelas de observación laboral que han sido cuidadosamente seleccionadas; estas escuelas incluyen escuelas primarias, secundarias y preparatorias. Además colaboramos con escuelas técnicas y vocacionales y escuelas con necesidades especiales.<br></br>Los temas del seguimiento laboral pueden incluir inclusión, diversidad, digitalización en las escuelas, enseñanza de la sostenibilidad y promoción de STEM.<br></br>Al final del programa de seguimiento laboral, los participantes quedan expuestos a varias prácticas docentes centradas en los temas elegidos.<br></br>Adquieren nuevas técnicas de enseñanza y descubren recursos que pueden aplicar a sus prácticas docentes.<br></br>En *** También proporcionamos a las organizaciones de envío el acuerdo de aprendizaje necesario."
           },
           "school-exchange": {
             "title": "Intercambio escolar",
             "description": "Los intercambios juveniles permiten que grupos de jóvenes de diferentes países se reúnan, convivan y trabajen en proyectos compartidos durante períodos cortos. Los intercambios juveniles se llevan a cabo fuera del entorno escolar. En un intercambio juvenil, puedes esperar participar en actividades como talleres, ejercicios, debates, juegos de roles, actividades al aire libre y más.",
             "with": "<br>Intercambio escolar</br> <br>con</br> <br>*****</br>",
-            "message": "En *** Colaboramos con un gran número de escuelas anfitrionas para intercambio escolar que han sido cuidadosamente seleccionadas, estas escuelas incluyen escuelas primarias, secundarias y preparatorias. El intercambio escolar es una gran oportunidad para que los estudiantes extranjeros realicen una amplia gama de actividades que incluyen presentaciones de países, talleres culturales o sesiones de idiomas con estudiantes locales.\nEn *** También brindamos apoyo logístico y local a través del programa de intercambio escolar."
+            "message": "En *** Colaboramos con un gran número de escuelas anfitrionas para intercambio escolar que han sido cuidadosamente seleccionadas, estas escuelas incluyen escuelas primarias, secundarias y preparatorias. El intercambio escolar es una gran oportunidad para que los estudiantes extranjeros realicen una amplia gama de actividades que incluyen presentaciones de países, talleres culturales o sesiones de idiomas con estudiantes locales.<br></br>En *** También brindamos apoyo logístico y local a través del programa de intercambio escolar."
           },
           "erasmus-mundus": {
             "title": "Erasmus Mundus",
@@ -251,7 +244,7 @@
       },
       "concierge": {
         "title": "Servicios de tutoría de conserjería",
-        "description": "Estudiar en el extranjero es una experiencia emocionante, pero puede ser un viaje preocupante para muchos estudiantes internacionales. Los participantes y sus familias suelen estar preocupados y un poco estresados por la incertidumbre de la nueva experiencia en el extranjero.\nNuestro compromiso es ayudar a los estudiantes y sus familias a familiarizarse con el nuevo país y sus costumbres. Ofrecemos soporte de emergencia 24 horas al día, 7 días a la semana a nuestros estudiantes.",
+        "description": "Estudiar en el extranjero es una experiencia emocionante, pero puede ser un viaje preocupante para muchos estudiantes internacionales. Los participantes y sus familias suelen estar preocupados y un poco estresados por la incertidumbre de la nueva experiencia en el extranjero.<br></br>Nuestro compromiso es ayudar a los estudiantes y sus familias a familiarizarse con el nuevo país y sus costumbres. Ofrecemos soporte de emergencia 24 horas al día, 7 días a la semana a nuestros estudiantes.",
         "includes": "Nuestros servicios incluyen:",
         "services": {
           "meeting-greeting": "Encuentro y saludo a la llegada.",
@@ -304,15 +297,7 @@
         "destinations": "Destinos",
         "choose": "Por que escoger Praga?",
         "reason": "Existen numerosas razones para tener tu experiencia en el extranjero en la capital de la República Checa, algunas de ellas incluyen: vivienda asequible, transporte público confiable y económico, una ciudad llena de expatriados y estudiantes internacionales con oportunidades de conocer gente de diferentes países.",
-        "know": "Conoce Praga",
-        "services": {
-          "title": "Servicios disponibles en Prague",
-          "see-more": "Saber más sobre este servicio",
-          "work-experience": "Experiencia laboral",
-          "job-shadowing": "Observación de profesionales",
-          "language-courses": "Cursos de idiomas y formación en IA",
-          "concierge": "Servicios de conserjería para estudiantes"
-        }
+        "know": "Conoce Praga"
       },
       "madrid": {
         "title": "Madrid",
@@ -320,16 +305,7 @@
         "destinations": "Destinos",
         "choose": "Por que escoger Madrid?",
         "reason": "Hay varias razones para tener tu experiencia en el extranjero en la Capital de España, algunas de ellas incluyen: vivienda asequible, amplio transporte público, vivir en una ciudad multicultural y vibrante con muchas cosas que hacer, gran vida nocturna llena de opciones, buen clima, comida deliciosa. Madrid tiene algunas de las mejores universidades de España.",
-        "know": "Conoce Madrid",
-        "services": {
-          "title": "Servicios disponibles en Madrid",
-          "see-more": "Saber más sobre este servicio",
-          "work-experience": "Experiencia laboral",
-          "job-shadowing": "Observación de profesionales",
-          "language-courses": "Cursos de idiomas y formación en IA",
-          "student-exchange": "Programas de inmersión y intercambio escolar",
-          "concierge": "Servicios de conserjería para estudiantes"
-        }
+        "know": "Conoce Madrid"
       },
       "malaga": {
         "title": "Málaga",
@@ -337,15 +313,7 @@
         "destinations": "Destinos",
         "choose": "Por que escoger Málaga?",
         "reason": "Hay diferentes razones para tener tu experiencia en el extranjero en Málaga, algunas de ellas incluyen: vivienda asequible, transporte público barato, comida deliciosa, buen clima durante la mayor parte del año, que junto con el carácter abierto y alegre de los locales, crea una ciudad. con mucho ambiente. Las calles siempre están llenas de gente reunida. Málaga tiene una vibrante vida nocturna y una rica historia.",
-        "know": "Conoce Málaga",
-        "services": {
-          "title": "Servicios disponibles en Málaga",
-          "see-more": "Saber más sobre este servicio",
-          "work-experience": "Experiencia laboral",
-          "job-shadowing": "Observación de profesionales",
-          "language-courses": "Cursos de idiomas y formación en IA",
-          "concierge": "Servicios de conserjería para estudiantes"
-        }
+        "know": "Conoce Málaga"
       },
       "krakow": {
         "title": "Cracovia",
@@ -353,13 +321,7 @@
         "destinations": "Destinos",
         "choose": "Por que escoger Cracovia?",
         "reason": "Hay varias razones para elegir Cracovia para tu experiencia en el extranjero. Es una ciudad muy asequible y segura con una universidad histórica y una hermosa arquitectura, la UNESCO designó su casco antiguo como Patrimonio de la Humanidad en 1978. Esta ciudad está llena de estudiantes internacionales, por lo que tendrás la oportunidad de tener una experiencia multicultural.",
-        "know": "Conoce Cracovia",
-        "services": {
-          "title": "Servicios disponibles en Cracovia",
-          "see-more": "Saber más sobre este servicio",
-          "work-experience": "Experiencia laboral",
-          "job-shadowing": "Observación de profesionales"
-        }
+        "know": "Conoce Cracovia"
       },
       "dublin": {
         "title": "Dublin",
@@ -367,14 +329,7 @@
         "destinations": "Destinos",
         "choose": "Por que escoger Dublin?",
         "reason": "Hay diferentes razones para elegir la capital o Irlanda para tu experiencia en el extranjero, es una ciudad acogedora y vibrante, llena de museos, galerías, bares y restaurantes. Dublín es una de las seis ciudades literarias de la UNESCO.",
-        "know": "Conoce Dublin",
-        "services": {
-          "title": "Servicios disponibles en Dublin",
-          "see-more": "Saber más sobre este servicio",
-          "work-experience": "Experiencia laboral",
-          "job-shadowing": "Observación de profesionales",
-          "language-courses": "Cursos de idiomas y formación en IA"
-        }
+        "know": "Conoce Dublin"
       },
       "ghent": {
         "title": "Gante",
@@ -382,14 +337,17 @@
         "destinations": "Destinos",
         "choose": "Por que escoger Gante?",
         "reason": "Hay diferentes razones para elegir Gante para vivir tu experiencia en el extranjero, es una ciudad multicultural con una comunidad estudiantil internacional. Tiene una de las universidades más prestigiosas de Europa. Es una ciudad asequible con buen transporte público y una ciudad amigable con las bicicletas. Es una de las ciudades belgas con más edificios históricos y culturales.",
-        "know": "Conoce Gante",
-        "services": {
-          "title": "Servicios disponibles en Gante",
-          "see-more": "Saber más sobre este servicio",
-          "work-experience": "Experiencia laboral",
-          "job-shadowing": "Observación de profesionales"
-        }
+        "know": "Conoce Gante"
       }
+    },
+    "services": {
+      "title": "Servicios disponibles en {city}",
+      "see-more": "Saber más sobre este servicio",
+      "work-experience": "Experiencia laboral",
+      "job-shadowing": "Observación de profesionales",
+      "language-courses": "Cursos de idiomas y formación en IA",
+      "student-exchange": "Programas de inmersión y intercambio escolar",
+      "concierge": "Servicios de conserjería para estudiantes"
     }
   },
   "accommodations-page": {
@@ -445,10 +403,40 @@
   "not-found-page": {
     "back-to-home": "Vuelta a casa"
   },
+  "top-destinations": {
+    "title": "Nuestros mejores destinos",
+    "see-all": "Ver todos los destinos",
+    "destinations": {
+      "prague": {
+        "title": "Praga",
+        "country": "República Checa"
+      },
+      "madrid": {
+        "title": "Madrid",
+        "country": "España"
+      },
+      "malaga": {
+        "title": "Málaga",
+        "country": "España"
+      },
+      "krakow": {
+        "title": "Cracovia",
+        "country": "Polonia"
+      },
+      "dublin": {
+        "title": "Dublin",
+        "country": "Irlanda"
+      },
+      "ghent": {
+        "title": "Gante",
+        "country": "Belgica"
+      }
+    }
+  },
   "contact-us": {
     "text": "Contáctanos"
   },
-  "company-form": {
+  "forms": {
     "input": {
       "service": {
         "label": "¿Qué tipo de servicio está interesado?",
@@ -493,31 +481,6 @@
       "terms": {
         "label": "Acepto reconocer que he leído y acepto las políticas de privacidad antes de enviar el formulario",
         "error": "Debe aceptar los Términos y Condiciones"
-      }
-    },
-    "submit": "Enviar el formulario"
-  },
-  "family-form": {
-    "input": {
-      "name": {
-        "label": "Nombre",
-        "placeholder": "Introduzca su nombre",
-        "error": "Por favor proporcione un nombre"
-      },
-      "lastname": {
-        "label": "Apellido",
-        "placeholder": "Introduzca su apellido",
-        "error": "Por favor proporcione un apellido"
-      },
-      "email": {
-        "label": "Dirección de correo electrónico",
-        "placeholder": "Introduzca su dirección de correo electrónico",
-        "error": "Por favor proporcione un correo electrónico válido"
-      },
-      "phone": {
-        "label": "Teléfono",
-        "placeholder": "Introduzca su teléfono",
-        "error": "Por favor proporcione un teléfono válido"
       },
       "city": {
         "label": "Ciudad donde vives",
@@ -534,59 +497,10 @@
         "placeholder": "Añadir un número",
         "error": "Por favor proporcione su capacidad de estudiantes"
       },
-      "message": {
-        "label": "Cuéntanos más, ¿qué te gustaría saber?",
-        "placeholder": "Introduzca su mensaje",
-        "error": "Por favor proporcione un mensaje"
-      },
-      "terms": {
-        "label": "Acepto reconocer que he leído y acepto las políticas de privacidad antes de enviar el formulario",
-        "error": "Debe aceptar los Términos y Condiciones"
-      }
-    },
-    "submit": "Enviar el formulario"
-  },
-  "institution-form": {
-    "input": {
-      "name": {
-        "label": "Nombre",
-        "placeholder": "Introduzca su nombre",
-        "error": "Por favor proporcione un nombre"
-      },
-      "lastname": {
-        "label": "Apellido",
-        "placeholder": "Introduzca su apellido",
-        "error": "Por favor proporcione un apellido"
-      },
-      "email": {
-        "label": "Dirección de correo electrónico",
-        "placeholder": "Introduzca su dirección de correo electrónico",
-        "error": "Por favor proporcione un correo electrónico válido"
-      },
-      "phone": {
-        "label": "Teléfono",
-        "placeholder": "Introduzca su teléfono",
-        "error": "Por favor proporcione un teléfono válido"
-      },
-      "nationality": {
-        "label": "Nacionalidad",
-        "placeholder": "Introduzca su nacionalidad",
-        "error": "Por favor seleccione una nacionalidad"
-      },
       "institutionName": {
         "label": "Nombre de tu escuela/institución",
         "placeholder": "Introduzca su nombre",
         "error": "Por favor proporcione un nombre"
-      },
-      "city": {
-        "label": "Ciudad de destino",
-        "placeholder": "Introduzca su ciudad de destino",
-        "error": "Please proporcione una ciudad de destino"
-      },
-      "hostSize": {
-        "label": "¿Cuántos estudiantes puedes alojar?",
-        "placeholder": "Introduzca su a number",
-        "error": "Por favor proporcione su capacidad de estudiantes"
       },
       "dateRange": {
         "label": "Fechas previstas",
@@ -652,48 +566,10 @@
           "no": "No"
         }
       },
-      "terms": {
-        "label": "Acepto reconocer que he leído y acepto las políticas de privacidad antes de enviar el formulario",
-        "error": "Debe aceptar los Términos y Condiciones"
-      }
-    },
-    "submit": "Enviar el formulario"
-  },
-  "partner-form": {
-    "input": {
-      "service": {
-        "label": "¿Qué tipo de servicio está interesado?",
-        "placeholder": "Seleccione uno",
-        "options": {
-          "erasmus": "Proyectos Erasmus+",
-          "language-courses": "Cursos de idioma",
-          "concierge": "Servicios de conserjería y tutoría"
-        },
-        "error": "Por favor seleccione un servicio en el que esté interesado"
-      },
-      "name": {
-        "label": "Nombre",
-        "placeholder": "Introduzca su Nombre",
-        "error": "Por favor proporcione un nombre"
-      },
-      "lastname": {
-        "label": "Apellido",
-        "placeholder": "Introduzca su apellido",
-        "error": "Por favor proporcione un apellido"
-      },
-      "email": {
-        "label": "Dirección de correo electrónico",
-        "placeholder": "Introduzca su dirección de correo electrónico",
-        "error": "Por favor proporcione un correo electrónico válido"
-      },
       "applicantName": {
         "label": "Nombre del solicitante",
         "placeholder": "Introduzca el nombre del solicitante",
         "error": "Por favor proporcione un nombre válido"
-      },
-      "terms": {
-        "label": "Acepto reconocer que he leído y acepto las políticas de privacidad antes de enviar el formulario",
-        "error": "Debe aceptar los Términos y Condiciones"
       }
     },
     "submit": "Enviar el formulario"
@@ -717,11 +593,11 @@
     }
   },
   "more-info": {
-    "title": "¿Busca más</br>información?",
+    "title": "¿Busca más <br></br> información?",
     "questions": "Estamos aquí para responder a todas tus preguntas. </br></br> ¡Contáctenos hoy!",
     "more-info": "Más Información",
-    "request-quote": "Solicitar </br> una cotización",
-    "host-family": "Conviértete en </br>una familia anfitriona",
+    "request-quote": "Solicitar una cotización",
+    "host-family": "Conviértete en una familia anfitriona",
     "contact-us": "Contactanos"
   },
   "our-partners": {
@@ -734,7 +610,7 @@
     "title": "Convertirse en un compañero",
     "description": "Estamos aquí para responder a todas tus preguntas. <br></br><br></br>¡Contáctenos hoy!",
     "button": {
-      "title": "Conviértase en<br></br>socio",
+      "title": "Conviértase en socio",
       "caption": "Contacta con nosotros"
     }
   },

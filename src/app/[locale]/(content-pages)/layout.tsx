@@ -3,10 +3,6 @@ import { notFound } from 'next/navigation';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { Header } from '@/components/header/header';
 
-export async function generateStaticParams() {
-  return languages.map((locale) => ({ locale }));
-}
-
 type RootLayoutProps = {
   children: React.ReactNode;
   params: { locale: Language };

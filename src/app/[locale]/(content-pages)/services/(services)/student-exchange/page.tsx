@@ -12,6 +12,7 @@ import { Bed } from '@phosphor-icons/react/dist/ssr/Bed';
 import { RoadHorizon } from '@phosphor-icons/react/dist/ssr/RoadHorizon';
 import { Train } from '@phosphor-icons/react/dist/ssr/Train';
 import { Bank } from '@phosphor-icons/react/dist/ssr/Bank';
+import { Typography } from '@/components/typography/typography';
 
 export default function Page({ params: { locale } }: LanguagePageProps) {
   // Enable static rendering
@@ -36,10 +37,15 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
 
   return (
     <div>
-      <div className='flex items-center justify-center py-24'>
-        <h1 className='text-center font-title text-desktop-h-2xl text-europe-dark'>
+      <div className='flex items-center justify-center px-2.5 py-16 desktop:py-24'>
+        <Typography
+          as='h1'
+          size='heading-2xl'
+          color='europe-dark'
+          className='text-center'
+        >
           {t('title')}
-        </h1>
+        </Typography>
       </div>
       <div className='sticky top-[80px] z-20 flex items-center gap-6 overflow-auto border-y border-y-basics-disabled bg-basics-white px-6 py-6 desktop:justify-center desktop:overflow-hidden desktop:px-12'>
         {studentExchangeServices.map((service) => (
@@ -55,42 +61,55 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
       </div>
       {Object.entries(sections).map(([section, imgSrc], index) => (
         <section key={section} id={section}>
-          <div className='flex flex-col items-center justify-center gap-32 px-12 py-24'>
+          <div className='flex flex-col items-center justify-center gap-8 px-6 py-12 desktop:gap-32 desktop:px-12 desktop:py-24'>
             <div className='flex flex-col items-center justify-center'>
-              <span className='font-title text-desktop-h-sm font-bold text-gold-dark'>
+              <Typography
+                as='span'
+                size='heading-sm'
+                color='gold-dark'
+                weight='bold'
+              >
                 {t('overview')}
-              </span>
-              <h2 className='font-title text-desktop-h-xl text-europe-dark'>
+              </Typography>
+              <Typography as='h2' size='heading-xl' color='europe-dark'>
                 {t(`categories.${section}.title`)}
-              </h2>
+              </Typography>
             </div>
-            <p className='text-center font-body text-b-lg text-europe-dark'>
+            <Typography
+              as='p'
+              size='body-lg'
+              color='europe-dark'
+              className='text-center'
+            >
               {t(`categories.${section}.description`)}
-            </p>
+            </Typography>
           </div>
           <div className={clsx('flex', index % 2 !== 0 && 'flex-row-reverse')}>
-            <div className='flex flex-[0_0_60%] flex-col gap-24 px-12 py-24'>
-              <h2 className='font-title text-desktop-h-xl text-europe-dark'>
+            <div className='flex flex-col gap-8 p-6 desktop:flex-[0_0_60%] desktop:gap-24 desktop:px-12 desktop:py-24'>
+              <Typography as='h2' size='heading-xl' color='europe-dark'>
                 {t(`categories.${section}.includes`)}
-              </h2>
+              </Typography>
               <ul className='flex flex-col gap-4'>
                 {Object.entries(services).map(([title, icon]) => (
                   <li
                     key={title}
-                    className='flex flex-col items-center border border-gold desktop:flex-row'
+                    className='flex items-center border border-gold'
                   >
-                    <div className='border-t border-t-gold p-4 desktop:border-r desktop:border-t-0 desktop:border-r-gold'>
-                      {icon}
-                    </div>
-                    <p className='m-4 font-body text-b-lg text-europe-dark'>
+                    <div className='border-r border-r-gold p-4'>{icon}</div>
+                    <Typography
+                      as='p'
+                      size='body-lg'
+                      color='europe-dark'
+                      className='m-4'
+                    >
                       {t(`services.${title}`)}
-                    </p>
+                    </Typography>
                   </li>
                 ))}
               </ul>
             </div>
             <div
-              className='flex-[0_0_40%] bg-cover bg-no-repeat'
+              className='hidden flex-[0_0_40%] bg-cover bg-no-repeat desktop:inline-block'
               style={{
                 backgroundImage: `url(${imgSrc})`,
               }}
