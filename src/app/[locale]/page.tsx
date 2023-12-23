@@ -5,23 +5,22 @@ import hero_bg from '../../../public/hero_bg.png';
 import who_we_are_bg from '../../../public/who_we_are_bg.png';
 import our_beliefs_bg from '../../../public/our_beliefs_bg.png';
 import our_commitment_bg from '../../../public/our_commitment_bg.png';
-import prague_bg from '../../../public/prague_bg.png';
-import madrid_bg from '../../../public/madrid_bg.png';
-import malaga_bg from '../../../public/malaga_bg.png';
-import { buttonTypes } from '@/components/button/button';
+import { buttonTypes, tagButtonTypes } from '@/components/button/button';
 import clsx from 'clsx';
 import { CommitmentsCarousel } from '@/components/commitments-carousel/commitments-carousel';
-import { AnimatedCard } from '@/components/destination-card/animated-card';
 import { FaqList } from '@/components/faq-list/faq-list';
 import { FAQCategories, Faqs } from '@/types/faq';
 import { Subset } from '@/types/types';
 import { Partners } from '@/components/partners/partners';
 import { Menu } from '@/components/menu/menu';
 import LocaleSwitcher from '@/components/locale-switcher/locale-switcher';
-import React, { useRef } from 'react';
+import React, { Fragment, useRef, useState } from 'react';
 import { motion, useInView, Variants } from 'framer-motion';
 import { MoreInfo } from '@/components/more-info/more-info';
 import { Typography } from '@/components/typography/typography';
+import { MobileMenu } from '@/components/header/header';
+import { TopDestinations } from '@/components/top-destinations/top-destinations';
+import { Destinations } from '@/types/destinations';
 
 const FaqsHome: Subset<typeof Faqs> = {
   [FAQCategories.erasmus]: [
@@ -38,32 +37,42 @@ export default function HomePage() {
 
   const ref = useRef(null);
   const inView = useInView(ref);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const headerVariants: Variants = {
     transparent: {
       backgroundColor: '#2E3B4800',
-      transition: { duration: 0.5, easings: ['easeIn'] },
+      transition: { duration: 0.3, easings: ['easeIn'] },
     },
     opaque: {
       backgroundColor: '#2E3B48',
-      transition: { duration: 0.5, easings: ['easeOut'] },
+      transition: { duration: 0.3, easings: ['easeOut'] },
     },
+  };
+
+  const handleMenuOpen = (open: boolean) => {
+    if (menuOpen !== open && ref.current) {
+      setMenuOpen(open);
+    }
   };
 
   return (
     <>
       <motion.header
         variants={headerVariants}
-        animate={inView ? 'transparent' : 'opaque'}
-        className='sticky top-0 z-50 flex h-[80px] items-center justify-between bg-europe px-[40px]'
+        animate={inView && !menuOpen ? 'transparent' : 'opaque'}
+        className='sticky top-0 z-50 flex h-[80px] items-center justify-between px-6 py-2.5 desktop:p-10'
       >
-        <Typography as='h1' size='heading-2xl' color='basics-white'>
+        <Typography as='h1' size='body-2xl' color='basics-white'>
           LOGO
         </Typography>
-        <nav className='flex items-center gap-[70px]'>
+        <div className='desktop:hidden'>
+          <MobileMenu onStateChange={handleMenuOpen} />
+        </div>
+        <nav className='hidden items-center gap-[70px] desktop:flex'>
           <Menu />
+          <LocaleSwitcher />
         </nav>
-        <LocaleSwitcher />
       </motion.header>
       <main>
         <div
@@ -124,14 +133,13 @@ export default function HomePage() {
         </div>
         <section id='who-we-are'>
           <div
+            className='w-full bg-cover bg-center desktop:mt-14'
             style={{
-              marginTop: '56px',
-              width: '100%',
               backgroundImage: `url(${who_we_are_bg.src})`,
             }}
           >
-            <div className='flex w-full justify-center'>
-              <div className='mt-[-28px] flex h-[550px] max-w-[416px] flex-col justify-between bg-star-light px-6 py-9'>
+            <div className='flex w-full flex-col justify-center desktop:flex-row'>
+              <div className='flex flex-col justify-between gap-8 bg-star-light px-6 py-9 desktop:mt-[-28px] desktop:h-[550px] desktop:max-w-[416px] desktop:gap-0'>
                 <div>
                   <Typography
                     as='span'
@@ -154,17 +162,12 @@ export default function HomePage() {
                       __html: t.raw('who-we-are.description'),
                     }}
                   />
-                  <button
-                    className={clsx(
-                      'mt-8',
-                      buttonTypes({ intent: 'secondary-light' })
-                    )}
-                  >
+                  <button className={clsx('mt-8', tagButtonTypes())}>
                     {t('see-more')}
                   </button>
                 </div>
               </div>
-              <div className='flex h-[550px] max-w-[416px] flex-col justify-between bg-basics-white px-6 py-9'>
+              <div className='flex flex-col justify-between gap-8 bg-basics-white px-6 py-9 desktop:h-[550px] desktop:max-w-[416px] desktop:gap-0'>
                 <div>
                   <Typography
                     as='span'
@@ -187,24 +190,23 @@ export default function HomePage() {
                   }}
                 />
               </div>
+              <div
+                className='h-[130px] w-full bg-cover bg-center desktop:hidden'
+                style={{
+                  backgroundImage: `url(${who_we_are_bg.src})`,
+                }}
+              />
             </div>
           </div>
-          <div
-            style={{
-              marginTop: '176px',
-              width: '100%',
-            }}
-          >
+          <div className='w-full desktop:mt-[176px]'>
             <div
-              className='bg-europe'
+              className='w-full bg-europe bg-no-repeat'
               style={{
-                width: '100%',
                 backgroundImage: `url(${our_beliefs_bg.src})`,
-                backgroundRepeat: 'no-repeat',
               }}
             >
-              <div className='flex w-full justify-center gap-20'>
-                <div className='mt-[-128px] flex  h-[478px] max-w-[490px] flex-col justify-between bg-basics-white p-6'>
+              <div className='flex w-full flex-col justify-center desktop:flex-row desktop:gap-20'>
+                <div className='flex flex-col justify-between gap-8 bg-basics-white p-6 desktop:mt-[-128px] desktop:h-[478px] desktop:max-w-[490px] desktop:gap-0'>
                   <div>
                     <Typography
                       as='span'
@@ -227,7 +229,13 @@ export default function HomePage() {
                     }}
                   />
                 </div>
-                <div className='flex h-[542px] max-w-[490px] flex-col justify-between bg-basics-white p-6'>
+                <div
+                  className='h-[130px] w-full bg-cover bg-center desktop:hidden'
+                  style={{
+                    backgroundImage: `url(${our_beliefs_bg.src})`,
+                  }}
+                />
+                <div className='flex flex-col justify-between gap-8 bg-basics-white p-6 desktop:h-[542px] desktop:max-w-[490px] desktop:gap-0'>
                   <div>
                     <Typography
                       as='span'
@@ -256,7 +264,7 @@ export default function HomePage() {
                   as='h3'
                   size='heading-lg'
                   color='basics-white'
-                  className='flex w-[816px] items-center text-center'
+                  className='flex w-[242px] flex-col items-center text-center desktop:w-[816px] desktop:flex-row'
                 >
                   <Typography as='span' size='heading-4xl' color='gold-dark'>
                     &ldquo;
@@ -271,15 +279,15 @@ export default function HomePage() {
           </div>
         </section>
         <section id='our-commitment'>
-          <div className='mx-12 my-14'>
-            <div className='flex justify-between'>
+          <div className='mx-0 mt-14 desktop:mx-12 desktop:my-14'>
+            <div className='flex flex-col-reverse gap-6 desktop:flex-row desktop:justify-between desktop:gap-0'>
               <CommitmentsCarousel />
               <div>
                 <Typography
                   as='h3'
                   size='heading-2xl'
                   color='europe-dark'
-                  className='border-b-2 border-b-europe-light'
+                  className='mx-2.5 border-b-2 border-b-europe-light text-center desktop:mx-0 desktop:text-left'
                 >
                   {t('our-commitment.title')}
                 </Typography>
@@ -287,64 +295,33 @@ export default function HomePage() {
             </div>
           </div>
           <div
+            className='h-[172px] w-full bg-cover bg-center bg-no-repeat desktop:mt-[-280px] desktop:h-[496px]'
             style={{
-              width: '100%',
-              height: '496px',
               backgroundImage: `url(${our_commitment_bg.src})`,
-              backgroundRepeat: 'no-repeat',
-              marginTop: '-280px',
             }}
           />
         </section>
         <section id='top-destinations'>
-          <div className='mt-14 flex h-[410px] flex-col items-center justify-start bg-europe pt-14'>
-            <Typography as='h3' size='heading-2xl' color='basics-white'>
-              {t('top-destinations.title')}
-            </Typography>
-            <div className='mt-6 flex items-center justify-center'>
-              <span className='h-1 w-[250px] border-b border-b-europe-light' />
-              <button
-                className={clsx(
-                  'mx-4',
-                  buttonTypes({ intent: 'secondary-dark' })
-                )}
-              >
-                {t('top-destinations.see-all')}
-              </button>
-              <span className='h-1 w-[250px] border-b border-b-europe-light' />
-            </div>
-          </div>
-          <div className='mt mt-[-152px] flex justify-center gap-4'>
-            <AnimatedCard
-              imgSrc={prague_bg.src}
-              title={t('top-destinations.destinations.prague')}
-              caption={t('top-destinations.destinations.czech')}
-              containerClasses='w-[328px] h-[506px]'
-              labelClasses='w-[174px] h-[192px]'
-            />
-            <AnimatedCard
-              imgSrc={madrid_bg.src}
-              title={t('top-destinations.destinations.madrid')}
-              caption={t('top-destinations.destinations.spain')}
-              containerClasses='w-[328px] h-[506px]'
-              labelClasses='w-[174px] h-[192px]'
-            />
-            <AnimatedCard
-              imgSrc={malaga_bg.src}
-              title={t('top-destinations.destinations.malaga')}
-              caption={t('top-destinations.destinations.spain')}
-              containerClasses='w-[328px] h-[506px]'
-              labelClasses='w-[174px] h-[192px]'
-            />
-          </div>
+          <TopDestinations
+            destinations={[
+              Destinations.PRAGUE,
+              Destinations.MADRID,
+              Destinations.MALAGA,
+            ]}
+          />
         </section>
         <section id='faq'>
-          <div className='mt-14 flex flex-col items-center justify-center pt-16'>
-            <Typography as='h3' size='heading-2xl' color='europe-dark'>
+          <div className='flex flex-col items-center justify-center px-2.5 pt-16 desktop:mt-14'>
+            <Typography
+              as='h3'
+              size='heading-2xl'
+              color='europe-dark'
+              className='text-center desktop:text-left'
+            >
               {t('faq.title')}
             </Typography>
-            <div className='mt-14 flex items-center justify-center'>
-              <span className='h-1 w-[250px] border-b border-b-europe' />
+            <div className='my-14 flex items-center justify-center'>
+              <span className='w-[76px] border-b border-b-europe desktop:w-[250px]' />
               <button
                 className={clsx(
                   'mx-4',
@@ -353,9 +330,9 @@ export default function HomePage() {
               >
                 {t('faq.see-more')}
               </button>
-              <span className='h-1 w-[250px] border-b border-b-europe' />
+              <span className='w-[76px] border-b border-b-europe desktop:w-[250px]' />
             </div>
-            <div className='my-14 w-full'>
+            <div className='w-full desktop:my-14'>
               {Object.entries(FaqsHome)
                 .flatMap(([category, faqs]) =>
                   faqs.map((faq) => `${category}.${faq}`)
@@ -372,7 +349,7 @@ export default function HomePage() {
           </div>
         </section>
         <section id='more-info'>
-          <div className='my-14 flex items-center justify-center'>
+          <div className='flex items-center justify-center desktop:my-14'>
             <MoreInfo />
           </div>
         </section>

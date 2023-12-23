@@ -9,7 +9,7 @@ export const MoreInfo = () => {
   const t = useTranslations('more-info');
 
   return (
-    <div className='m-auto flex flex-col gap-9 bg-europe px-6 py-14 desktop:p-14'>
+    <div className='flex w-full flex-col gap-9 bg-europe px-6 py-14 desktop:m-auto desktop:w-auto desktop:p-14'>
       <Typography
         as='h3'
         color='basics-white'

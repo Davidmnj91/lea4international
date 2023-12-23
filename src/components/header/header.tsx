@@ -13,7 +13,11 @@ import {
 } from '@/components/typography/typography';
 import clsx from 'clsx';
 
-const MobileHeader = () => {
+export const MobileMenu = ({
+  onStateChange,
+}: {
+  onStateChange?: (open: boolean) => void;
+}) => {
   const t = useTranslations('pages');
 
   const fullClassName = typographyClasses({
@@ -22,28 +26,32 @@ const MobileHeader = () => {
     weight: 'light',
   });
 
+  const triggerCallBack = (open: boolean) => {
+    if (onStateChange) {
+      onStateChange(open);
+    }
+  };
+
   return (
-    <header className='sticky top-0 z-50 flex h-[80px] items-center justify-between bg-europe px-6 py-2.5 text-basics-white desktop:hidden'>
-      <Typography as='h1' size='body-2xl' color='basics-white'>
-        LOGO
-      </Typography>
-      <Popover>
-        {({ open, close }) => (
+    <Popover>
+      {({ open, close }) => {
+        triggerCallBack(open);
+        return (
           <>
             <Popover.Button className='group text-basics-white hover:text-basics-gray focus:outline-none'>
               {open ? <X size={32} /> : <List size={32} />}
             </Popover.Button>
             <Transition
               as={Fragment}
-              enter='transition ease-out duration-200'
+              enter='transition ease-out duration-300'
               enterFrom='opacity-0 translate-y-1'
               enterTo='opacity-100 translate-y-0'
-              leave='transition ease-in duration-150'
+              leave='transition ease-in duration-300'
               leaveFrom='opacity-100 translate-y-0'
               leaveTo='opacity-0 translate-y-1'
             >
               <Popover.Panel className='absolute left-0 top-[80px] z-50 flex h-[calc(100vh-80px)] w-full transform flex-col'>
-                <div className='flex h-full flex-col gap-3.5 bg-europe p-6'>
+                <nav className='flex h-full flex-col gap-3.5 bg-europe p-6'>
                   <LocaleSwitcher />
                   <Link
                     className={fullClassName}
@@ -118,7 +126,7 @@ const MobileHeader = () => {
                   >
                     {t('faq')}
                   </Link>
-                </div>
+                </nav>
                 <Link
                   href={`/contact`}
                   className={clsx(
@@ -136,25 +144,24 @@ const MobileHeader = () => {
               </Popover.Panel>
             </Transition>
           </>
-        )}
-      </Popover>
-    </header>
+        );
+      }}
+    </Popover>
   );
 };
-
 export const Header = () => {
   return (
-    <>
-      <MobileHeader />
-      <header className='sticky top-0 z-50 h-[80px] items-center justify-between bg-europe px-[40px] mobile:hidden desktop:flex'>
-        <Typography as='h1' size='body-2xl' color='basics-white'>
-          LOGO
-        </Typography>
-        <nav className='flex items-center gap-[70px]'>
-          <Menu />
-        </nav>
+    <header className='sticky top-0 z-50 flex h-[80px] items-center justify-between bg-europe px-6 py-2.5 desktop:p-10'>
+      <Typography as='h1' size='body-2xl' color='basics-white'>
+        LOGO
+      </Typography>
+      <div className='desktop:hidden'>
+        <MobileMenu />
+      </div>
+      <nav className='hidden items-center gap-[70px] desktop:flex'>
+        <Menu />
         <LocaleSwitcher />
-      </header>
-    </>
+      </nav>
+    </header>
   );
 };

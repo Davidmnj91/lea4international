@@ -50,7 +50,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
       </div>
       <div className='flex flex-col items-center justify-center gap-14 p-6 desktop:flex-row desktop:p-24'>
         <div
-          className='flex h-[346px] w-[422px] flex-col items-end '
+          className='flex h-[272px] w-full flex-col items-end desktop:h-[346px] desktop:w-[422px] '
           style={{ backgroundImage: `url(${lucia_bg.src}` }}
         >
           <span
@@ -140,7 +140,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
           {Object.entries(values).map(([value, icon]) => (
             <div
               key={value}
-              className='flex h-[200px] w-[200px] flex-col items-center justify-center gap-2.5 rounded-full border border-dashed border-basics-white'
+              className='flex h-[120px] w-[120px] flex-col items-center justify-center gap-2.5 rounded-full border border-dashed border-basics-white desktop:h-[200px] desktop:w-[200px]'
             >
               <Typography as='span' size='heading-md' color='basics-white'>
                 {t(`values.${value}`)}

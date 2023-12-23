@@ -33,6 +33,7 @@ import { buttonTypes } from '@/components/button/button';
 import { ArrowRight } from '@phosphor-icons/react/dist/ssr/ArrowRight';
 import { notFound } from 'next/navigation';
 import { Typography } from '@/components/typography/typography';
+import { EuropeMapGhent } from '@/components/maps/ghent';
 
 export const dynamicParams = false;
 
@@ -43,11 +44,13 @@ type DestinationPageDetails = {
   sampleImages: [string, string];
   servicesAvailable: AvailableServices[];
 };
+const iconClassNames =
+  'h-[310px] w-[375px] desktop:h-[500px] desktop:w-[605px]';
 const destinationsProps: Record<Destinations, DestinationPageDetails> = {
   [Destinations.PRAGUE]: {
     name: 'prague',
     mainImageSrc: prague_bg.src,
-    mapComponent: <EuropeMapPrague />,
+    mapComponent: <EuropeMapPrague className={iconClassNames} />,
     sampleImages: [prague_1_bg.src, prague_2_bg.src],
     servicesAvailable: [
       'work-experience',
@@ -59,7 +62,7 @@ const destinationsProps: Record<Destinations, DestinationPageDetails> = {
   [Destinations.MADRID]: {
     name: 'madrid',
     mainImageSrc: madrid_bg.src,
-    mapComponent: <EuropeMapMadrid />,
+    mapComponent: <EuropeMapMadrid className={iconClassNames} />,
     sampleImages: [madrid_1_bg.src, madrid_2_bg.src],
     servicesAvailable: [
       'work-experience',
@@ -72,7 +75,7 @@ const destinationsProps: Record<Destinations, DestinationPageDetails> = {
   [Destinations.MALAGA]: {
     name: 'malaga',
     mainImageSrc: malaga_bg.src,
-    mapComponent: <EuropeMapMalaga />,
+    mapComponent: <EuropeMapMalaga className={iconClassNames} />,
     sampleImages: [malaga_1_bg.src, malaga_2_bg.src],
     servicesAvailable: [
       'work-experience',
@@ -85,21 +88,21 @@ const destinationsProps: Record<Destinations, DestinationPageDetails> = {
   [Destinations.KRAKOW]: {
     name: 'krakow',
     mainImageSrc: krakow_bg.src,
-    mapComponent: <EuropeMapKrakow />,
+    mapComponent: <EuropeMapKrakow className={iconClassNames} />,
     sampleImages: [krakow_1_bg.src, krakow_2_bg.src],
     servicesAvailable: ['work-experience', 'job-shadowing'],
   },
   [Destinations.DUBLIN]: {
     name: 'dublin',
     mainImageSrc: dublin_bg.src,
-    mapComponent: <EuropeMapDublin />,
+    mapComponent: <EuropeMapDublin className={iconClassNames} />,
     sampleImages: [dublin_1_bg.src, dublin_2_bg.src],
     servicesAvailable: ['work-experience', 'job-shadowing', 'language-courses'],
   },
   [Destinations.GHENT]: {
     name: 'ghent',
     mainImageSrc: ghent_bg.src,
-    mapComponent: <EuropeMapDublin />,
+    mapComponent: <EuropeMapGhent className={iconClassNames} />,
     sampleImages: [ghent_1_bg.src, ghent_2_bg.src],
     servicesAvailable: ['work-experience', 'job-shadowing'],
   },
@@ -141,9 +144,9 @@ export default function Page({
             {t('title')}
           </Typography>
           <div className='flex items-center gap-4'>
-            <span className='h-1 w-[250px] border-b border-b-europe-light' />
+            <span className='w-[116px] border-b border-b-europe-light desktop:w-[250px]' />
             <ArrowDown className='text-gold' size={32} />
-            <span className='h-1 w-[250px] border-b border-b-europe-light' />
+            <span className='w-[116px] border-b border-b-europe-light desktop:w-[250px]' />
           </div>
         </div>
       </div>

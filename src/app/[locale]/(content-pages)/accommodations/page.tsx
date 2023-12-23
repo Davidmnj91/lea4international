@@ -10,13 +10,11 @@ import host_family_bg from '../../../../../public/host_family_bg.png';
 import hotel_bg from '../../../../../public/hotel_bg.png';
 import hostel_bg from '../../../../../public/hostel_bg.png';
 import airbnb_bg from '../../../../../public/airbnb_bg.png';
-import prague_bg from '../../../../../public/prague_bg.png';
-import madrid_bg from '../../../../../public/madrid_bg.png';
-import malaga_bg from '../../../../../public/malaga_bg.png';
 import clsx from 'clsx';
 import { BecomePartner } from '@/components/partners/become-partner';
 import { Typography } from '@/components/typography/typography';
-import { AnimatedCard } from '@/components/destination-card/animated-card';
+import { TopDestinations } from '@/components/top-destinations/top-destinations';
+import { Destinations } from '@/types/destinations';
 
 export default function Page({ params: { locale } }: LanguagePageProps) {
   // Enable static rendering
@@ -31,12 +29,6 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
     hotel: hotel_bg.src,
     hostel: hostel_bg.src,
     airbnb: airbnb_bg.src,
-  };
-
-  const destinations = {
-    prague: prague_bg.src,
-    madrid: madrid_bg.src,
-    malaga: malaga_bg.src,
   };
 
   return (
@@ -121,42 +113,14 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
         <BecomePartner />
       </section>
       <section id='top-destinations'>
-        <div className='flex h-[410px] flex-col items-center gap-6 bg-europe p-6 desktop:p-14'>
-          <Typography
-            as='h3'
-            size='heading-2xl'
-            color='basics-white'
-            className='text-center'
-          >
-            {t('top-destinations.title')}
-          </Typography>
-          <div className='flex items-center justify-center'>
-            <span className='w-[58px] border-b border-b-europe-light desktop:w-[250px]' />
-            <button
-              className={clsx(
-                'mx-4',
-                buttonTypes({ intent: 'secondary-dark' })
-              )}
-            >
-              {t('top-destinations.see-all')}
-            </button>
-            <span className='w-[58px] border-b border-b-europe-light desktop:w-[250px]' />
-          </div>
-        </div>
-        <div className='mt-[-160px] flex items-center gap-4 overflow-auto p-6 desktop:justify-center desktop:overflow-hidden'>
-          {Object.entries(destinations).map(([destination, imgSrc]) => (
-            <Link key={destination} href={`destinations/${destination}`}>
-              <AnimatedCard
-                imgSrc={imgSrc}
-                title={t(`top-destinations.destinations.${destination}.title`)}
-                caption={t(
-                  `top-destinations.destinations.${destination}.country`
-                )}
-                containerClasses='w-[328px] h-[506px]'
-                labelClasses='w-[174px] h-[192px]'
-              />
-            </Link>
-          ))}
+        <div className='mb-16'>
+          <TopDestinations
+            destinations={[
+              Destinations.PRAGUE,
+              Destinations.MADRID,
+              Destinations.MALAGA,
+            ]}
+          />
         </div>
       </section>
     </div>

@@ -581,11 +581,11 @@
     }
   },
   "more-info": {
-    "title": "¿Busca más</br>información?",
+    "title": "¿Busca más <br></br> información?",
     "questions": "Estamos aquí para responder a todas tus preguntas. </br></br> ¡Contáctenos hoy!",
     "more-info": "Más Información",
-    "request-quote": "Solicitar </br> una cotización",
-    "host-family": "Conviértete en </br>una familia anfitriona",
+    "request-quote": "Solicitar una cotización",
+    "host-family": "Conviértete en una familia anfitriona",
     "contact-us": "Contactanos"
   },
   "our-partners": {

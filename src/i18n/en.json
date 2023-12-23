@@ -348,7 +348,7 @@
       "student-exchange": "School Exchange & Immersions Programs",
       "concierge": "Student concierge Services",
       "see-more": "See more about this service"
-    } 
+    }
   },
   "accommodations-page": {
     "title": "Accommodations",
@@ -379,24 +379,6 @@
         "title": "Airbnb",
         "description": "Choosing to stay in an Airbnb is a great option for short and long term experience abroad. It is generally cheaper than a hotel and it has the advantage of having an equipped kitchen where you can cook your own meals and use the laundry. On the other hand, Airbnb is missing a 24 hours reception desk."
       }
-    },
-    "top-destinations": {
-      "title": "Our Top destinations",
-      "see-all": "See all destinations",
-      "destinations": {
-        "prague": {
-          "title": "Prague",
-          "country": "República Checa"
-        },
-        "madrid": {
-          "title": "Madrid",
-          "country": "España"
-        },
-        "malaga": {
-          "title": "Málaga",
-          "country": "España"
-        }
-      }
     }
   },
   "faq-page": {
@@ -420,6 +402,24 @@
   },
   "not-found-page": {
     "back-to-home": "Back to home"
+  },
+  "top-destinations": {
+    "title": "Our Top destinations",
+    "see-all": "See all destinations",
+    "destinations": {
+      "prague": {
+        "title": "Prague",
+        "country": "República Checa"
+      },
+      "madrid": {
+        "title": "Madrid",
+        "country": "España"
+      },
+      "malaga": {
+        "title": "Málaga",
+        "country": "España"
+      }
+    }
   },
   "contact-us": {
     "text": "Contact us"
@@ -470,7 +470,6 @@
         "label": "I accept to acknowledge that I have read and agree to the privacy policies before submitting the form",
         "error": "You must accept the terms and conditions"
       },
-
       "city": {
         "label": "City where you live",
         "placeholder": "Enter city name",
@@ -582,11 +581,11 @@
     }
   },
   "more-info": {
-    "title": "Looking For More</br>Information?",
+    "title": "Looking For More <br></br>Information?",
     "questions": "We are here to answer all your questions. </br></br> Contact us today!",
     "more-info": "More Information",
-    "request-quote": "Request <br></br>A Quote",
-    "host-family": "Become A <br></br>Host Family",
+    "request-quote": "Request A Quote",
+    "host-family": "Become A Host Family",
     "contact-us": "Contact Us"
   },
   "our-partners": {
