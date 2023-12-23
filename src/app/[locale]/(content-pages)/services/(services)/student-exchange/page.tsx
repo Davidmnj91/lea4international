@@ -12,6 +12,7 @@ import { Bed } from '@phosphor-icons/react/dist/ssr/Bed';
 import { RoadHorizon } from '@phosphor-icons/react/dist/ssr/RoadHorizon';
 import { Train } from '@phosphor-icons/react/dist/ssr/Train';
 import { Bank } from '@phosphor-icons/react/dist/ssr/Bank';
+import { Typography } from '@/components/typography/typography';
 
 export default function Page({ params: { locale } }: LanguagePageProps) {
   // Enable static rendering
@@ -37,9 +38,14 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
   return (
     <div>
       <div className='flex items-center justify-center py-24'>
-        <h1 className='text-center font-title text-desktop-h-2xl text-europe-dark'>
+        <Typography
+          as='h1'
+          size='heading-2xl'
+          color='europe-dark'
+          className='text-center'
+        >
           {t('title')}
-        </h1>
+        </Typography>
       </div>
       <div className='sticky top-[80px] z-20 flex items-center gap-6 overflow-auto border-y border-y-basics-disabled bg-basics-white px-6 py-6 desktop:justify-center desktop:overflow-hidden desktop:px-12'>
         {studentExchangeServices.map((service) => (
@@ -57,22 +63,32 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
         <section key={section} id={section}>
           <div className='flex flex-col items-center justify-center gap-32 px-12 py-24'>
             <div className='flex flex-col items-center justify-center'>
-              <span className='font-title text-desktop-h-sm font-bold text-gold-dark'>
+              <Typography
+                as='span'
+                size='heading-sm'
+                color='gold-dark'
+                weight='bold'
+              >
                 {t('overview')}
-              </span>
+              </Typography>
               <h2 className='font-title text-desktop-h-xl text-europe-dark'>
                 {t(`categories.${section}.title`)}
               </h2>
             </div>
-            <p className='text-center font-body text-b-lg text-europe-dark'>
+            <Typography
+              as='p'
+              size='body-lg'
+              color='europe-dark'
+              className='text-center'
+            >
               {t(`categories.${section}.description`)}
-            </p>
+            </Typography>
           </div>
           <div className={clsx('flex', index % 2 !== 0 && 'flex-row-reverse')}>
             <div className='flex flex-[0_0_60%] flex-col gap-24 px-12 py-24'>
-              <h2 className='font-title text-desktop-h-xl text-europe-dark'>
+              <Typography as='h2' size='heading-xl' color='europe-dark'>
                 {t(`categories.${section}.includes`)}
-              </h2>
+              </Typography>
               <ul className='flex flex-col gap-4'>
                 {Object.entries(services).map(([title, icon]) => (
                   <li
@@ -82,9 +98,14 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
                     <div className='border-t border-t-gold p-4 desktop:border-r desktop:border-t-0 desktop:border-r-gold'>
                       {icon}
                     </div>
-                    <p className='m-4 font-body text-b-lg text-europe-dark'>
+                    <Typography
+                      as='p'
+                      size='body-lg'
+                      color='europe-dark'
+                      className='m-4'
+                    >
                       {t(`services.${title}`)}
-                    </p>
+                    </Typography>
                   </li>
                 ))}
               </ul>

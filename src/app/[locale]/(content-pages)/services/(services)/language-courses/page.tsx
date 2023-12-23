@@ -14,6 +14,7 @@ import business_english_courses_bg from '../../../../../../../public/business_en
 import spanish_courses_bg from '../../../../../../../public/spanish_courses_bg.png';
 import business_spanish_courses_bg from '../../../../../../../public/business_spanish_courses_bg.png';
 import clsx from 'clsx';
+import { Typography } from '@/components/typography/typography';
 
 export default function Page({ params: { locale } }: LanguagePageProps) {
   // Enable static rendering
@@ -41,9 +42,9 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
   return (
     <div>
       <div className='flex items-center justify-center py-24'>
-        <h1 className='font-title text-desktop-h-2xl text-europe-dark'>
+        <Typography as='h1' size='heading-2xl' color='europe-dark'>
           {t('title')}
-        </h1>
+        </Typography>
       </div>
       <div className='sticky top-[80px] z-20 flex items-center justify-center gap-6 border-y border-y-basics-disabled bg-basics-white px-12 py-6'>
         {erasmusServices.map((service) => (
@@ -59,27 +60,37 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
       </div>
       <div className='flex flex-col items-center justify-center gap-32 px-12 py-24'>
         <div className='flex flex-col items-center justify-center'>
-          <span className='font-title text-desktop-h-sm font-bold text-gold-dark'>
+          <Typography
+            as='span'
+            size='heading-sm'
+            color='gold-dark'
+            weight='bold'
+          >
             {t('overview')}
-          </span>
-          <h2 className='font-title text-desktop-h-xl text-europe-dark'>
+          </Typography>
+          <Typography as='h2' size='heading-xl' color='europe-dark'>
             {t('sub-title')}
-          </h2>
+          </Typography>
         </div>
-        <p className='text-center font-body text-b-lg text-europe-dark'>
+        <Typography
+          as='p'
+          size='body-lg'
+          color='europe-dark'
+          className='text-center'
+        >
           {t('description')}
-        </p>
+        </Typography>
       </div>
       {Object.entries(sections).map(([section, imgSrc], index) => (
         <section key={section} id={section}>
           <div className={clsx('flex', index % 2 !== 0 && 'flex-row-reverse')}>
             <div className='flex flex-[0_0_60%] flex-col gap-24 px-12 py-24'>
-              <h2 className='font-title text-desktop-h-xl text-europe-dark'>
+              <Typography as='h2' size='heading-xl' color='europe-dark'>
                 {t(`categories.${section}.title`)}
-              </h2>
-              <p className='font-body text-b-lg text-europe-dark'>
+              </Typography>
+              <Typography as='p' size='body-lg' color='europe-dark'>
                 {t.rich(`categories.${section}.description`)}
-              </p>
+              </Typography>
               <div className='flex flex-col gap-4'>
                 {Object.entries(courses).map(([title, icon]) => (
                   <ServiceItem
@@ -107,25 +118,35 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
       <section id='ai-trainings'>
         <div className='flex flex-col items-center justify-center gap-32 px-12 py-24'>
           <div className='flex flex-col items-center justify-center'>
-            <span className='font-title text-desktop-h-sm font-bold text-gold-dark'>
+            <Typography
+              as='span'
+              size='heading-sm'
+              color='gold-dark'
+              weight='bold'
+            >
               {t('overview')}
-            </span>
-            <h2 className='font-title text-desktop-h-xl text-europe-dark'>
+            </Typography>
+            <Typography as='h2' size='heading-xl' color='europe-dark'>
               {t(`categories.ai-trainings.title`)}
-            </h2>
+            </Typography>
           </div>
-          <p className='text-center font-body text-b-lg text-europe-dark'>
+          <Typography
+            as='p'
+            size='body-lg'
+            color='europe-dark'
+            className='text-center'
+          >
             {t.rich(`categories.ai-trainings.description`)}
-          </p>
+          </Typography>
           <div className='flex justify-center gap-10'>
             {aiTrainings.map((training) => (
               <div
                 key={training}
                 className='flex items-center border border-gold p-4'
               >
-                <h3 className='font-title text-desktop-h-md text-europe-dark'>
+                <Typography as='h3' size='heading-md' color='europe-dark'>
                   {t(`categories.ai-trainings.we-offer.${training}`)}
-                </h3>
+                </Typography>
               </div>
             ))}
           </div>
