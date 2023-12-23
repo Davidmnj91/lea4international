@@ -2,7 +2,7 @@ import { LanguagePageProps } from '@/i18n';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { tagButtonTypes } from '@/components/button/button';
+import { buttonTypes, tagButtonTypes } from '@/components/button/button';
 import { Services } from '@/types/services';
 import work_experience_bg from '../../../../../../../public/work_experience_bg.png';
 import we_offer_bg from '../../../../../../../public/we_offer_bg.png';
@@ -34,12 +34,12 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
   };
   return (
     <div>
-      <div className='flex items-center justify-center py-24'>
+      <div className='flex items-center justify-center px-2.5 py-16 desktop:py-24'>
         <Typography
           as='h1'
           size='heading-2xl'
           color='europe-dark'
-          className='text-center desktop:text-left'
+          className='text-center '
         >
           {t('title')}
         </Typography>
@@ -57,7 +57,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
         ))}
       </div>
       <section id='work-experience'>
-        <div className='flex flex-col items-center justify-center gap-28 p-6 desktop:px-12 desktop:py-24'>
+        <div className='flex flex-col items-center justify-center gap-8 p-6 desktop:gap-28 desktop:px-12 desktop:py-24'>
           <div className='text-center'>
             <Typography
               as='span'
@@ -82,12 +82,12 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
         </div>
         <div className='flex flex-col desktop:h-[893px] desktop:flex-row'>
           <div
-            className='relative h-[380px] bg-cover bg-center desktop:flex-[0_0_60%]'
+            className='relative h-[380px] bg-cover bg-center desktop:h-full desktop:flex-[0_0_60%]'
             style={{
               backgroundImage: `url(${work_experience_bg.src})`,
             }}
           >
-            <div className='absolute left-[50%] top-[50%] flex h-[240px] w-[245px] flex-[0_0_40%] translate-x-[-50%] translate-y-[-50%] items-center justify-center bg-europe p-6 desktop:right-[-90px] desktop:top-16 desktop:translate-x-0 desktop:translate-y-0'>
+            <div className='absolute left-[50%] top-[50%] flex h-[240px] w-[245px] flex-[0_0_40%] translate-x-[-50%] translate-y-[-50%] items-center justify-center bg-europe p-6 desktop:left-auto desktop:right-[-90px] desktop:top-16 desktop:translate-x-0 desktop:translate-y-0'>
               <div className='flex-grow border border-basics-white p-2.5'>
                 <Typography as='span' size='heading-lg' color='basics-white'>
                   {t.rich('categories.work-experience.with')}
@@ -104,7 +104,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
           </div>
         </div>
         <div className='flex'>
-          <div className='flex flex-col gap-8 p-6 desktop:flex-[0_0_60%] desktop:gap-24 desktop:px-12 desktop:py-24'>
+          <div className='flex flex-col gap-8 p-6 desktop:flex-[0_0_60%] desktop:justify-between desktop:px-12 desktop:py-24'>
             <Typography as='h2' size='heading-xl' color='europe-dark'>
               {t('categories.work-experience.we-offer.title')}
             </Typography>
@@ -116,12 +116,17 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
                   title={t(
                     `categories.work-experience.we-offer.${title}.title`
                   )}
-                  description={t(
+                  description={t.rich(
                     `categories.work-experience.we-offer.${title}.description`
                   )}
                 />
               ))}
             </ul>
+            <div>
+              <button className={buttonTypes({ intent: 'primary' })}>
+                {t('categories.work-experience.know-more')}
+              </button>
+            </div>
           </div>
           <div
             className='hidden bg-cover bg-no-repeat desktop:block desktop:flex-[0_0_40%]'
@@ -152,7 +157,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
             color='europe-dark'
             className='text-center'
           >
-            {t('categories.job-shadowing.description')}
+            {t.rich('categories.job-shadowing.description')}
           </Typography>
         </div>
         <div className='flex flex-col desktop:h-[1012px] desktop:flex-row'>
@@ -162,7 +167,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
               backgroundImage: `url(${job_shadowing_bg.src})`,
             }}
           >
-            <div className='absolute left-[50%] top-[50%] flex h-[240px] w-[245px] flex-[0_0_40%] translate-x-[-50%] translate-y-[-50%] items-center justify-center bg-europe p-6 desktop:right-[-90px] desktop:top-16 desktop:translate-x-0 desktop:translate-y-0'>
+            <div className='absolute left-[50%] top-[50%] flex h-[240px] w-[245px] flex-[0_0_40%] translate-x-[-50%] translate-y-[-50%] items-center justify-center bg-europe p-6 desktop:left-auto desktop:right-[-90px] desktop:top-16 desktop:translate-x-0 desktop:translate-y-0'>
               <div className='flex-grow border border-basics-white p-2.5'>
                 <Typography as='span' size='heading-lg' color='basics-white'>
                   {t.rich('categories.job-shadowing.with')}
@@ -173,7 +178,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
           <div className='flex flex-col justify-end p-6 text-center desktop:flex-[0_0_40%] desktop:px-12 desktop:py-24 desktop:text-left'>
             <div className='z-10 bg-basics-white'>
               <Typography as='p' size='body-lg' color='europe-dark'>
-                {t('categories.job-shadowing.message')}
+                {t.rich('categories.job-shadowing.message')}
               </Typography>
             </div>
           </div>
@@ -205,7 +210,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
               backgroundImage: `url(${school_exchange_bg.src})`,
             }}
           >
-            <div className='absolute left-[50%] top-[50%] flex h-[240px] w-[245px] flex-[0_0_40%] translate-x-[-50%] translate-y-[-50%] items-center justify-center bg-europe p-6 desktop:right-[-90px] desktop:top-16 desktop:translate-x-0 desktop:translate-y-0'>
+            <div className='absolute left-[50%] top-[50%] flex h-[240px] w-[245px] flex-[0_0_40%] translate-x-[-50%] translate-y-[-50%] items-center justify-center bg-europe p-6 desktop:left-auto desktop:right-[-90px] desktop:top-16 desktop:translate-x-0 desktop:translate-y-0'>
               <div className='flex-grow border border-basics-white p-2.5'>
                 <Typography as='span' size='heading-lg' color='basics-white'>
                   {t.rich('categories.school-exchange.with')}
@@ -216,7 +221,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
           <div className='flex flex-col justify-end p-6 text-center desktop:flex-[0_0_40%] desktop:px-12 desktop:py-24 desktop:text-left'>
             <div className='z-10 bg-basics-white'>
               <Typography as='p' size='body-lg' color='europe-dark'>
-                {t('categories.school-exchange.message')}
+                {t.rich('categories.school-exchange.message')}
               </Typography>
             </div>
           </div>
@@ -253,7 +258,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
               backgroundImage: `url(${erasmus_mundus_bg.src})`,
             }}
           >
-            <div className='absolute left-[50%] top-[50%] flex h-[240px] w-[245px] flex-[0_0_40%] translate-x-[-50%] translate-y-[-50%] items-center justify-center bg-europe p-6 desktop:right-[-90px] desktop:top-16 desktop:translate-x-0 desktop:translate-y-0'>
+            <div className='absolute left-[50%] top-[50%] flex h-[240px] w-[245px] flex-[0_0_40%] translate-x-[-50%] translate-y-[-50%] items-center justify-center bg-europe p-6 desktop:left-auto desktop:right-[-90px] desktop:top-16 desktop:translate-x-0 desktop:translate-y-0'>
               <div className='flex-grow border border-basics-white p-2.5'>
                 <Typography as='span' size='heading-lg' color='basics-white'>
                   {t.rich('categories.erasmus-mundus.with')}
@@ -293,12 +298,12 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
           >
             {t('categories.KA-2.description')}
           </Typography>
-          <div className='mx-auto flex gap-16'>
+          <div className='mx-auto flex flex-col gap-8 desktop:flex-row desktop:gap-16'>
             <div
-              className='h-[478px] w-[275px] bg-cover bg-no-repeat'
+              className='mx-auto h-[153px] w-[325px] bg-cover bg-no-repeat desktop:h-[478px] desktop:w-[275px]'
               style={{ backgroundImage: `url(${ka_2_bg.src})` }}
             />
-            <div className='flex flex-col gap-10 py-4'>
+            <div className='flex flex-col gap-8 desktop:py-4'>
               <div className='flex flex-col gap-6'>
                 <Typography as='h3' size='heading-lg' color='europe-dark'>
                   {t('categories.KA-2.priority-topics.title')}

@@ -37,7 +37,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
 
   return (
     <div>
-      <div className='flex items-center justify-center py-24'>
+      <div className='flex items-center justify-center px-2.5 py-16 desktop:py-24'>
         <Typography
           as='h1'
           size='heading-2xl'
@@ -61,7 +61,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
       </div>
       {Object.entries(sections).map(([section, imgSrc], index) => (
         <section key={section} id={section}>
-          <div className='flex flex-col items-center justify-center gap-32 px-12 py-24'>
+          <div className='flex flex-col items-center justify-center gap-8 px-6 py-12 desktop:gap-32 desktop:px-12 desktop:py-24'>
             <div className='flex flex-col items-center justify-center'>
               <Typography
                 as='span'
@@ -71,9 +71,9 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
               >
                 {t('overview')}
               </Typography>
-              <h2 className='font-title text-desktop-h-xl text-europe-dark'>
+              <Typography as='h2' size='heading-xl' color='europe-dark'>
                 {t(`categories.${section}.title`)}
-              </h2>
+              </Typography>
             </div>
             <Typography
               as='p'
@@ -85,7 +85,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
             </Typography>
           </div>
           <div className={clsx('flex', index % 2 !== 0 && 'flex-row-reverse')}>
-            <div className='flex flex-[0_0_60%] flex-col gap-24 px-12 py-24'>
+            <div className='flex flex-col gap-8 p-6 desktop:flex-[0_0_60%] desktop:gap-24 desktop:px-12 desktop:py-24'>
               <Typography as='h2' size='heading-xl' color='europe-dark'>
                 {t(`categories.${section}.includes`)}
               </Typography>
@@ -93,11 +93,9 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
                 {Object.entries(services).map(([title, icon]) => (
                   <li
                     key={title}
-                    className='flex flex-col items-center border border-gold desktop:flex-row'
+                    className='flex items-center border border-gold'
                   >
-                    <div className='border-t border-t-gold p-4 desktop:border-r desktop:border-t-0 desktop:border-r-gold'>
-                      {icon}
-                    </div>
+                    <div className='border-r border-r-gold p-4'>{icon}</div>
                     <Typography
                       as='p'
                       size='body-lg'
@@ -111,7 +109,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
               </ul>
             </div>
             <div
-              className='flex-[0_0_40%] bg-cover bg-no-repeat'
+              className='hidden flex-[0_0_40%] bg-cover bg-no-repeat desktop:inline-block'
               style={{
                 backgroundImage: `url(${imgSrc})`,
               }}

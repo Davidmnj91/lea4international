@@ -377,7 +377,9 @@ export default function HomePage() {
           </div>
         </section>
         <section id='our-partners'>
-          <Partners />
+          <div className='py-16'>
+            <Partners />
+          </div>
         </section>
       </main>
     </>

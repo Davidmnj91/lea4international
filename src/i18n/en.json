@@ -31,7 +31,7 @@
     },
     "our-beliefs": {
       "title": "Our Beliefs",
-      "description": "At *** We believe that having an experience abroad is a great opportunity to open your mind, explore <b>different cultures and speak other languages.</b>\n Thanks to globalization, we live in a connected world that offers many opportunities to <b>travel and explore</b> outside of our home country."
+      "description": "At *** We believe that having an experience abroad is a great opportunity to open your mind, explore <b>different cultures and speak other languages.</b><br></br> Thanks to globalization, we live in a connected world that offers many opportunities to <b>travel and explore</b> outside of our home country."
     },
     "coming-challenges": {
       "title": "Overcoming Challenges",
@@ -81,7 +81,7 @@
               "title": "Find out what professional sector we offer",
               "IT": {
                 "title": "IT and Multimedia Professions",
-                "description": "IT - Information technology (IT) is the use of any computers, storage, networking and other physical devices, infrastructure and processes to create, process, store, secure and exchange all forms of electronic data.\nMultimedia is a growing field that is part of the technology sector and includes professional opportunities as graphic design, marketing, product development, multimedia designer etc."
+                "description": "IT - Information technology (IT) is the use of any computers, storage, networking and other physical devices, infrastructure and processes to create, process, store, secure and exchange all forms of electronic data.<br></br>Multimedia is a growing field that is part of the technology sector and includes professional opportunities as graphic design, marketing, product development, multimedia designer etc."
               },
               "business": {
                 "title": "Business Administration",
@@ -95,19 +95,20 @@
                 "title": "Beauty Professions",
                 "description": "This sector includes various professions related to aesthetics, hairdressing, cosmetics and nails. This professional sector includes opportunities such as working in a beauty salon, hair salon, nail salon, spa center, cosmetics store etc. An internship in this field will allow the apprentice to discover new techniques in a foreign language."
               }
-            }
+            },
+            "know-more": "Do you want to know more?"
           },
           "job-shadowing": {
             "title": "Job Shadowing",
-            "description": "Job shadowing programmes offer participants the chance to spend a period of time at a hosting organization in another country. The aim of this program is to learn new practices and gather new ideas through observation and interaction with peers, experts or other practitioners in their daily work at the hosting organization.\nEligible participants include teachers, trainers, and all other non-teaching experts and staff in adult education.\nEligible non-teaching staff includes staff working in adult education, either in adult education providers or in other organizations active in adult education.",
+            "description": "Job shadowing programmes offer participants the chance to spend a period of time at a hosting organization in another country. The aim of this program is to learn new practices and gather new ideas through observation and interaction with peers, experts or other practitioners in their daily work at the hosting organization.<br></br>Eligible participants include teachers, trainers, and all other non-teaching experts and staff in adult education.<br></br>Eligible non-teaching staff includes staff working in adult education, either in adult education providers or in other organizations active in adult education.",
             "with": "Job <br>shadowing</br> <br>with</br> <br>*****</br>",
-            "message": "At *** We collaborate with a large number of hosting job shadowing schools that have been carefully selected, these schools include primary, secondary and high schools. Additionally we collaborate with technical and vocational schools and schools with special needs. \nThe topics of the job shadowing can include, inclusion, diversity, digitization in schools, teaching sustainability, promoting STEM. \nBy the end of the job shadowing programme participants get exposed to several teaching practices focused on the chosen topics. \nThey acquire new teaching techniques, and discover resources that they can apply to their teaching practices.\nAt *** We also provide the sending organizations with the necessary learning agreement."
+            "message": "At *** We collaborate with a large number of hosting job shadowing schools that have been carefully selected, these schools include primary, secondary and high schools. Additionally we collaborate with technical and vocational schools and schools with special needs.<br></br>The topics of the job shadowing can include, inclusion, diversity, digitization in schools, teaching sustainability, promoting STEM. <br></br>By the end of the job shadowing programme participants get exposed to several teaching practices focused on the chosen topics. <br></br>They acquire new teaching techniques, and discover resources that they can apply to their teaching practices.<br></br>At *** We also provide the sending organizations with the necessary learning agreement."
           },
           "school-exchange": {
             "title": "School Exchange",
             "description": "Youth exchanges allow groups of young people from different countries to meet, live together and work on shared projects for short periods. Youth exchanges take place outside the school environment. On a youth exchange, you can expect to participate in activities such as workshops, exercises, debates, role-plays, outdoor activities and more.",
             "with": "School <br>Exchange</br> <br>with</br> <br>*****</br>",
-            "message": "At *** We collaborate with a large number of hosting schools for school exchange that have been carefully selected, these schools include primary, secondary and high schools. School Exchange is a great opportunity for the foreign students to do a wide range of activities that include country presentations, cultural workshops or language sessions with local students.\nAt *** We also provide logistic and local support through the school exchange program."
+            "message": "At *** We collaborate with a large number of hosting schools for school exchange that have been carefully selected, these schools include primary, secondary and high schools. School Exchange is a great opportunity for the foreign students to do a wide range of activities that include country presentations, cultural workshops or language sessions with local students.<br></br>At *** We also provide logistic and local support through the school exchange program."
           },
           "erasmus-mundus": {
             "title": "Erasmus Mundus",
@@ -243,7 +244,7 @@
       },
       "concierge": {
         "title": "Student concierge services",
-        "description": "Studying abroad is an exciting experience but can be a worrying journey for many international students. The participants as well as their families are often concerned and a bit stressed about the uncertainty of the new experience abroad.\nOur commitment is to help students and their families to get familiar with the new country and its customs. We offer 24/7 emergency support to our students.",
+        "description": "Studying abroad is an exciting experience but can be a worrying journey for many international students. The participants as well as their families are often concerned and a bit stressed about the uncertainty of the new experience abroad.<br></br>Our commitment is to help students and their families to get familiar with the new country and its customs. We offer 24/7 emergency support to our students.",
         "includes": "Our services includes:",
         "services": {
           "meeting-greeting": "Meeting and greeting at arrival",

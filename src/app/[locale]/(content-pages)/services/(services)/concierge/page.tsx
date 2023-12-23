@@ -29,7 +29,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
 
   return (
     <div>
-      <div className='flex flex-col items-center justify-center gap-28 px-12 py-24'>
+      <div className='flex flex-col items-center justify-center gap-8 p-6 desktop:gap-28 desktop:px-12 desktop:py-24'>
         <Typography
           as='h1'
           size='heading-2xl'
@@ -44,24 +44,24 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
           color='europe-dark'
           className='text-center'
         >
-          {t('description')}
+          {t.rich('description')}
         </Typography>
       </div>
-      <div className='flex'>
-        <div className='flex flex-[0_0_60%] flex-col gap-24 px-12 py-24'>
+      <div className='flex flex-col-reverse desktop:flex-row'>
+        <div className='flex flex-col gap-8 p-6 desktop:flex-[0_0_60%] desktop:justify-between desktop:px-12 desktop:py-24'>
           <Typography as='h2' size='heading-xl' color='europe-dark'>
             {t(`includes`)}
           </Typography>
           <ul className='flex flex-col gap-4'>
             {Object.entries(services).map(([title, icon]) => (
-              <li
-                key={title}
-                className='flex flex-col items-center border border-gold p-4 desktop:flex-row'
-              >
-                <div className='border-t border-t-gold desktop:border-r desktop:border-t-0 desktop:border-r-gold'>
-                  {icon}
-                </div>
-                <Typography as='p' size='body-lg' color='europe-dark'>
+              <li key={title} className='flex items-center border border-gold'>
+                <div className='border-r border-r-gold p-4'>{icon}</div>
+                <Typography
+                  as='p'
+                  size='body-lg'
+                  color='europe-dark'
+                  className='m-4'
+                >
                   {t(`services.${title}`)}
                 </Typography>
               </li>
@@ -69,7 +69,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
           </ul>
         </div>
         <div
-          className='flex-[0_0_40%] bg-cover bg-no-repeat'
+          className='h-[283px] w-full bg-cover bg-no-repeat desktop:h-[858px] desktop:flex-[0_0_40%]'
           style={{
             backgroundImage: `url(${concierge_services_bg.src})`,
           }}

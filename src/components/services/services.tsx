@@ -26,7 +26,7 @@ export const OtherServices = ({ services }: OtherServicesProps) => {
           {t.rich('other-services.description')}
         </Typography>
       </div>
-      <div className='mt-[-80px] flex items-center gap-4 overflow-auto p-6 desktop:mt-[-160px] desktop:justify-center desktop:overflow-hidden'>
+      <div className='mt-[-160px] flex items-center gap-4 overflow-auto p-6 desktop:justify-center desktop:overflow-hidden'>
         {Object.entries(servicesCardConfig)
           .filter(([service, _]) =>
             services.includes(service as ServicesCategories)
