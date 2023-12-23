@@ -5,7 +5,7 @@ export const Partners = () => {
   const t = useTranslations('our-partners');
 
   return (
-    <div className='my-14 flex flex-col items-center justify-center gap-14 px-2.5'>
+    <div className='flex flex-col items-center justify-center gap-14 px-2.5'>
       <Typography as='h2' size='heading-2xl' color='europe-dark'>
         {t('title')}
       </Typography>

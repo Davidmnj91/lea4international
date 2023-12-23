@@ -125,6 +125,7 @@ export default function Page({
   unstable_setRequestLocale(locale);
 
   const t = useTranslations(`destinations-page.destinations.${name}`);
+  const tServices = useTranslations('destinations-page.services');
 
   return (
     <div>
@@ -198,7 +199,7 @@ export default function Page({
           color='europe-dark'
           className='px-6 py-6 desktop:px-12'
         >
-          {t('services.title')}
+          {tServices('title', { city: t('title') })}
         </Typography>
         <ul className='desktop:px-12'>
           {servicesAvailable.map((service) => (
@@ -207,7 +208,7 @@ export default function Page({
               className='flex items-center justify-between border-b-2 border-t-0 border-basics-disabled p-6 first-of-type:border-t-2 desktop:px-0 desktop:py-6'
             >
               <Typography as='h3' size='heading-lg' color='europe-dark'>
-                {t(`services.${service}`)}
+                {tServices(`${service}`)}
               </Typography>
               <button
                 className={clsx(
@@ -215,7 +216,7 @@ export default function Page({
                   'hidden desktop:inline-block'
                 )}
               >
-                {t(`services.see-more`)}
+                {tServices(`see-more`)}
               </button>
               <ArrowRight className='desktop:hidden' size={32} />
             </li>

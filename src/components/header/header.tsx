@@ -28,7 +28,7 @@ const MobileHeader = () => {
         LOGO
       </Typography>
       <Popover>
-        {({ open }) => (
+        {({ open, close }) => (
           <>
             <Popover.Button className='group text-basics-white hover:text-basics-gray focus:outline-none'>
               {open ? <X size={32} /> : <List size={32} />}
@@ -45,49 +45,77 @@ const MobileHeader = () => {
               <Popover.Panel className='absolute left-0 top-[80px] z-50 flex h-[calc(100vh-80px)] w-full transform flex-col'>
                 <div className='flex h-full flex-col gap-3.5 bg-europe p-6'>
                   <LocaleSwitcher />
-                  <Link className={fullClassName} href={`/`}>
+                  <Link
+                    className={fullClassName}
+                    href={`/`}
+                    onClick={() => close()}
+                  >
                     {t('home')}
                   </Link>
                   <Link
                     className={`flex items-center gap-2 ${fullClassName}`}
                     href={`/services`}
+                    onClick={() => close()}
                   >
                     {t('services.main')}
                     <ArrowDown size={24} />
                   </Link>
                   <div className='ml-6 flex flex-col gap-3.5'>
-                    <Link className={fullClassName} href={`/services/erasmus`}>
+                    <Link
+                      className={fullClassName}
+                      href={`/services/erasmus`}
+                      onClick={() => close()}
+                    >
                       {t('services.erasmus')}
                     </Link>
                     <Link
                       className={fullClassName}
                       href={`/services/language-courses`}
+                      onClick={() => close()}
                     >
                       {t('services.language-courses')}
                     </Link>
                     <Link
                       className={fullClassName}
                       href={`/services/student-exchange`}
+                      onClick={() => close()}
                     >
                       {t('services.student-exchange')}
                     </Link>
                     <Link
                       className={fullClassName}
                       href={`/services/concierge`}
+                      onClick={() => close()}
                     >
                       {t('services.concierge')}
                     </Link>
                   </div>
-                  <Link className={fullClassName} href={`/about-us`}>
+                  <Link
+                    className={fullClassName}
+                    href={`/about-us`}
+                    onClick={() => close()}
+                  >
                     {t('about-us')}
                   </Link>
-                  <Link className={fullClassName} href={`/destinations`}>
+                  <Link
+                    className={fullClassName}
+                    href={`/destinations`}
+                    onClick={() => close()}
+                  >
                     {t('destinations')}
                   </Link>
-                  <Link className={fullClassName} href={`/accommodations`}>
+                  <Link
+                    className={fullClassName}
+                    href={`/accommodations`}
+                    onClick={() => close()}
+                  >
                     {t('accommodations')}
                   </Link>
-                  <Link className={fullClassName} href={`/faq`}>
+                  <Link
+                    className={fullClassName}
+                    href={`/faq`}
+                    onClick={() => close()}
+                  >
                     {t('faq')}
                   </Link>
                 </div>
@@ -100,6 +128,7 @@ const MobileHeader = () => {
                     }),
                     'flex items-center gap-3 bg-star px-9 py-5'
                   )}
+                  onClick={() => close()}
                 >
                   <span>Contact us</span>
                   <CaretRight size={16} />

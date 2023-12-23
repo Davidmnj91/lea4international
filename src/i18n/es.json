@@ -296,15 +296,7 @@
         "destinations": "Destinos",
         "choose": "Por que escoger Praga?",
         "reason": "Existen numerosas razones para tener tu experiencia en el extranjero en la capital de la República Checa, algunas de ellas incluyen: vivienda asequible, transporte público confiable y económico, una ciudad llena de expatriados y estudiantes internacionales con oportunidades de conocer gente de diferentes países.",
-        "know": "Conoce Praga",
-        "services": {
-          "title": "Servicios disponibles en Prague",
-          "see-more": "Saber más sobre este servicio",
-          "work-experience": "Experiencia laboral",
-          "job-shadowing": "Observación de profesionales",
-          "language-courses": "Cursos de idiomas y formación en IA",
-          "concierge": "Servicios de conserjería para estudiantes"
-        }
+        "know": "Conoce Praga"
       },
       "madrid": {
         "title": "Madrid",
@@ -312,16 +304,7 @@
         "destinations": "Destinos",
         "choose": "Por que escoger Madrid?",
         "reason": "Hay varias razones para tener tu experiencia en el extranjero en la Capital de España, algunas de ellas incluyen: vivienda asequible, amplio transporte público, vivir en una ciudad multicultural y vibrante con muchas cosas que hacer, gran vida nocturna llena de opciones, buen clima, comida deliciosa. Madrid tiene algunas de las mejores universidades de España.",
-        "know": "Conoce Madrid",
-        "services": {
-          "title": "Servicios disponibles en Madrid",
-          "see-more": "Saber más sobre este servicio",
-          "work-experience": "Experiencia laboral",
-          "job-shadowing": "Observación de profesionales",
-          "language-courses": "Cursos de idiomas y formación en IA",
-          "student-exchange": "Programas de inmersión y intercambio escolar",
-          "concierge": "Servicios de conserjería para estudiantes"
-        }
+        "know": "Conoce Madrid"
       },
       "malaga": {
         "title": "Málaga",
@@ -329,15 +312,7 @@
         "destinations": "Destinos",
         "choose": "Por que escoger Málaga?",
         "reason": "Hay diferentes razones para tener tu experiencia en el extranjero en Málaga, algunas de ellas incluyen: vivienda asequible, transporte público barato, comida deliciosa, buen clima durante la mayor parte del año, que junto con el carácter abierto y alegre de los locales, crea una ciudad. con mucho ambiente. Las calles siempre están llenas de gente reunida. Málaga tiene una vibrante vida nocturna y una rica historia.",
-        "know": "Conoce Málaga",
-        "services": {
-          "title": "Servicios disponibles en Málaga",
-          "see-more": "Saber más sobre este servicio",
-          "work-experience": "Experiencia laboral",
-          "job-shadowing": "Observación de profesionales",
-          "language-courses": "Cursos de idiomas y formación en IA",
-          "concierge": "Servicios de conserjería para estudiantes"
-        }
+        "know": "Conoce Málaga"
       },
       "krakow": {
         "title": "Cracovia",
@@ -345,13 +320,7 @@
         "destinations": "Destinos",
         "choose": "Por que escoger Cracovia?",
         "reason": "Hay varias razones para elegir Cracovia para tu experiencia en el extranjero. Es una ciudad muy asequible y segura con una universidad histórica y una hermosa arquitectura, la UNESCO designó su casco antiguo como Patrimonio de la Humanidad en 1978. Esta ciudad está llena de estudiantes internacionales, por lo que tendrás la oportunidad de tener una experiencia multicultural.",
-        "know": "Conoce Cracovia",
-        "services": {
-          "title": "Servicios disponibles en Cracovia",
-          "see-more": "Saber más sobre este servicio",
-          "work-experience": "Experiencia laboral",
-          "job-shadowing": "Observación de profesionales"
-        }
+        "know": "Conoce Cracovia"
       },
       "dublin": {
         "title": "Dublin",
@@ -359,14 +328,7 @@
         "destinations": "Destinos",
         "choose": "Por que escoger Dublin?",
         "reason": "Hay diferentes razones para elegir la capital o Irlanda para tu experiencia en el extranjero, es una ciudad acogedora y vibrante, llena de museos, galerías, bares y restaurantes. Dublín es una de las seis ciudades literarias de la UNESCO.",
-        "know": "Conoce Dublin",
-        "services": {
-          "title": "Servicios disponibles en Dublin",
-          "see-more": "Saber más sobre este servicio",
-          "work-experience": "Experiencia laboral",
-          "job-shadowing": "Observación de profesionales",
-          "language-courses": "Cursos de idiomas y formación en IA"
-        }
+        "know": "Conoce Dublin"
       },
       "ghent": {
         "title": "Gante",
@@ -374,14 +336,17 @@
         "destinations": "Destinos",
         "choose": "Por que escoger Gante?",
         "reason": "Hay diferentes razones para elegir Gante para vivir tu experiencia en el extranjero, es una ciudad multicultural con una comunidad estudiantil internacional. Tiene una de las universidades más prestigiosas de Europa. Es una ciudad asequible con buen transporte público y una ciudad amigable con las bicicletas. Es una de las ciudades belgas con más edificios históricos y culturales.",
-        "know": "Conoce Gante",
-        "services": {
-          "title": "Servicios disponibles en Gante",
-          "see-more": "Saber más sobre este servicio",
-          "work-experience": "Experiencia laboral",
-          "job-shadowing": "Observación de profesionales"
-        }
+        "know": "Conoce Gante"
       }
+    },
+    "services": {
+      "title": "Servicios disponibles en {city}",
+      "see-more": "Saber más sobre este servicio",
+      "work-experience": "Experiencia laboral",
+      "job-shadowing": "Observación de profesionales",
+      "language-courses": "Cursos de idiomas y formación en IA",
+      "student-exchange": "Programas de inmersión y intercambio escolar",
+      "concierge": "Servicios de conserjería para estudiantes"
     }
   },
   "accommodations-page": {

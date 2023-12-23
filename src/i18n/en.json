@@ -296,15 +296,7 @@
         "destinations": "Destinations",
         "choose": "Why choose Prague?",
         "reason": "There are numerous reasons to have your experience abroad in the Capital of the Czech Republic, some of them include: affordable housing, reliable and cheap public transportation, a city full of expats and international students with opportunities to meet people from different countries.",
-        "know": "Know Prague",
-        "services": {
-          "title": "Services available in Prague",
-          "see-more": "See more about this service ",
-          "work-experience": "Work Experience",
-          "job-shadowing": "Job Shadowing",
-          "language-courses": "Language courses & AI Training",
-          "concierge": "Student concierge Services"
-        }
+        "know": "Know Prague"
       },
       "madrid": {
         "title": "Madrid",
@@ -312,16 +304,7 @@
         "destinations": "Destinations",
         "choose": "Why choose Madrid?",
         "reason": "There are several reasons to have your experience abroad in the Capital of Spain, some of them include : affordable housing, extensive public transport, living in a multicultural and vibrant city with plenty of things to do, great nightlife full of options, nice weather, delicious food. Madrid has some of the best universities in Spain.",
-        "know": "Know Madrid",
-        "services": {
-          "title": "Services available in Madrid",
-          "see-more": "See more about this service ",
-          "work-experience": "Work Experience",
-          "job-shadowing": "Job Shadowing",
-          "language-courses": "Language courses & AI Training",
-          "student-exchange": "School Exchange & Immersions Programs",
-          "concierge": "Student concierge Services"
-        }
+        "know": "Know Madrid"
       },
       "malaga": {
         "title": "Málaga",
@@ -329,15 +312,7 @@
         "destinations": "Destinations",
         "choose": "Why choose Málaga?",
         "reason": "There are different reasons to have your experience abroad in Malaga, some of them include : affordable housing, cheap public transport, delicious food, nice weather during most of the year, which together with the open and cheerful character of the locals, creates a city with a lot of atmosphere. The streets are always full of people gathering together. Malaga has a vibrant nightlife and a rich history.",
-        "know": "Know Málaga",
-        "services": {
-          "title": "Services available in Málaga",
-          "see-more": "See more about this service ",
-          "work-experience": "Work Experience",
-          "job-shadowing": "Job Shadowing",
-          "language-courses": "Language courses & AI Training",
-          "concierge": "Student concierge Services"
-        }
+        "know": "Know Málaga"
       },
       "krakow": {
         "title": "Krakow",
@@ -345,13 +320,7 @@
         "destinations": "Destinations",
         "choose": "Why choose Krakow?",
         "reason": "There are several reasons to choose Krakow for your experience abroad. It is a very affordable and safe city with a historical university and beautiful architecture, UNESCO designated its old town area a World Heritage site in 1978. This city is full of international students so you will have the opportunity to have a multicultural experience.",
-        "know": "Know Krakow",
-        "services": {
-          "title": "Services available in Krakow",
-          "see-more": "See more about this service ",
-          "work-experience": "Work Experience",
-          "job-shadowing": "Job Shadowing"
-        }
+        "know": "Know Krakow"
       },
       "dublin": {
         "title": "Dublin",
@@ -359,14 +328,7 @@
         "destinations": "Destinations",
         "choose": "Why choose Dublin?",
         "reason": "There are different reasons to choose the capital or Ireland for your experience abroad, it is a welcoming and vibrant city, full of museums, galleries, bars and restaurants. Dublin is one of 6 UNESCO cities of literature.",
-        "know": "Know Dublin",
-        "services": {
-          "title": "Services available in Dublin",
-          "see-more": "See more about this service ",
-          "work-experience": "Work Experience",
-          "job-shadowing": "Job Shadowing",
-          "language-courses": "Language courses & AI Training"
-        }
+        "know": "Know Dublin"
       },
       "ghent": {
         "title": "Ghent",
@@ -374,14 +336,17 @@
         "destinations": "Destinations",
         "choose": "Why choose Ghent?",
         "reason": "There are different reasons to choose Ghent to have your experience abroad, it is a multicultural city with an international student community. It has one of the most prestigious universities in Europe. It is an affordable city with good public transport and a bicycle-friendly city. It is one of the Belgian cities with the most historical and cultural buildings.",
-        "know": "Know Ghent",
-        "services": {
-          "title": "Services available in Ghent",
-          "see-more": "See more about this service ",
-          "work-experience": "Work Experience",
-          "job-shadowing": "Job Shadowing"
-        }
+        "know": "Know Ghent"
       }
+    },
+    "services": {
+      "title": "Services available in {city}",
+      "work-experience": "Work Experience",
+      "job-shadowing": "Job Shadowing",
+      "language-courses": "Language courses & AI Training",
+      "student-exchange": "School Exchange & Immersions Programs",
+      "concierge": "Student concierge Services",
+      "see-more": "See more about this service"
     }
   },
   "accommodations-page": {
