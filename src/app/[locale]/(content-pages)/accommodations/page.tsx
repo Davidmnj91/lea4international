@@ -81,7 +81,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
               >
                 <div
                   className={clsx(
-                    'h-[189px] w-full bg-cover bg-no-repeat desktop:mb-0 desktop:h-[427px] desktop:w-[675px]',
+                    'h-[189px] w-full bg-cover bg-center bg-no-repeat desktop:mb-0 desktop:h-[427px] desktop:w-[675px]',
                     index % 2 === 0
                       ? 'desktop:ml-[-100px]'
                       : 'desktop:mr-[-100px]'
@@ -100,9 +100,12 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
                   <Typography as='p' size='body-lg' color='europe'>
                     {t(`accommodations.${accommodation}.description`)}
                   </Typography>
-                  <button className={buttonTypes({ intent: 'primary' })}>
+                  <Link
+                    href={'/contact/company'}
+                    className={buttonTypes({ intent: 'primary' })}
+                  >
                     {t('contact-us')}
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

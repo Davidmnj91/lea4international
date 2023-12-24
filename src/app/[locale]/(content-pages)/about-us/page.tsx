@@ -26,14 +26,14 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
   const t = useTranslations('about-us-page');
 
   const values = {
-    inclusion: <PuzzlePiece size={54} />,
-    diversity: <UsersFour size={54} />,
-    respect: <HandHeart size={54} />,
-    quality: <SealCheck size={54} />,
-    honesty: <Eye size={54} />,
-    innovation: <Gear size={54} />,
-    sustainability: <Leaf size={54} />,
-    collaboration: <Users size={54} />,
+    inclusion: <PuzzlePiece size={54} weight='thin' />,
+    diversity: <UsersFour size={54} weight='thin' />,
+    respect: <HandHeart size={54} weight='thin' />,
+    quality: <SealCheck size={54} weight='thin' />,
+    honesty: <Eye size={54} weight='thin' />,
+    innovation: <Gear size={54} weight='thin' />,
+    sustainability: <Leaf size={54} weight='thin' />,
+    collaboration: <Users size={54} weight='thin' />,
   };
 
   return (
@@ -140,7 +140,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
           {Object.entries(values).map(([value, icon]) => (
             <div
               key={value}
-              className='flex h-[120px] w-[120px] flex-col items-center justify-center gap-2.5 rounded-full border border-dashed border-basics-white desktop:h-[200px] desktop:w-[200px]'
+              className='flex h-[140px] w-[140px] flex-col items-center justify-center gap-2.5 rounded-full border border-dashed border-basics-white desktop:h-[200px] desktop:w-[200px]'
             >
               <Typography as='span' size='heading-md' color='basics-white'>
                 {t(`values.${value}`)}

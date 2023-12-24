@@ -66,7 +66,7 @@ export const MobileMenu = ({
                     onClick={() => close()}
                   >
                     {t('services.main')}
-                    <ArrowDown size={24} />
+                    <ArrowDown size={16} />
                   </Link>
                   <div className='ml-6 flex flex-col gap-3.5'>
                     <Link
@@ -128,7 +128,7 @@ export const MobileMenu = ({
                   </Link>
                 </nav>
                 <Link
-                  href={`/contact`}
+                  href={'/contact/company'}
                   className={clsx(
                     typographyClasses({
                       size: 'body-sm',

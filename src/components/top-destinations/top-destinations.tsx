@@ -42,11 +42,12 @@ export const TopDestinations = ({
         </Typography>
         <div className='flex items-center justify-center'>
           <span className='w-[58px] border-b border-b-europe-light desktop:w-[250px]' />
-          <button
+          <Link
+            href={'/destinations'}
             className={clsx('mx-4', buttonTypes({ intent: 'secondary-dark' }))}
           >
             {t('see-all')}
-          </button>
+          </Link>
           <span className='w-[58px] border-b border-b-europe-light desktop:w-[250px]' />
         </div>
       </div>

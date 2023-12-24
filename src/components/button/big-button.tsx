@@ -1,23 +1,23 @@
-import React, { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
+import React from 'react';
 import { RichTranslation } from '@/types/types';
 import { Typography } from '@/components/typography/typography';
+import Link, { LinkProps } from 'next/link';
 
 type BigButtonProps = {
   subject: RichTranslation;
   caption: RichTranslation;
-} & DetailedHTMLProps<
-  ButtonHTMLAttributes<HTMLButtonElement>,
-  HTMLButtonElement
->;
+} & LinkProps;
 export const BigButton = ({
   subject,
   caption,
-  ...buttonProps
+  href,
+  ...linkProps
 }: BigButtonProps) => {
   return (
-    <button
+    <Link
+      href={href}
       className='group flex h-[158px] flex-col justify-between border border-basics-white p-2.5 hover:border-star-dark desktop:w-[310px]'
-      {...buttonProps}
+      {...linkProps}
     >
       <Typography
         as='h4'
@@ -35,6 +35,6 @@ export const BigButton = ({
       >
         {caption}
       </Typography>
-    </button>
+    </Link>
   );
 };

@@ -9,8 +9,7 @@ const config: Config = {
     extend: {
       screens: {
         mobile: '375px',
-        tablet: '834px',
-        desktop: '1440px',
+        desktop: '1080px',
       },
       colors: {
         europe: {

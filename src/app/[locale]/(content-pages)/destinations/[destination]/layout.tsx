@@ -17,7 +17,7 @@ export default function RootDestinationsLayout({
     <>
       <div className='flex border-b border-basics-disabled px-6 py-2.5 desktop:px-12'>
         <Link href={'/destinations'} className='flex items-center gap-4'>
-          <CaretLeft size={32} />
+          <CaretLeft size={32} weight='thin' />
           <Typography as='span' size='body-lg' color='europe-dark'>
             {t('back-to-destinations')}
           </Typography>
@@ -33,10 +33,15 @@ export default function RootDestinationsLayout({
             {t.rich('inspired.description')}
           </Typography>
           <div className='flex flex-col gap-6 desktop:flex-row desktop:gap-8'>
-            <BigButton subject={t('inspired.join')} caption={t('contact-us')} />
+            <BigButton
+              subject={t('inspired.join')}
+              caption={t('contact-us')}
+              href={'/contact/company'}
+            />
             <BigButton
               subject={t('inspired.accommodations')}
               caption={t('see-more')}
+              href={'/accommodations'}
             />
           </div>
         </div>

@@ -64,7 +64,9 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
         ))}
       </div>
       <section id='more-info'>
-        <MoreInfo />
+        <div className='py-14'>
+          <MoreInfo />
+        </div>
       </section>
     </div>
   );

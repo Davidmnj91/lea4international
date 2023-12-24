@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import hero_bg from '../../../public/images/home/hero_bg.png';
+import prague_main_bg from '../../../public/images/destinations/prague_main_bg.png';
 import who_we_are_bg from '../../../public/images/home/who_we_are_bg.png';
 import our_beliefs_bg from '../../../public/images/home/our_beliefs_bg.png';
 import our_commitment_bg from '../../../public/images/home/our_commitment_bg.png';
@@ -21,6 +21,8 @@ import { Typography } from '@/components/typography/typography';
 import { MobileMenu } from '@/components/header/header';
 import { TopDestinations } from '@/components/top-destinations/top-destinations';
 import { Destinations } from '@/types/destinations';
+import Link from 'next/link';
+import { Contact } from '@/types/contact';
 
 const FaqsHome: Subset<typeof Faqs> = {
   [FAQCategories.erasmus]: [
@@ -82,7 +84,7 @@ export default function HomePage() {
             height: '100vh',
             width: '100%',
             zIndex: '-1',
-            backgroundImage: `url(${hero_bg.src}), linear-gradient(#0308227F,#0308227F)`,
+            backgroundImage: `url(${prague_main_bg.src}), linear-gradient(#0308227F,#0308227F)`,
             backgroundBlendMode: 'overlay',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
@@ -125,11 +127,12 @@ export default function HomePage() {
               {t('slogan')}
             </Typography>
           </div>
-          <button
+          <Link
+            href={'/contact/company'}
             className={clsx('mt-[60px]', buttonTypes({ intent: 'primary' }))}
           >
             {t('request-more-info')}
-          </button>
+          </Link>
         </div>
         <section id='who-we-are'>
           <div
@@ -147,7 +150,7 @@ export default function HomePage() {
                     color='gold-dark'
                     weight='bold'
                   >
-                    Company Name
+                    {Contact.companyName}
                   </Typography>
                   <Typography as='h1' size='heading-xl' color='europe-dark'>
                     {t('who-we-are.title')}
@@ -162,9 +165,12 @@ export default function HomePage() {
                       __html: t.raw('who-we-are.description'),
                     }}
                   />
-                  <button className={clsx('mt-8', tagButtonTypes())}>
+                  <Link
+                    href={'/services'}
+                    className={clsx(tagButtonTypes(), 'mt-8')}
+                  >
                     {t('see-more')}
-                  </button>
+                  </Link>
                 </div>
               </div>
               <div className='flex flex-col justify-between gap-8 bg-basics-white px-6 py-9 desktop:h-[550px] desktop:max-w-[416px] desktop:gap-0'>
@@ -175,7 +181,7 @@ export default function HomePage() {
                     color='gold-dark'
                     weight='bold'
                   >
-                    Company Name
+                    {Contact.companyName}
                   </Typography>
                   <Typography as='h1' size='heading-xl' color='europe-dark'>
                     {t('our-focus.title')}
@@ -214,7 +220,7 @@ export default function HomePage() {
                       color='gold-dark'
                       weight='bold'
                     >
-                      Company Name
+                      {Contact.companyName}
                     </Typography>
                     <Typography as='h1' size='heading-xl' color='europe-dark'>
                       {t('our-beliefs.title')}
@@ -243,7 +249,7 @@ export default function HomePage() {
                       color='gold-dark'
                       weight='bold'
                     >
-                      Company Name
+                      {Contact.companyName}
                     </Typography>
                     <Typography as='h1' size='heading-xl' color='europe-dark'>
                       {t('coming-challenges.title')}
@@ -280,7 +286,7 @@ export default function HomePage() {
         </section>
         <section id='our-commitment'>
           <div className='mx-0 mt-14 desktop:mx-12 desktop:my-14'>
-            <div className='flex flex-col-reverse gap-6 desktop:flex-row desktop:justify-between desktop:gap-0'>
+            <div className='flex flex-col-reverse gap-6 desktop:flex-row desktop:justify-center desktop:gap-20'>
               <CommitmentsCarousel />
               <div>
                 <Typography
@@ -322,17 +328,18 @@ export default function HomePage() {
             </Typography>
             <div className='my-14 flex items-center justify-center'>
               <span className='w-[76px] border-b border-b-europe desktop:w-[250px]' />
-              <button
+              <Link
+                href={'/faq'}
                 className={clsx(
                   'mx-4',
                   buttonTypes({ intent: 'secondary-light' })
                 )}
               >
                 {t('faq.see-more')}
-              </button>
+              </Link>
               <span className='w-[76px] border-b border-b-europe desktop:w-[250px]' />
             </div>
-            <div className='w-full desktop:my-14'>
+            <div className='max-w-[1440px] desktop:my-14'>
               {Object.entries(FaqsHome)
                 .flatMap(([category, faqs]) =>
                   faqs.map((faq) => `${category}.${faq}`)

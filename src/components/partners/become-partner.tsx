@@ -22,6 +22,7 @@ export const BecomePartner = () => {
         <BigButton
           subject={t.raw('button.title')}
           caption={t('button.caption')}
+          href={'/contact/partner'}
         />
       </div>
     </div>
