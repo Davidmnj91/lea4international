@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import not_found from '../../../../public/not_found.png';
+import not_found from '../../../../public/images/not_found.png';
 import { buttonTypes } from '@/components/button/button';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';

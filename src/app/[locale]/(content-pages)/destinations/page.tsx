@@ -3,12 +3,12 @@ import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import { AnimatedCard } from '@/components/destination-card/animated-card';
-import prague_bg from '../../../../../public/prague_bg.png';
-import madrid_bg from '../../../../../public/madrid_bg.png';
-import malaga_bg from '../../../../../public/malaga_bg.png';
-import krakow_bg from '../../../../../public/krakow_bg.png';
-import dublin_bg from '../../../../../public/dublin_bg.png';
-import ghent_bg from '../../../../../public/ghent_bg.png';
+import prague_bg from '../../../../../public/images/destinations/prague_bg.png';
+import madrid_bg from '../../../../../public/images/destinations/madrid_bg.png';
+import malaga_bg from '../../../../../public/images/destinations/malaga_bg.png';
+import krakow_bg from '../../../../../public/images/destinations/krakow_bg.png';
+import dublin_bg from '../../../../../public/images/destinations/dublin_bg.png';
+import ghent_bg from '../../../../../public/images/destinations/ghent_bg.png';
 import { Typography } from '@/components/typography/typography';
 
 export default function Page({ params: { locale } }: LanguagePageProps) {

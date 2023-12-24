@@ -11,7 +11,7 @@ export const ServiceItem = ({ title, description, icon }: ServiceItemProps) => {
   return (
     <li className='flex flex-col items-center border border-gold desktop:flex-row'>
       <div className='flex h-full items-center p-4'>{icon}</div>
-      <div className='flex flex-col gap-1 border-t border-t-gold p-4 desktop:border-l desktop:border-t-0 desktop:border-l-gold'>
+      <div className='flex w-full flex-col gap-1 border-t border-t-gold p-4 desktop:border-l desktop:border-t-0 desktop:border-l-gold'>
         <Typography
           as='h3'
           size='heading-md'

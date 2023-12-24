@@ -9,10 +9,10 @@ import { MagnifyingGlassPlus } from '@phosphor-icons/react/dist/ssr/MagnifyingGl
 import Link from 'next/link';
 import { tagButtonTypes } from '@/components/button/button';
 import { ServiceItem } from '@/components/service-item/service-item';
-import english_courses_bg from '../../../../../../../public/english_courses_bg.png';
-import business_english_courses_bg from '../../../../../../../public/business_english_courses_bg.png';
-import spanish_courses_bg from '../../../../../../../public/spanish_courses_bg.png';
-import business_spanish_courses_bg from '../../../../../../../public/business_spanish_courses_bg.png';
+import english_courses_bg from '../../../../../../../public/images/services/language-courses/english_courses_bg.png';
+import business_english_courses_bg from '../../../../../../../public/images/services/language-courses/business_english_courses_bg.png';
+import spanish_courses_bg from '../../../../../../../public/images/services/language-courses/spanish_courses_bg.png';
+import business_spanish_courses_bg from '../../../../../../../public/images/services/language-courses/business_spanish_courses_bg.png';
 import clsx from 'clsx';
 import { Typography } from '@/components/typography/typography';
 
@@ -22,7 +22,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
 
   const t = useTranslations('services-page.services.language-courses');
 
-  const erasmusServices = Services['language-courses'];
+  const languageCoursesServices = Services['language-courses'];
 
   const sections = {
     'english-courses': english_courses_bg.src,
@@ -52,7 +52,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
         </Typography>
       </div>
       <div className='sticky top-[80px] z-20 flex items-center gap-6 overflow-auto border-y border-y-basics-disabled bg-basics-white px-6 py-6 desktop:justify-center desktop:overflow-hidden desktop:px-12'>
-        {erasmusServices.map((service) => (
+        {languageCoursesServices.map((service) => (
           <Link
             href={`#${service}`}
             scroll={true}
@@ -89,7 +89,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
       {Object.entries(sections).map(([section, imgSrc], index) => (
         <section key={section} id={section}>
           <div className={clsx('flex', index % 2 !== 0 && 'flex-row-reverse')}>
-            <div className='flex flex-col gap-8 p-6 desktop:flex-[0_0_60%] desktop:gap-24 desktop:px-12 desktop:py-24'>
+            <div className='flex flex-auto flex-col gap-8 p-6 desktop:flex-[0_0_60%] desktop:gap-24 desktop:px-12 desktop:py-24'>
               <Typography as='h2' size='heading-xl' color='europe-dark'>
                 {t(`categories.${section}.title`)}
               </Typography>
@@ -112,7 +112,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
               </div>
             </div>
             <div
-              className='hidden flex-[0_0_40%] bg-cover bg-no-repeat desktop:inline-block'
+              className='hidden bg-cover bg-no-repeat desktop:inline-block desktop:flex-[0_0_40%]'
               style={{
                 backgroundImage: `url(${imgSrc})`,
               }}

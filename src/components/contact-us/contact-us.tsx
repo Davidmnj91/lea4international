@@ -11,7 +11,7 @@ export const ContactUs = () => {
       {/*Mobile version*/}
       <button
         className={clsx(
-          'fixed bottom-10 right-10 z-20 desktop:hidden',
+          'fixed bottom-10 right-6 z-20 desktop:hidden',
           buttonTypes({ intent: 'primary', type: 'icon' })
         )}
       >

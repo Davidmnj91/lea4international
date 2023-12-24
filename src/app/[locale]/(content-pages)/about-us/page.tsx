@@ -1,9 +1,9 @@
 import { LanguagePageProps } from '@/i18n';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
-import lucia_bg from '../../../../../public/lucia_bg.png';
-import partner_1_bg from '../../../../../public/partner_1_bg.png';
-import my_abroad_ally from '../../../../../public/my_abroad_ally.png';
+import lucia_bg from '../../../../../public/images/partners/lucia_bg.png';
+import my_abroad_ally_owner from '../../../../../public/images/partners/my_abroad_ally_owner.png';
+import my_abroad_ally_logo from '../../../../../public/images/partners/my_abroad_ally_logo.png';
 import Image from 'next/image';
 import { tagButtonTypes } from '@/components/button/button';
 import { Eye } from '@phosphor-icons/react/dist/ssr/Eye';
@@ -50,13 +50,13 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
       </div>
       <div className='flex flex-col items-center justify-center gap-14 p-6 desktop:flex-row desktop:p-24'>
         <div
-          className='flex h-[272px] w-full flex-col items-end desktop:h-[346px] desktop:w-[422px] '
+          className='relative flex h-[272px] w-full flex-col items-end bg-contain bg-center bg-no-repeat desktop:h-[346px] desktop:w-[422px] '
           style={{ backgroundImage: `url(${lucia_bg.src}` }}
         >
           <span
             className={clsx(
               tagButtonTypes({ intent: 'selected' }),
-              'mr-5 mt-5 flex-grow-0'
+              'absolute left-[50%] ml-10 mt-5 flex-grow-0 translate-x-1/2'
             )}
           >
             {t('role.director')}
@@ -174,7 +174,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
           <div className='flex flex-col items-end gap-8'>
             <div
               className='flex h-[346px] w-[236px] flex-col'
-              style={{ backgroundImage: `url(${partner_1_bg.src})` }}
+              style={{ backgroundImage: `url(${my_abroad_ally_owner.src})` }}
             />
           </div>
           <svg
@@ -196,7 +196,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
             <path d='M175 1L-2.29478e-06 0.999985' stroke='#45586A' />
           </svg>
           <Image
-            src={my_abroad_ally.src}
+            src={my_abroad_ally_logo.src}
             alt='my_abroad_ally'
             width='200'
             height='200'

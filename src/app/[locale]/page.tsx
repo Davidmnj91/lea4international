@@ -1,10 +1,10 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import hero_bg from '../../../public/hero_bg.png';
-import who_we_are_bg from '../../../public/who_we_are_bg.png';
-import our_beliefs_bg from '../../../public/our_beliefs_bg.png';
-import our_commitment_bg from '../../../public/our_commitment_bg.png';
+import hero_bg from '../../../public/images/home/hero_bg.png';
+import who_we_are_bg from '../../../public/images/home/who_we_are_bg.png';
+import our_beliefs_bg from '../../../public/images/home/our_beliefs_bg.png';
+import our_commitment_bg from '../../../public/images/home/our_commitment_bg.png';
 import { buttonTypes, tagButtonTypes } from '@/components/button/button';
 import clsx from 'clsx';
 import { CommitmentsCarousel } from '@/components/commitments-carousel/commitments-carousel';
@@ -340,7 +340,7 @@ export default function HomePage() {
                 .map((faq) => (
                   <div
                     key={faq}
-                    className='border-b-2 border-t-0 border-basics-disabled px-12 py-6 first-of-type:border-t-2'
+                    className='border-b-2 border-t-0 border-basics-disabled px-3.5 py-6 first-of-type:border-t-2 desktop:px-12'
                   >
                     <FaqList faqKey={faq} />
                   </div>
