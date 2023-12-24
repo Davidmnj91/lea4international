@@ -4,8 +4,8 @@ import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { tagButtonTypes } from '@/components/button/button';
 import { Services } from '@/types/services';
-import immersion_program_bg from '../../../../../../../public/immersion_program_bg.png';
-import exchange_bg from '../../../../../../../public/exchange_bg.png';
+import immersion_program_bg from '../../../../../../../public/images/services/student-exchange/immersion_program_bg.png';
+import exchange_bg from '../../../../../../../public/images/services/student-exchange/exchange_bg.png';
 import clsx from 'clsx';
 import { AirplaneTilt } from '@phosphor-icons/react/dist/ssr/AirplaneTilt';
 import { Bed } from '@phosphor-icons/react/dist/ssr/Bed';
@@ -85,7 +85,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
             </Typography>
           </div>
           <div className={clsx('flex', index % 2 !== 0 && 'flex-row-reverse')}>
-            <div className='flex flex-col gap-8 p-6 desktop:flex-[0_0_60%] desktop:gap-24 desktop:px-12 desktop:py-24'>
+            <div className='flex flex-auto flex-col gap-8 p-6 desktop:flex-[0_0_60%] desktop:gap-24 desktop:px-12 desktop:py-24'>
               <Typography as='h2' size='heading-xl' color='europe-dark'>
                 {t(`categories.${section}.includes`)}
               </Typography>

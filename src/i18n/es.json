@@ -2,14 +2,14 @@
   "pages": {
     "home": "Bienvenido",
     "services": {
-      "main": "Nuestros Servicios",
+      "main": "Servicios",
       "erasmus": "Proyectos Erasmus+",
       "language-courses": "Cursos de inglés y español",
       "student-exchange": "Programas de intercambio e inmersión de estudiantes",
       "concierge": "Servicios de conserjería para estudiantes"
     },
     "about-us": "Sobre nosotros",
-    "destinations": "Nuestros Destinos",
+    "destinations": "Destinos",
     "accommodations": "Alojamientos",
     "faq": "FAQ",
     "contact": "Contacto",
@@ -593,7 +593,7 @@
     }
   },
   "more-info": {
-    "title": "¿Busca más <br></br> información?",
+    "title": "¿Busca más información?",
     "questions": "Estamos aquí para responder a todas tus preguntas. </br></br> ¡Contáctenos hoy!",
     "more-info": "Más Información",
     "request-quote": "Solicitar una cotización",
@@ -652,7 +652,7 @@
   },
   "footer": {
     "follow-us": "Síguenos en",
-    "copyright": "Copyright © 2024. Nombre de la empresa. Todos los derechos reservados.",
+    "copyright": "Copyright © 2024. LEA 4 International. Todos los derechos reservados.",
     "privacy-policy": "Política de rivacidad"
   }
 }

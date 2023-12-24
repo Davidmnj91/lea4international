@@ -4,12 +4,12 @@ import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { buttonTypes, tagButtonTypes } from '@/components/button/button';
 import React from 'react';
-import apartment_bg from '../../../../../public/apartment_bg.png';
-import student_residence_bg from '../../../../../public/student_residence_bg.png';
-import host_family_bg from '../../../../../public/host_family_bg.png';
-import hotel_bg from '../../../../../public/hotel_bg.png';
-import hostel_bg from '../../../../../public/hostel_bg.png';
-import airbnb_bg from '../../../../../public/airbnb_bg.png';
+import apartment_bg from '../../../../../public/images/accommodations/apartment_bg.png';
+import student_residence_bg from '../../../../../public/images/accommodations/student_residence_bg.png';
+import host_family_bg from '../../../../../public/images/accommodations/host_family_bg.png';
+import hotel_bg from '../../../../../public/images/accommodations/hotel_bg.png';
+import hostel_bg from '../../../../../public/images/accommodations/hostel_bg.png';
+import airbnb_bg from '../../../../../public/images/accommodations/airbnb_bg.png';
 import clsx from 'clsx';
 import { BecomePartner } from '@/components/partners/become-partner';
 import { Typography } from '@/components/typography/typography';
@@ -81,7 +81,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
               >
                 <div
                   className={clsx(
-                    'h-[189px] w-full bg-cover bg-no-repeat desktop:mb-0 desktop:h-[427px] desktop:w-[675px]',
+                    'h-[189px] w-full bg-cover bg-center bg-no-repeat desktop:mb-0 desktop:h-[427px] desktop:w-[675px]',
                     index % 2 === 0
                       ? 'desktop:ml-[-100px]'
                       : 'desktop:mr-[-100px]'
@@ -100,9 +100,12 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
                   <Typography as='p' size='body-lg' color='europe'>
                     {t(`accommodations.${accommodation}.description`)}
                   </Typography>
-                  <button className={buttonTypes({ intent: 'primary' })}>
+                  <Link
+                    href={'/contact/company'}
+                    className={buttonTypes({ intent: 'primary' })}
+                  >
                     {t('contact-us')}
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

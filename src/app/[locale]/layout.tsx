@@ -33,7 +33,7 @@ export default function RootLayout({
       <head>
         <title>Lucia Web</title>
       </head>
-      <body className='relative mx-auto max-w-[1440px] bg-basics-white'>
+      <body className='relative mx-auto bg-basics-white'>
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
           <ContactUs />

@@ -15,7 +15,7 @@ export const FaqList = ({ faqKey }: FaqProps) => {
     <Disclosure>
       {({ open }) => (
         <>
-          <Disclosure.Button className='flex w-full justify-between'>
+          <Disclosure.Button className='flex w-full justify-between gap-8'>
             <Typography
               as='span'
               size='heading-lg'

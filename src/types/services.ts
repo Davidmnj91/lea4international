@@ -1,7 +1,7 @@
-import erasmus_bg from '../../public/erasmus_bg.png';
-import language_courses_bg from '../../public/language_courses_bg.png';
-import student_exchange_bg from '../../public/student_exchange_bg.png';
-import concierge_bg from '../../public/concierge_bg.png';
+import erasmus_bg from '../../public/images/services/erasmus/erasmus_bg.png';
+import language_courses_bg from '../../public/images/services/language-courses/language_courses_bg.png';
+import student_exchange_bg from '../../public/images/services/student-exchange/student_exchange_bg.png';
+import concierge_bg from '../../public/images/services/concierge/concierge_bg.png';
 
 export enum ServicesCategories {
   Erasmus = 'erasmus',

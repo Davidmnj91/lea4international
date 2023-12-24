@@ -1,23 +1,23 @@
 import React, { JSX } from 'react';
 import { AvailableServices, Destinations } from '@/types/destinations';
-import prague_bg from '../../../../../../public/prague_bg.png';
-import prague_1_bg from '../../../../../../public/prague_1_bg.png';
-import prague_2_bg from '../../../../../../public/prague_2_bg.png';
-import madrid_bg from '../../../../../../public/madrid_bg.png';
-import madrid_1_bg from '../../../../../../public/madrid_1_bg.png';
-import madrid_2_bg from '../../../../../../public/madrid_2_bg.png';
-import malaga_bg from '../../../../../../public/malaga_bg.png';
-import malaga_1_bg from '../../../../../../public/malaga_1_bg.png';
-import malaga_2_bg from '../../../../../../public/malaga_2_bg.png';
-import krakow_bg from '../../../../../../public/krakow_bg.png';
-import krakow_1_bg from '../../../../../../public/krakow_1_bg.png';
-import krakow_2_bg from '../../../../../../public/krakow_2_bg.png';
-import dublin_bg from '../../../../../../public/dublin_bg.png';
-import dublin_1_bg from '../../../../../../public/dublin_1_bg.png';
-import dublin_2_bg from '../../../../../../public/dublin_2_bg.png';
-import ghent_bg from '../../../../../../public/ghent_bg.png';
-import ghent_1_bg from '../../../../../../public/ghent_1_bg.png';
-import ghent_2_bg from '../../../../../../public/ghent_2_bg.png';
+import prague_main_bg from '../../../../../../public/images/destinations/prague_main_bg.png';
+import prague_1_bg from '../../../../../../public/images/destinations/prague_1_bg.png';
+import prague_2_bg from '../../../../../../public/images/destinations/prague_2_bg.png';
+import madrid_bg from '../../../../../../public/images/destinations/madrid_bg.png';
+import madrid_1_bg from '../../../../../../public/images/destinations/madrid_1_bg.png';
+import madrid_2_bg from '../../../../../../public/images/destinations/madrid_2_bg.png';
+import malaga_bg from '../../../../../../public/images/destinations/malaga_bg.png';
+import malaga_1_bg from '../../../../../../public/images/destinations/malaga_1_bg.png';
+import malaga_2_bg from '../../../../../../public/images/destinations/malaga_2_bg.png';
+import krakow_bg from '../../../../../../public/images/destinations/krakow_bg.png';
+import krakow_1_bg from '../../../../../../public/images/destinations/krakow_1_bg.png';
+import krakow_2_bg from '../../../../../../public/images/destinations/krakow_2_bg.png';
+import dublin_bg from '../../../../../../public/images/destinations/dublin_bg.png';
+import dublin_1_bg from '../../../../../../public/images/destinations/dublin_1_bg.png';
+import dublin_2_bg from '../../../../../../public/images/destinations/dublin_2_bg.png';
+import ghent_bg from '../../../../../../public/images/destinations/ghent_bg.png';
+import ghent_1_bg from '../../../../../../public/images/destinations/ghent_1_bg.png';
+import ghent_2_bg from '../../../../../../public/images/destinations/ghent_2_bg.png';
 import { EuropeMapPrague } from '@/components/maps/prague';
 import { EuropeMapMadrid } from '@/components/maps/madrid';
 import { EuropeMapMalaga } from '@/components/maps/malaga';
@@ -34,6 +34,7 @@ import { ArrowRight } from '@phosphor-icons/react/dist/ssr/ArrowRight';
 import { notFound } from 'next/navigation';
 import { Typography } from '@/components/typography/typography';
 import { EuropeMapGhent } from '@/components/maps/ghent';
+import Link from 'next/link';
 
 export const dynamicParams = false;
 
@@ -42,21 +43,21 @@ type DestinationPageDetails = {
   mainImageSrc: string;
   mapComponent: JSX.Element;
   sampleImages: [string, string];
-  servicesAvailable: AvailableServices[];
+  servicesAvailable: [AvailableServices, string][];
 };
 const iconClassNames =
   'h-[310px] w-[375px] desktop:h-[500px] desktop:w-[605px]';
 const destinationsProps: Record<Destinations, DestinationPageDetails> = {
   [Destinations.PRAGUE]: {
     name: 'prague',
-    mainImageSrc: prague_bg.src,
+    mainImageSrc: prague_main_bg.src,
     mapComponent: <EuropeMapPrague className={iconClassNames} />,
     sampleImages: [prague_1_bg.src, prague_2_bg.src],
     servicesAvailable: [
-      'work-experience',
-      'job-shadowing',
-      'language-courses',
-      'concierge',
+      ['work-experience', '/services/erasmus#work-experience'],
+      ['job-shadowing', '/services/erasmus#job-shadowing'],
+      ['language-courses', '/services/language-courses'],
+      ['concierge', 'services/concierge'],
     ],
   },
   [Destinations.MADRID]: {
@@ -65,11 +66,11 @@ const destinationsProps: Record<Destinations, DestinationPageDetails> = {
     mapComponent: <EuropeMapMadrid className={iconClassNames} />,
     sampleImages: [madrid_1_bg.src, madrid_2_bg.src],
     servicesAvailable: [
-      'work-experience',
-      'job-shadowing',
-      'language-courses',
-      'student-exchange',
-      'concierge',
+      ['work-experience', '/services/erasmus#work-experience'],
+      ['job-shadowing', '/services/erasmus#job-shadowing'],
+      ['language-courses', '/services/language-courses'],
+      ['student-exchange', 'services/student-exchange'],
+      ['concierge', 'services/concierge'],
     ],
   },
   [Destinations.MALAGA]: {
@@ -78,11 +79,11 @@ const destinationsProps: Record<Destinations, DestinationPageDetails> = {
     mapComponent: <EuropeMapMalaga className={iconClassNames} />,
     sampleImages: [malaga_1_bg.src, malaga_2_bg.src],
     servicesAvailable: [
-      'work-experience',
-      'job-shadowing',
-      'language-courses',
-      'student-exchange',
-      'concierge',
+      ['work-experience', '/services/erasmus#work-experience'],
+      ['job-shadowing', '/services/erasmus#job-shadowing'],
+      ['language-courses', '/services/language-courses'],
+      ['student-exchange', 'services/student-exchange'],
+      ['concierge', 'services/concierge'],
     ],
   },
   [Destinations.KRAKOW]: {
@@ -90,21 +91,31 @@ const destinationsProps: Record<Destinations, DestinationPageDetails> = {
     mainImageSrc: krakow_bg.src,
     mapComponent: <EuropeMapKrakow className={iconClassNames} />,
     sampleImages: [krakow_1_bg.src, krakow_2_bg.src],
-    servicesAvailable: ['work-experience', 'job-shadowing'],
+    servicesAvailable: [
+      ['work-experience', '/services/erasmus#work-experience'],
+      ['job-shadowing', '/services/erasmus#job-shadowing'],
+    ],
   },
   [Destinations.DUBLIN]: {
     name: 'dublin',
     mainImageSrc: dublin_bg.src,
     mapComponent: <EuropeMapDublin className={iconClassNames} />,
     sampleImages: [dublin_1_bg.src, dublin_2_bg.src],
-    servicesAvailable: ['work-experience', 'job-shadowing', 'language-courses'],
+    servicesAvailable: [
+      ['work-experience', '/services/erasmus#work-experience'],
+      ['job-shadowing', '/services/erasmus#job-shadowing'],
+      ['language-courses', '/services/language-courses'],
+    ],
   },
   [Destinations.GHENT]: {
     name: 'ghent',
     mainImageSrc: ghent_bg.src,
     mapComponent: <EuropeMapGhent className={iconClassNames} />,
     sampleImages: [ghent_1_bg.src, ghent_2_bg.src],
-    servicesAvailable: ['work-experience', 'job-shadowing'],
+    servicesAvailable: [
+      ['work-experience', '/services/erasmus#work-experience'],
+      ['job-shadowing', '/services/erasmus#job-shadowing'],
+    ],
   },
 };
 
@@ -205,7 +216,7 @@ export default function Page({
           {tServices('title', { city: t('title') })}
         </Typography>
         <ul className='desktop:px-12'>
-          {servicesAvailable.map((service) => (
+          {servicesAvailable.map(([service, href]) => (
             <li
               key={service}
               className='flex items-center justify-between border-b-2 border-t-0 border-basics-disabled p-6 first-of-type:border-t-2 desktop:px-0 desktop:py-6'
@@ -213,14 +224,15 @@ export default function Page({
               <Typography as='h3' size='heading-lg' color='europe-dark'>
                 {tServices(`${service}`)}
               </Typography>
-              <button
+              <Link
+                href={href}
                 className={clsx(
                   buttonTypes({ intent: 'secondary-light' }),
                   'hidden desktop:inline-block'
                 )}
               >
                 {tServices(`see-more`)}
-              </button>
+              </Link>
               <ArrowRight className='desktop:hidden' size={32} />
             </li>
           ))}

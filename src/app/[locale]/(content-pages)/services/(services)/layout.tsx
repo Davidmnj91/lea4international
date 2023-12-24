@@ -23,7 +23,7 @@ export default function RootServicesLayout({
     <>
       <div className='flex border-b border-basics-disabled px-6 py-2.5 desktop:px-12'>
         <Link href={'/services'} className='flex items-center gap-4'>
-          <CaretLeft size={32} />
+          <CaretLeft size={32} weight='thin' />
           <Typography as='span' size='body-lg' color='europe-dark'>
             {t('back-to-services')}
           </Typography>

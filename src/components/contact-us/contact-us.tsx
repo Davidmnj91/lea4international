@@ -1,7 +1,8 @@
 import clsx from 'clsx';
 import { buttonTypes } from '@/components/button/button';
 import { useTranslations } from 'next-intl';
-import { ChatCenteredText } from '@phosphor-icons/react/dist/ssr/ChatCenteredText';
+import Link from 'next/link';
+import { ChatCircleText } from '@phosphor-icons/react/dist/ssr/ChatCircleText';
 
 export const ContactUs = () => {
   const t = useTranslations('contact-us');
@@ -9,23 +10,25 @@ export const ContactUs = () => {
   return (
     <>
       {/*Mobile version*/}
-      <button
+      <Link
+        href={'/contact/company'}
         className={clsx(
-          'fixed bottom-10 right-10 z-20 desktop:hidden',
+          'fixed bottom-10 right-6 z-20 desktop:hidden',
           buttonTypes({ intent: 'primary', type: 'icon' })
         )}
       >
-        <ChatCenteredText size={32} />
-      </button>
+        <ChatCircleText size={24} />
+      </Link>
       {/*Desktop version*/}
-      <button
+      <Link
+        href={'/contact/company'}
         className={clsx(
-          'fixed bottom-10 right-10 z-50 hidden desktop:block',
+          'fixed bottom-10 right-10 z-50 hidden desktop:flex',
           buttonTypes({ intent: 'primary' })
         )}
       >
         {t('text')}
-      </button>
+      </Link>
     </>
   );
 };

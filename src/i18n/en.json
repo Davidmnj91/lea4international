@@ -2,14 +2,14 @@
   "pages": {
     "home": "Welcome",
     "services": {
-      "main": "Our Services",
+      "main": "Services",
       "erasmus": "Erasmus+ Projects",
       "language-courses": "Englsh & Spanish courses",
       "student-exchange": "Student exchange & Immersion programs",
       "concierge": "Student concierge services"
     },
     "about-us": "About us",
-    "destinations": "Popular Destinations",
+    "destinations": "Destinations",
     "accommodations": "Accommodations",
     "faq": "FAQ",
     "contact": "Contact",
@@ -593,8 +593,8 @@
     }
   },
   "more-info": {
-    "title": "Looking For More <br></br>Information?",
-    "questions": "We are here to answer all your questions. </br></br> Contact us today!",
+    "title": "Looking For More Information?",
+    "questions": "We are here to answer all your questions. <br></br> Contact us today!",
     "more-info": "More Information",
     "request-quote": "Request A Quote",
     "host-family": "Become A Host Family",
@@ -652,7 +652,7 @@
   },
   "footer": {
     "follow-us": "Follow us on",
-    "copyright": "Copyright © 2024. Company name. All right reserved.",
+    "copyright": "Copyright © 2024. LEA 4 International. All right reserved.",
     "privacy-policy": "Privacy Policy"
   }
 }

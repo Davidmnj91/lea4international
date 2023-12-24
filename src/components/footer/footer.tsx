@@ -26,13 +26,13 @@ const MobileFooter = () => {
       </div>
       <div className='flex w-full flex-col items-center justify-center gap-2'>
         <div className='flex items-center gap-6 text-basics-white'>
-          <Envelope size={32} />
+          <Envelope size={32} weight='thin' />
           <Typography as='span' size='body-md' color='basics-white'>
             [mail]@[mail]
           </Typography>
         </div>
         <div className='flex items-center gap-6 text-basics-white'>
-          <Phone size={32} />
+          <Phone size={32} weight='thin' />
           <Typography
             as='a'
             size='body-md'
@@ -60,10 +60,10 @@ const MobileFooter = () => {
       </div>
       <div className='flex flex-col items-center justify-center gap-6'>
         <Typography as='span' size='body-sm' color='basics-white'>
-          Copyright © 2024. Company name. All right reserved.
+          {t('copyright')}
         </Typography>
         <Typography as='span' size='body-sm' color='basics-white'>
-          Privacy Policy
+          {t('privacy-policy')}
         </Typography>
       </div>
     </footer>
@@ -82,13 +82,13 @@ const DesktopFooter = () => {
           </Typography>
           <div className='flex flex-col gap-2'>
             <div className='flex items-center  gap-6 text-basics-white'>
-              <Envelope size={32} />
+              <Envelope size={32} weight='thin' />
               <Typography as='span' size='body-md' color='basics-white'>
                 [mail]@[mail]
               </Typography>
             </div>
             <div className='flex items-center  gap-6 text-basics-white'>
-              <Phone size={32} />
+              <Phone size={32} weight='thin' />
               <Typography
                 as='a'
                 size='body-md'
@@ -124,10 +124,10 @@ const DesktopFooter = () => {
       </div>
       <div className='flex w-full justify-between'>
         <Typography as='span' size='body-sm' color='basics-white'>
-          Copyright © 2024. Company name. All right reserved.
+          {t('copyright')}
         </Typography>
         <Typography as='span' size='body-sm' color='basics-white'>
-          Privacy Policy
+          {t('privacy-policy')}
         </Typography>
       </div>
     </footer>

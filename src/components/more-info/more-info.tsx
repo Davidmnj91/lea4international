@@ -9,7 +9,7 @@ export const MoreInfo = () => {
   const t = useTranslations('more-info');
 
   return (
-    <div className='flex w-full flex-col gap-9 bg-europe px-6 py-14 desktop:m-auto desktop:w-auto desktop:p-14'>
+    <div className='flex w-full flex-col gap-9 bg-europe px-6 py-14 desktop:m-auto desktop:w-[1100px] desktop:p-14'>
       <Typography
         as='h3'
         color='basics-white'
@@ -29,11 +29,16 @@ export const MoreInfo = () => {
         }}
       />
       <div className='flex w-full flex-col justify-between gap-[30px] desktop:flex-row'>
-        {['more-info', 'request-quote', 'host-family'].map((title) => (
+        {[
+          ['more-info', '/contact/company'],
+          ['request-quote', '/contact/company'],
+          ['host-family', '/contact/host-family'],
+        ].map(([title, href]) => (
           <BigButton
             key={title}
             subject={t.raw(title) as string}
             caption={t('contact-us')}
+            href={href}
           />
         ))}
       </div>
