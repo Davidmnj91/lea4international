@@ -6,6 +6,7 @@ import { Partners } from '@/components/partners/partners';
 import Link from 'next/link';
 import { servicesCardConfig } from '@/types/services';
 import { Typography } from '@/components/typography/typography';
+import { Route } from 'next';
 
 export default function Page({ params: { locale } }: LanguagePageProps) {
   // Enable static rendering
@@ -31,7 +32,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
       </div>
       <div className='mt-[-180px] flex items-center gap-4 overflow-auto p-6 desktop:mt-[-160px] desktop:justify-center desktop:overflow-hidden'>
         {Object.entries(servicesCardConfig).map(([service, imgSrc]) => (
-          <Link key={service} href={`services/${service}`}>
+          <Link key={service} href={`services/${service}` as Route}>
             <AnimatedCard
               imgSrc={imgSrc}
               title={t(`services.${service}.title`)}

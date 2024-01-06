@@ -1,23 +1,23 @@
 import React, { JSX } from 'react';
 import { AvailableServices, Destinations } from '@/types/destinations';
-import prague_main_bg from '../../../../../../public/images/destinations/prague_main_bg.png';
-import prague_1_bg from '../../../../../../public/images/destinations/prague_1_bg.png';
-import prague_2_bg from '../../../../../../public/images/destinations/prague_2_bg.png';
-import madrid_bg from '../../../../../../public/images/destinations/madrid_bg.png';
-import madrid_1_bg from '../../../../../../public/images/destinations/madrid_1_bg.png';
-import madrid_2_bg from '../../../../../../public/images/destinations/madrid_2_bg.png';
-import malaga_bg from '../../../../../../public/images/destinations/malaga_bg.png';
-import malaga_1_bg from '../../../../../../public/images/destinations/malaga_1_bg.png';
-import malaga_2_bg from '../../../../../../public/images/destinations/malaga_2_bg.png';
-import krakow_bg from '../../../../../../public/images/destinations/krakow_bg.png';
-import krakow_1_bg from '../../../../../../public/images/destinations/krakow_1_bg.png';
-import krakow_2_bg from '../../../../../../public/images/destinations/krakow_2_bg.png';
-import dublin_bg from '../../../../../../public/images/destinations/dublin_bg.png';
-import dublin_1_bg from '../../../../../../public/images/destinations/dublin_1_bg.png';
-import dublin_2_bg from '../../../../../../public/images/destinations/dublin_2_bg.png';
-import ghent_bg from '../../../../../../public/images/destinations/ghent_bg.png';
-import ghent_1_bg from '../../../../../../public/images/destinations/ghent_1_bg.png';
-import ghent_2_bg from '../../../../../../public/images/destinations/ghent_2_bg.png';
+import prague_main_bg from '../../../../../../public/images/destinations/prague_main_bg.webp';
+import prague_1_bg from '../../../../../../public/images/destinations/prague_1_bg.webp';
+import prague_2_bg from '../../../../../../public/images/destinations/prague_2_bg.webp';
+import madrid_bg from '../../../../../../public/images/destinations/madrid_bg.webp';
+import madrid_1_bg from '../../../../../../public/images/destinations/madrid_1_bg.webp';
+import madrid_2_bg from '../../../../../../public/images/destinations/madrid_2_bg.webp';
+import malaga_bg from '../../../../../../public/images/destinations/malaga_bg.webp';
+import malaga_1_bg from '../../../../../../public/images/destinations/malaga_1_bg.webp';
+import malaga_2_bg from '../../../../../../public/images/destinations/malaga_2_bg.webp';
+import krakow_bg from '../../../../../../public/images/destinations/krakow_bg.webp';
+import krakow_1_bg from '../../../../../../public/images/destinations/krakow_1_bg.webp';
+import krakow_2_bg from '../../../../../../public/images/destinations/krakow_2_bg.webp';
+import dublin_bg from '../../../../../../public/images/destinations/dublin_bg.webp';
+import dublin_1_bg from '../../../../../../public/images/destinations/dublin_1_bg.webp';
+import dublin_2_bg from '../../../../../../public/images/destinations/dublin_2_bg.webp';
+import ghent_bg from '../../../../../../public/images/destinations/ghent_bg.webp';
+import ghent_1_bg from '../../../../../../public/images/destinations/ghent_1_bg.webp';
+import ghent_2_bg from '../../../../../../public/images/destinations/ghent_2_bg.webp';
 import { EuropeMapPrague } from '@/components/maps/prague';
 import { EuropeMapMadrid } from '@/components/maps/madrid';
 import { EuropeMapMalaga } from '@/components/maps/malaga';
@@ -35,6 +35,7 @@ import { notFound } from 'next/navigation';
 import { Typography } from '@/components/typography/typography';
 import { EuropeMapGhent } from '@/components/maps/ghent';
 import Link from 'next/link';
+import { Route } from 'next';
 
 export const dynamicParams = false;
 
@@ -225,7 +226,7 @@ export default function Page({
                 {tServices(`${service}`)}
               </Typography>
               <Link
-                href={href}
+                href={href as Route}
                 className={clsx(
                   buttonTypes({ intent: 'secondary-light' }),
                   'hidden desktop:inline-block'

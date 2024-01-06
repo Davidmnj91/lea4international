@@ -1,7 +1,7 @@
 import { LanguagePageProps } from '@/i18n';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
-import concierge_services_bg from '../../../../../../../public/images/services/concierge/concierge_services_bg.png';
+import concierge_services_bg from '../../../../../../../public/images/services/concierge/concierge_services_bg.webp';
 import { AirplaneTilt } from '@phosphor-icons/react/dist/ssr/AirplaneTilt';
 import { FirstAidKit } from '@phosphor-icons/react/dist/ssr/FirstAidKit';
 import { Globe } from '@phosphor-icons/react/dist/ssr/Globe';

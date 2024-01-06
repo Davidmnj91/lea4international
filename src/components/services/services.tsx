@@ -3,6 +3,7 @@ import { servicesCardConfig, ServicesCategories } from '@/types/services';
 import Link from 'next/link';
 import { AnimatedCard } from '@/components/destination-card/animated-card';
 import { Typography } from '@/components/typography/typography';
+import { Route } from 'next';
 
 type OtherServicesProps = {
   services: Array<ServicesCategories>;
@@ -32,7 +33,7 @@ export const OtherServices = ({ services }: OtherServicesProps) => {
             services.includes(service as ServicesCategories)
           )
           .map(([service, imgSrc]) => (
-            <Link key={service} href={service}>
+            <Link key={service} href={service as Route}>
               <AnimatedCard
                 imgSrc={imgSrc}
                 title={t(`${service}.title`)}

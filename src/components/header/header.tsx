@@ -12,6 +12,7 @@ import {
   typographyClasses,
 } from '@/components/typography/typography';
 import clsx from 'clsx';
+import { Route } from 'next';
 
 export const MobileMenu = ({
   onStateChange,
@@ -55,7 +56,7 @@ export const MobileMenu = ({
                   <LocaleSwitcher />
                   <Link
                     className={fullClassName}
-                    href={`/`}
+                    href={`/` as Route}
                     onClick={() => close()}
                   >
                     {t('home')}

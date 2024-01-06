@@ -9,10 +9,10 @@ import { MagnifyingGlassPlus } from '@phosphor-icons/react/dist/ssr/MagnifyingGl
 import Link from 'next/link';
 import { tagButtonTypes } from '@/components/button/button';
 import { ServiceItem } from '@/components/service-item/service-item';
-import english_courses_bg from '../../../../../../../public/images/services/language-courses/english_courses_bg.png';
-import business_english_courses_bg from '../../../../../../../public/images/services/language-courses/business_english_courses_bg.png';
-import spanish_courses_bg from '../../../../../../../public/images/services/language-courses/spanish_courses_bg.png';
-import business_spanish_courses_bg from '../../../../../../../public/images/services/language-courses/business_spanish_courses_bg.png';
+import english_courses_bg from '../../../../../../../public/images/services/language-courses/english_courses_bg.webp';
+import business_english_courses_bg from '../../../../../../../public/images/services/language-courses/business_english_courses_bg.webp';
+import spanish_courses_bg from '../../../../../../../public/images/services/language-courses/spanish_courses_bg.webp';
+import business_spanish_courses_bg from '../../../../../../../public/images/services/language-courses/business_spanish_courses_bg.webp';
 import clsx from 'clsx';
 import { Typography } from '@/components/typography/typography';
 

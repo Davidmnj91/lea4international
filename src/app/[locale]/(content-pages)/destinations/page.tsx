@@ -3,13 +3,14 @@ import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import { AnimatedCard } from '@/components/destination-card/animated-card';
-import prague_bg from '../../../../../public/images/destinations/prague_bg.png';
-import madrid_bg from '../../../../../public/images/destinations/madrid_bg.png';
-import malaga_bg from '../../../../../public/images/destinations/malaga_bg.png';
-import krakow_bg from '../../../../../public/images/destinations/krakow_bg.png';
-import dublin_bg from '../../../../../public/images/destinations/dublin_bg.png';
-import ghent_bg from '../../../../../public/images/destinations/ghent_bg.png';
+import prague_bg from '../../../../../public/images/destinations/prague_bg.webp';
+import madrid_bg from '../../../../../public/images/destinations/madrid_bg.webp';
+import malaga_bg from '../../../../../public/images/destinations/malaga_bg.webp';
+import krakow_bg from '../../../../../public/images/destinations/krakow_bg.webp';
+import dublin_bg from '../../../../../public/images/destinations/dublin_bg.webp';
+import ghent_bg from '../../../../../public/images/destinations/ghent_bg.webp';
 import { Typography } from '@/components/typography/typography';
+import { Route } from 'next';
 
 export default function Page({ params: { locale } }: LanguagePageProps) {
   // Enable static rendering
@@ -44,7 +45,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
       </div>
       <div className='mt-[-160px] flex flex-wrap items-center justify-center gap-4 overflow-auto p-6 desktop:mt-[-160px] desktop:overflow-hidden'>
         {Object.entries(destinations).map(([destination, imgSrc]) => (
-          <Link key={destination} href={`destinations/${destination}`}>
+          <Link key={destination} href={`destinations/${destination}` as Route}>
             <AnimatedCard
               imgSrc={imgSrc}
               title={t(`destinations.${destination}.title`)}

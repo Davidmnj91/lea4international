@@ -5,10 +5,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const domain = process.env.APP_DOMAIN;
   const pages = [
     { path: '', priority: 1 },
-    { path: 'about', priority: 0.5 },
-    { path: 'contact', priority: 0.5 },
-    { path: 'destinations', priority: 0.5 },
     { path: 'services', priority: 0.5 },
+    { path: 'services/erasmus', priority: 0.5 },
+    { path: 'services/language-courses', priority: 0.5 },
+    { path: 'services/student-exchange', priority: 0.5 },
+    { path: 'services/concierge', priority: 0.5 },
+    { path: 'about-us', priority: 0.5 },
+    { path: 'destinations', priority: 0.5 },
+    { path: 'destinations/prague', priority: 0.5 },
+    { path: 'destinations/madrid', priority: 0.5 },
+    { path: 'destinations/malaga', priority: 0.5 },
+    { path: 'destinations/krakow', priority: 0.5 },
+    { path: 'destinations/dublin', priority: 0.5 },
+    { path: 'destinations/ghent', priority: 0.5 },
+    { path: 'accommodations', priority: 0.5 },
+    { path: 'faq', priority: 0.5 },
+    { path: 'contact', priority: 0.5 },
   ];
 
   return languages.flatMap((lang) =>
