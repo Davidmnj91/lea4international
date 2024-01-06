@@ -1,9 +1,9 @@
 import { LanguagePageProps } from '@/i18n';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
-import lucia_bg from '../../../../../public/images/partners/lucia_bg.png';
-import my_abroad_ally_owner from '../../../../../public/images/partners/my_abroad_ally_owner.png';
-import my_abroad_ally_logo from '../../../../../public/images/partners/my_abroad_ally_logo.png';
+import lucia_bg from '../../../../../public/images/partners/lucia_bg.webp';
+import my_abroad_ally_owner from '../../../../../public/images/partners/my_abroad_ally_owner.webp';
+import my_abroad_ally_logo from '../../../../../public/images/partners/my_abroad_ally_logo.webp';
 import Image from 'next/image';
 import { tagButtonTypes } from '@/components/button/button';
 import { Eye } from '@phosphor-icons/react/dist/ssr/Eye';

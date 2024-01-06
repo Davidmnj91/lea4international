@@ -6,12 +6,13 @@ import { buttonTypes } from '@/components/button/button';
 import Link from 'next/link';
 import { AnimatedCard } from '@/components/destination-card/animated-card';
 import React from 'react';
-import prague_bg from '../../../public/images/destinations/prague_bg.png';
-import madrid_bg from '../../../public/images/destinations/madrid_bg.png';
-import malaga_bg from '../../../public/images/destinations/malaga_bg.png';
-import krakow_bg from '../../../public/images/destinations/krakow_bg.png';
-import dublin_bg from '../../../public/images/destinations/dublin_bg.png';
-import ghent_bg from '../../../public/images/destinations/ghent_bg.png';
+import prague_bg from '../../../public/images/destinations/prague_bg.webp';
+import madrid_bg from '../../../public/images/destinations/madrid_bg.webp';
+import malaga_bg from '../../../public/images/destinations/malaga_bg.webp';
+import krakow_bg from '../../../public/images/destinations/krakow_bg.webp';
+import dublin_bg from '../../../public/images/destinations/dublin_bg.webp';
+import ghent_bg from '../../../public/images/destinations/ghent_bg.webp';
+import { Route } from 'next';
 
 export const TopDestinations = ({
   destinations,
@@ -57,7 +58,10 @@ export const TopDestinations = ({
             destinations.includes(destination as Destinations)
           )
           .map(([destination, imgSrc]) => (
-            <Link key={destination} href={`destinations/${destination}`}>
+            <Link
+              key={destination}
+              href={`destinations/${destination}` as Route}
+            >
               <AnimatedCard
                 imgSrc={imgSrc}
                 title={t(`destinations.${destination}.title`)}

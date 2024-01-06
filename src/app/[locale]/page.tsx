@@ -1,10 +1,10 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import prague_main_bg from '../../../public/images/destinations/prague_main_bg.png';
-import who_we_are_bg from '../../../public/images/home/who_we_are_bg.png';
-import our_beliefs_bg from '../../../public/images/home/our_beliefs_bg.png';
-import our_commitment_bg from '../../../public/images/home/our_commitment_bg.png';
+import prague_main_bg from '../../../public/images/destinations/prague_main_bg.webp';
+import who_we_are_bg from '../../../public/images/home/who_we_are_bg.webp';
+import our_beliefs_bg from '../../../public/images/home/our_beliefs_bg.webp';
+import our_commitment_bg from '../../../public/images/home/our_commitment_bg.webp';
 import { buttonTypes, tagButtonTypes } from '@/components/button/button';
 import clsx from 'clsx';
 import { CommitmentsCarousel } from '@/components/commitments-carousel/commitments-carousel';

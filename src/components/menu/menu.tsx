@@ -2,6 +2,7 @@ import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import clsx from 'clsx';
 import { typographyClasses } from '@/components/typography/typography';
+import { Route } from 'next';
 
 type MenuProps = {
   itemClassNames?: string;
@@ -17,7 +18,7 @@ export const Menu = ({ itemClassNames }: MenuProps) => {
 
   return (
     <>
-      <Link className={fullClassName} href={`/`}>
+      <Link className={fullClassName} href={`/` as Route}>
         {t('home')}
       </Link>
       <Link className={fullClassName} href={`/services`}>
