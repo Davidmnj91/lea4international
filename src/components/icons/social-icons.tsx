@@ -40,12 +40,7 @@ export const FacebookIcon = ({ size }: IconProps) => {
 
 export const LinkedinIcon = ({ size }: IconProps) => {
   return (
-    <svg
-      width={`${size}px`}
-      height={`${size}px`}
-      viewBox={`0 0 ${size} ${size}`}
-      version='1.1'
-    >
+    <svg width={size} height={size} viewBox='0 0 24 24' version='1.1'>
       <title>linkedin_line</title>
       <g
         id='页面-1'
@@ -79,12 +74,7 @@ export const LinkedinIcon = ({ size }: IconProps) => {
 
 export const TwitterIcon = ({ size }: IconProps) => {
   return (
-    <svg
-      width={`${size}px`}
-      height={`${size}px`}
-      viewBox={`0 0 ${size} ${size}`}
-      version='1.1'
-    >
+    <svg width={size} height={size} viewBox='0 0 24 24' version='1.1'>
       <title>social_x_line</title>
       <g id='Icon' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
         <g id='Logo' transform='translate(-48.000000, -288.000000)'>

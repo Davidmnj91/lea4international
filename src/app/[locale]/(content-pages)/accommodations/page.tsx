@@ -43,20 +43,18 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
           {t('title')}
         </Typography>
       </div>
-      <section id='accommodations' className='sticky top-20'>
-        <div className='flex items-center gap-6 overflow-auto border-y border-y-basics-disabled bg-basics-white px-6 py-6 desktop:justify-center desktop:overflow-hidden desktop:px-12'>
-          {Object.keys(accommodations).map((accommodation) => (
-            <Link
-              href={`#${accommodation}`}
-              scroll={true}
-              key={accommodation}
-              className={tagButtonTypes()}
-            >
-              {t(`accommodations.${accommodation}.title`)}
-            </Link>
-          ))}
-        </div>
-      </section>
+      <div className='sticky top-[80px] z-20 flex items-center gap-6 overflow-auto border-y border-y-basics-disabled bg-basics-white px-6 py-6 desktop:justify-center desktop:overflow-hidden desktop:px-12'>
+        {Object.keys(accommodations).map((accommodation) => (
+          <Link
+            href={`#${accommodation}`}
+            scroll={true}
+            key={accommodation}
+            className={tagButtonTypes()}
+          >
+            {t(`accommodations.${accommodation}.title`)}
+          </Link>
+        ))}
+      </div>
       <div className='flex items-center justify-center p-6 desktop:px-12 desktop:py-24'>
         <Typography
           as='h2'
@@ -68,7 +66,11 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
         </Typography>
       </div>
       {Object.entries(accommodations).map(([accommodation, imgSrc], index) => (
-        <section key={accommodation} id={accommodation}>
+        <section
+          key={accommodation}
+          id={accommodation}
+          className='scroll-mt-[164px]'
+        >
           <div className='mb-6 flex items-center justify-center desktop:mb-14'>
             <div className='flex bg-basics-gray p-6 desktop:max-w-[1200px]'>
               <div
@@ -81,7 +83,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
               >
                 <div
                   className={clsx(
-                    'h-[189px] w-full bg-cover bg-center bg-no-repeat desktop:mb-0 desktop:h-[427px] desktop:w-[675px]',
+                    'h-[189px] w-full bg-contain bg-center bg-no-repeat desktop:mb-0 desktop:h-[427px] desktop:w-[675px]',
                     index % 2 === 0
                       ? 'desktop:ml-[-100px]'
                       : 'desktop:mr-[-100px]'

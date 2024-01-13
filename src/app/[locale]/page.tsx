@@ -14,7 +14,7 @@ import { Subset } from '@/types/types';
 import { Partners } from '@/components/partners/partners';
 import { Menu } from '@/components/menu/menu';
 import LocaleSwitcher from '@/components/locale-switcher/locale-switcher';
-import React, { Fragment, useRef, useState } from 'react';
+import React, { Fragment, useCallback, useRef, useState } from 'react';
 import { motion, useInView, Variants } from 'framer-motion';
 import { MoreInfo } from '@/components/more-info/more-info';
 import { Typography } from '@/components/typography/typography';
@@ -23,6 +23,7 @@ import { TopDestinations } from '@/components/top-destinations/top-destinations'
 import { Destinations } from '@/types/destinations';
 import Link from 'next/link';
 import { Contact } from '@/types/contact';
+import { FullLogo } from '@/components/logo/fullLogo';
 
 const FaqsHome: Subset<typeof Faqs> = {
   [FAQCategories.erasmus]: [
@@ -52,11 +53,15 @@ export default function HomePage() {
     },
   };
 
-  const handleMenuOpen = (open: boolean) => {
-    if (menuOpen !== open && ref.current) {
-      setMenuOpen(open);
-    }
-  };
+  const handleMenuOpen = useCallback(
+    (open: boolean) => {
+      if (menuOpen !== open && ref.current) {
+        setMenuOpen(open);
+        document.body.style.overflow = open ? 'hidden' : 'auto';
+      }
+    },
+    [menuOpen]
+  );
 
   return (
     <>
@@ -65,9 +70,7 @@ export default function HomePage() {
         animate={inView && !menuOpen ? 'transparent' : 'opaque'}
         className='sticky top-0 z-50 flex h-[80px] items-center justify-between px-6 py-2.5 desktop:p-10'
       >
-        <Typography as='h1' size='body-2xl' color='basics-white'>
-          LOGO
-        </Typography>
+        <FullLogo width={129} height={50} />
         <div className='desktop:hidden'>
           <MobileMenu onStateChange={handleMenuOpen} />
         </div>
@@ -120,9 +123,9 @@ export default function HomePage() {
           <div className='mt-[36px]'>
             <Typography
               as='h2'
-              size='body-xl'
+              size='body-md'
               color='basics-white'
-              className='max-w-[840px] text-center'
+              className='max-w-[336px] text-center desktop:max-w-[840px]'
             >
               {t('slogan')}
             </Typography>

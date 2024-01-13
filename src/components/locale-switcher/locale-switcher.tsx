@@ -45,12 +45,12 @@ export default function LocaleSwitcher() {
           leaveFrom='transform opacity-100 scale-100'
           leaveTo='transform opacity-0 scale-95'
         >
-          <Menu.Items className='absolute right-0 mt-12 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none'>
-            <div className='p-2'>
+          <Menu.Items className='absolute left-0 mt-12 origin-top-left divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none desktop:left-auto desktop:right-0 desktop:origin-top-right'>
+            <div className='relative p-2'>
               {languageOptions.map(({ language, icon }) => (
                 <Menu.Item key={language}>
                   <button
-                    className='group flex w-full items-center gap-2 rounded-md bg-basics-white px-2 py-2 text-b-sm text-europe-dark hover:bg-basics-gray'
+                    className='text-b-sm group flex w-full items-center gap-2 rounded-md bg-basics-white px-2 py-2 text-europe-dark hover:bg-basics-gray'
                     onClick={() => changeLanguage(language)}
                   >
                     {icon}
