@@ -20,16 +20,13 @@ export const Partners = () => {
           width={144}
           style={{ width: '144px', height: 'auto' }}
         />
-        {Array.from(Array(4).keys()).map((index) => (
-          <Image
-            key={index}
-            src={erasmus_plus_logo.src}
-            alt={'Erasmus+'}
-            width={144}
-            height={60}
-            style={{ width: '144px', height: 'auto' }}
-          />
-        ))}
+        <Image
+          src={erasmus_plus_logo.src}
+          alt={'Erasmus+'}
+          width={144}
+          height={60}
+          style={{ width: '144px', height: 'auto' }}
+        />
       </div>
     </div>
   );
