@@ -21,13 +21,25 @@ export const FaqList = ({ faqKey }: FaqProps) => {
               size='heading-lg'
               color='europe-dark'
               className='flex-grow-0 text-left'
+              itemProp='name'
             >
               {t(`${faqKey}.title`)}
             </Typography>
             <div>{open ? <Minus size={32} /> : <Plus size={32} />}</div>
           </Disclosure.Button>
-          <Disclosure.Panel className='mt-4'>
-            <Typography as='p' size='body-lg' color='europe' weight='light'>
+          <Disclosure.Panel
+            className='mt-4'
+            itemScope
+            itemProp='acceptedAnswer'
+            itemType='https://schema.org/Answer'
+          >
+            <Typography
+              as='p'
+              size='body-lg'
+              color='europe'
+              weight='light'
+              itemProp='text'
+            >
               {t(`${faqKey}.description`)}
             </Typography>
           </Disclosure.Panel>
