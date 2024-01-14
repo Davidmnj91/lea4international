@@ -43,9 +43,8 @@ export default function RootLayout({
     dateModified: '2024-01-11T11:35:00+07:00',
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Paris, France',
-      postalCode: 'F-75002',
-      streetAddress: "38 avenue de l'Opera",
+      addressLocality: 'Valladoliz, Spain',
+      postalCode: 'F47007',
     },
     email: Contact.mail,
     telephone: Contact.phone,
