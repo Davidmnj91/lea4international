@@ -1,18 +1,15 @@
 'use client';
 
 import LocaleSwitcher from '@/components/locale-switcher/locale-switcher';
-import React, { Fragment } from 'react';
+import React, { Fragment, useCallback } from 'react';
 import { Popover, Transition } from '@headlessui/react';
 import { ArrowDown, CaretRight, List, X } from '@phosphor-icons/react';
 import { Menu } from '@/components/menu/menu';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import {
-  Typography,
-  typographyClasses,
-} from '@/components/typography/typography';
+import { typographyClasses } from '@/components/typography/typography';
 import clsx from 'clsx';
-import { Route } from 'next';
+import { FullLogo } from '@/components/logo/fullLogo';
 
 export const MobileMenu = ({
   onStateChange,
@@ -27,11 +24,14 @@ export const MobileMenu = ({
     weight: 'light',
   });
 
-  const triggerCallBack = (open: boolean) => {
-    if (onStateChange) {
-      onStateChange(open);
-    }
-  };
+  const triggerCallBack = useCallback(
+    (open: boolean) => {
+      if (onStateChange) {
+        onStateChange(open);
+      }
+    },
+    [onStateChange]
+  );
 
   return (
     <Popover>
@@ -54,13 +54,6 @@ export const MobileMenu = ({
               <Popover.Panel className='absolute left-0 top-[80px] z-50 flex h-[calc(100vh-80px)] w-full transform flex-col'>
                 <nav className='flex h-full flex-col gap-3.5 bg-europe p-6'>
                   <LocaleSwitcher />
-                  <Link
-                    className={fullClassName}
-                    href={`/` as Route}
-                    onClick={() => close()}
-                  >
-                    {t('home')}
-                  </Link>
                   <Link
                     className={`flex items-center gap-2 ${fullClassName}`}
                     href={`/services`}
@@ -153,9 +146,9 @@ export const MobileMenu = ({
 export const Header = () => {
   return (
     <header className='sticky top-0 z-50 flex h-[80px] items-center justify-between bg-europe px-6 py-2.5 desktop:p-10'>
-      <Typography as='h1' size='body-2xl' color='basics-white'>
-        LOGO
-      </Typography>
+      <Link href='/'>
+        <FullLogo width={129} height={50} />
+      </Link>
       <div className='desktop:hidden'>
         <MobileMenu />
       </div>

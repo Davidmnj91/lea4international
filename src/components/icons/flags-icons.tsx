@@ -6,7 +6,7 @@ export const SpainFlag = ({ size }: IconProps) => {
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      viewBox={`0 0 16 16`}
+      viewBox='0 0 16 16'
       fill='none'
     >
       <g clipPath='url(#clip0_1289_2554)'>
@@ -38,7 +38,7 @@ export const EnglandFlag = ({ size }: IconProps) => {
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      viewBox={`0 0 16 16`}
+      viewBox='0 0 16 16'
       fill='none'
     >
       <g clipPath='url(#clip0_1289_2511)'>

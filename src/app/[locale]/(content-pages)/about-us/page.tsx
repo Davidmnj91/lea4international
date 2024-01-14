@@ -50,13 +50,13 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
       </div>
       <div className='flex flex-col items-center justify-center gap-14 p-6 desktop:flex-row desktop:p-24'>
         <div
-          className='relative flex h-[272px] w-full flex-col items-end bg-contain bg-center bg-no-repeat desktop:h-[346px] desktop:w-[422px] '
+          className='relative flex h-[272px] w-full flex-col items-end bg-contain bg-center bg-no-repeat desktop:h-[346px] desktop:w-[422px] desktop:bg-cover '
           style={{ backgroundImage: `url(${lucia_bg.src}` }}
         >
           <span
             className={clsx(
               tagButtonTypes({ intent: 'selected' }),
-              'absolute left-[50%] ml-10 mt-5 flex-grow-0 translate-x-1/2'
+              'absolute left-1/2 ml-10 mt-5 flex-grow-0 translate-x-1/2 desktop:left-auto desktop:right-12 desktop:ml-auto'
             )}
           >
             {t('role.director')}

@@ -72,7 +72,7 @@ export default function RootDestinationsLayout({
             color='europe-dark'
             href={`mailto:${Contact.mail}`}
           >
-            [mail]@[mail]
+            {Contact.mail}
           </Typography>
         </div>
         <div className='flex items-center justify-center gap-6'>

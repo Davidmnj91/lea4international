@@ -16,7 +16,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
   const t = useTranslations('faq-page');
 
   return (
-    <div>
+    <div itemScope itemType='https://schema.org/FAQPage'>
       <div>
         <div className='flex items-center justify-center py-14 desktop:py-24'>
           <Typography
@@ -56,6 +56,9 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
               <div
                 key={faq}
                 className='border-b-2 border-t-0 border-basics-disabled px-12 py-6 first-of-type:border-t-2'
+                itemScope
+                itemProp='mainEntity'
+                itemType='https://schema.org/Question'
               >
                 <FaqList key={faq} faqKey={`${category}.${faq}`} />
               </div>

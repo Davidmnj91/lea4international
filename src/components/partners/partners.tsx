@@ -1,5 +1,8 @@
 import { useTranslations } from 'next-intl';
 import { Typography } from '@/components/typography/typography';
+import Image from 'next/image';
+import erasmus_plus_logo from '../../../public/images/partners/erasmus_plus_logo.webp';
+import impronta_logo from '../../../public/images/partners/impronta_logo.webp';
 
 export const Partners = () => {
   const t = useTranslations('our-partners');
@@ -9,12 +12,21 @@ export const Partners = () => {
       <Typography as='h2' size='heading-2xl' color='europe-dark'>
         {t('title')}
       </Typography>
-      <div className='flex w-full flex-wrap justify-center gap-14'>
-        {Array.from(Array(5).keys()).map((index) => (
-          <Typography key={index} as='span' size='body-xl' color='europe'>
-            {t('partners.name')}
-          </Typography>
-        ))}
+      <div className='flex w-full flex-wrap items-center justify-center gap-14'>
+        <Image
+          src={impronta_logo.src}
+          alt={'Impronta'}
+          height={60}
+          width={144}
+          style={{ width: '144px', height: 'auto' }}
+        />
+        <Image
+          src={erasmus_plus_logo.src}
+          alt={'Erasmus+'}
+          width={144}
+          height={60}
+          style={{ width: '144px', height: 'auto' }}
+        />
       </div>
     </div>
   );
