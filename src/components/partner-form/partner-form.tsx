@@ -137,6 +137,23 @@ export const PartnerForm = () => {
             message={t('input.email.error')}
           />
         </div>
+        <div>
+          <label htmlFor='projectDescription' className={labelStyles}>
+            {t('input.projectDescription.label')}
+          </label>
+          <textarea
+            id='projectDescription'
+            rows={9}
+            {...register('projectDescription', { required: true })}
+            className={clsx('h-[250px]', inputStyles)}
+            placeholder={t('input.projectDescription.placeholder')}
+          />
+          <ErrorField
+            name='projectDescription'
+            errors={errors}
+            message={t('input.projectDescription.error')}
+          />
+        </div>
         <div className='flex flex-col'>
           <div className='flex items-center gap-4'>
             <input

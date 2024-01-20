@@ -13,6 +13,11 @@ import { RoadHorizon } from '@phosphor-icons/react/dist/ssr/RoadHorizon';
 import { Train } from '@phosphor-icons/react/dist/ssr/Train';
 import { Bank } from '@phosphor-icons/react/dist/ssr/Bank';
 import { Typography } from '@/components/typography/typography';
+import {
+  InformationCategories,
+  MoreInfo,
+} from '@/components/more-info/more-info';
+import React from 'react';
 
 export default function Page({ params: { locale } }: LanguagePageProps) {
   // Enable static rendering
@@ -117,6 +122,14 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
           </div>
         </section>
       ))}
+      <section id='more-info'>
+        <div className='desktop:py-14'>
+          <MoreInfo
+            informationCategories={[InformationCategories.MORE_INFO]}
+            className='desktop:max-w-[576px]'
+          />
+        </div>
+      </section>
     </div>
   );
 }

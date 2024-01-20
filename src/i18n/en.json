@@ -66,7 +66,7 @@
       "back-to-services": "Back to our services",
       "other-services": {
         "title": "Other services",
-        "description": "Select & discover from our services to learn <br>more about them.</br>"
+        "description": "Select & discover from our services to learn <br></br>more about them."
       },
       "erasmus": {
         "title": "Erasmus+ Projects",
@@ -75,7 +75,7 @@
           "work-experience": {
             "title": "Work Experience",
             "description": "Erasmus+ can help you gain valuable work experience abroad. By participating in the Erasmus+ traineeship program you will improve your interpersonal and foreign language skills, and you will develop intercultural skills that will help you find a job after your studies. Erasmus+ supports work placements or study periods abroad for students currently enrolled in vocational education and training (VET) and for recent graduates.",
-            "with": "Work <br>experience</br> <br>with</br> <br>LEA 4 Int.</br>",
+            "with": "Work <br></br>experience <br></br>with <br></br>LEA 4 Int.",
             "message": "At LEA 4 International we offer a variety of professional sectors in which you can do your internship experience. We know how important it is to gain some professional work experience that is why we offer high quality internships tailored to every individual. <br></br><br></br> We have a team of experts that will review and study your CV and motivational letter to match you with the right company. You will get support through the interviewing process, you will get a supervisor assigned to you to monitor your performance and make sure you achieve the best results. <br></br><br></br> We will provide you with the learning agreement and all the help you need before and during your internship.",
             "we-offer": {
               "title": "Find out what professional sector we offer",
@@ -101,19 +101,19 @@
           "job-shadowing": {
             "title": "Job Shadowing",
             "description": "Job shadowing programmes offer participants the chance to spend a period of time at a hosting organization in another country. The aim of this program is to learn new practices and gather new ideas through observation and interaction with peers, experts or other practitioners in their daily work at the hosting organization.<br></br>Eligible participants include teachers, trainers, and all other non-teaching experts and staff in adult education.<br></br>Eligible non-teaching staff includes staff working in adult education, either in adult education providers or in other organizations active in adult education.",
-            "with": "Job <br>shadowing</br> <br>with</br> <br>LEA 4 Int.</br>",
+            "with": "Job <br></br>shadowing <br></br>with <br></br>LEA 4 Int.",
             "message": "At LEA 4 International we collaborate with a large number of hosting schools that have been carefully selected, these schools include primary, secondary and high schools. Additionally we collaborate with technical and vocational schools and schools with special needs.<br></br>There are different topics to choose for job shadowing, including but not limited to, inclusion, diversity, digitization in schools, teaching sustainability, promoting STEM.<br></br>By the end of the job shadowing programme participants get exposed to several teaching practices focused on the chosen topics.<br></br>The participants acquire new teaching techniques, and discover resources that they can apply to their teaching methodologies.<br></br>At LEA 4 International we also provide the sending organizations with the necessary learning agreement."
           },
           "school-exchange": {
             "title": "School Exchange",
             "description": "School exchange allows a group of pupils from different countries to spend time learning together with your peers in another country. Teachers or other authorized persons from the sending school will accompany you for the entire duration of the activity. A group mobility of school pupils can last up to 1 month. This excludes traveling time.",
-            "with": "School <br>Exchange</br> <br>with</br> <br>LEA 4 Int.</br>",
+            "with": "School <br></br>Exchange <br></br>with <br></br>LEA 4 Int.",
             "message": "At LEA 4 International we collaborate with a large number of hosting schools for school exchange that have been carefully selected, these schools include primary, secondary and high schools. School Exchange is a great opportunity for the foreign students to do a wide range of activities that include country presentations, cultural workshops or language sessions with local students.<br></br>At LEA 4 International we also provide logistic and local support through the school exchange program."
           },
           "erasmus-mundus": {
             "title": "Erasmus Mundus",
             "description": "This action aims at fostering excellence and worldwide internationalization of higher education institutions via study programmes – at Master course level – jointly delivered and jointly recognised by higher education institutions (HEIs) established in Europe, and open to institutions in other countries of the world.",
-            "with": "Erasmus <br>Mundus</br> <br>with</br> <br>LEA 4 Int.</br>",
+            "with": "Erasmus <br></br>Mundus <br></br>with <br></br>LEA 4 Int.",
             "message": "We know the challenges of finding a new home abroad as an international students, at LEA 4 International we help international students to find accommodation that meets your expectations and it is suitable with your budget. We assist international students with questions, general advice. We provide support and useful information to international students by organizing Pre-Departure Orientation seminars."
           },
           "KA-2": {
@@ -159,7 +159,7 @@
             "description": "Do you feel like you lack confidence and vocabulary when you have to speak English at your workplace?<br></br><br></br>Then this is the right course for you.",
             "we-offer": {
               "focus": {
-                "title": "During this course our English teachers will <br>focus on:</br>",
+                "title": "During this course our English teachers will <br></br>focus on:",
                 "description": "<li>Eliminate any grammatical or pronunciation mistakes.</li><li>Giving you real life scenarios at the workplace to practice conversation.</li><li>Expanding your business vocabulary.</li><li>Writing business reports and memos.</li>"
               },
               "help": {
@@ -177,7 +177,7 @@
             "description": "Conversational Spanish Course<br></br>Have you spent years learning Spanish at school but still lack fluency and confidence to speak Spanish?<br></br><br></br>Then this is the right course for you",
             "we-offer": {
               "focus": {
-                "title": "During this course our Spanish teachers will <br>focus on:</br>",
+                "title": "During this course our Spanish teachers will <br></br>focus on:",
                 "description": "<li>Identify your spoken difficulties and pronunciation challenges.</li><li>Eliminate any grammatical or pronunciation mistakes.</li><li>Giving you topics to practice conversation.</li><li>Expanding your vocabulary, teaching you common phrases.</li>"
               },
               "help": {
@@ -195,7 +195,7 @@
             "description": "Do you feel like you lack confidence and vocabulary when you have to speak Spanish at your workplace?<br></br><br></br>Then this is the right course for you.",
             "we-offer": {
               "focus": {
-                "title": "During this course our Spanish teachers will <br>focus on:</br>",
+                "title": "During this course our Spanish teachers will <br></br>focus on:",
                 "description": "<li>Identify your spoken difficulties and pronunciation challenges.</li><li>Eliminate any grammatical or pronunciation mistakes.</li><li>Giving you topics to practice conversation.</li><li>Expanding your vocabulary, teaching you common phrases.</li>"
               },
               "help": {
@@ -210,12 +210,36 @@
           },
           "ai-trainings": {
             "title": "AI Trainings",
-            "description": "Artificial Intelligence (AI) can be defined as the intelligence of machines or software. It is a field of study in computer science which develops and studies intelligent machines.<br></br>AI is changing nearly every industry and will have a massive impact in the labor market and society in the upcoming years. <br><br/><br><br/> We want to help individuals and companies to enhance their understanding and knowledge of AI. We offer the following trainings",
+            "description": "Artificial Intelligence (AI) can be defined as the intelligence of machines or software. It is a field of study in computer science which develops and studies intelligent machines.<br></br>AI is reshaping nearly every industry and is poised to have a significant impact in the labor market and society in the upcoming years.<br></br><br></br>At LEA 4 International, we aim to assist individuals and companies to enhance their understanding and knowledge of AI. We offer the following trainings:"
+          },
+          "machine-learning": {
+            "title": "Machine Learning",
+            "description": "Machine learning refers to a subset of artificial intelligence (AI) that focuses on developing systems and algorithms that enable computers to learn and improve from experience. Instead of being explicitly programmed to perform a task, these systems use statistical techniques to analyze data, identify patterns, and make decisions with minimal human intervention.<br></br><br></br>Machine learning is widely used in various applications, including image and speech recognition, recommendation systems, autonomous vehicles, and many more. It has become a crucial part of modern technology, contributing to advancements in various fields."
+          },
+          "data-mining": {
+            "title": "Data Mining",
+            "description": "Data Mining is the process of discovering patterns, trends, and valuable insights from large sets of data. It involves analyzing and interpreting large amounts of data to uncover hidden patterns and relationships that can be useful for making informed business decisions, predictions, and other applications.<br></br><br></br>Data mining is applied in various industries, such as finance, healthcare, marketing, and retail, to extract meaningful information from vast datasets. It plays a crucial role in decision-making processes and business strategy development. Techniques within data mining include classification, clustering, regression analysis, association rule mining, and more."
+          },
+          "business-ia": {
+            "title": "IA For Business",
+            "description": "Artificial Intelligence (AI) has become a transformative force in the business landscape, offering innovative solutions and opportunities for efficiency, automation, and decision-making.<br></br>Here are key aspects of how AI is utilized in business:",
+            "sub-description": "Businesses embrace AI for efficiency, innovation, and staying competitive in the digital era.<br></br>The successful integration of AI in business requires thoughtful planning, ethical considerations, and ongoing monitoring. As technology advances, businesses are increasingly leveraging AI to gain a competitive edge and adapt to the evolving digital landscape.",
             "we-offer": {
-              "machine-learning": "Machine learning",
-              "data-mining": "Data Mining",
-              "ai-for-business": "AI For Business"
+              "automation": "<b>Automation:</b> Streamlines tasks, cuts costs, and boosts productivity.",
+              "data-analysis": "<b>Data Analysis:</b> Extracts insights for informed decision-making.",
+              "customer-service": "<b>Customer Service:</b> Enhances support through AI-powered chatbots.",
+              "predictive-analytics": "<b>Predictive Analytics:</b> Forecasts trends and customer behaviors.",
+              "personalization": "<b>Personalization:</b> Tailors experiences for customers.",
+              "supply-chain": "<b>Supply Chain:</b> Optimizes processes, predicts demand, and manages inventory.",
+              "fraud-detection": "<b>Fraud Detection:</b> Strengthens cybersecurity through anomaly detection.",
+              "human-resources": "<b>Human Resources:</b> Improves recruitment and talent management.",
+              "decision-support": "<b>Decision Support:</b> Provides insights for strategic planning.",
+              "nlp": "<b>NLP:</b> Enables machines to understand human language."
             }
+          },
+          "business-development": {
+            "title": "Business Development",
+            "description": "The main focus of our business development training is assisting companies to reach greater commercial success through Business Development training sessions. The typical model for this assistance is a monthly, or quarterly, session focusing on one area of Business Development training. A standard session lasts three hours and the group size of attendees is usually from 10-20 (larger and smaller groups are possible)."
           }
         }
       },
@@ -570,6 +594,11 @@
         "label": "Name of the applicant",
         "placeholder": "Enter applicant name",
         "error": "Please provide a valid name"
+      },
+      "projectDescription": {
+        "label": "Project proposal",
+        "placeholder": "Enter a description of your project",
+        "error": "Please provide a description of your project"
       }
     },
     "submit": "Send form"

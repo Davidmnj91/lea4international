@@ -59,5 +59,6 @@ export const PartnerContactSchema = z.object({
   lastname: z.string().min(1),
   applicantName: z.string().min(1),
   email: z.string().email().min(1),
+  projectDescription: z.string().min(1).max(255),
   terms: checkboxValidation,
 });
