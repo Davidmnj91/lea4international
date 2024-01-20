@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import { ErrorMessage } from '@hookform/error-message';
 import { FieldErrors } from 'react-hook-form';
 import { typographyClasses } from '@/components/typography/typography';
+import { RichTranslation } from '@/types/types';
 
 export const labelStyles = typographyClasses({
   size: 'body-md',
@@ -32,7 +33,7 @@ export const ErrorField = ({
 }: {
   name: string;
   errors: FieldErrors;
-  message: string;
+  message: RichTranslation;
 }) => {
   return (
     <ErrorMessage

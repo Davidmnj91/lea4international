@@ -21,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: 'accommodations', priority: 0.5 },
     { path: 'faq', priority: 0.5 },
     { path: 'contact', priority: 0.5 },
+    { path: 'privacy-policy', priority: 0.5 },
   ];
 
   return languages.flatMap((lang) =>

@@ -80,9 +80,16 @@ const MobileFooter = () => {
         <Typography as='span' size='body-sm' color='basics-white'>
           {t('copyright')}
         </Typography>
-        <Typography as='span' size='body-sm' color='basics-white'>
-          {t('privacy-policy')}
-        </Typography>
+        <Link href={'/privacy-policy'} target={'_blank'}>
+          <Typography
+            as='span'
+            size='body-sm'
+            color='basics-white'
+            className='underline'
+          >
+            {t('privacy-policy')}
+          </Typography>
+        </Link>
       </div>
     </footer>
   );
@@ -157,9 +164,16 @@ const DesktopFooter = () => {
         <Typography as='span' size='body-sm' color='basics-white'>
           {t('copyright')}
         </Typography>
-        <Typography as='span' size='body-sm' color='basics-white'>
-          {t('privacy-policy')}
-        </Typography>
+        <Link href={'/privacy-policy'} target={'_blank'}>
+          <Typography
+            as='span'
+            size='body-sm'
+            color='basics-white'
+            className='underline'
+          >
+            {t('privacy-policy')}
+          </Typography>
+        </Link>
       </div>
     </footer>
   );

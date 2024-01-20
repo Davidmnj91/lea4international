@@ -424,6 +424,10 @@
       "partner": "Conviertete en un compañero"
     }
   },
+  "privacy-policy-page": {
+    "title": "Politica de privacidad",
+    "content": "TODO"
+  },
   "not-found-page": {
     "back-to-home": "Vuelta a casa"
   },
@@ -503,8 +507,15 @@
         "error": "Por favor proporcione un mensaje"
       },
       "terms": {
-        "label": "Acepto reconocer que he leído y acepto las políticas de privacidad antes de enviar el formulario",
-        "error": "Debe aceptar los Términos y Condiciones"
+        "label": {
+          "first": "Acepto reconocer que he leído y acepto las ",
+          "link": "políticas de privacidad ",
+          "last": "antes de enviar el formulario"
+        },
+        "error": {
+          "first": "Debe aceptar los ",
+          "link": "Términos y Condiciones"
+        }
       },
       "city": {
         "label": "Ciudad donde vives",

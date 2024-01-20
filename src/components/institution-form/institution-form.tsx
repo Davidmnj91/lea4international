@@ -19,6 +19,7 @@ import countries from '../../../public/countries.json';
 import { z } from 'zod';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import Link from 'next/link';
 
 type InstitutionFormValues = z.infer<typeof InstitutionsContactSchema>;
 
@@ -377,13 +378,32 @@ export const InstitutionForm = () => {
                 className={checkboxStyles}
               />
               <label htmlFor='terms' className={clsx('text-b-sm', labelStyles)}>
-                {t('input.terms.label')}
+                {t('input.terms.label.first')}
+                <Link
+                  className='font-bold underline'
+                  href={'/privacy-policy'}
+                  target={'_blank'}
+                >
+                  {t('input.terms.label.link')}
+                </Link>
+                {t('input.terms.label.last')}
               </label>
             </div>
             <ErrorField
               name='terms'
               errors={errors}
-              message={t('input.terms.error')}
+              message={
+                <>
+                  {t('input.terms.error.first')}{' '}
+                  <Link
+                    className='font-bold underline'
+                    href={'/privacy-policy'}
+                    target={'_blank'}
+                  >
+                    {t('input.terms.error.link')}
+                  </Link>
+                </>
+              }
             />
           </div>
           <button

@@ -424,6 +424,10 @@
       "partner": "Become a partner"
     }
   },
+  "privacy-policy-page": {
+    "title": "Privacy Policy",
+    "content": "TODO"
+  },
   "not-found-page": {
     "back-to-home": "Back to home"
   },
@@ -503,8 +507,15 @@
         "error": "Please provide a message"
       },
       "terms": {
-        "label": "I accept to acknowledge that I have read and agree to the privacy policies before submitting the form",
-        "error": "You must accept the terms and conditions"
+        "label": {
+          "first": "I accept to acknowledge that I have read and agree to the ",
+          "link": "privacy policies",
+          "last": "before submitting the form"
+        },
+        "error": {
+          "first": "You must accept the ",
+          "link": "terms and conditions"
+        }
       },
       "city": {
         "label": "City where you live",
