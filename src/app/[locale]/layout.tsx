@@ -7,6 +7,7 @@ import { ContactUs } from '@/components/contact-us/contact-us';
 import { Footer } from '@/components/footer/footer';
 import { Contact } from '@/types/contact';
 import lea4international from '../../../public/images/lea4international.png';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 export async function generateStaticParams() {
   return languages.map((locale) => ({ locale }));
@@ -152,6 +153,7 @@ export default function RootLayout({
           <Footer />
         </NextIntlClientProvider>
       </body>
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
     </html>
   );
 }

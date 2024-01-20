@@ -1,25 +1,58 @@
-import nodemailer from 'nodemailer';
+import nodemailer, { Transporter } from 'nodemailer';
+import { google } from 'googleapis';
+import SMTPTransport from 'nodemailer/lib/smtp-transport';
 
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
-
-const transport = nodemailer.createTransport({
-  host: process.env.MAIL_HOST,
-  port: 1025,
-  secure: false,
+const transportFactory = (accessToken: string): SMTPTransport.Options => ({
+  service: 'gmail',
   auth: {
+    type: 'OAuth2',
     user: process.env.MAIL_USER,
-    pass: process.env.MAIL_PASSWORD,
+    clientId: process.env.MAIL_CLIENT_ID,
+    clientSecret: process.env.MAIL_CLIENT_SECRET,
+    accessToken,
+    refreshToken: process.env.OAUTH_REFRESH_TOKEN,
+  },
+  tls: {
+    rejectUnauthorized: false,
   },
 });
+
+const mailFactory = async (
+  callback: (transporter: Transporter) => void | Promise<void>
+) => {
+  const oauthClient = new google.auth.OAuth2({
+    credentials: { refresh_token: process.env.OAUTH_REFRESH_TOKEN },
+    clientId: process.env.MAIL_CLIENT_ID,
+    clientSecret: process.env.MAIL_CLIENT_SECRET,
+    redirectUri: process.env.OAUTH_REDIRECT_URL,
+  });
+
+  oauthClient.getAccessToken((err, token) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    const transport = transportFactory(token!);
+    console.log(transport);
+    callback(nodemailer.createTransport(transport));
+  });
+};
+
 export const sendMail = async (
   subject: string,
   to: string,
   template: string
 ) => {
-  await transport.sendMail({
-    from: process.env.MAIL_USER,
-    to: to,
-    subject: subject,
-    html: template,
+  await mailFactory(async (transport) => {
+    try {
+      await transport.sendMail({
+        from: process.env.MAIL_USER,
+        to: to,
+        subject: subject,
+        html: template,
+      });
+    } catch (e) {
+      console.error(e);
+    }
   });
 };

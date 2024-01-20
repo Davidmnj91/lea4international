@@ -15,18 +15,9 @@ import {
 } from '@/components/form/form';
 import { buttonTypes } from '@/components/button/button';
 import clsx from 'clsx';
+import { z } from 'zod';
 
-type FamilyFormValues = {
-  name: string;
-  lastname: string;
-  email: string;
-  phone: string;
-  city: string;
-  zipCode: string;
-  hostSize: string;
-  message: string;
-  terms: boolean;
-};
+type FamilyFormValues = z.infer<typeof HostFamilyContactSchema>;
 export const FamilyForm = () => {
   const { pending } = useFormStatus();
   const [state, formAction] = useFormState<ContactUsState, FormData>(
@@ -204,7 +195,7 @@ export const FamilyForm = () => {
           </div>
 
           <div className='flex flex-col'>
-            <div className='flex items-center gap-2'>
+            <div className='flex items-center gap-4'>
               <input
                 type='checkbox'
                 id='terms'
