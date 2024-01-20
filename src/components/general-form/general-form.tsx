@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl';
 import { ContactUsState, getContactUs } from '@/actions/contactUs';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useEffect } from 'react';
-import { CompanyContactSchema } from '@/schemas/contactSchemas';
+import { GeneralContactSchema } from '@/schemas/contactSchemas';
 import {
   checkboxStyles,
   ErrorField,
@@ -20,8 +20,8 @@ import { ContactServices } from '@/types/contact';
 import { z } from 'zod';
 import Link from 'next/link';
 
-type ContactFormValues = z.infer<typeof CompanyContactSchema>;
-export const CompanyForm = () => {
+type ContactFormValues = z.infer<typeof GeneralContactSchema>;
+export const GeneralForm = () => {
   const { pending } = useFormStatus();
   const [state, formAction] = useFormState<ContactUsState, FormData>(
     getContactUs,
@@ -33,7 +33,7 @@ export const CompanyForm = () => {
     setError,
   } = useForm<ContactFormValues>({
     mode: 'all',
-    resolver: zodResolver(CompanyContactSchema),
+    resolver: zodResolver(GeneralContactSchema),
   });
 
   const t = useTranslations('forms');

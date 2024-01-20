@@ -12,6 +12,7 @@
     "destinations": "Destinations",
     "accommodations": "Accommodations",
     "faq": "FAQ",
+    "blog": "Blog",
     "contact": "Contact",
     "404": "FOUR ZERO FOUR"
   },
@@ -418,7 +419,7 @@
     "message": "The simplest way to commence is by initiating contact.",
     "who-are-you": "Who are you?",
     "roles": {
-      "company": "Company",
+      "general": "General",
       "host-family": "Host family",
       "institutions": "Schools or institutions",
       "partner": "Become a partner"

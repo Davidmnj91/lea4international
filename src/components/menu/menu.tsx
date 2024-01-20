@@ -32,6 +32,9 @@ export const Menu = ({ itemClassNames }: MenuProps) => {
       <Link className={fullClassName} href={`/faq`}>
         {t('faq')}
       </Link>
+      <Link className={fullClassName} href={`/blog`}>
+        {t('blog')}
+      </Link>
     </>
   );
 };

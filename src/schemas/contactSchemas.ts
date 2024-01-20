@@ -5,7 +5,7 @@ const checkboxValidation = z.union([
   z.literal(true),
   z.literal('on').transform(() => true),
 ]);
-export const CompanyContactSchema = z.object({
+export const GeneralContactSchema = z.object({
   service: z.nativeEnum(ContactServices),
   name: z.string().min(1),
   lastname: z.string().min(1),

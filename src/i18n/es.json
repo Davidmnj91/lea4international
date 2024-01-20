@@ -12,6 +12,7 @@
     "destinations": "Destinos",
     "accommodations": "Alojamientos",
     "faq": "FAQ",
+    "blog": "Blog",
     "contact": "Contacto",
     "404": "CUATRO ZERO CUATRO"
   },
@@ -418,7 +419,7 @@
     "message": "La forma más sencilla de comenzar es iniciando contacto.",
     "who-are-you": "¿Quién eres?",
     "roles": {
-      "company": "Empresa",
+      "general": "General",
       "host-family": "Familia anfitriona",
       "institutions": "Escuelas o instituciones",
       "partner": "Conviertete en un compañero"
