@@ -428,6 +428,11 @@
     "title": "Politica de privacidad",
     "content": "TODO"
   },
+  "blog-page": {
+    "title": "Nuestro blog de vídeos",
+    "description": "TODO",
+    "visit-chanel": "Visita nuestro canal"
+  },
   "not-found-page": {
     "back-to-home": "Vuelta a casa"
   },
