@@ -11,7 +11,7 @@ export const ContactUs = () => {
     <>
       {/*Mobile version*/}
       <Link
-        href={'/contact/company'}
+        href={'/contact/general'}
         className={clsx(
           'fixed bottom-10 right-6 z-20 desktop:hidden',
           buttonTypes({ intent: 'primary', type: 'icon' })
@@ -21,7 +21,7 @@ export const ContactUs = () => {
       </Link>
       {/*Desktop version*/}
       <Link
-        href={'/contact/company'}
+        href={'/contact/general'}
         className={clsx(
           'fixed bottom-10 right-10 z-50 hidden desktop:flex',
           buttonTypes({ intent: 'primary' })

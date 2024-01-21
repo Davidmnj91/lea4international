@@ -36,7 +36,7 @@ export default function RootDestinationsLayout({
             <BigButton
               subject={t('inspired.join')}
               caption={t('contact-us')}
-              href={'/contact/company'}
+              href={'/contact/general'}
             />
             <BigButton
               subject={t('inspired.accommodations')}

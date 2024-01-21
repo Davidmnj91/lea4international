@@ -12,6 +12,7 @@
     "destinations": "Destinos",
     "accommodations": "Alojamientos",
     "faq": "FAQ",
+    "blog": "Blog",
     "contact": "Contacto",
     "404": "CUATRO ZERO CUATRO"
   },
@@ -60,13 +61,13 @@
   },
   "services-page": {
     "title": "Nuestros Servicios",
-    "message": "Seleccione y descubra nuestros servicios pa ra conocer <br>más sobre ellos.</br>",
+    "message": "Seleccione y descubra nuestros servicios pa ra conocer <br></br>más sobre ellos.",
     "services": {
       "see-more": "Ver más",
       "back-to-services": "Volver a nuestros servicios",
       "other-services": {
         "title": "Otros servicios",
-        "description": "Seleccione y descubra nuestros servicios para conocer <br>más sobre ellos.</br>"
+        "description": "Seleccione y descubra nuestros servicios para conocer <br></br>más sobre ellos."
       },
       "erasmus": {
         "title": "Proyectos Erasmus+",
@@ -75,7 +76,7 @@
           "work-experience": {
             "title": "Experiencia laboral",
             "description": "Erasmus+ puede ayudarte a adquirir una valiosa experiencia laboral en el extranjero. Al participar en el programa de prácticas Erasmus+ mejorarás tus habilidades interpersonales y de idiomas extranjeros, y desarrollarás habilidades interculturales que te ayudarán a encontrar un trabajo después de tus estudios.<br></br>Erasmus+ apoya las prácticas laborales o los períodos de estudio en el extranjero para estudiantes actualmente matriculados en educación y formación profesional (FP) y para recién graduados.",
-            "with": "Experiencia <br>laboral</br> <br>con</br> <br>LEA 4 Int.</br>",
+            "with": "Experiencia <br></br>laboral <br></br>con <br></br>LEA 4 Int.",
             "message": "En LEA 4 International ofrecemos una variedad de sectores profesionales en los que podrás realizar tu experiencia de prácticas. Sabemos lo importante que es adquirir experiencia laboral profesional, por eso ofrecemos pasantías de alta calidad adaptadas a cada individuo.<br></br>Contamos con un equipo de expertos que revisarán y estudiarán tu CV y \u200B\u200Bcarta de motivación para encontrarte con la empresa adecuada. Recibirá apoyo durante el proceso de entrevista, se le asignará un supervisor para monitorear su desempeño y asegurarse de lograr los mejores resultados. Te proporcionaremos el acuerdo de aprendizaje y toda la ayuda que necesites antes y durante tus prácticas.",
             "we-offer": {
               "title": "Descubra qué sector profesional ofrecemos",
@@ -101,19 +102,19 @@
           "job-shadowing": {
             "title": "Observación de profesionales",
             "description": "Los programas de observación laboral ofrecen a los participantes la oportunidad de pasar un período de tiempo en una organización de acogida en otro país. El objetivo de este programa es aprender nuevas prácticas y recopilar nuevas ideas a través de la observación y la interacción con pares, expertos u otros profesionales en su trabajo diario en la organización anfitriona.<br></br>Los participantes elegibles incluyen profesores, formadores y todos los demás expertos y personal no docente en educación de adultos.<br></br>El personal no docente elegible incluye el personal que trabaja en la educación de adultos, ya sea en proveedores de educación de adultos o en otras organizaciones activas en la educación de adultos.",
-            "with": "Trabajo <br>seguimiento</br> <br>con</br> <br>LEA 4 Int.*</br>",
+            "with": "Trabajo <br></br>seguimiento <br></br>con <br></br>LEA 4 Int.*",
             "message": "En LEA 4 International colaboramos con un gran número de escuelas de observación laboral que han sido cuidadosamente seleccionadas; estas escuelas incluyen escuelas primarias, secundarias y preparatorias. Además colaboramos con escuelas técnicas y vocacionales y escuelas con necesidades especiales.<br></br>Los temas del seguimiento laboral pueden incluir inclusión, diversidad, digitalización en las escuelas, enseñanza de la sostenibilidad y promoción de STEM.<br></br>Al final del programa de seguimiento laboral, los participantes quedan expuestos a varias prácticas docentes centradas en los temas elegidos.<br></br>Adquieren nuevas técnicas de enseñanza y descubren recursos que pueden aplicar a sus prácticas docentes.<br></br>En LEA 4 International también proporcionamos a las organizaciones de envío el acuerdo de aprendizaje necesario."
           },
           "school-exchange": {
             "title": "Intercambio escolar",
             "description": "El intercambio escolar permite a un grupo de alumnos de diferentes países pasar tiempo aprendiendo junto con sus compañeros de otro país. Los profesores u otras personas autorizadas de la escuela de envío te acompañarán durante toda la actividad. Una movilidad grupal de alumnos escolares puede durar hasta 1 mes. Esto excluye el tiempo de viaje.",
-            "with": "<br>Intercambio escolar</br> <br>con</br> <br>LEA 4 Int.</br>",
+            "with": "<br></br>Intercambio escolar <br></br>con <br></br>LEA 4 Int.",
             "message": "En LEA 4 International colaboramos con un gran número de escuelas anfitrionas para intercambio escolar que han sido cuidadosamente seleccionadas, estas escuelas incluyen escuelas primarias, secundarias y preparatorias. El intercambio escolar es una gran oportunidad para que los estudiantes extranjeros realicen una amplia gama de actividades que incluyen presentaciones de países, talleres culturales o sesiones de idiomas con estudiantes locales.<br></br>En LEA 4 International también brindamos apoyo logístico y local a través del programa de intercambio escolar."
           },
           "erasmus-mundus": {
             "title": "Erasmus Mundus",
             "description": "Esta acción tiene como objetivo fomentar la excelencia y la internacionalización mundial de las instituciones de educación superior a través de programas de estudio (a nivel de maestría) impartidos y reconocidos conjuntamente por instituciones de educación superior (IES) establecidas en Europa y abiertos a instituciones de otros países del mundo.",
-            "with": "Erasmus <br>Mundus</br> <br>con</br> <br>LEA 4 Int.</br>",
+            "with": "Erasmus <br></br>Mundus <br></br>con <br></br>LEA 4 Int.",
             "message": "Conocemos los desafíos de encontrar un nuevo hogar en el extranjero como estudiante internacional, en LEA 4 International ayudamos a los estudiantes internacionales a encontrar un alojamiento que cumpla con sus expectativas y se ajuste a su presupuesto. Asistimos a estudiantes internacionales con preguntas, consejos generales. Brindamos apoyo e información útil a los estudiantes internacionales mediante la organización de seminarios de orientación previa a la salida."
           },
           "KA-2": {
@@ -177,7 +178,7 @@
             "description": "Curso de español conversacional<br></br><br></br>¿Has pasado años aprendiendo español en la escuela pero aún te falta fluidez y confianza para hablar español?<br></br><br></br>Entonces este es el curso adecuado para ti",
             "we-offer": {
               "focus": {
-                "title": "Durante este curso nuestros profesores de español <br>Se centrarán en:</br>",
+                "title": "Durante este curso nuestros profesores de español <br></br>Se centrarán en:",
                 "description": "<li>Identifica tus dificultades habladas y desafíos de pronunciación.</li><li>Elimina cualquier error gramatical o de pronunciación.</li><li>Te brinda temas para practicar la conversación.</li><li>Amplía tu vocabulario. enseñándote frases comunes.</li>"
               },
               "help": {
@@ -195,7 +196,7 @@
             "description": "¿Sientes que te falta confianza y vocabulario cuando tienes que hablar español en tu lugar de trabajo?<br></br><br></br>Entonces este es el curso adecuado para ti.",
             "we-offer": {
               "focus": {
-                "title": "Durante este curso nuestros profesores de español <br>Se centrarán en:</br>",
+                "title": "Durante este curso nuestros profesores de español <br></br>Se centrarán en:",
                 "description": "<li>Identifica tus dificultades habladas y desafíos de pronunciación.</li><li>Elimina cualquier error gramatical o de pronunciación.</li><li>Te brinda temas para practicar la conversación.</li><li>Amplía tu vocabulario. enseñándote frases comunes.</li>"
               },
               "help": {
@@ -210,18 +211,42 @@
           },
           "ai-trainings": {
             "title": "Entrenamientos de IA",
-            "description": "No se puede negar que la Inteligencia Artificial (IA) es la inteligencia de las máquinas o del software. Es un campo de estudio de la informática que desarrolla y estudia máquinas inteligentes.<br></br>La IA está cambiando casi todas las industrias y tendrá un impacto masivo en el mercado laboral y la sociedad en los próximos años.<br><br/><br><br/> Queremos ayudar a personas y empresas a mejorar su comprensión y conocimiento de la IA. Ofrecemos las siguientes capacitaciones",
+            "description": "No se puede negar que la Inteligencia Artificial (IA) es la inteligencia de las máquinas o del software. Es un campo de estudio de la informática que desarrolla y estudia máquinas inteligentes.<br></br>La IA está cambiando casi todas las industrias y tendrá un impacto masivo en el mercado laboral y la sociedad en los próximos años.<br><br/><br><br/> Queremos ayudar a personas y empresas a mejorar su comprensión y conocimiento de la IA. Ofrecemos las siguientes capacitaciones"
+          },
+          "machine-learning": {
+            "title": "Machine Learning",
+            "description": "El aprendizaje automático se refiere a un subconjunto de la inteligencia artificial (IA) que se centra en el desarrollo de sistemas y algoritmos que permiten a las computadoras aprender y mejorar a partir de la experiencia. En lugar de programarse explícitamente para realizar una tarea, estos sistemas utilizan técnicas estadísticas para analizar datos, identificar patrones y tomar decisiones con una mínima intervención humana.<br></br><br></br>El aprendizaje automático se utiliza ampliamente en diversas aplicaciones, incluido reconocimiento de imagen y voz, sistemas de recomendación, vehículos autónomos y muchas más. Se ha convertido en una parte crucial de la tecnología moderna y contribuye a los avances en diversos campos."
+          },
+          "data-mining": {
+            "title": "Data Mining",
+            "description": "La minería de datos es el proceso de descubrir patrones, tendencias e información valiosa a partir de grandes conjuntos de datos. Implica analizar e interpretar grandes cantidades de datos para descubrir patrones y relaciones ocultos que pueden ser útiles para tomar decisiones comerciales informadas, predicciones y otras aplicaciones.<br></br><br></br>La minería de datos se aplica en diversas industrias, como finanzas, atención médica, marketing y comercio minorista, para extraer información significativa de vastos conjuntos de datos. Desempeña un papel crucial en los procesos de toma de decisiones y el desarrollo de estrategias comerciales. Las técnicas dentro de la minería de datos incluyen clasificación, agrupación, análisis de regresión, minería de reglas de asociación y más."
+          },
+          "business-ia": {
+            "title": "IA para Empresas",
+            "description": "La Inteligencia Artificial (IA) se ha convertido en una fuerza transformadora en el panorama empresarial, ofreciendo soluciones innovadoras y oportunidades para la eficiencia, la automatización y la toma de decisiones.<br></br>A continuación se detallan aspectos clave de cómo se utiliza la IA en los negocios:",
+            "sub-description": "Las empresas adoptan la IA para lograr eficiencia, innovación y mantenerse competitivas en la era digital.<br></br>La integración exitosa de la IA en los negocios requiere una planificación cuidadosa, consideraciones éticas y un monitoreo continuo. A medida que avanza la tecnología, las empresas aprovechan cada vez más la IA para obtener una ventaja competitiva y adaptarse al cambiante panorama digital.",
             "we-offer": {
-              "machine-learning": "Machine learning",
-              "data-mining": "Data Mining",
-              "ai-for-business": "AI For Business"
+              "automation": "<b>Automatización:</b> Agiliza las tareas, reduce costes y aumenta la productividad.",
+              "data-analysis": "<b>Análisis de datos:</b> extrae información para tomar decisiones informadas.",
+              "customer-service": "<b>Servicio al cliente:</b> mejora el soporte a través de chatbots con tecnología de inteligencia artificial.",
+              "predictive-analytics": "<b>Análisis predictivo:</b> Pronostica tendencias y comportamientos de los clientes.",
+              "personalization": "<b>Personalización:</b> experiencias personalizadas para los clientes.",
+              "supply-chain": "<b>Cadena de suministro:</b> Optimiza procesos, predice la demanda y gestiona el inventario.",
+              "fraud-detection": "<b>Detección de fraude:</b> Fortalece la ciberseguridad mediante la detección de anomalías.",
+              "human-resources": "<b>Recursos Humanos:</b> Mejora la contratación y la gestión del talento.",
+              "decision-support": "<b>Soporte de decisiones:</b> proporciona información para la planificación estratégica.",
+              "nlp": "<b>PNL:</b> Permite que las máquinas comprendan el lenguaje humano."
             }
+          },
+          "business-development": {
+            "title": "Desarollo de Negocio",
+            "description": "El objetivo principal de nuestra formación en desarrollo empresarial es ayudar a las empresas a alcanzar un mayor éxito comercial a través de sesiones de formación en desarrollo empresarial. El modelo típico de esta asistencia es una sesión mensual o trimestral que se centra en un área de capacitación en desarrollo empresarial. Una sesión estándar dura tres horas y el tamaño del grupo de asistentes suele ser de 10 a 20 (son posibles grupos más grandes o más pequeños)."
           }
         }
       },
       "student-exchange": {
         "title": "Programas de intercambio e inmersión de estudiantes",
-        "overview": "Descripción general",
+        "overview": "Descr ipción general",
         "categories": {
           "immersion-program": {
             "title": "Programa de inmersión",
@@ -394,11 +419,20 @@
     "message": "La forma más sencilla de comenzar es iniciando contacto.",
     "who-are-you": "¿Quién eres?",
     "roles": {
-      "company": "Empresa",
+      "general": "General",
       "host-family": "Familia anfitriona",
       "institutions": "Escuelas o instituciones",
       "partner": "Conviertete en un compañero"
     }
+  },
+  "privacy-policy-page": {
+    "title": "Politica de privacidad",
+    "content": "TODO"
+  },
+  "blog-page": {
+    "title": "Nuestro blog de vídeos",
+    "description": "TODO",
+    "visit-chanel": "Visita nuestro canal"
   },
   "not-found-page": {
     "back-to-home": "Vuelta a casa"
@@ -479,8 +513,15 @@
         "error": "Por favor proporcione un mensaje"
       },
       "terms": {
-        "label": "Acepto reconocer que he leído y acepto las políticas de privacidad antes de enviar el formulario",
-        "error": "Debe aceptar los Términos y Condiciones"
+        "label": {
+          "first": "Acepto reconocer que he leído y acepto las ",
+          "link": "políticas de privacidad ",
+          "last": "antes de enviar el formulario"
+        },
+        "error": {
+          "first": "Debe aceptar los ",
+          "link": "Términos y Condiciones"
+        }
       },
       "city": {
         "label": "Ciudad donde vives",
@@ -570,6 +611,11 @@
         "label": "Nombre del solicitante",
         "placeholder": "Introduzca el nombre del solicitante",
         "error": "Por favor proporcione un nombre válido"
+      },
+      "projectDescription": {
+        "label": "Descripción del proyecto",
+        "placeholder": "Describa su proyecto",
+        "error": "Por favor propocione una descripción de su proyecto"
       }
     },
     "submit": "Enviar el formulario"

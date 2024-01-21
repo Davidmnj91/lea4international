@@ -124,7 +124,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
             </ul>
             <div>
               <Link
-                href={'/contact/company'}
+                href={'/contact/general'}
                 className={buttonTypes({ intent: 'primary' })}
               >
                 {t('categories.work-experience.know-more')}

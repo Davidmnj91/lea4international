@@ -10,6 +10,11 @@ import { MapTrifold } from '@phosphor-icons/react/dist/ssr/MapTrifold';
 import { Ticket } from '@phosphor-icons/react/dist/ssr/Ticket';
 import { Translate } from '@phosphor-icons/react/dist/ssr/Translate';
 import { Typography } from '@/components/typography/typography';
+import {
+  InformationCategories,
+  MoreInfo,
+} from '@/components/more-info/more-info';
+import React from 'react';
 
 export default function Page({ params: { locale } }: LanguagePageProps) {
   // Enable static rendering
@@ -69,12 +74,20 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
           </ul>
         </div>
         <div
-          className='h-[283px] w-full bg-cover bg-no-repeat desktop:h-[858px] desktop:flex-[0_0_40%]'
+          className='h-[283px] w-full bg-contain bg-center bg-no-repeat desktop:h-[858px] desktop:flex-[0_0_40%]'
           style={{
             backgroundImage: `url(${concierge_services_bg.src})`,
           }}
         />
       </div>
+      <section id='more-info'>
+        <div className='desktop:py-14'>
+          <MoreInfo
+            informationCategories={[InformationCategories.MORE_INFO]}
+            className='desktop:max-w-[576px]'
+          />
+        </div>
+      </section>
     </div>
   );
 }

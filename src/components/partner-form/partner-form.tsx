@@ -1,15 +1,12 @@
 'use client';
 
-import { Controller, FieldPath, useForm } from 'react-hook-form';
+import { FieldPath, useForm } from 'react-hook-form';
 import { useFormState, useFormStatus } from 'react-dom';
 import { useTranslations } from 'next-intl';
 import { ContactUsState, getContactUs } from '@/actions/contactUs';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useEffect } from 'react';
-import {
-  CompanyContactSchema,
-  PartnerContactSchema,
-} from '@/schemas/contactSchemas';
+import { PartnerContactSchema } from '@/schemas/contactSchemas';
 import {
   checkboxStyles,
   ErrorField,
@@ -18,8 +15,9 @@ import {
 } from '@/components/form/form';
 import { buttonTypes } from '@/components/button/button';
 import clsx from 'clsx';
-import ComboBoxWrapper from '@/components/select/select';
 import { z } from 'zod';
+import { ContactServices } from '@/types/contact';
+import Link from 'next/link';
 
 type PartnerFormValues = z.infer<typeof PartnerContactSchema>;
 export const PartnerForm = () => {
@@ -30,12 +28,11 @@ export const PartnerForm = () => {
   );
   const {
     register,
-    control,
     formState: { isValid, errors },
     setError,
   } = useForm<PartnerFormValues>({
     mode: 'all',
-    resolver: zodResolver(CompanyContactSchema),
+    resolver: zodResolver(PartnerContactSchema),
   });
 
   const t = useTranslations('forms');
@@ -61,36 +58,16 @@ export const PartnerForm = () => {
       </h1>
       <form className='flex flex-col justify-center gap-9' action={formAction}>
         <div>
-          <Controller
-            name='service'
-            control={control}
-            render={({ field: { onChange, value, onBlur } }) => (
-              <ComboBoxWrapper
-                label={t('input.service.label')}
-                placeholder={t('input.service.placeholder')}
-                value={value}
-                onChange={onChange}
-                onBlur={onBlur}
-                options={[
-                  {
-                    id: 'erasmus',
-                    label: t('input.service.options.erasmus'),
-                    value: 'erasmus',
-                  },
-                  {
-                    id: 'language-courses',
-                    label: t('input.service.options.language-courses'),
-                    value: 'language-courses',
-                  },
-                  {
-                    id: 'concierge',
-                    label: t('input.service.options.concierge'),
-                    value: 'concierge',
-                  },
-                ]}
-              />
-            )}
-          />
+          <label htmlFor='service' className={labelStyles}>
+            {t('input.service.label')}
+          </label>
+          <select id='service' className={inputStyles} {...register('service')}>
+            {Object.values(ContactServices).map((service) => (
+              <option key={service} value={service}>
+                {t(`input.service.options.${service}`)}
+              </option>
+            ))}
+          </select>
           <ErrorField
             name='service'
             errors={errors}
@@ -161,8 +138,25 @@ export const PartnerForm = () => {
             message={t('input.email.error')}
           />
         </div>
+        <div>
+          <label htmlFor='projectDescription' className={labelStyles}>
+            {t('input.projectDescription.label')}
+          </label>
+          <textarea
+            id='projectDescription'
+            rows={9}
+            {...register('projectDescription', { required: true })}
+            className={clsx('h-[250px]', inputStyles)}
+            placeholder={t('input.projectDescription.placeholder')}
+          />
+          <ErrorField
+            name='projectDescription'
+            errors={errors}
+            message={t('input.projectDescription.error')}
+          />
+        </div>
         <div className='flex flex-col'>
-          <div className='flex items-center gap-2'>
+          <div className='flex items-center gap-4'>
             <input
               type='checkbox'
               id='terms'
@@ -170,13 +164,32 @@ export const PartnerForm = () => {
               className={checkboxStyles}
             />
             <label htmlFor='terms' className={clsx('text-b-sm', labelStyles)}>
-              {t('input.terms.label')}
+              {t('input.terms.label.first')}
+              <Link
+                className='font-bold underline'
+                href={'/privacy-policy'}
+                target={'_blank'}
+              >
+                {t('input.terms.label.link')}
+              </Link>
+              {t('input.terms.label.last')}
             </label>
           </div>
           <ErrorField
             name='terms'
             errors={errors}
-            message={t('input.terms.error')}
+            message={
+              <>
+                {t('input.terms.error.first')}{' '}
+                <Link
+                  className='font-bold underline'
+                  href={'/privacy-policy'}
+                  target={'_blank'}
+                >
+                  {t('input.terms.error.link')}
+                </Link>
+              </>
+            }
           />
         </div>
         <button

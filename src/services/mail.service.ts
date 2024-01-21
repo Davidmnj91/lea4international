@@ -1,14 +1,19 @@
 import nodemailer from 'nodemailer';
+import SMTPTransport from 'nodemailer/lib/smtp-transport';
+import { getAuthToken } from '@/services/oath.service';
 
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
-
-const transport = nodemailer.createTransport({
-  host: process.env.MAIL_HOST,
-  port: 1025,
-  secure: false,
+const transportFactory = (accessToken: string): SMTPTransport.Options => ({
+  service: 'gmail',
   auth: {
+    type: 'OAuth2',
     user: process.env.MAIL_USER,
-    pass: process.env.MAIL_PASSWORD,
+    clientId: process.env.MAIL_CLIENT_ID,
+    clientSecret: process.env.MAIL_CLIENT_SECRET,
+    accessToken,
+    refreshToken: process.env.OAUTH_REFRESH_TOKEN,
+  },
+  tls: {
+    rejectUnauthorized: false,
   },
 });
 export const sendMail = async (
@@ -16,10 +21,17 @@ export const sendMail = async (
   to: string,
   template: string
 ) => {
-  await transport.sendMail({
-    from: process.env.MAIL_USER,
-    to: to,
-    subject: subject,
-    html: template,
-  });
+  try {
+    const token = await getAuthToken();
+    const transport = transportFactory(token);
+    const mailer = nodemailer.createTransport(transport);
+    await mailer.sendMail({
+      from: process.env.MAIL_USER,
+      to: to,
+      subject: subject,
+      html: template,
+    });
+  } catch (e) {
+    console.error(e);
+  }
 };

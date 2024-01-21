@@ -1,12 +1,12 @@
 'use client';
 
-import { Controller, FieldPath, useForm } from 'react-hook-form';
+import { FieldPath, useForm } from 'react-hook-form';
 import { useFormState, useFormStatus } from 'react-dom';
 import { useTranslations } from 'next-intl';
 import { ContactUsState, getContactUs } from '@/actions/contactUs';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useEffect } from 'react';
-import { CompanyContactSchema } from '@/schemas/contactSchemas';
+import { GeneralContactSchema } from '@/schemas/contactSchemas';
 import {
   checkboxStyles,
   ErrorField,
@@ -15,20 +15,13 @@ import {
 } from '@/components/form/form';
 import { buttonTypes } from '@/components/button/button';
 import clsx from 'clsx';
-import ComboBoxWrapper from '@/components/select/select';
 import countries from '../../../public/countries.json';
+import { ContactServices } from '@/types/contact';
+import { z } from 'zod';
+import Link from 'next/link';
 
-type ContactFormValues = {
-  service: string;
-  name: string;
-  lastname: string;
-  email: string;
-  phone: string;
-  nationality: string;
-  message: string;
-  terms: boolean;
-};
-export const CompanyForm = () => {
+type ContactFormValues = z.infer<typeof GeneralContactSchema>;
+export const GeneralForm = () => {
   const { pending } = useFormStatus();
   const [state, formAction] = useFormState<ContactUsState, FormData>(
     getContactUs,
@@ -36,12 +29,11 @@ export const CompanyForm = () => {
   );
   const {
     register,
-    control,
     formState: { isValid, errors },
     setError,
   } = useForm<ContactFormValues>({
     mode: 'all',
-    resolver: zodResolver(CompanyContactSchema),
+    resolver: zodResolver(GeneralContactSchema),
   });
 
   const t = useTranslations('forms');
@@ -71,36 +63,20 @@ export const CompanyForm = () => {
       >
         <div className='flex flex-col gap-9 desktop:flex-[0_0_50%]'>
           <div>
-            <Controller
-              name='service'
-              control={control}
-              render={({ field: { onChange, value, onBlur } }) => (
-                <ComboBoxWrapper
-                  label={t('input.service.label')}
-                  placeholder={t('input.service.placeholder')}
-                  value={value}
-                  onChange={onChange}
-                  onBlur={onBlur}
-                  options={[
-                    {
-                      id: 'erasmus',
-                      label: t('input.service.options.erasmus'),
-                      value: 'erasmus',
-                    },
-                    {
-                      id: 'language-courses',
-                      label: t('input.service.options.language-courses'),
-                      value: 'language-courses',
-                    },
-                    {
-                      id: 'concierge',
-                      label: t('input.service.options.concierge'),
-                      value: 'concierge',
-                    },
-                  ]}
-                />
-              )}
-            />
+            <label htmlFor='service' className={labelStyles}>
+              {t('input.service.label')}
+            </label>
+            <select
+              id='service'
+              className={inputStyles}
+              {...register('service')}
+            >
+              {Object.values(ContactServices).map((service) => (
+                <option key={service} value={service}>
+                  {t(`input.service.options.${service}`)}
+                </option>
+              ))}
+            </select>
             <ErrorField
               name='service'
               errors={errors}
@@ -175,24 +151,20 @@ export const CompanyForm = () => {
 
         <div className='flex flex-col gap-9 desktop:flex-[0_0_50%]'>
           <div>
-            <Controller
-              name='nationality'
-              control={control}
-              render={({ field: { onChange, value, onBlur } }) => (
-                <ComboBoxWrapper
-                  label={t('input.nationality.label')}
-                  placeholder={t('input.nationality.placeholder')}
-                  value={value}
-                  onChange={onChange}
-                  onBlur={onBlur}
-                  options={countries.map(({ name, code }) => ({
-                    id: code,
-                    value: name,
-                    label: name,
-                  }))}
-                />
-              )}
-            />
+            <label htmlFor='nationality' className={labelStyles}>
+              {t('input.nationality.label')}
+            </label>
+            <select
+              id='nationality'
+              className={inputStyles}
+              {...register('nationality')}
+            >
+              {countries.map(({ name }) => (
+                <option key={name} value={name}>
+                  {name}
+                </option>
+              ))}
+            </select>
             <ErrorField
               name='nationality'
               errors={errors}
@@ -206,7 +178,7 @@ export const CompanyForm = () => {
             <textarea
               id='message'
               rows={9}
-              {...register('message')}
+              {...register('message', { required: true })}
               className={clsx('h-[250px]', inputStyles)}
               placeholder={t('input.message.placeholder')}
             />
@@ -218,7 +190,7 @@ export const CompanyForm = () => {
           </div>
 
           <div className='flex flex-col'>
-            <div className='flex items-center gap-2'>
+            <div className='flex items-center gap-4'>
               <input
                 type='checkbox'
                 id='terms'
@@ -226,13 +198,32 @@ export const CompanyForm = () => {
                 className={checkboxStyles}
               />
               <label htmlFor='terms' className={clsx('text-b-sm', labelStyles)}>
-                {t('input.terms.label')}
+                {t('input.terms.label.first')}
+                <Link
+                  className='font-bold underline'
+                  href={'/privacy-policy'}
+                  target={'_blank'}
+                >
+                  {t('input.terms.label.link')}
+                </Link>
+                {t('input.terms.label.last')}
               </label>
             </div>
             <ErrorField
               name='terms'
               errors={errors}
-              message={t('input.terms.error')}
+              message={
+                <>
+                  {t('input.terms.error.first')}{' '}
+                  <Link
+                    className='font-bold underline'
+                    href={'/privacy-policy'}
+                    target={'_blank'}
+                  >
+                    {t('input.terms.error.link')}
+                  </Link>
+                </>
+              }
             />
           </div>
           <button

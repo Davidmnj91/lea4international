@@ -15,11 +15,11 @@ import {
 } from '@/components/form/form';
 import { buttonTypes } from '@/components/button/button';
 import clsx from 'clsx';
-import ComboBoxWrapper from '@/components/select/select';
 import countries from '../../../public/countries.json';
 import { z } from 'zod';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import Link from 'next/link';
 
 type InstitutionFormValues = z.infer<typeof InstitutionsContactSchema>;
 
@@ -146,24 +146,20 @@ export const InstitutionForm = () => {
             />
           </div>
           <div>
-            <Controller
-              name='nationality'
-              control={control}
-              render={({ field: { onChange, value, onBlur } }) => (
-                <ComboBoxWrapper
-                  label={t('input.nationality.label')}
-                  placeholder={t('input.nationality.placeholder')}
-                  value={value}
-                  onChange={onChange}
-                  onBlur={onBlur}
-                  options={countries.map(({ name, code }) => ({
-                    id: code,
-                    value: name,
-                    label: name,
-                  }))}
-                />
-              )}
-            />
+            <label htmlFor='nationality' className={labelStyles}>
+              {t('input.nationality.label')}
+            </label>
+            <select
+              id='service'
+              className={inputStyles}
+              {...register('nationality')}
+            >
+              {countries.map(({ name }) => (
+                <option key={name} value={name}>
+                  {name}
+                </option>
+              ))}
+            </select>
             <ErrorField
               name='nationality'
               errors={errors}
@@ -269,26 +265,20 @@ export const InstitutionForm = () => {
             />
           </div>
           <div>
-            <Controller
-              name='accommodationType'
-              control={control}
-              render={({ field: { onChange, value, onBlur } }) => (
-                <ComboBoxWrapper
-                  label={t('input.accommodationType.label')}
-                  placeholder={t('input.accommodationType.placeholder')}
-                  value={value}
-                  onChange={onChange}
-                  onBlur={onBlur}
-                  options={accommodationTypes.map((accommodationType) => ({
-                    id: accommodationType,
-                    label: t(
-                      `input.accommodationType.options.${accommodationType}`
-                    ),
-                    value: accommodationType,
-                  }))}
-                />
-              )}
-            />
+            <label htmlFor='accommodationType' className={labelStyles}>
+              {t('input.accommodationType.label')}
+            </label>
+            <select
+              id='accommodationType'
+              className={inputStyles}
+              {...register('accommodationType')}
+            >
+              {accommodationTypes.map((accommodationType) => (
+                <option key={accommodationType} value={accommodationType}>
+                  {t(`input.accommodationType.options.${accommodationType}`)}
+                </option>
+              ))}
+            </select>
             <ErrorField
               name='accommodationType'
               errors={errors}
@@ -296,24 +286,20 @@ export const InstitutionForm = () => {
             />
           </div>
           <div>
-            <Controller
-              name='roomType'
-              control={control}
-              render={({ field: { onChange, value, onBlur } }) => (
-                <ComboBoxWrapper
-                  label={t('input.roomType.label')}
-                  placeholder={t('input.roomType.placeholder')}
-                  value={value}
-                  onChange={onChange}
-                  onBlur={onBlur}
-                  options={roomTypes.map((roomType) => ({
-                    id: roomType,
-                    label: t(`input.roomType.options.${roomType}`),
-                    value: roomType,
-                  }))}
-                />
-              )}
-            />
+            <label htmlFor='roomType' className={labelStyles}>
+              {t('input.roomType.label')}
+            </label>
+            <select
+              id='roomType'
+              className={inputStyles}
+              {...register('roomType')}
+            >
+              {roomTypes.map((roomType) => (
+                <option key={roomType} value={roomType}>
+                  {t(`input.roomType.options.${roomType}`)}
+                </option>
+              ))}
+            </select>
             <ErrorField
               name='roomType'
               errors={errors}
@@ -321,24 +307,20 @@ export const InstitutionForm = () => {
             />
           </div>
           <div>
-            <Controller
-              name='boardType'
-              control={control}
-              render={({ field: { onChange, value, onBlur } }) => (
-                <ComboBoxWrapper
-                  label={t('input.boardType.label')}
-                  placeholder={t('input.boardType.placeholder')}
-                  value={value}
-                  onChange={onChange}
-                  onBlur={onBlur}
-                  options={boardTypes.map((boardType) => ({
-                    id: boardType,
-                    label: t(`input.boardType.options.${boardType}`),
-                    value: boardType,
-                  }))}
-                />
-              )}
-            />
+            <label htmlFor='boardType' className={labelStyles}>
+              {t('input.boardType.label')}
+            </label>
+            <select
+              id='boardType'
+              className={inputStyles}
+              {...register('boardType')}
+            >
+              {boardTypes.map((boardType) => (
+                <option key={boardType} value={boardType}>
+                  {t(`input.boardType.options.${boardType}`)}
+                </option>
+              ))}
+            </select>
             <ErrorField
               name='boardType'
               errors={errors}
@@ -346,24 +328,20 @@ export const InstitutionForm = () => {
             />
           </div>
           <div>
-            <Controller
-              name='roundTripIncluded'
-              control={control}
-              render={({ field: { onChange, value, onBlur } }) => (
-                <ComboBoxWrapper
-                  label={t('input.roundTripIncluded.label')}
-                  placeholder={t('input.roundTripIncluded.placeholder')}
-                  value={value}
-                  onChange={onChange}
-                  onBlur={onBlur}
-                  options={roundTripOptions.map((option) => ({
-                    id: option,
-                    label: t(`input.roundTripIncluded.options.${option}`),
-                    value: option,
-                  }))}
-                />
-              )}
-            />
+            <label htmlFor='roundTripIncluded' className={labelStyles}>
+              {t('input.roundTripIncluded.label')}
+            </label>
+            <select
+              id='roundTripIncluded'
+              className={inputStyles}
+              {...register('roundTripIncluded')}
+            >
+              {roundTripOptions.map((option) => (
+                <option key={option} value={option}>
+                  {t(`input.roundTripIncluded.options.${option}`)}
+                </option>
+              ))}
+            </select>
             <ErrorField
               name='roundTripIncluded'
               errors={errors}
@@ -371,28 +349,20 @@ export const InstitutionForm = () => {
             />
           </div>
           <div>
-            <Controller
-              name='culturalActivitiesIncluded'
-              control={control}
-              render={({ field: { onChange, value, onBlur } }) => (
-                <ComboBoxWrapper
-                  label={t('input.culturalActivitiesIncluded.label')}
-                  placeholder={t(
-                    'input.culturalActivitiesIncluded.placeholder'
-                  )}
-                  value={value}
-                  onChange={onChange}
-                  onBlur={onBlur}
-                  options={culturalOptions.map((option) => ({
-                    id: option,
-                    label: t(
-                      `input.culturalActivitiesIncluded.options.${option}`
-                    ),
-                    value: option,
-                  }))}
-                />
-              )}
-            />
+            <label htmlFor='culturalActivitiesIncluded' className={labelStyles}>
+              {t('input.culturalActivitiesIncluded.label')}
+            </label>
+            <select
+              id='culturalActivitiesIncluded'
+              className={inputStyles}
+              {...register('culturalActivitiesIncluded')}
+            >
+              {culturalOptions.map((option) => (
+                <option key={option} value={option}>
+                  {t(`input.culturalActivitiesIncluded.options.${option}`)}
+                </option>
+              ))}
+            </select>
             <ErrorField
               name='culturalActivitiesIncluded'
               errors={errors}
@@ -400,7 +370,7 @@ export const InstitutionForm = () => {
             />
           </div>
           <div className='flex flex-col'>
-            <div className='flex items-center gap-2'>
+            <div className='flex items-center gap-4'>
               <input
                 type='checkbox'
                 id='terms'
@@ -408,13 +378,32 @@ export const InstitutionForm = () => {
                 className={checkboxStyles}
               />
               <label htmlFor='terms' className={clsx('text-b-sm', labelStyles)}>
-                {t('input.terms.label')}
+                {t('input.terms.label.first')}
+                <Link
+                  className='font-bold underline'
+                  href={'/privacy-policy'}
+                  target={'_blank'}
+                >
+                  {t('input.terms.label.link')}
+                </Link>
+                {t('input.terms.label.last')}
               </label>
             </div>
             <ErrorField
               name='terms'
               errors={errors}
-              message={t('input.terms.error')}
+              message={
+                <>
+                  {t('input.terms.error.first')}{' '}
+                  <Link
+                    className='font-bold underline'
+                    href={'/privacy-policy'}
+                    target={'_blank'}
+                  >
+                    {t('input.terms.error.link')}
+                  </Link>
+                </>
+              }
             />
           </div>
           <button

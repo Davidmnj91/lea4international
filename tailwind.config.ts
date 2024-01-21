@@ -14,7 +14,7 @@ const config: Config = {
       colors: {
         europe: {
           light: '#45586A',
-          DEFAULT: '#2E3B48 ',
+          DEFAULT: '#2E3B48',
           dark: '#030822',
         },
         gold: {

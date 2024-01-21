@@ -12,7 +12,7 @@ type RootContactLayoutProps = {
   children: React.ReactNode;
 };
 
-const roles = ['company', 'host-family', 'institutions', 'partner'];
+const roles = ['general', 'host-family', 'institutions', 'partner'];
 
 export default function RootDestinationsLayout({
   children,

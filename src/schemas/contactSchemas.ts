@@ -1,7 +1,12 @@
 import { z } from 'zod';
+import { ContactServices } from '@/types/contact';
 
-export const CompanyContactSchema = z.object({
-  service: z.string().min(1),
+const checkboxValidation = z.union([
+  z.literal(true),
+  z.literal('on').transform(() => true),
+]);
+export const GeneralContactSchema = z.object({
+  service: z.nativeEnum(ContactServices),
   name: z.string().min(1),
   lastname: z.string().min(1),
   email: z.string().email().min(1),
@@ -10,7 +15,7 @@ export const CompanyContactSchema = z.object({
     .regex(/^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/),
   nationality: z.string().min(1),
   message: z.string().min(1).max(255),
-  terms: z.literal(true),
+  terms: checkboxValidation,
 });
 
 export const HostFamilyContactSchema = z.object({
@@ -22,9 +27,9 @@ export const HostFamilyContactSchema = z.object({
     .regex(/^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/),
   city: z.string().min(1),
   zipCode: z.string().min(1),
-  hostSize: z.number().min(1),
+  hostSize: z.coerce.number().min(1),
   message: z.string().min(1).max(255),
-  terms: z.literal(true),
+  terms: checkboxValidation,
 });
 
 export const InstitutionsContactSchema = z.object({
@@ -37,22 +42,23 @@ export const InstitutionsContactSchema = z.object({
   nationality: z.string().min(1),
   institutionName: z.string().min(1),
   city: z.string().min(1),
-  hostSize: z.number().min(1),
+  hostSize: z.coerce.number().min(1),
   dateRange: z.tuple([z.date().optional(), z.date().optional()]),
-  supervisorNumber: z.number().min(1),
+  supervisorNumber: z.coerce.number().min(1),
   accommodationType: z.string().min(1),
   roomType: z.string().min(1),
   boardType: z.string().min(1),
   roundTripIncluded: z.string().min(1),
   culturalActivitiesIncluded: z.string().min(1),
-  terms: z.literal(true),
+  terms: checkboxValidation,
 });
 
 export const PartnerContactSchema = z.object({
-  service: z.string().min(1),
+  service: z.nativeEnum(ContactServices),
   name: z.string().min(1),
   lastname: z.string().min(1),
   applicantName: z.string().min(1),
   email: z.string().email().min(1),
-  terms: z.literal(true),
+  projectDescription: z.string().min(1).max(255),
+  terms: checkboxValidation,
 });

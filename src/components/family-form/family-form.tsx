@@ -15,18 +15,10 @@ import {
 } from '@/components/form/form';
 import { buttonTypes } from '@/components/button/button';
 import clsx from 'clsx';
+import { z } from 'zod';
+import Link from 'next/link';
 
-type FamilyFormValues = {
-  name: string;
-  lastname: string;
-  email: string;
-  phone: string;
-  city: string;
-  zipCode: string;
-  hostSize: string;
-  message: string;
-  terms: boolean;
-};
+type FamilyFormValues = z.infer<typeof HostFamilyContactSchema>;
 export const FamilyForm = () => {
   const { pending } = useFormStatus();
   const [state, formAction] = useFormState<ContactUsState, FormData>(
@@ -204,7 +196,7 @@ export const FamilyForm = () => {
           </div>
 
           <div className='flex flex-col'>
-            <div className='flex items-center gap-2'>
+            <div className='flex items-center gap-4'>
               <input
                 type='checkbox'
                 id='terms'
@@ -212,13 +204,32 @@ export const FamilyForm = () => {
                 className={checkboxStyles}
               />
               <label htmlFor='terms' className={clsx('text-b-sm', labelStyles)}>
-                {t('input.terms.label')}
+                {t('input.terms.label.first')}
+                <Link
+                  className='font-bold underline'
+                  href={'/privacy-policy'}
+                  target={'_blank'}
+                >
+                  {t('input.terms.label.link')}
+                </Link>
+                {t('input.terms.label.last')}
               </label>
             </div>
             <ErrorField
               name='terms'
               errors={errors}
-              message={t('input.terms.error')}
+              message={
+                <>
+                  {t('input.terms.error.first')}{' '}
+                  <Link
+                    className='font-bold underline'
+                    href={'/privacy-policy'}
+                    target={'_blank'}
+                  >
+                    {t('input.terms.error.link')}
+                  </Link>
+                </>
+              }
             />
           </div>
           <button
