@@ -11,9 +11,10 @@ export const getVideos =
     const youtubeService = google.youtube('v3');
     const { data } = await youtubeService.search.list({
       auth: client,
-      channelId: 'UCMQZSMxrlgjZEAlJJdds89w', // 'UC58jbZp1CqC--5HBphpJmdg',
+      channelId: process.env.YOUTUBE_CHANEL_ID, //'UCMQZSMxrlgjZEAlJJdds89w', // 'UC58jbZp1CqC--5HBphpJmdg',
       part: ['snippet', 'id'],
       order: 'date',
+      maxResults: 20,
     });
 
     return data;

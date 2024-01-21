@@ -27,8 +27,8 @@ export const usePagination = <T>(
   };
 
   const paginationLinks = () => {
-    const startIndex = Math.max(0, currentPage - 4);
-    const endIndex = Math.min(currentPage + 4, totalPages());
+    const startIndex = Math.max(0, currentPage - maxPaginationLinks);
+    const endIndex = Math.min(currentPage + maxPaginationLinks, totalPages());
     return Array.from(
       { length: maxPaginationLinks },
       (_, k) => startIndex + k

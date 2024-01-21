@@ -131,7 +131,7 @@ export default function HomePage() {
             </Typography>
           </div>
           <Link
-            href={'/contact/company'}
+            href={'/contact/general'}
             className={clsx('mt-[60px]', buttonTypes({ intent: 'primary' }))}
           >
             {t('request-more-info')}

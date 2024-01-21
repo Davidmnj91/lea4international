@@ -81,12 +81,11 @@ export const VideoBlog = ({ videos }: VideoBlogProps) => {
 
       <div className='grid grid-cols-1 gap-6 desktop:grid-cols-2 desktop:gap-9'>
         {currentItems().map((item) => (
-          <>
+          <div key={item.id?.videoId} className='flex h-[348px]'>
             <a
-              key={`${item.id?.videoId}-mobile`}
               href={`https://www.youtube.com/watch?v=${item?.id?.videoId}`}
               target={'_blank'}
-              className='flex h-[348px] items-center justify-center bg-cover bg-center bg-no-repeat desktop:hidden'
+              className='flex flex-auto items-center justify-center bg-cover bg-center bg-no-repeat desktop:hidden'
               style={{
                 backgroundImage: `url(${
                   item.snippet?.thumbnails?.high?.url || ''
@@ -94,16 +93,15 @@ export const VideoBlog = ({ videos }: VideoBlogProps) => {
               }}
             />
             <button
-              key={`${item.id?.videoId}-desktop`}
               onClick={() => selectVideo(item)}
-              className='hidden h-[348px] items-center justify-center bg-cover bg-center bg-no-repeat desktop:flex'
+              className='hidden flex-auto items-center justify-center bg-cover bg-center bg-no-repeat desktop:flex'
               style={{
                 backgroundImage: `url(${
                   item.snippet?.thumbnails?.high?.url || ''
                 })`,
               }}
             />
-          </>
+          </div>
         ))}
       </div>
       <div className='flex flex-col items-center gap-6 desktop:flex-row desktop:justify-between desktop:gap-0'>
@@ -129,7 +127,7 @@ export const VideoBlog = ({ videos }: VideoBlogProps) => {
                   intent: 'secondary-light',
                 })}
               >
-                {i}
+                {i + 1}
               </button>
             ))}
             <button
