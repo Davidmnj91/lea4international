@@ -5,7 +5,7 @@ import { useFormState, useFormStatus } from 'react-dom';
 import { useTranslations } from 'next-intl';
 import { ContactUsState, getContactUs } from '@/actions/contactUs';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { PartnerContactSchema } from '@/schemas/contactSchemas';
 import {
   checkboxStyles,
@@ -18,6 +18,7 @@ import clsx from 'clsx';
 import { z } from 'zod';
 import { ContactServices } from '@/types/contact';
 import Link from 'next/link';
+import { FormResultPopup } from '@/components/form/form-result';
 
 type PartnerFormValues = z.infer<typeof PartnerContactSchema>;
 export const PartnerForm = () => {
@@ -26,6 +27,9 @@ export const PartnerForm = () => {
     getContactUs,
     null
   );
+  const [showPopup, setShowPopup] = useState(false);
+  const [serverError, setServerError] = useState<boolean>(false);
+
   const {
     register,
     formState: { isValid, errors },
@@ -41,21 +45,27 @@ export const PartnerForm = () => {
     if (!state) {
       return;
     }
-
-    if (state.status === 'error') {
+    if (state.status === 'VALIDATION_ERROR') {
       state.errors?.forEach((error) => {
         setError(error.path as FieldPath<PartnerFormValues>, {
           message: error.message,
         });
       });
+      return;
+    }
+    setShowPopup(true);
+    if (state.status === 'INTERNAL_ERROR') {
+      setServerError(true);
     }
   }, [state, setError]);
 
   return (
     <>
-      <h1 style={{ color: state?.status === 'success' ? 'green' : 'red' }}>
-        {state?.message}
-      </h1>
+      <FormResultPopup
+        state={serverError ? 'error' : 'success'}
+        open={showPopup}
+        onClose={() => setShowPopup(false)}
+      />
       <form className='flex flex-col justify-center gap-9' action={formAction}>
         <div>
           <label htmlFor='service' className={labelStyles}>

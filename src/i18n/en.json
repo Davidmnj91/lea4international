@@ -618,6 +618,19 @@
         "error": "Please provide a description of your project"
       }
     },
+    "feedback": {
+      "success": {
+        "title": "Thanks You",
+        "description": "Thank you for your time, we may email you back on the address you leave in the form.",
+        "sub-description": "You can also write us on <email>info@lea4int.com</email>"
+      },
+      "error": {
+        "title": "Error Ocurred",
+        "description": "Sorry, an error occurred. Thank you for your time. If you want you can contact us by email",
+        "sub-description": "<email>info@lea4int.com</email>"
+      },
+      "close": "Close"
+    },
     "submit": "Send form"
   },
   "locale-switcher": {

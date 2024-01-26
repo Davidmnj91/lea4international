@@ -618,6 +618,19 @@
         "error": "Por favor propocione una descripción de su proyecto"
       }
     },
+    "feedback": {
+      "success": {
+        "title": "Gracias",
+        "description": "Gracias por su tiempo, podemos enviarle un correo electrónico a la dirección que dejó en el formulario.",
+        "sub-description": "También puedes escribirnos a <email>info@lea4int.com</email>"
+      },
+      "error": {
+        "title": "Hubo un error",
+        "description": "Disculpe, ocurrió un error. Gracias por tu tiempo. Si quieres puedes contactar con nosotros por email",
+        "sub-description": "<email>info@lea4int.com</email>"
+      },
+      "close": "Cerrar"
+    },
     "submit": "Enviar el formulario"
   },
   "locale-switcher": {

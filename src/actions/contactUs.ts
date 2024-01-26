@@ -10,17 +10,23 @@ import { renderAsync } from '@react-email/render';
 import Email from '../emails';
 
 type ContactUsSuccess = {
-  status: 'success';
+  status: 'SUCCESS';
   message: string;
 };
 
 type ContactUsError = {
-  status: 'error';
+  status: 'VALIDATION_ERROR';
   errors: ValidationErrors;
   message: string;
 };
 
-export type ContactUsState = Nullable<ContactUsSuccess | ContactUsError>;
+type ServerError = {
+  status: 'INTERNAL_ERROR';
+};
+
+export type ContactUsState = Nullable<
+  ContactUsSuccess | ContactUsError | ServerError
+>;
 
 const contactUsFormDataSchema = zfd.formData(GeneralContactSchema);
 
@@ -39,7 +45,7 @@ export async function getContactUs(
     await sendMail('Welcome from Lucia Web', email, template);
 
     return {
-      status: 'success',
+      status: 'SUCCESS',
       message: fullMessage,
     };
   } catch (e) {
@@ -47,16 +53,14 @@ export async function getContactUs(
 
     if (e instanceof ZodError) {
       return {
-        status: 'error',
+        status: 'VALIDATION_ERROR',
         errors: getValidationErrors(e),
         message: e.message,
       };
     }
 
     return {
-      status: 'error',
-      errors: [],
-      message: `${e}`,
+      status: 'INTERNAL_ERROR',
     };
   }
 }

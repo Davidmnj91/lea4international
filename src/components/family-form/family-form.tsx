@@ -5,7 +5,7 @@ import { useFormState, useFormStatus } from 'react-dom';
 import { useTranslations } from 'next-intl';
 import { ContactUsState, getContactUs } from '@/actions/contactUs';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { HostFamilyContactSchema } from '@/schemas/contactSchemas';
 import {
   checkboxStyles,
@@ -17,6 +17,7 @@ import { buttonTypes } from '@/components/button/button';
 import clsx from 'clsx';
 import { z } from 'zod';
 import Link from 'next/link';
+import { FormResultPopup } from '@/components/form/form-result';
 
 type FamilyFormValues = z.infer<typeof HostFamilyContactSchema>;
 export const FamilyForm = () => {
@@ -25,6 +26,9 @@ export const FamilyForm = () => {
     getContactUs,
     null
   );
+  const [showPopup, setShowPopup] = useState(false);
+  const [serverError, setServerError] = useState<boolean>(false);
+
   const {
     register,
     formState: { isValid, errors },
@@ -40,21 +44,27 @@ export const FamilyForm = () => {
     if (!state) {
       return;
     }
-
-    if (state.status === 'error') {
+    if (state.status === 'VALIDATION_ERROR') {
       state.errors?.forEach((error) => {
         setError(error.path as FieldPath<FamilyFormValues>, {
           message: error.message,
         });
       });
+      return;
+    }
+    setShowPopup(true);
+    if (state.status === 'INTERNAL_ERROR') {
+      setServerError(true);
     }
   }, [state, setError]);
 
   return (
     <>
-      <h1 style={{ color: state?.status === 'success' ? 'green' : 'red' }}>
-        {state?.message}
-      </h1>
+      <FormResultPopup
+        state={serverError ? 'error' : 'success'}
+        open={showPopup}
+        onClose={() => setShowPopup(false)}
+      />
       <form
         className='flex flex-col justify-center gap-8 desktop:flex-row desktop:gap-16'
         action={formAction}
