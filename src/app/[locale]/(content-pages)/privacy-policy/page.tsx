@@ -11,17 +11,10 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
   const t = useTranslations('privacy-policy-page');
 
   return (
-    <div>
-      <div className='flex items-center justify-center py-14 desktop:py-24'>
-        <Typography
-          as='h1'
-          size='heading-2xl'
-          color='europe-dark'
-          className='text-center desktop:text-left'
-        >
-          {t('title')}
-        </Typography>
-      </div>
+    <div className='p-6 desktop:px-12 desktop:py-24'>
+      <Typography size='body-md' color='europe-dark'>
+        {t.rich('content')}
+      </Typography>
     </div>
   );
 }

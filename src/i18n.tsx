@@ -24,6 +24,16 @@ export const defaultTranslationVales: RichTranslationValues = {
     </li>
   ),
   b: (chunks: ReactNode) => <strong>{chunks}</strong>,
+  link: (chunks: ReactNode) => (
+    <a className='underline' href={`${chunks}`} target='_blank'>
+      {chunks}
+    </a>
+  ),
+  email: (chunks: ReactNode) => (
+    <a className='underline' href={`mailto:${chunks}`}>
+      {chunks}
+    </a>
+  ),
 };
 
 export const defaultLanguage: Language = 'en';
