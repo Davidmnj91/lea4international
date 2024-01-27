@@ -5,6 +5,7 @@ export const Contact = {
   youtube: 'https://www.youtube.com/channel/UC58jbZp1CqC--5HBphpJmdg',
   facebook: 'https://www.facebook.com/profile.php?id=61555352530058',
   instagram: 'https://www.instagram.com/lea4int',
+  linkedin: 'https://www.linkedin.com/in/lucia-soto-5780402b1',
 };
 
 export enum ContactServices {
