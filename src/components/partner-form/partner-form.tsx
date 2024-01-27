@@ -2,7 +2,7 @@
 
 import { FieldPath, useForm } from 'react-hook-form';
 import { useFormState, useFormStatus } from 'react-dom';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { ContactUsState, getContactUs } from '@/actions/contactUs';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useEffect, useState } from 'react';
@@ -15,12 +15,10 @@ import {
 } from '@/components/form/form';
 import { buttonTypes } from '@/components/button/button';
 import clsx from 'clsx';
-import { z } from 'zod';
-import { ContactServices } from '@/types/contact';
+import { ContactServices, PartnerFormData } from '@/types/contact';
 import Link from 'next/link';
 import { FormResultPopup } from '@/components/form/form-result';
 
-type PartnerFormValues = z.infer<typeof PartnerContactSchema>;
 export const PartnerForm = () => {
   const { pending } = useFormStatus();
   const [state, formAction] = useFormState<ContactUsState, FormData>(
@@ -34,12 +32,13 @@ export const PartnerForm = () => {
     register,
     formState: { isValid, errors },
     setError,
-  } = useForm<PartnerFormValues>({
+  } = useForm<PartnerFormData>({
     mode: 'all',
     resolver: zodResolver(PartnerContactSchema),
   });
 
   const t = useTranslations('forms');
+  const locale = useLocale();
 
   useEffect(() => {
     if (!state) {
@@ -47,7 +46,7 @@ export const PartnerForm = () => {
     }
     if (state.status === 'VALIDATION_ERROR') {
       state.errors?.forEach((error) => {
-        setError(error.path as FieldPath<PartnerFormValues>, {
+        setError(error.path as FieldPath<PartnerFormData>, {
           message: error.message,
         });
       });
@@ -67,6 +66,8 @@ export const PartnerForm = () => {
         onClose={() => setShowPopup(false)}
       />
       <form className='flex flex-col justify-center gap-9' action={formAction}>
+        <input type='hidden' name='language' value={locale} />
+        <input type='hidden' name='type' value='PARTNER' />
         <div>
           <label htmlFor='service' className={labelStyles}>
             {t('input.service.label')}

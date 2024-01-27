@@ -2,7 +2,7 @@
 
 import { Controller, FieldPath, useForm } from 'react-hook-form';
 import { useFormState, useFormStatus } from 'react-dom';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { ContactUsState, getContactUs } from '@/actions/contactUs';
 import { zodResolver } from '@hookform/resolvers/zod';
 import React, { useEffect, useState } from 'react';
@@ -16,13 +16,11 @@ import {
 import { buttonTypes } from '@/components/button/button';
 import clsx from 'clsx';
 import countries from '../../../public/countries.json';
-import { z } from 'zod';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import Link from 'next/link';
 import { FormResultPopup } from '@/components/form/form-result';
-
-type InstitutionFormValues = z.infer<typeof InstitutionsContactSchema>;
+import { InstitutionFormData } from '@/types/contact';
 
 const accommodationTypes = [
   'apartment',
@@ -54,12 +52,13 @@ export const InstitutionForm = () => {
     control,
     formState: { isValid, errors },
     setError,
-  } = useForm<InstitutionFormValues>({
+  } = useForm<InstitutionFormData>({
     mode: 'all',
     resolver: zodResolver(InstitutionsContactSchema),
   });
 
   const t = useTranslations('forms');
+  const locale = useLocale();
 
   useEffect(() => {
     if (!state) {
@@ -67,7 +66,7 @@ export const InstitutionForm = () => {
     }
     if (state.status === 'VALIDATION_ERROR') {
       state.errors?.forEach((error) => {
-        setError(error.path as FieldPath<InstitutionFormValues>, {
+        setError(error.path as FieldPath<InstitutionFormData>, {
           message: error.message,
         });
       });
@@ -90,6 +89,8 @@ export const InstitutionForm = () => {
         className='flex flex-col justify-center gap-8 desktop:flex-row desktop:gap-16'
         action={formAction}
       >
+        <input type='hidden' name='language' value={locale} />
+        <input type='hidden' name='type' value='INSTITUTION' />
         <div className='flex flex-col gap-9 desktop:flex-[0_0_50%]'>
           <div>
             <label htmlFor='name' className={labelStyles}>
@@ -237,9 +238,10 @@ export const InstitutionForm = () => {
               <Controller
                 control={control}
                 name='dateRange'
-                render={({ field: { onChange, value } }) => (
+                render={({ field: { onChange, value, name } }) => (
                   <DatePicker
                     className='block w-full'
+                    name={name}
                     selected={value ? value[0] : undefined}
                     onChange={([from, to]) => onChange([from, to])}
                     startDate={value ? value[0] : undefined}

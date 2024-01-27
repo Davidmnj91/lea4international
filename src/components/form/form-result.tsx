@@ -63,6 +63,7 @@ export const FormResultPopup = ({ state, open, onClose }: FormResultProps) => {
                   </Typography>
                   <button
                     className={buttonTypes({ intent: 'secondary-light' })}
+                    onClick={onClose}
                   >
                     {t('close')}
                   </button>
