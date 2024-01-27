@@ -1,6 +1,7 @@
 import { getRequestConfig } from 'next-intl/server';
 import { ReactNode } from 'react';
 import { RichTranslationValues } from 'use-intl';
+import Link from 'next/link';
 
 export type Language = 'en' | 'es';
 
@@ -33,6 +34,15 @@ export const defaultTranslationVales: RichTranslationValues = {
     <a className='underline' href={`mailto:${chunks}`}>
       {chunks}
     </a>
+  ),
+  policy: (chunks: ReactNode) => (
+    <Link
+      className='font-bold underline'
+      href={'/privacy-policy'}
+      target={'_blank'}
+    >
+      {chunks}
+    </Link>
   ),
 };
 

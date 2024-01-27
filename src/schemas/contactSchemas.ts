@@ -43,10 +43,7 @@ export const InstitutionsContactSchema = z.object({
   institutionName: z.string().min(1),
   city: z.string().min(1),
   hostSize: z.coerce.number().min(1),
-  dateRange: z.union([
-    z.string().optional(),
-    z.tuple([z.date().optional(), z.date().optional()]).optional(),
-  ]),
+  dateRange: z.string().optional(),
   supervisorNumber: z.coerce.number().min(1),
   accommodationType: z.string().min(1),
   roomType: z.string().min(1),

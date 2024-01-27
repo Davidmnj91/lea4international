@@ -513,15 +513,8 @@
         "error": "Por favor proporcione un mensaje"
       },
       "terms": {
-        "label": {
-          "first": "Acepto reconocer que he leído y acepto las ",
-          "link": "políticas de privacidad ",
-          "last": "antes de enviar el formulario"
-        },
-        "error": {
-          "first": "Debe aceptar los ",
-          "link": "Términos y Condiciones"
-        }
+        "label": "Acepto reconocer que he leído y acepto las <policy>políticas de privacidad</policy> antes de enviar el formulario",
+        "error": "Debe aceptar los <policy>Términos y Condiciones</policy>"
       },
       "city": {
         "label": "Ciudad donde vives",
@@ -650,6 +643,11 @@
       "title": "Enfoque personalizado",
       "description": "No todos los proyectos son iguales y lo sabemos, en LEA 4 International recibirás un trato totalmente personalizado. <b>Trabajamos duro para que puedas disfrutar de los resultados</b>"
     }
+  },
+  "cookie-banner": {
+    "message": "Este sitio web utiliza cookies para mejorar tu experiencia de navegación y analizar el tráfico del sitio. Al hacer clic en \"Aceptar\", aceptas el uso de cookies de acuerdo con nuestra <policy>Política de Cookies.</policy>",
+    "accept": "Aceptar",
+    "reject": "Rechazar"
   },
   "more-info": {
     "title": "¿Busca más información?",

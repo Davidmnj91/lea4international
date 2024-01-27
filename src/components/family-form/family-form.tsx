@@ -15,7 +15,6 @@ import {
 } from '@/components/form/form';
 import { buttonTypes } from '@/components/button/button';
 import clsx from 'clsx';
-import Link from 'next/link';
 import { FormResultPopup } from '@/components/form/form-result';
 import { HostFamilyFormData } from '@/types/contact';
 
@@ -216,32 +215,13 @@ export const FamilyForm = () => {
                 className={checkboxStyles}
               />
               <label htmlFor='terms' className={clsx('text-b-sm', labelStyles)}>
-                {t('input.terms.label.first')}
-                <Link
-                  className='font-bold underline'
-                  href={'/privacy-policy'}
-                  target={'_blank'}
-                >
-                  {t('input.terms.label.link')}
-                </Link>
-                {t('input.terms.label.last')}
+                {t.rich('input.terms.label')}
               </label>
             </div>
             <ErrorField
               name='terms'
               errors={errors}
-              message={
-                <>
-                  {t('input.terms.error.first')}{' '}
-                  <Link
-                    className='font-bold underline'
-                    href={'/privacy-policy'}
-                    target={'_blank'}
-                  >
-                    {t('input.terms.error.link')}
-                  </Link>
-                </>
-              }
+              message={t.rich('input.terms.error')}
             />
           </div>
           <button

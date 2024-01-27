@@ -513,14 +513,9 @@
         "error": "Please provide a message"
       },
       "terms": {
-        "label": {
-          "first": "I accept to acknowledge that I have read and agree to the ",
-          "link": "privacy policies",
-          "last": "before submitting the form"
-        },
+        "label": "I accept to acknowledge that I have read and agree to the <policy>privacy policies</policy> before submitting the form",
         "error": {
-          "first": "You must accept the ",
-          "link": "terms and conditions"
+          "first": "You must accept the <policy>terms and conditions</policy>"
         }
       },
       "city": {
@@ -650,6 +645,11 @@
       "title": "Personalized approach",
       "description": "Not every project is the same and we know it, at LEA 4 International you will receive a fully customized approach. We <b>work hard for your to/so you can enjoy the results</b> <b>we work hard for you to enjoy the results</b>"
     }
+  },
+  "cookie-banner": {
+    "message": "This website uses cookies to improve your browsing experience and analyze site traffic. By clicking \"Accept\", you agree to the use of cookies in accordance with our <policy>Cookie Policy.</policy>",
+    "accept": "Accept",
+    "reject": "Reject"
   },
   "more-info": {
     "title": "Looking For More Information?",

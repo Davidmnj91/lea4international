@@ -18,7 +18,6 @@ import clsx from 'clsx';
 import countries from '../../../public/countries.json';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import Link from 'next/link';
 import { FormResultPopup } from '@/components/form/form-result';
 import { InstitutionFormData } from '@/types/contact';
 
@@ -77,6 +76,16 @@ export const InstitutionForm = () => {
       setServerError(true);
     }
   }, [state, setError]);
+
+  const parseDateRangeStr = (
+    value: string
+  ): [Date | undefined, Date | undefined] => {
+    const [from, to] = value.split('-');
+    return [
+      from !== 'undefined' ? new Date(from) : undefined,
+      to !== 'undefined' ? new Date(to) : undefined,
+    ];
+  };
 
   return (
     <>
@@ -242,10 +251,12 @@ export const InstitutionForm = () => {
                   <DatePicker
                     className='block w-full'
                     name={name}
-                    selected={value ? value[0] : undefined}
-                    onChange={([from, to]) => onChange([from, to])}
-                    startDate={value ? value[0] : undefined}
-                    endDate={value ? value[1] : undefined}
+                    selected={value ? parseDateRangeStr(value)[0] : undefined}
+                    onChange={([from, to]) =>
+                      onChange(`${from?.toDateString()}-${to?.toDateString()}`)
+                    }
+                    startDate={value ? parseDateRangeStr(value)[0] : undefined}
+                    endDate={value ? parseDateRangeStr(value)[1] : undefined}
                     selectsRange
                   />
                 )}
@@ -390,32 +401,13 @@ export const InstitutionForm = () => {
                 className={checkboxStyles}
               />
               <label htmlFor='terms' className={clsx('text-b-sm', labelStyles)}>
-                {t('input.terms.label.first')}
-                <Link
-                  className='font-bold underline'
-                  href={'/privacy-policy'}
-                  target={'_blank'}
-                >
-                  {t('input.terms.label.link')}
-                </Link>
-                {t('input.terms.label.last')}
+                {t.rich('input.terms.label')}
               </label>
             </div>
             <ErrorField
               name='terms'
               errors={errors}
-              message={
-                <>
-                  {t('input.terms.error.first')}{' '}
-                  <Link
-                    className='font-bold underline'
-                    href={'/privacy-policy'}
-                    target={'_blank'}
-                  >
-                    {t('input.terms.error.link')}
-                  </Link>
-                </>
-              }
+              message={t.rich('input.terms.error')}
             />
           </div>
           <button
