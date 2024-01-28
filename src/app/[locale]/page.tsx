@@ -127,7 +127,7 @@ export default function HomePage() {
               color='basics-white'
               className='max-w-[336px] text-center desktop:max-w-[840px]'
             >
-              {t('slogan')}
+              {t.rich('slogan')}
             </Typography>
           </div>
           <Link

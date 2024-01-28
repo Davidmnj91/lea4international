@@ -44,6 +44,15 @@ export const defaultTranslationVales: RichTranslationValues = {
       {chunks}
     </Link>
   ),
+  contact: (chunks: ReactNode) => (
+    <Link
+      className='font-bold underline'
+      href={'/contact/general'}
+      target={'_blank'}
+    >
+      {chunks}
+    </Link>
+  ),
 };
 
 export const defaultLanguage: Language = 'en';
