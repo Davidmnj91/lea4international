@@ -397,14 +397,6 @@ export default async function Page({ params: { locale } }: LanguagePageProps) {
         >
           {t('title')}
         </Typography>
-        <Typography
-          as='p'
-          size='body-lg'
-          color='europe-dark'
-          className='text-center desktop:text-left'
-        >
-          {t('description')}
-        </Typography>
       </div>
       <Suspense fallback={<div>Loading...</div>}>
         <section id='videos'>
