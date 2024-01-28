@@ -77,7 +77,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
             color='europe-dark'
             className='text-center'
           >
-            {t('categories.work-experience.description')}
+            {t.rich('categories.work-experience.description')}
           </Typography>
         </div>
         <div className='flex flex-col desktop:h-[893px] desktop:flex-row'>
@@ -299,7 +299,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
             color='europe-dark'
             className='text-center'
           >
-            {t('categories.KA-2.description')}
+            {t.rich('categories.KA-2.description')}
           </Typography>
           <div className='mx-auto flex flex-col gap-8 desktop:flex-row desktop:gap-16'>
             <div

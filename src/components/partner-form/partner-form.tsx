@@ -2,10 +2,10 @@
 
 import { FieldPath, useForm } from 'react-hook-form';
 import { useFormState, useFormStatus } from 'react-dom';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { ContactUsState, getContactUs } from '@/actions/contactUs';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { PartnerContactSchema } from '@/schemas/contactSchemas';
 import {
   checkboxStyles,
@@ -15,48 +15,58 @@ import {
 } from '@/components/form/form';
 import { buttonTypes } from '@/components/button/button';
 import clsx from 'clsx';
-import { z } from 'zod';
-import { ContactServices } from '@/types/contact';
-import Link from 'next/link';
+import { ContactServices, PartnerFormData } from '@/types/contact';
+import { FormResultPopup } from '@/components/form/form-result';
 
-type PartnerFormValues = z.infer<typeof PartnerContactSchema>;
 export const PartnerForm = () => {
   const { pending } = useFormStatus();
   const [state, formAction] = useFormState<ContactUsState, FormData>(
     getContactUs,
     null
   );
+  const [showPopup, setShowPopup] = useState(false);
+  const [serverError, setServerError] = useState<boolean>(false);
+
   const {
     register,
     formState: { isValid, errors },
     setError,
-  } = useForm<PartnerFormValues>({
+  } = useForm<PartnerFormData>({
     mode: 'all',
     resolver: zodResolver(PartnerContactSchema),
   });
 
   const t = useTranslations('forms');
+  const locale = useLocale();
 
   useEffect(() => {
     if (!state) {
       return;
     }
-
-    if (state.status === 'error') {
+    if (state.status === 'VALIDATION_ERROR') {
       state.errors?.forEach((error) => {
-        setError(error.path as FieldPath<PartnerFormValues>, {
+        setError(error.path as FieldPath<PartnerFormData>, {
           message: error.message,
         });
       });
+      return;
+    }
+    setShowPopup(true);
+    if (state.status === 'INTERNAL_ERROR') {
+      setServerError(true);
     }
   }, [state, setError]);
 
   return (
     <>
-      <h1 style={{ color: state?.status === 'success' ? 'green' : 'red' }}>
-        {state?.message}
-      </h1>
+      <FormResultPopup
+        state={serverError ? 'error' : 'success'}
+        open={showPopup}
+        onClose={() => setShowPopup(false)}
+      />
       <form className='flex flex-col justify-center gap-9' action={formAction}>
+        <input type='hidden' name='language' value={locale} />
+        <input type='hidden' name='type' value='PARTNER' />
         <div>
           <label htmlFor='service' className={labelStyles}>
             {t('input.service.label')}
@@ -164,32 +174,13 @@ export const PartnerForm = () => {
               className={checkboxStyles}
             />
             <label htmlFor='terms' className={clsx('text-b-sm', labelStyles)}>
-              {t('input.terms.label.first')}
-              <Link
-                className='font-bold underline'
-                href={'/privacy-policy'}
-                target={'_blank'}
-              >
-                {t('input.terms.label.link')}
-              </Link>
-              {t('input.terms.label.last')}
+              {t.rich('input.terms.label')}
             </label>
           </div>
           <ErrorField
             name='terms'
             errors={errors}
-            message={
-              <>
-                {t('input.terms.error.first')}{' '}
-                <Link
-                  className='font-bold underline'
-                  href={'/privacy-policy'}
-                  target={'_blank'}
-                >
-                  {t('input.terms.error.link')}
-                </Link>
-              </>
-            }
+            message={t.rich('input.terms.error')}
           />
         </div>
         <button

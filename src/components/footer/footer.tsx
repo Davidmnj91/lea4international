@@ -6,6 +6,7 @@ import { Envelope, Phone } from '@phosphor-icons/react';
 import {
   FacebookIcon,
   InstagramIcon,
+  LinkedinIcon,
   YoutubeIcon,
 } from '@/components/icons/social-icons';
 import { Menu } from '@/components/menu/menu';
@@ -63,6 +64,9 @@ const MobileFooter = () => {
         </Typography>
         <Link href={Contact.instagram} target='_blank'>
           <InstagramIcon size={24} />
+        </Link>
+        <Link href={Contact.linkedin} target='_blank'>
+          <LinkedinIcon size={24} />
         </Link>
         <Link href={Contact.facebook} target='_blank'>
           <FacebookIcon size={24} />
@@ -133,6 +137,9 @@ const DesktopFooter = () => {
             </Typography>
             <Link href={Contact.instagram} target='_blank'>
               <InstagramIcon size={24} />
+            </Link>
+            <Link href={Contact.linkedin} target='_blank'>
+              <LinkedinIcon size={24} />
             </Link>
             <Link href={Contact.facebook} target='_blank'>
               <FacebookIcon size={24} />

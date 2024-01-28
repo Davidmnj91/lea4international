@@ -2,10 +2,10 @@
 
 import { Controller, FieldPath, useForm } from 'react-hook-form';
 import { useFormState, useFormStatus } from 'react-dom';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { ContactUsState, getContactUs } from '@/actions/contactUs';
 import { zodResolver } from '@hookform/resolvers/zod';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { InstitutionsContactSchema } from '@/schemas/contactSchemas';
 import {
   checkboxStyles,
@@ -16,12 +16,10 @@ import {
 import { buttonTypes } from '@/components/button/button';
 import clsx from 'clsx';
 import countries from '../../../public/countries.json';
-import { z } from 'zod';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import Link from 'next/link';
-
-type InstitutionFormValues = z.infer<typeof InstitutionsContactSchema>;
+import { FormResultPopup } from '@/components/form/form-result';
+import { InstitutionFormData } from '@/types/contact';
 
 const accommodationTypes = [
   'apartment',
@@ -45,41 +43,63 @@ export const InstitutionForm = () => {
     getContactUs,
     null
   );
+  const [showPopup, setShowPopup] = useState(false);
+  const [serverError, setServerError] = useState<boolean>(false);
+
   const {
     register,
     control,
     formState: { isValid, errors },
     setError,
-  } = useForm<InstitutionFormValues>({
+  } = useForm<InstitutionFormData>({
     mode: 'all',
     resolver: zodResolver(InstitutionsContactSchema),
   });
 
   const t = useTranslations('forms');
+  const locale = useLocale();
 
   useEffect(() => {
     if (!state) {
       return;
     }
-
-    if (state.status === 'error') {
+    if (state.status === 'VALIDATION_ERROR') {
       state.errors?.forEach((error) => {
-        setError(error.path as FieldPath<InstitutionFormValues>, {
+        setError(error.path as FieldPath<InstitutionFormData>, {
           message: error.message,
         });
       });
+      return;
+    }
+    setShowPopup(true);
+    if (state.status === 'INTERNAL_ERROR') {
+      setServerError(true);
     }
   }, [state, setError]);
 
+  const parseDateRangeStr = (
+    value: string
+  ): [Date | undefined, Date | undefined] => {
+    const [from, to] = value.split('-');
+    return [
+      from !== 'undefined' ? new Date(from) : undefined,
+      to !== 'undefined' ? new Date(to) : undefined,
+    ];
+  };
+
   return (
     <>
-      <h1 style={{ color: state?.status === 'success' ? 'green' : 'red' }}>
-        {state?.message}
-      </h1>
+      <FormResultPopup
+        state={serverError ? 'error' : 'success'}
+        open={showPopup}
+        onClose={() => setShowPopup(false)}
+      />
       <form
         className='flex flex-col justify-center gap-8 desktop:flex-row desktop:gap-16'
         action={formAction}
       >
+        <input type='hidden' name='language' value={locale} />
+        <input type='hidden' name='type' value='INSTITUTION' />
         <div className='flex flex-col gap-9 desktop:flex-[0_0_50%]'>
           <div>
             <label htmlFor='name' className={labelStyles}>
@@ -227,13 +247,16 @@ export const InstitutionForm = () => {
               <Controller
                 control={control}
                 name='dateRange'
-                render={({ field: { onChange, value } }) => (
+                render={({ field: { onChange, value, name } }) => (
                   <DatePicker
                     className='block w-full'
-                    selected={value ? value[0] : undefined}
-                    onChange={([from, to]) => onChange([from, to])}
-                    startDate={value ? value[0] : undefined}
-                    endDate={value ? value[1] : undefined}
+                    name={name}
+                    selected={value ? parseDateRangeStr(value)[0] : undefined}
+                    onChange={([from, to]) =>
+                      onChange(`${from?.toDateString()}-${to?.toDateString()}`)
+                    }
+                    startDate={value ? parseDateRangeStr(value)[0] : undefined}
+                    endDate={value ? parseDateRangeStr(value)[1] : undefined}
                     selectsRange
                   />
                 )}
@@ -378,32 +401,13 @@ export const InstitutionForm = () => {
                 className={checkboxStyles}
               />
               <label htmlFor='terms' className={clsx('text-b-sm', labelStyles)}>
-                {t('input.terms.label.first')}
-                <Link
-                  className='font-bold underline'
-                  href={'/privacy-policy'}
-                  target={'_blank'}
-                >
-                  {t('input.terms.label.link')}
-                </Link>
-                {t('input.terms.label.last')}
+                {t.rich('input.terms.label')}
               </label>
             </div>
             <ErrorField
               name='terms'
               errors={errors}
-              message={
-                <>
-                  {t('input.terms.error.first')}{' '}
-                  <Link
-                    className='font-bold underline'
-                    href={'/privacy-policy'}
-                    target={'_blank'}
-                  >
-                    {t('input.terms.error.link')}
-                  </Link>
-                </>
-              }
+              message={t.rich('input.terms.error')}
             />
           </div>
           <button

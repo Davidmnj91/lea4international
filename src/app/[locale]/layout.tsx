@@ -2,12 +2,13 @@ import { Language, languages } from '@/i18n';
 import { notFound } from 'next/navigation';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { cormorant, ubuntu } from '@/app/fonts';
-import { NextIntlClientProvider, useMessages } from 'next-intl';
+import { useMessages } from 'next-intl';
 import { ContactUs } from '@/components/contact-us/contact-us';
 import { Footer } from '@/components/footer/footer';
 import { Contact } from '@/types/contact';
 import lea4international from '../../../public/images/lea4international.png';
-import { GoogleAnalytics } from '@next/third-parties/google';
+import { CookieBanner } from '@/components/cookie-banner/cookie-banner';
+import IntlClientProvider from '@/providers/IntlClientProvider';
 
 export async function generateStaticParams() {
   return languages.map((locale) => ({ locale }));
@@ -147,13 +148,18 @@ export default function RootLayout({
         />
       </head>
       <body className='relative mx-auto bg-basics-white'>
-        <NextIntlClientProvider locale={locale} messages={messages}>
+        <IntlClientProvider
+          locale={locale}
+          messages={messages}
+          timeZone='Europe/Berlin'
+          now={new Date()}
+        >
           {children}
           <ContactUs />
           <Footer />
-        </NextIntlClientProvider>
+          <CookieBanner />
+        </IntlClientProvider>
       </body>
-      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
     </html>
   );
 }

@@ -120,6 +120,13 @@ export const MobileMenu = ({
                   >
                     {t('faq')}
                   </Link>
+                  <Link
+                    className={fullClassName}
+                    href={`/blog`}
+                    onClick={() => close()}
+                  >
+                    {t('blog')}
+                  </Link>
                 </nav>
                 <Link
                   href={'/contact/general'}

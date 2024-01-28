@@ -23,7 +23,7 @@ export const ContactUs = () => {
       <Link
         href={'/contact/general'}
         className={clsx(
-          'fixed bottom-10 right-10 z-50 hidden desktop:flex',
+          'fixed bottom-10 right-10 z-20 hidden desktop:flex',
           buttonTypes({ intent: 'primary' })
         )}
       >

@@ -173,7 +173,7 @@ export default function Page({
             </Typography>
           </div>
           <Typography as='p' size='body-lg' color='europe-dark'>
-            {t('reason')}
+            {t.rich('reason')}
           </Typography>
         </div>
         {mapComponent}

@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import prague_main_bg from '../../../public/images/destinations/prague_main_bg.webp';
+import main_bg from '../../../public/images/main_bg.webp';
 import who_we_are_bg from '../../../public/images/home/who_we_are_bg.webp';
 import our_beliefs_bg from '../../../public/images/home/our_beliefs_bg.webp';
 import our_commitment_bg from '../../../public/images/home/our_commitment_bg.webp';
@@ -87,7 +87,7 @@ export default function HomePage() {
             height: '100vh',
             width: '100%',
             zIndex: '-1',
-            backgroundImage: `url(${prague_main_bg.src}), linear-gradient(#0308227F,#0308227F)`,
+            backgroundImage: `url(${main_bg.src}), linear-gradient(#0308227F,#0308227F)`,
             backgroundBlendMode: 'overlay',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
@@ -127,7 +127,7 @@ export default function HomePage() {
               color='basics-white'
               className='max-w-[336px] text-center desktop:max-w-[840px]'
             >
-              {t('slogan')}
+              {t.rich('slogan')}
             </Typography>
           </div>
           <Link
