@@ -9,7 +9,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { Typography } from '@/components/typography/typography';
 
 export const CommitmentsCarousel = () => {
-  const [carouselRef, carouselApi] = useEmblaCarousel();
+  const [carouselRef, carouselApi] = useEmblaCarousel({ loop: true });
   const t = useTranslations();
 
   const [prevBtnDisabled, setPrevBtnDisabled] = useState(true);

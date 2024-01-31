@@ -8,37 +8,40 @@ const checkboxValidation = z.union([
 export const GeneralContactSchema = z.object({
   service: z.nativeEnum(ContactServices),
   name: z.string().min(1),
-  lastname: z.string().min(1),
+  lastname: z.string().min(1).optional(),
   email: z.string().email().min(1),
   phone: z
     .string()
-    .regex(/^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/),
+    .regex(/^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/)
+    .optional(),
   nationality: z.string().min(1),
-  message: z.string().min(1).max(255),
+  message: z.string().min(1).max(255).optional(),
   terms: checkboxValidation,
 });
 
 export const HostFamilyContactSchema = z.object({
   name: z.string().min(1),
-  lastname: z.string().min(1),
+  lastname: z.string().min(1).optional(),
   email: z.string().email().min(1),
   phone: z
     .string()
-    .regex(/^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/),
+    .regex(/^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/)
+    .optional(),
   city: z.string().min(1),
   zipCode: z.string().min(1),
   hostSize: z.coerce.number().min(1),
-  message: z.string().min(1).max(255),
+  message: z.string().min(1).max(255).optional(),
   terms: checkboxValidation,
 });
 
 export const InstitutionsContactSchema = z.object({
   name: z.string().min(1),
-  lastname: z.string().min(1),
+  lastname: z.string().min(1).optional(),
   email: z.string().email().min(1),
   phone: z
     .string()
-    .regex(/^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/),
+    .regex(/^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/)
+    .optional(),
   nationality: z.string().min(1),
   institutionName: z.string().min(1),
   city: z.string().min(1),
@@ -54,11 +57,10 @@ export const InstitutionsContactSchema = z.object({
 });
 
 export const PartnerContactSchema = z.object({
-  service: z.nativeEnum(ContactServices),
   name: z.string().min(1),
-  lastname: z.string().min(1),
-  applicantName: z.string().min(1),
+  lastname: z.string().min(1).optional(),
+  applicantName: z.string().min(1).optional(),
   email: z.string().email().min(1),
-  projectDescription: z.string().min(1).max(255),
+  projectDescription: z.string().min(1).max(255).optional(),
   terms: checkboxValidation,
 });

@@ -131,7 +131,7 @@ export default function HomePage() {
             </Typography>
           </div>
           <Link
-            href={'/contact/general'}
+            href={'/contact/individual'}
             className={clsx('mt-[60px]', buttonTypes({ intent: 'primary' }))}
           >
             {t('request-more-info')}
@@ -145,7 +145,7 @@ export default function HomePage() {
             }}
           >
             <div className='flex w-full flex-col justify-center desktop:flex-row'>
-              <div className='flex flex-col justify-between gap-8 bg-star-light px-6 py-9 desktop:mt-[-28px] desktop:h-[550px] desktop:max-w-[416px] desktop:gap-0'>
+              <div className='flex flex-col justify-between gap-8 bg-star-light px-6 py-9 desktop:mt-[-28px] desktop:h-[550px] desktop:max-w-[615px] desktop:gap-0'>
                 <div>
                   <Typography
                     as='span'

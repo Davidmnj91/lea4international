@@ -167,7 +167,7 @@ const DesktopFooter = () => {
         <Logo width={60} height={46} />
         <span className='h-1 w-[250px] flex-1 border-b border-b-gold-dark' />
       </div>
-      <div className='flex w-full justify-between'>
+      <div className='flex w-full flex-col'>
         <Typography as='span' size='body-sm' color='basics-white'>
           {t('copyright')}
         </Typography>

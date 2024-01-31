@@ -19,7 +19,13 @@ export const Contact = {
 
 export enum ContactServices {
   ERASMUS = 'erasmus',
-  LANGUAGE_COURSES = 'language-courses',
+  CONVERSATIONAL_ENGLISH_COURSE = 'conversational-english-course',
+  BUSINESS_ENGLISH_COURSE = 'business-english-course',
+  CONVERSATIONAL_SPANISH_COURSE = 'conversational-spanish-course',
+  BUSINESS_SPANISH_COURSE = 'business-spanish-course',
+  MACHINE_LEARNING = 'machine-learning',
+  DATA_MINING = 'data-mining',
+  AI_FOR_BUSINESS = 'business-ai',
   CONCIERGE = 'concierge',
 }
 

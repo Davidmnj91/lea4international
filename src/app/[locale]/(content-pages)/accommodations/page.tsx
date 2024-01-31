@@ -103,7 +103,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
                     {t(`accommodations.${accommodation}.description`)}
                   </Typography>
                   <Link
-                    href={'/contact/general'}
+                    href={'/contact/individual'}
                     className={buttonTypes({ intent: 'primary' })}
                   >
                     {t('contact-us')}

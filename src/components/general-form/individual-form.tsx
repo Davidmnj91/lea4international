@@ -19,7 +19,7 @@ import countries from '../../../public/countries.json';
 import { ContactServices, GeneralFormData } from '@/types/contact';
 import { FormResultPopup } from '@/components/form/form-result';
 
-export const GeneralForm = () => {
+export const IndividualForm = () => {
   const { pending } = useFormStatus();
   const [state, formAction] = useFormState<ContactUsState, FormData>(
     getContactUs,

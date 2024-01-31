@@ -25,12 +25,14 @@ import business_spanish_courses_bg from '../../../../../../../public/images/serv
 import machine_learning_bg from '../../../../../../../public/images/services/language-courses/machine_learning_bg.webp';
 import data_mining_bg from '../../../../../../../public/images/services/language-courses/data_mining_bg.webp';
 import business_ia_bg from '../../../../../../../public/images/services/language-courses/business_ia_bg.webp';
+import business_development_bg from '../../../../../../../public/images/services/language-courses/business_development_bg.webp';
 import clsx from 'clsx';
 import { Typography } from '@/components/typography/typography';
 import {
   InformationCategories,
   MoreInfo,
 } from '@/components/more-info/more-info';
+import Image from 'next/image';
 
 export default function Page({ params: { locale } }: LanguagePageProps) {
   // Enable static rendering
@@ -121,7 +123,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
       {Object.entries(sections).map(([section, imgSrc], index) => (
         <section key={section} id={section}>
           <div className={clsx('flex', index % 2 !== 0 && 'flex-row-reverse')}>
-            <div className='flex flex-auto flex-col gap-8 p-6 desktop:flex-[0_0_60%] desktop:gap-24 desktop:px-12 desktop:py-24'>
+            <div className='flex flex-auto flex-col gap-8 p-6 desktop:flex-[0_0_60%] desktop:gap-14 desktop:px-12 desktop:py-24'>
               <Typography as='h2' size='heading-xl' color='europe-dark'>
                 {t(`categories.${section}.title`)}
               </Typography>
@@ -180,7 +182,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
       {Object.entries(iaSections).map(([section, imgSrc], index) => (
         <section key={section} id={section}>
           <div className={clsx('flex', index % 2 !== 0 && 'flex-row-reverse')}>
-            <div className='flex flex-auto flex-col gap-8 p-6 desktop:flex-[0_0_60%] desktop:gap-24 desktop:px-12 desktop:py-24'>
+            <div className='flex flex-auto flex-col gap-8 p-6 desktop:flex-[0_0_60%] desktop:gap-14 desktop:px-12 desktop:py-24'>
               <Typography as='h2' size='heading-xl' color='europe-dark'>
                 {t(`categories.${section}.title`)}
               </Typography>
@@ -199,7 +201,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
       ))}
       <section id='business-ia'>
         <div className='flex'>
-          <div className='flex flex-auto flex-col gap-8 p-6 desktop:flex-[0_0_60%] desktop:gap-24 desktop:px-12 desktop:py-24'>
+          <div className='flex flex-auto flex-col gap-8 p-6 desktop:flex-[0_0_60%] desktop:gap-14 desktop:px-12 desktop:py-24'>
             <Typography as='h2' size='heading-xl' color='europe-dark'>
               {t('categories.business-ia.title')}
             </Typography>
@@ -254,6 +256,13 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
             {t.rich(`categories.business-development.description`)}
           </Typography>
         </div>
+        <Image
+          src={business_development_bg.src}
+          alt='BusinessDevelopment'
+          height={401}
+          width={1440}
+          style={{ width: '100%' }}
+        />
       </section>
       <section id='more-info'>
         <div className='desktop:py-14'>
