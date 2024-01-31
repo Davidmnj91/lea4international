@@ -88,7 +88,7 @@ export async function getContactUs(
     const adminTemplate = await renderAsync(AdminEmail({ props: email }));
     await sendMail(
       emails[language]['admin-mail'].subject,
-      contactData.data.email,
+      process.env.MAIL_USER!,
       adminTemplate
     );
 
