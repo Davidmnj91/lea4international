@@ -55,6 +55,9 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
             {t(`categories.${service}.title`)}
           </Link>
         ))}
+        <Link href={`#KA-2`} scroll={true} className={tagButtonTypes()}>
+          {t(`categories.KA-2.title`)}
+        </Link>
       </div>
       <section id='work-experience'>
         <div className='flex flex-col items-center justify-center gap-8 p-6 desktop:gap-28 desktop:px-12 desktop:py-24'>
@@ -95,7 +98,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
               </div>
             </div>
           </div>
-          <div className='flex flex-col justify-end p-6 text-center desktop:flex-[0_0_40%] desktop:px-12 desktop:py-24 desktop:text-left'>
+          <div className='flex flex-col justify-end p-6 text-center desktop:flex-[0_0_40%] desktop:px-12 desktop:text-left'>
             <div className='z-10 bg-basics-white'>
               <Typography as='p' size='body-lg' color='europe-dark'>
                 {t.rich('categories.work-experience.message')}
@@ -124,7 +127,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
             </ul>
             <div>
               <Link
-                href={'/contact/general'}
+                href={'/contact/individual'}
                 className={buttonTypes({ intent: 'primary' })}
               >
                 {t('categories.work-experience.know-more')}
@@ -178,7 +181,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
               </div>
             </div>
           </div>
-          <div className='flex flex-col justify-end p-6 text-center desktop:flex-[0_0_40%] desktop:px-12 desktop:py-24 desktop:text-left'>
+          <div className='flex flex-col justify-end p-6 text-center desktop:flex-[0_0_40%] desktop:px-12 desktop:text-left'>
             <div className='z-10 bg-basics-white'>
               <Typography as='p' size='body-lg' color='europe-dark'>
                 {t.rich('categories.job-shadowing.message')}
@@ -202,8 +205,13 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
               {t('categories.school-exchange.title')}
             </Typography>
           </div>
-          <Typography as='span' size='body-lg' color='europe-dark'>
-            {t('categories.school-exchange.description')}
+          <Typography
+            as='span'
+            size='body-lg'
+            color='europe-dark'
+            className='text-center'
+          >
+            {t.rich('categories.school-exchange.description')}
           </Typography>
         </div>
         <div className='flex flex-col desktop:h-[782px] desktop:flex-row'>
@@ -221,7 +229,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
               </div>
             </div>
           </div>
-          <div className='flex flex-col justify-end p-6 text-center desktop:flex-[0_0_40%] desktop:px-12 desktop:py-24 desktop:text-left'>
+          <div className='flex flex-col justify-end p-6 text-center desktop:flex-[0_0_40%] desktop:px-12 desktop:text-left'>
             <div className='z-10 bg-basics-white'>
               <Typography as='p' size='body-lg' color='europe-dark'>
                 {t.rich('categories.school-exchange.message')}
@@ -269,10 +277,10 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
               </div>
             </div>
           </div>
-          <div className='flex flex-col justify-end p-6 text-center desktop:flex-[0_0_40%] desktop:px-12 desktop:py-24 desktop:text-left'>
+          <div className='flex flex-col justify-end p-6 text-center desktop:flex-[0_0_40%] desktop:px-12 desktop:text-left'>
             <div className='z-10 bg-basics-white'>
               <Typography as='p' size='body-lg' color='europe-dark'>
-                {t('categories.erasmus-mundus.message')}
+                {t.rich('categories.erasmus-mundus.message')}
               </Typography>
             </div>
           </div>
@@ -311,13 +319,21 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
                 <Typography as='h3' size='heading-lg' color='europe-dark'>
                   {t('categories.KA-2.priority-topics.title')}
                 </Typography>
-                <ul>{t.rich('categories.KA-2.priority-topics.description')}</ul>
+                <ul>
+                  <Typography as='span' size='body-lg' color='europe-dark'>
+                    {t.rich('categories.KA-2.priority-topics.description')}
+                  </Typography>
+                </ul>
               </div>
               <div className='flex flex-col gap-6'>
                 <Typography as='h3' size='heading-lg' color='europe-dark'>
                   {t('categories.KA-2.eligible.title')}
                 </Typography>
-                <ul>{t.rich('categories.KA-2.eligible.description')}</ul>
+                <ul>
+                  <Typography as='span' size='body-lg' color='europe-dark'>
+                    {t.rich('categories.KA-2.eligible.description')}
+                  </Typography>
+                </ul>
               </div>
             </div>
           </div>

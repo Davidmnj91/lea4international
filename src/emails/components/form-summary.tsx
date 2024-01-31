@@ -171,9 +171,6 @@ export const PartnerContactDetails = ({
         {t.email}: <strong> {data.email}</strong>
       </Text>
       <Text className='text-desktop-b-md text-europe'>
-        {t.service}: <strong> {data.service}</strong>
-      </Text>
-      <Text className='text-desktop-b-md text-europe'>
         {t.projectDescription}: <strong> {data.projectDescription}</strong>
       </Text>
     </Column>

@@ -15,7 +15,7 @@ import {
 } from '@/components/form/form';
 import { buttonTypes } from '@/components/button/button';
 import clsx from 'clsx';
-import { ContactServices, PartnerFormData } from '@/types/contact';
+import { PartnerFormData } from '@/types/contact';
 import { FormResultPopup } from '@/components/form/form-result';
 
 export const PartnerForm = () => {
@@ -67,23 +67,6 @@ export const PartnerForm = () => {
       <form className='flex flex-col justify-center gap-9' action={formAction}>
         <input type='hidden' name='language' value={locale} />
         <input type='hidden' name='type' value='PARTNER' />
-        <div>
-          <label htmlFor='service' className={labelStyles}>
-            {t('input.service.label')}
-          </label>
-          <select id='service' className={inputStyles} {...register('service')}>
-            {Object.values(ContactServices).map((service) => (
-              <option key={service} value={service}>
-                {t(`input.service.options.${service}`)}
-              </option>
-            ))}
-          </select>
-          <ErrorField
-            name='service'
-            errors={errors}
-            message={t('input.service.error')}
-          />
-        </div>
         <div>
           <label htmlFor='name' className={labelStyles}>
             {t('input.name.label')}

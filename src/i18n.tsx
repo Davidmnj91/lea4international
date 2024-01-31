@@ -19,8 +19,8 @@ export const defaultTranslationVales: RichTranslationValues = {
     </>
   ),
   li: (chunks: ReactNode) => (
-    <li className='flex'>
-      <span className='mr-2'>&#8226;</span>
+    <li className='flex gap-2'>
+      <span>&#8226;</span>
       <span>{chunks}</span>
     </li>
   ),
@@ -47,7 +47,7 @@ export const defaultTranslationVales: RichTranslationValues = {
   contact: (chunks: ReactNode) => (
     <Link
       className='font-bold underline'
-      href={'/contact/general'}
+      href={'/contact/individual'}
       target={'_blank'}
     >
       {chunks}

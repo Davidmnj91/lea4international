@@ -11,7 +11,7 @@ export enum InformationCategories {
 }
 
 const informationLinks = {
-  [InformationCategories.MORE_INFO]: 'contact/general',
+  [InformationCategories.MORE_INFO]: 'contact/individual',
   [InformationCategories.REQUEST_QUOTE]: 'contact/institutions',
   [InformationCategories.HOST_FAMILIY]: 'contact/host-family',
 };

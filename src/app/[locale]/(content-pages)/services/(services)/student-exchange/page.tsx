@@ -86,7 +86,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
               color='europe-dark'
               className='text-center'
             >
-              {t(`categories.${section}.description`)}
+              {t.rich(`categories.${section}.description`)}
             </Typography>
           </div>
           <div className={clsx('flex', index % 2 !== 0 && 'flex-row-reverse')}>

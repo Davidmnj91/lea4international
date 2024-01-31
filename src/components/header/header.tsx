@@ -129,7 +129,7 @@ export const MobileMenu = ({
                   </Link>
                 </nav>
                 <Link
-                  href={'/contact/general'}
+                  href={'/contact/individual'}
                   className={clsx(
                     typographyClasses({
                       size: 'body-sm',

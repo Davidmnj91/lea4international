@@ -27,6 +27,7 @@ const accommodationTypes = [
   'hotel',
   'hostel',
   'host-family',
+  'airbnb',
 ];
 
 const roomTypes = ['single', 'double', 'triple', 'quadruple'];
