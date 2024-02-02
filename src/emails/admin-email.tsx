@@ -46,7 +46,9 @@ export const AdminEmail = ({ props = previewProps }) => {
             <Container className='max-w-[490px]'>
               <Link href='https://www.lea4int.com'>
                 <Img
-                  src={`${baseUrl}/_next/image?url=${encodeURI(logo.src)}`}
+                  src={`${baseUrl}/_next/image?url=${encodeURIComponent(
+                    logo.src
+                  )}`}
                   width={132}
                   height={50}
                   alt='LEA4International'
@@ -71,7 +73,7 @@ export const AdminEmail = ({ props = previewProps }) => {
                 <Column className='pr-2'>
                   <Link href={Contact.instagram}>
                     <Img
-                      src={`${baseUrl}/_next/image?url=${encodeURI(
+                      src={`${baseUrl}/_next/image?url=${encodeURIComponent(
                         instagram.src
                       )}`}
                       width={24}
@@ -83,7 +85,7 @@ export const AdminEmail = ({ props = previewProps }) => {
                 <Column className='pr-2'>
                   <Link href={Contact.linkedin}>
                     <Img
-                      src={`${baseUrl}/_next/image?url=${encodeURI(
+                      src={`${baseUrl}/_next/image?url=${encodeURIComponent(
                         linkedin.src
                       )}`}
                       width={24}
@@ -95,7 +97,7 @@ export const AdminEmail = ({ props = previewProps }) => {
                 <Column className='pr-2'>
                   <Link href={Contact.facebook}>
                     <Img
-                      src={`${baseUrl}/_next/image?url=${encodeURI(
+                      src={`${baseUrl}/_next/image?url=${encodeURIComponent(
                         facebook.src
                       )}`}
                       width={24}
@@ -107,7 +109,7 @@ export const AdminEmail = ({ props = previewProps }) => {
                 <Column className='pr-2'>
                   <Link href={Contact.youtube}>
                     <Img
-                      src={`${baseUrl}/_next/image?url=${encodeURI(
+                      src={`${baseUrl}/_next/image?url=${encodeURIComponent(
                         youtube.src
                       )}`}
                       width={24}
