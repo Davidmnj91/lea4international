@@ -48,7 +48,7 @@ export const AdminEmail = ({ props = previewProps }) => {
                 <Img
                   src={`${baseUrl}/_next/image?url=${encodeURIComponent(
                     logo.src
-                  )}`}
+                  )}&w=132&q=100`}
                   width={132}
                   height={50}
                   alt='LEA4International'
@@ -75,7 +75,7 @@ export const AdminEmail = ({ props = previewProps }) => {
                     <Img
                       src={`${baseUrl}/_next/image?url=${encodeURIComponent(
                         instagram.src
-                      )}`}
+                      )}&w=24&q=100`}
                       width={24}
                       height={24}
                       alt='Instagram'
@@ -87,7 +87,7 @@ export const AdminEmail = ({ props = previewProps }) => {
                     <Img
                       src={`${baseUrl}/_next/image?url=${encodeURIComponent(
                         linkedin.src
-                      )}`}
+                      )}&w=24&q=100`}
                       width={24}
                       height={24}
                       alt='LinkedIn'
@@ -99,7 +99,7 @@ export const AdminEmail = ({ props = previewProps }) => {
                     <Img
                       src={`${baseUrl}/_next/image?url=${encodeURIComponent(
                         facebook.src
-                      )}`}
+                      )}&w=24&q=100`}
                       width={24}
                       height={24}
                       alt='Facebook'
@@ -111,7 +111,7 @@ export const AdminEmail = ({ props = previewProps }) => {
                     <Img
                       src={`${baseUrl}/_next/image?url=${encodeURIComponent(
                         youtube.src
-                      )}`}
+                      )}&w=24&q=100`}
                       width={24}
                       height={24}
                       alt='Youtube'
