@@ -1,7 +1,7 @@
 'use client';
 
 import { FieldPath, useForm } from 'react-hook-form';
-import { useFormState, useFormStatus } from 'react-dom';
+import { useFormState } from 'react-dom';
 import { useLocale, useTranslations } from 'next-intl';
 import { ContactUsState, getContactUs } from '@/actions/contactUs';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -13,13 +13,13 @@ import {
   inputStyles,
   labelStyles,
 } from '@/components/form/form';
-import { buttonTypes } from '@/components/button/button';
 import clsx from 'clsx';
 import { FormResultPopup } from '@/components/form/form-result';
 import { HostFamilyFormData } from '@/types/contact';
+import { FormLoadingPopup } from '@/components/form/form-loading';
+import { SubmitButton } from '@/components/form/submit-button';
 
 export const FamilyForm = () => {
-  const { pending } = useFormStatus();
   const [state, formAction] = useFormState<ContactUsState, FormData>(
     getContactUs,
     null
@@ -31,6 +31,7 @@ export const FamilyForm = () => {
     register,
     formState: { isValid, errors },
     setError,
+    reset,
   } = useForm<HostFamilyFormData>({
     mode: 'all',
     resolver: zodResolver(HostFamilyContactSchema),
@@ -55,7 +56,10 @@ export const FamilyForm = () => {
     if (state.status === 'INTERNAL_ERROR') {
       setServerError(true);
     }
-  }, [state, setError]);
+    if (state.status === 'SUCCESS') {
+      reset();
+    }
+  }, [state, setError, reset]);
 
   return (
     <>
@@ -68,6 +72,7 @@ export const FamilyForm = () => {
         className='flex flex-col justify-center gap-8 desktop:flex-row desktop:gap-16'
         action={formAction}
       >
+        <FormLoadingPopup />
         <input type='hidden' name='language' value={locale} />
         <input type='hidden' name='type' value='FAMILY' />
         <div className='flex flex-col gap-9 desktop:flex-[0_0_50%]'>
@@ -224,16 +229,7 @@ export const FamilyForm = () => {
               message={t.rich('input.terms.error')}
             />
           </div>
-          <button
-            className={clsx(
-              'self-end',
-              buttonTypes({ intent: 'secondary-light' })
-            )}
-            type='submit'
-            disabled={pending || !isValid}
-          >
-            {t('submit')}
-          </button>
+          <SubmitButton isValid={isValid} />
         </div>
       </form>
     </>

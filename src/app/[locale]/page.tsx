@@ -145,7 +145,7 @@ export default function HomePage() {
             }}
           >
             <div className='flex w-full flex-col justify-center desktop:flex-row'>
-              <div className='flex flex-col justify-between gap-8 bg-star-light px-6 py-9 desktop:mt-[-28px] desktop:h-[550px] desktop:max-w-[615px] desktop:gap-0'>
+              <div className='flex flex-col justify-between gap-8 bg-star-light px-6 py-9 desktop:mt-[-28px] desktop:h-[550px] desktop:max-w-[416px] desktop:gap-0'>
                 <div>
                   <Typography
                     as='span'
@@ -226,7 +226,7 @@ export default function HomePage() {
                       {Contact.companyName}
                     </Typography>
                     <Typography as='h1' size='heading-xl' color='europe-dark'>
-                      {t('our-beliefs.title')}
+                      {t('our-principles.title')}
                     </Typography>
                   </div>
                   <Typography
@@ -234,7 +234,7 @@ export default function HomePage() {
                     size='body-lg'
                     color='europe-dark'
                     dangerouslySetInnerHTML={{
-                      __html: t.raw('our-beliefs.description'),
+                      __html: t.raw('our-principles.description'),
                     }}
                   />
                 </div>
@@ -278,7 +278,7 @@ export default function HomePage() {
                   <Typography as='span' size='heading-4xl' color='gold-dark'>
                     &ldquo;
                   </Typography>
-                  {t('help-you')}
+                  {t.rich('help-you')}
                   <Typography as='span' size='heading-4xl' color='gold-dark'>
                     &rdquo;
                   </Typography>

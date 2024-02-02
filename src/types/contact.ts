@@ -1,7 +1,7 @@
 import { z } from 'zod';
 import {
-  GeneralContactSchema,
   HostFamilyContactSchema,
+  IndividualContactSchema,
   InstitutionsContactSchema,
   PartnerContactSchema,
 } from '@/schemas/contactSchemas';
@@ -29,13 +29,13 @@ export enum ContactServices {
   CONCIERGE = 'concierge',
 }
 
-export type GeneralFormData = z.infer<typeof GeneralContactSchema>;
+export type IndividualFormData = z.infer<typeof IndividualContactSchema>;
 export type HostFamilyFormData = z.infer<typeof HostFamilyContactSchema>;
 export type InstitutionFormData = z.infer<typeof InstitutionsContactSchema>;
 export type PartnerFormData = z.infer<typeof PartnerContactSchema>;
 
 export type ContactData =
-  | { type: 'GENERAL'; data: GeneralFormData }
+  | { type: 'INDIVIDUAL'; data: IndividualFormData }
   | { type: 'FAMILY'; data: HostFamilyFormData }
   | { type: 'INSTITUTION'; data: InstitutionFormData }
   | { type: 'PARTNER'; data: PartnerFormData };

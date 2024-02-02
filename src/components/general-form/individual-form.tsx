@@ -1,26 +1,26 @@
 'use client';
 
 import { FieldPath, useForm } from 'react-hook-form';
-import { useFormState, useFormStatus } from 'react-dom';
+import { useFormState } from 'react-dom';
 import { useLocale, useTranslations } from 'next-intl';
 import { ContactUsState, getContactUs } from '@/actions/contactUs';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useEffect, useState } from 'react';
-import { GeneralContactSchema } from '@/schemas/contactSchemas';
+import { IndividualContactSchema } from '@/schemas/contactSchemas';
 import {
   checkboxStyles,
   ErrorField,
   inputStyles,
   labelStyles,
 } from '@/components/form/form';
-import { buttonTypes } from '@/components/button/button';
 import clsx from 'clsx';
 import countries from '../../../public/countries.json';
-import { ContactServices, GeneralFormData } from '@/types/contact';
+import { ContactServices, IndividualFormData } from '@/types/contact';
 import { FormResultPopup } from '@/components/form/form-result';
+import { FormLoadingPopup } from '@/components/form/form-loading';
+import { SubmitButton } from '@/components/form/submit-button';
 
 export const IndividualForm = () => {
-  const { pending } = useFormStatus();
   const [state, formAction] = useFormState<ContactUsState, FormData>(
     getContactUs,
     null
@@ -32,9 +32,10 @@ export const IndividualForm = () => {
     register,
     formState: { isValid, errors },
     setError,
-  } = useForm<GeneralFormData>({
+    reset,
+  } = useForm<IndividualFormData>({
     mode: 'all',
-    resolver: zodResolver(GeneralContactSchema),
+    resolver: zodResolver(IndividualContactSchema),
   });
 
   const t = useTranslations('forms');
@@ -46,7 +47,7 @@ export const IndividualForm = () => {
     }
     if (state.status === 'VALIDATION_ERROR') {
       state.errors?.forEach((error) => {
-        setError(error.path as FieldPath<GeneralFormData>, {
+        setError(error.path as FieldPath<IndividualFormData>, {
           message: error.message,
         });
       });
@@ -56,7 +57,10 @@ export const IndividualForm = () => {
     if (state.status === 'INTERNAL_ERROR') {
       setServerError(true);
     }
-  }, [state, setError]);
+    if (state.status === 'SUCCESS') {
+      reset();
+    }
+  }, [state, setError, reset]);
 
   return (
     <>
@@ -69,8 +73,9 @@ export const IndividualForm = () => {
         className='flex flex-col justify-center gap-8 desktop:flex-row desktop:gap-16'
         action={formAction}
       >
+        <FormLoadingPopup />
         <input type='hidden' name='language' value={locale} />
-        <input type='hidden' name='type' value='GENERAL' />
+        <input type='hidden' name='type' value='INDIVIDUAL' />
         <div className='flex flex-col gap-9 desktop:flex-[0_0_50%]'>
           <div>
             <label htmlFor='service' className={labelStyles}>
@@ -217,16 +222,7 @@ export const IndividualForm = () => {
               message={t.rich('input.terms.error')}
             />
           </div>
-          <button
-            className={clsx(
-              'self-end',
-              buttonTypes({ intent: 'secondary-light' })
-            )}
-            type='submit'
-            disabled={pending || !isValid}
-          >
-            {t('submit')}
-          </button>
+          <SubmitButton isValid={isValid} />
         </div>
       </form>
     </>

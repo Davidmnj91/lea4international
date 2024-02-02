@@ -135,7 +135,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
             </div>
           </div>
           <div
-            className='hidden bg-cover bg-no-repeat desktop:block desktop:flex-[0_0_40%]'
+            className='hidden bg-cover bg-bottom bg-no-repeat desktop:block desktop:flex-[0_0_40%]'
             style={{
               backgroundImage: `url(${we_offer_bg.src})`,
             }}

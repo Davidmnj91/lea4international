@@ -53,7 +53,7 @@ export const buttonTypes = cva(
 export const tagButtonTypes = cva(
   clsx(
     typographyClasses({ size: 'body-md', color: 'europe-dark' }),
-    'inline-flex flex-[1_0_auto] desktop:flex-initial py-1 px-2.5 justify-center items-center rounded-[30px] border border-europe-dark hover:bg-star-light hover:font-normal'
+    'inline-flex flex-[1_0_auto] desktop:flex-initial py-1 px-2.5 justify-center items-center rounded-[30px] border border-europe-dark hover:bg-star-light hover:font-normal text-center'
   ),
   {
     variants: {

@@ -1,7 +1,7 @@
 import {
   ContactEmailProps,
-  GeneralFormData,
   HostFamilyFormData,
+  IndividualFormData,
   InstitutionFormData,
   PartnerFormData,
 } from '@/types/contact';
@@ -10,7 +10,7 @@ import emails from '../../i18n/emails.json';
 import { Column, Text } from '@react-email/components';
 
 type GeneralContactDetailsProps = {
-  data: GeneralFormData;
+  data: IndividualFormData;
   language: Language;
 };
 export const GeneralContactDetails = ({
@@ -179,7 +179,7 @@ export const PartnerContactDetails = ({
 
 export const FormSummary = ({ language, contactData }: ContactEmailProps) => {
   switch (contactData.type) {
-    case 'GENERAL':
+    case 'INDIVIDUAL':
       return (
         <GeneralContactDetails data={contactData.data} language={language} />
       );
