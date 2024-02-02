@@ -9,7 +9,6 @@ import exchange_bg from '../../../../../../../public/images/services/student-exc
 import clsx from 'clsx';
 import { AirplaneTilt } from '@phosphor-icons/react/dist/ssr/AirplaneTilt';
 import { Bed } from '@phosphor-icons/react/dist/ssr/Bed';
-import { RoadHorizon } from '@phosphor-icons/react/dist/ssr/RoadHorizon';
 import { Train } from '@phosphor-icons/react/dist/ssr/Train';
 import { Bank } from '@phosphor-icons/react/dist/ssr/Bank';
 import { Typography } from '@/components/typography/typography';
@@ -18,6 +17,7 @@ import {
   MoreInfo,
 } from '@/components/more-info/more-info';
 import React from 'react';
+import { Taxi } from '@phosphor-icons/react/dist/ssr/Taxi';
 
 export default function Page({ params: { locale } }: LanguagePageProps) {
   // Enable static rendering
@@ -33,8 +33,8 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
   };
 
   const services = {
-    'round-trip': <RoadHorizon size={32} />,
-    airport: <AirplaneTilt size={32} />,
+    'round-trip': <AirplaneTilt size={32} />,
+    airport: <Taxi size={32} />,
     'local-transport': <Train size={32} />,
     accommodation: <Bed size={32} />,
     cultural: <Bank size={32} />,

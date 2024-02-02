@@ -29,10 +29,11 @@ const MobileFooter = () => {
         <Menu />
       </div>
       <Image
+        unoptimized
         src={erasmus_quality_standards.src}
         alt='eramus_quality_standards'
-        width={72}
-        height={72}
+        width={125}
+        height={125}
       />
       <div className='flex w-full flex-col items-center justify-center gap-2'>
         <div className='flex items-center gap-6 text-basics-white'>
@@ -131,6 +132,13 @@ const DesktopFooter = () => {
               </Typography>
             </div>
           </div>
+          <Image
+            unoptimized
+            src={erasmus_quality_standards.src}
+            alt='eramus_quality_standards'
+            width={125}
+            height={125}
+          />
           <div className='flex gap-4 text-basics-white'>
             <Typography as='span' size='body-md' color='basics-white'>
               {t('follow-us')}
@@ -151,15 +159,9 @@ const DesktopFooter = () => {
         </div>
         <div className='flex flex-col items-end justify-between gap-4'>
           <LocaleSwitcher />
-          <nav className=' flex flex-col justify-between gap-4'>
+          <nav className='flex h-full flex-col justify-center gap-4'>
             <Menu itemClassNames='text-right' />
           </nav>
-          <Image
-            src={erasmus_quality_standards.src}
-            alt='eramus_quality_standards'
-            width={72}
-            height={72}
-          />
         </div>
       </div>
       <div className='flex w-full items-center justify-between gap-6'>

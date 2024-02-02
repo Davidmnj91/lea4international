@@ -20,23 +20,23 @@
     "language": "Idioma.",
     "education": "Educación.",
     "travel": "Viajar.",
-    "slogan": "LEA 4 International promueve la Educación Superior en el Extranjero mediante la planificación, implementación y coordinación de una variedad de proyectos educativos. Trabajamos en colaboración con programas de financiamiento como Erasmus Plus en diversos países europeos.",
+    "slogan": "LEA 4 International promueve la Educación Superior en el Extranjero mediante la planificación, implementación y coordinación de una variedad de proyectos educativos. Trabajamos en colaboración con programas de financiamiento como Erasmus+ en diversos países europeos.",
     "request-more-info": "Infórmate",
     "who-we-are": {
       "title": "Quienes Somos",
-      "description": "LEA 4 International es una empresa de gestión de proyectos y consultoría. Nos especializamos en la planificación, organización y ejecución de una variedad de proyectos educativos. Nuestra meta principal es ayudar a las personas a obtener experiencias significativas en el extranjero que les permitan crecer tanto profesional como personalmente. <br></br>Creemos que tener una experiencia en el extranjero es una excelente oportunidad para expandir la mente, explorar diferentes culturas y aprender otros idiomas. Gracias a la globalización, vivimos en un mundo conectado que ofrece muchas oportunidades para viajar y explorar más allá de nuestro país de origen.<br></br>Salir de tu zona de confort e ir al extranjero puede ser estresante y desafiante. Por esta razón, en LEA 4 International queremos hacer tu experiencia en el extranjero más fácil. Apoyamos tu proyecto realizando todas las gestiones necesarias. Estamos aquí para ayudarte a disfrutar de tu aventura educativa."
+      "description": "LEA 4 International es una empresa de gestión de proyectos y consultoría especializada en la planificación, organización y ejecución de una variedad de proyectos educativos."
     },
     "our-focus": {
       "title": "Nuestra Misión",
-      "description": "Organización y ejecución de una variedad de <b>proyectos educativos</b>. Nuestro objetivo principal es ayudar a las personas a adquirir <b>experiencias de vida significativas</b> en el extranjero que les ayudarán a crecer, tanto a nivel profesional como personal."
+      "description": "Nuestro objetivo principal es ayudar a las personas a obtener experiencias significativas en el extranjero que les ayuden a crecer, tanto profesional como personalmente."
     },
-    "our-beliefs": {
-      "title": "Nuestras Creencias",
-      "description": "En LEA 4 International creemos que tener una experiencia en el extranjero es una gran oportunidad para abrir la mente, explorar <b>diferentes culturas y hablar otros idiomas.</b> Gracias a la globalización, vivimos en un mundo conectado que ofrece muchas oportunidades para <b>viajar y explorar</b> fuera de nuestro país de origen. "
+    "our-principles": {
+      "title": "Nuestros Principios",
+      "description": "En LEA 4 International creemos que tener una experiencia en el extranjero es una gran oportunidad para abrir la mente, explorar <b>diferentes culturas y hablar otros idiomas.</b> Gracias a la globalización, vivimos en un mundo conectado que ofrece muchas oportunidades para <b>viajar y explorar</b> fuera de nuestro país de origen."
     },
     "coming-challenges": {
       "title": "Superando Desafíos",
-      "description": "Salir de tu zona de confort e ir al extranjero puede resultar estresante y desafiante.<br></br>Por eso en LEA 4 International queremos <b>hacer más fácil tu experiencia en el extranjero</b>. Apoyamos su proyecto realizando todos los trámites necesarios."
+      "description": "Salir de nuestra zona de confort y aventurarse en el extranjero puede ser desafiante. Por eso, en LEA 4 International, nos esforzamos por facilitar tu experiencia en el extranjero al proporcionar un apoyo integral y realizar todos los trámites necesarios para tu proyecto."
     },
     "our-commitment": {
       "title": "Nuestro compromiso"
@@ -56,7 +56,7 @@
       "title": "Preguntas frecuentes",
       "see-more": "Ver más preguntas"
     },
-    "help-you": "Esperamos Poder Ayudarte A Disfrutar De Tu Aventura Educativa.",
+    "help-you": "Esperamos poder ayudarte a disfrutar de tu aventura educativa",
     "see-more": "Saber más"
   },
   "services-page": {
@@ -74,7 +74,7 @@
         "overview": "Descripción general",
         "categories": {
           "work-experience": {
-            "title": "Experiencia laboral",
+            "title": "Prácticas profesionales",
             "description": "Erasmus+ puede ayudarte a adquirir una valiosa experiencia laboral en el extranjero. Al participar en el programa de prácticas Erasmus+ mejorarás tus habilidades interpersonales y de idiomas extranjeros, y desarrollarás habilidades interculturales que te ayudarán a encontrar un trabajo después de tus estudios.<br></br>Erasmus+ apoya las prácticas laborales o los períodos de estudio en el extranjero para estudiantes actualmente matriculados en educación y formación profesional (FP) y para recién graduados.",
             "with": "Experiencia <br></br>laboral <br></br>con <br></br>LEA 4 Int.",
             "message": "En LEA 4 International ofrecemos una variedad de sectores profesionales en los que podrás realizar tu experiencia de prácticas. Sabemos lo importante que es adquirir experiencia profesional, por eso ofrecemos pasantías de alta calidad adaptadas a cada individuo.<br></br>Contamos con un equipo de expertos que revisarán y estudiarán tu CV y carta de motivación para encontrarte con la empresa adecuada. Recibirás apoyo durante el proceso de entrevista, se te asignará un supervisor para monitorear su desempeño y asegurarse de lograr los mejores resultados. Te proporcionaremos el acuerdo de aprendizaje y toda la ayuda que necesites antes y durante tus prácticas.",
@@ -422,7 +422,7 @@
     "roles": {
       "individual": "Individual",
       "host-family": "Familia anfitriona",
-      "institutions": "Escuelas o Instituciones",
+      "institutions": "Escuela o Institución",
       "partner": "Conviértete en socio colaborador"
     }
   },
@@ -562,7 +562,8 @@
           "student-residence": "Residencia de estudiantes",
           "hotel": "Hotel",
           "hostel": "Hostal",
-          "host-family": "Familia anfitriona"
+          "host-family": "Familia anfitriona",
+          "airbnb": "Airbnb"
         }
       },
       "roomType": {
@@ -631,6 +632,10 @@
       },
       "close": "Cerrar"
     },
+    "loading": {
+      "title": "Procesando..",
+      "description": "Por favor, espera un momento."
+    },
     "submit": "Enviar el formulario"
   },
   "locale-switcher": {
@@ -648,7 +653,7 @@
     },
     "approach": {
       "title": "Enfoque personalizado",
-      "description": "No todos los proyectos son iguales y lo sabemos, en LEA 4 International recibirás un trato totalmente personalizado. <b>Trabajamos duro para que puedas disfrutar de los resultados</b>"
+      "description": "No todos los proyectos son iguales y lo sabemos, en LEA 4 International recibirás un trato totalmente personalizado. <b>Trabajamos duro para que puedas disfrutar de los resultados.</b>"
     }
   },
   "cookie-banner": {
@@ -671,10 +676,10 @@
     }
   },
   "become-partner": {
-    "title": "Convertirse en un compañero",
+    "title": "Convertirse en un socio colaborador",
     "description": "Estamos aquí para responder a todas tus preguntas. <br></br><br></br>¡Contáctanos hoy!",
     "button": {
-      "title": "Conviértete en socio",
+      "title": "Conviértete en socio colaborador",
       "caption": "Contacta con nosotros"
     }
   },
@@ -713,13 +718,13 @@
     },
     "language-immersion": {
       "what-it-is": {
-        "title": "¿Qué es un programa de intercambio de estudiantes?",
-        "description": "Un programa de intercambio de estudiantes es un programa en el que estudiantes de una escuela secundaria o de educación superior estudian en el extranjero en una de las instituciones asociadas de su institución. Estos programas implican que el estudiante asista a clases en una institución extranjera, viva con una familia local en algunos casos y participe en actividades que son exclusivas de la cultura del país extranjero."
+        "title": "¿Qué es un programa de inmersión lingüística?",
+        "description": "Un programa de inmersión lingüística sumerge completamente a los estudiantes en un idioma y cultura distintos. Este enfoque los rodea con el idioma que están aprendiendo tanto dentro como fuera del aula. Esta experiencia inmersiva acelera el dominio del idioma y mejora la comprensión cultural. Los programas pueden variar en duración e intensidad, desde programas de corta duración hasta semestres académicos completos o períodos más largos inmersos en el idioma y la cultura."
       }
     },
     "concierge": {
       "what-included": {
-        "title": "¿Qué está incluido en los servicios de conserjería para estudiantes?",
+        "title": "¿Qué está incluido en los servicios de apoyo para estudiantes?",
         "description": "Student Concierge Services brinda servicios de apoyo personalizados para estudiantes internacionales que estudian en un país extranjero. Nuestro objetivo es brindar al estudiante la mejor y más cómoda experiencia de vida en el extranjero. Sabemos que dejar que su hijo vaya al extranjero para estudiar en un país extranjero puede ser estresante, para facilitar este proceso que nos mantengamos conectados con el estudiante."
       }
     }

@@ -1,23 +1,20 @@
+'use client';
+
 import { useTranslations } from 'next-intl';
 import React, { Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import { CheckCircle, WarningCircle, X } from '@phosphor-icons/react';
+import { SpinnerGap } from '@phosphor-icons/react';
 import { Typography } from '@/components/typography/typography';
-import { buttonTypes } from '@/components/button/button';
+import { useFormStatus } from 'react-dom';
 
-type FormResultProps = {
-  state: 'success' | 'error';
-  open: boolean;
-  onClose: () => void;
-};
-export const FormResultPopup = ({ state, open, onClose }: FormResultProps) => {
-  const t = useTranslations('forms.feedback');
+export const FormLoadingPopup = () => {
+  const { pending } = useFormStatus();
 
-  if (!open) return null;
+  const t = useTranslations('forms.loading');
 
   return (
-    <Transition appear show={open} as={Fragment}>
-      <Dialog as='div' className='relative z-50' onClose={onClose}>
+    <Transition appear show={pending} as={Fragment}>
+      <Dialog as='div' className='relative z-50' onClose={() => {}}>
         <Transition.Child
           as={Fragment}
           enter='ease-out duration-300'
@@ -42,31 +39,14 @@ export const FormResultPopup = ({ state, open, onClose }: FormResultProps) => {
               leaveTo='opacity-0 scale-95'
             >
               <Dialog.Panel className='flex w-[354px] transform flex-col gap-4 overflow-hidden rounded-2xl bg-white px-6 py-4 text-left align-middle shadow-xl transition-all'>
-                <button onClick={onClose} className='self-end text-europe'>
-                  <X size={32} />
-                </button>
-                <div className='flex flex-col items-center justify-center gap-4 pb-16 pt-4 text-center'>
-                  {state === 'success' ? (
-                    <CheckCircle size={38} className='text-status-success' />
-                  ) : (
-                    <WarningCircle size={38} className='text-status-error' />
-                  )}
+                <div className='flex flex-col items-center justify-center gap-4 py-8 text-center'>
+                  <SpinnerGap size={48} className='animate-spin' />
                   <Typography as='h3' size='heading-lg' color='europe-dark'>
-                    {t(`${state}.title`)}
+                    {t('title')}
                   </Typography>
                   <Typography size='body-md' color='europe'>
-                    {t.rich(`${state}.description`)}
+                    {t('description')}
                   </Typography>
-                  <span className='h-1 w-full flex-grow border-b border-b-europe-light' />
-                  <Typography size='body-md' color='europe'>
-                    {t.rich(`${state}.sub-description`)}
-                  </Typography>
-                  <button
-                    className={buttonTypes({ intent: 'secondary-light' })}
-                    onClick={onClose}
-                  >
-                    {t('close')}
-                  </button>
                 </div>
               </Dialog.Panel>
             </Transition.Child>

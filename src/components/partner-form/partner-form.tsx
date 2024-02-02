@@ -1,7 +1,7 @@
 'use client';
 
 import { FieldPath, useForm } from 'react-hook-form';
-import { useFormState, useFormStatus } from 'react-dom';
+import { useFormState } from 'react-dom';
 import { useLocale, useTranslations } from 'next-intl';
 import { ContactUsState, getContactUs } from '@/actions/contactUs';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -13,13 +13,13 @@ import {
   inputStyles,
   labelStyles,
 } from '@/components/form/form';
-import { buttonTypes } from '@/components/button/button';
 import clsx from 'clsx';
 import { PartnerFormData } from '@/types/contact';
 import { FormResultPopup } from '@/components/form/form-result';
+import { FormLoadingPopup } from '@/components/form/form-loading';
+import { SubmitButton } from '@/components/form/submit-button';
 
 export const PartnerForm = () => {
-  const { pending } = useFormStatus();
   const [state, formAction] = useFormState<ContactUsState, FormData>(
     getContactUs,
     null
@@ -31,6 +31,7 @@ export const PartnerForm = () => {
     register,
     formState: { isValid, errors },
     setError,
+    reset,
   } = useForm<PartnerFormData>({
     mode: 'all',
     resolver: zodResolver(PartnerContactSchema),
@@ -55,7 +56,10 @@ export const PartnerForm = () => {
     if (state.status === 'INTERNAL_ERROR') {
       setServerError(true);
     }
-  }, [state, setError]);
+    if (state.status === 'SUCCESS') {
+      reset();
+    }
+  }, [state, setError, reset]);
 
   return (
     <>
@@ -65,6 +69,7 @@ export const PartnerForm = () => {
         onClose={() => setShowPopup(false)}
       />
       <form className='flex flex-col justify-center gap-9' action={formAction}>
+        <FormLoadingPopup />
         <input type='hidden' name='language' value={locale} />
         <input type='hidden' name='type' value='PARTNER' />
         <div>
@@ -166,16 +171,7 @@ export const PartnerForm = () => {
             message={t.rich('input.terms.error')}
           />
         </div>
-        <button
-          className={clsx(
-            'self-end',
-            buttonTypes({ intent: 'secondary-light' })
-          )}
-          type='submit'
-          disabled={pending || !isValid}
-        >
-          {t('submit')}
-        </button>
+        <SubmitButton isValid={isValid} />
       </form>
     </>
   );

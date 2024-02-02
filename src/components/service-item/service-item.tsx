@@ -16,7 +16,7 @@ export const ServiceItem = ({
   mobileDirection = 'VERTICAL',
 }: ServiceItemProps) => {
   return (
-    <li
+    <div
       className={clsx(
         'flex items-center border border-gold desktop:flex-row',
         mobileDirection === 'VERTICAL' ? 'flex-col' : 'flex-row'
@@ -42,11 +42,11 @@ export const ServiceItem = ({
           </Typography>
         )}
         {description && (
-          <Typography as='span' size='body-lg' color='europe-dark'>
+          <Typography as='ul' size='body-lg' color='europe-dark'>
             {description}
           </Typography>
         )}
       </div>
-    </li>
+    </div>
   );
 };

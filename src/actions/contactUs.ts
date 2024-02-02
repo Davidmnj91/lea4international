@@ -4,8 +4,8 @@ import { Nullable, ValidationErrors } from '@/types/types';
 import { zfd } from 'zod-form-data';
 import { ZodError } from 'zod';
 import {
-  GeneralContactSchema,
   HostFamilyContactSchema,
+  IndividualContactSchema,
   InstitutionsContactSchema,
   PartnerContactSchema,
 } from '@/schemas/contactSchemas';
@@ -36,7 +36,7 @@ export type ContactUsState = Nullable<
   ContactUsSuccess | ContactUsError | ServerError
 >;
 
-const generalFormDataSchema = zfd.formData(GeneralContactSchema);
+const generalFormDataSchema = zfd.formData(IndividualContactSchema);
 const hostFamilyFormDataSchema = zfd.formData(HostFamilyContactSchema);
 const institutionFormDataSchema = zfd.formData(InstitutionsContactSchema);
 
@@ -52,9 +52,9 @@ export async function getContactUs(
     let contactData: ContactData;
 
     switch (data.get('type')) {
-      case 'GENERAL':
+      case 'INDIVIDUAL':
         contactData = {
-          type: 'GENERAL',
+          type: 'INDIVIDUAL',
           data: await generalFormDataSchema.parseAsync(data),
         };
         break;

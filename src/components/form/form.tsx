@@ -3,6 +3,7 @@ import { ErrorMessage } from '@hookform/error-message';
 import { FieldErrors } from 'react-hook-form';
 import { typographyClasses } from '@/components/typography/typography';
 import { RichTranslation } from '@/types/types';
+import React from 'react';
 
 export const labelStyles = typographyClasses({
   size: 'body-md',

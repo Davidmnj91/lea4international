@@ -38,7 +38,7 @@ export default function RootLayout({
     },
     headline: 'LEA 4 International',
     description:
-      'LEA 4 International promotes Leading Education Abroad through the planification, implementation and coordination of a variety of educational projects. We work in collaboration with funding programs such as Erasmus Plus in different European countries.',
+      'LEA 4 International promotes Leading Education Abroad through the planification, implementation and coordination of a variety of educational projects. We work in collaboration with funding programs such as Erasmus+ in different European countries.',
     image: `https://lea4int.com${lea4international.src}`,
     dateCreated: '2024-01-11T11:35:00+07:00',
     datePublished: '2024-01-11T11:35:00+07:00',
@@ -81,7 +81,7 @@ export default function RootLayout({
         <title>LEA 4 International</title>
         <meta
           name='description'
-          content='LEA 4 International promotes Leading Education Abroad through the planification, implementation and coordination of a variety of educational projects. We work in collaboration with funding programs such as Erasmus Plus in different European countries.'
+          content='LEA 4 International promotes Leading Education Abroad through the planification, implementation and coordination of a variety of educational projects. We work in collaboration with funding programs such as Erasmus+ in different European countries.'
         />
         <meta
           name='keywords'
@@ -95,7 +95,7 @@ export default function RootLayout({
         <meta property='og:title' content='LEA 4 Internaltional' />
         <meta
           property='og:description'
-          content='LEA 4 International promotes Leading Education Abroad through the planification, implementation and coordination of a variety of educational projects. We work in collaboration with funding programs such as Erasmus Plus in different European countries.'
+          content='LEA 4 International promotes Leading Education Abroad through the planification, implementation and coordination of a variety of educational projects. We work in collaboration with funding programs such as Erasmus+ in different European countries.'
         />
         <meta property='og:type' content='website' />
         <meta property='og:url' content='https://lea4int.com' />

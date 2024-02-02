@@ -20,19 +20,19 @@
     "language": "Language.",
     "education": "Education.",
     "travel": "Travel.",
-    "slogan": "LEA 4 International promotes Leading Education Abroad through the planification, implementation and coordination of a variety of educational projects. We work in collaboration with funding programs such as Erasmus Plus in different European countries.",
+    "slogan": "LEA 4 International promotes Leading Education Abroad through the planification, implementation and coordination of a variety of educational projects. We work in collaboration with funding programs such as Erasmus+ in different European countries.",
     "request-more-info": "Request more information",
     "who-we-are": {
       "title": "Who We Are",
-      "description": "LEA 4 International is a <b>project management and consulting company</b>. We focus on planning, organizing and delivering a variety of educational projects. Our main goal is to <b>help people gain meaningful life experiences abroad</b> that will help them grow, both professionally and personally. We believe that having an experience abroad is a great opportunity to open your mind, explore different cultures and speak other languages. Thanks to globalization we live in a connected world that offers many opportunities to travel and explore outside of our home country."
+      "description": "LEA 4 International is a project management and consulting company <b>that specializes in</b> planning, organizing and delivering a variety of educational projects."
     },
     "our-focus": {
       "title": "Our Focus",
-      "description": "Planning, organizing and delivering a variety of <b>educational projects</b>. <br></br>Our main goal is to assist individuals gaining meaningful life experiences abroad that will help them grow, both professionally and personally."
+      "description": " Our main goal is to <b>assist individuals gaining</b> meaningful life experiences abroad that will help them grow, both professionally and personally."
     },
-    "our-beliefs": {
-      "title": "Our Beliefs",
-      "description": "At LEA 4 International we <b>firmly</b> believe that having an experience abroad is <b>an excellent</b> opportunity to <b>broaden one's mind</b>, explore different cultures and speak other languages. Thanks to globalization we live in a connected world that offers many opportunities to travel and explore <b>beyond</b> our home country"
+    "our-principles": {
+      "title": "Our Principles",
+      "description": "We <b>firmly</b> believe that having an experience abroad is <b>an excellent</b> opportunity to <b>broaden one's mind</b>, explore different cultures and speak other languages. Thanks to globalization we live in a connected world that offers many<br></br>opportunities to travel and explore <b>beyond our</b> home country."
     },
     "coming-challenges": {
       "title": "Overcoming Challenges",
@@ -56,7 +56,7 @@
       "title": "Frequently Asked Questions",
       "see-more": "See more questions"
     },
-    "help-you": "We Are Looking Forward To Helping You Enjoy Your Educational Adventure",
+    "help-you": "<b>We are eager to assist you in enjoying</b> your educational adventure.",
     "see-more": "See more"
   },
   "services-page": {
@@ -82,7 +82,7 @@
               "title": "Find out what professional sectors we offer",
               "IT": {
                 "title": "IT and Multimedia Professions",
-                "description": "IT - Information technology (IT) is the use of any computers, storage, networking and other physical devices, infrastructure and processes to create, process, store, secure and exchange all forms of electronic data.<br></br>Multimedia is a growing field that is part of the technology sector and includes professional opportunities as graphic design, marketing, product development, multimedia designer etc."
+                "description": "IT - Information technology (IT) is the use of computers, storage, networking and other physical devices, infrastructure and processes to create, process, store, secure and exchange all forms of electronic data.<br></br>Multimedia is a growing field that is part of the technology sector and includes professional opportunities as graphic design, marketing, product development, multimedia designer etc."
               },
               "business": {
                 "title": "Business Administration",
@@ -138,7 +138,7 @@
         "overview": "Overview",
         "categories": {
           "english-courses": {
-            "title": "English courses",
+            "title": "Conversational English course",
             "description": "Have you spent years learning English at school but still lack fluency and confidence to speak English? <br></br><br></br> Then this is the right course for you.",
             "we-offer": {
               "focus": {
@@ -156,7 +156,7 @@
             }
           },
           "business-english-courses": {
-            "title": "Business English courses",
+            "title": "Business English course",
             "description": "Do you feel like you lack confidence and vocabulary when you have to speak English at your workplace?<br></br><br></br>Then this is the right course for you.",
             "we-offer": {
               "focus": {
@@ -174,8 +174,8 @@
             }
           },
           "spanish-courses": {
-            "title": "Spanish courses",
-            "description": "Conversational Spanish Course<br></br>Have you spent years learning Spanish at school but still lack fluency and confidence to speak Spanish?<br></br><br></br>Then this is the right course for you",
+            "title": "Conversational Spanish course",
+            "description": "Have you spent years learning Spanish at school but still lack fluency and confidence to speak Spanish?<br></br><br></br>Then this is the right course for you",
             "we-offer": {
               "focus": {
                 "title": "During this course our Spanish teachers will <br></br>focus on:",
@@ -192,7 +192,7 @@
             }
           },
           "business-spanish-courses": {
-            "title": "Business Spanish courses",
+            "title": "Business Spanish course",
             "description": "Do you feel like you lack confidence and vocabulary when you have to speak Spanish at your workplace?<br></br><br></br>Then this is the right course for you.",
             "we-offer": {
               "focus": {
@@ -222,7 +222,7 @@
             "description": "Data Mining is the process of discovering patterns, trends, and valuable insights from large sets of data. It involves analyzing and interpreting large amounts of data to uncover hidden patterns and relationships that can be useful for making informed business decisions, predictions, and other applications.<br></br><br></br>Data mining is applied in various industries, such as finance, healthcare, marketing, and retail, to extract meaningful information from vast datasets. It plays a crucial role in decision-making processes and business strategy development. Techniques within data mining include classification, clustering, regression analysis, association rule mining, and more."
           },
           "business-ia": {
-            "title": "IA For Business",
+            "title": "AI for business",
             "description": "Artificial Intelligence (AI) has become a transformative force in the business landscape, offering innovative solutions and opportunities for efficiency, automation, and decision-making.<br></br>Here are key aspects of how AI is utilized in business:",
             "sub-description": "Businesses embrace AI for efficiency, innovation, and staying competitive in the digital era.<br></br>The successful integration of AI in business requires thoughtful planning, ethical considerations, and ongoing monitoring. As technology advances, businesses are increasingly leveraging AI to gain a competitive edge and adapt to the evolving digital landscape.<br></br>For more information <contact>contact us</contact>",
             "we-offer": {
@@ -631,6 +631,10 @@
       },
       "close": "Close"
     },
+    "loading": {
+      "title": "Processing..",
+      "description": "Please wait a moment."
+    },
     "submit": "Send form"
   },
   "locale-switcher": {
@@ -648,7 +652,7 @@
     },
     "approach": {
       "title": "Personalized approach",
-      "description": "Not every project is the same and we know it, at LEA 4 International you will receive a fully customized approach. WE WORK HARD FOR YOU TO ENJOY THE RESULTS"
+      "description": "Not every project is the same and we know it, at LEA 4 International you will receive a fully customized approach. <b>We work hard for you to enjoy the results.</b>"
     }
   },
   "cookie-banner": {
@@ -713,8 +717,8 @@
     },
     "language-immersion": {
       "what-it-is": {
-        "title": "What is a student exchange program?",
-        "description": "A student exchange program is a program in which students from a secondary school or higher education study abroad at one of their institution's partner institutions. These programs involve the student attending classes at a foreign institution, living with a local family in some cases, and taking part in activities that are unique to the culture of the foreign country."
+        "title": "What is a language immersion program?",
+        "description": "A language immersion program is an educational approach where students are fully immersed in a target language and culture. In this type of program, students are surrounded by the language they are learning both inside and outside the classroom.<br></br><br></br>This immersion helps students develop language proficiency more rapidly and gain a deeper understanding of the culture associated with the language. Language immersion programs can vary in duration and intensity, ranging from short-term programs to full academic semesters or years spent immersed in the language and culture."
       }
     },
     "concierge": {

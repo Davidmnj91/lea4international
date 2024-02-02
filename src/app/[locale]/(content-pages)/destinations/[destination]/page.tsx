@@ -58,7 +58,7 @@ const destinationsProps: Record<Destinations, DestinationPageDetails> = {
       ['work-experience', '/services/erasmus#work-experience'],
       ['job-shadowing', '/services/erasmus#job-shadowing'],
       ['language-courses', '/services/language-courses'],
-      ['concierge', 'services/concierge'],
+      ['concierge', '/services/concierge'],
     ],
   },
   [Destinations.MADRID]: {
@@ -70,8 +70,8 @@ const destinationsProps: Record<Destinations, DestinationPageDetails> = {
       ['work-experience', '/services/erasmus#work-experience'],
       ['job-shadowing', '/services/erasmus#job-shadowing'],
       ['language-courses', '/services/language-courses'],
-      ['student-exchange', 'services/student-exchange'],
-      ['concierge', 'services/concierge'],
+      ['student-exchange', '/services/student-exchange'],
+      ['concierge', '/services/concierge'],
     ],
   },
   [Destinations.MALAGA]: {
@@ -83,8 +83,8 @@ const destinationsProps: Record<Destinations, DestinationPageDetails> = {
       ['work-experience', '/services/erasmus#work-experience'],
       ['job-shadowing', '/services/erasmus#job-shadowing'],
       ['language-courses', '/services/language-courses'],
-      ['student-exchange', 'services/student-exchange'],
-      ['concierge', 'services/concierge'],
+      ['student-exchange', '/services/student-exchange'],
+      ['concierge', '/services/concierge'],
     ],
   },
   [Destinations.KRAKOW]: {
@@ -191,20 +191,24 @@ export default function Page({
           </Typography>
         </div>
         <div className='flex flex-col gap-4 px-8 desktop:flex-row desktop:gap-12 desktop:px-0'>
-          <Image
-            src={sampleImages[0]}
-            alt='prague_1'
-            width={650}
-            height={402}
-            style={{ height: '100%', width: '100%' }}
-          />
-          <Image
-            src={sampleImages[1]}
-            alt='prague_2'
-            width={650}
-            height={402}
-            style={{ height: '100%', width: '100%' }}
-          />
+          <div className='h-[402px] flex-grow'>
+            <Image
+              src={sampleImages[0]}
+              alt={`${destination}_1`}
+              width={650}
+              height={402}
+              style={{ height: '100%', width: '100%' }}
+            />
+          </div>
+          <div className='h-[402px] flex-grow'>
+            <Image
+              src={sampleImages[1]}
+              alt={`${destination}_2`}
+              width={650}
+              height={402}
+              style={{ height: '100%', width: '100%' }}
+            />
+          </div>
         </div>
       </div>
       <div className='flex flex-col desktop:mt-16'>

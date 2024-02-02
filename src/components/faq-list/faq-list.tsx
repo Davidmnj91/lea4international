@@ -40,7 +40,7 @@ export const FaqList = ({ faqKey }: FaqProps) => {
               weight='light'
               itemProp='text'
             >
-              {t(`${faqKey}.description`)}
+              {t.rich(`${faqKey}.description`)}
             </Typography>
           </Disclosure.Panel>
         </>

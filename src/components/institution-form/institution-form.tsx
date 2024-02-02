@@ -1,7 +1,7 @@
 'use client';
 
 import { Controller, FieldPath, useForm } from 'react-hook-form';
-import { useFormState, useFormStatus } from 'react-dom';
+import { useFormState } from 'react-dom';
 import { useLocale, useTranslations } from 'next-intl';
 import { ContactUsState, getContactUs } from '@/actions/contactUs';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -13,13 +13,14 @@ import {
   inputStyles,
   labelStyles,
 } from '@/components/form/form';
-import { buttonTypes } from '@/components/button/button';
 import clsx from 'clsx';
 import countries from '../../../public/countries.json';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { FormResultPopup } from '@/components/form/form-result';
 import { InstitutionFormData } from '@/types/contact';
+import { FormLoadingPopup } from '@/components/form/form-loading';
+import { SubmitButton } from '@/components/form/submit-button';
 
 const accommodationTypes = [
   'apartment',
@@ -39,7 +40,6 @@ const roundTripOptions = ['yes', 'arrival', 'departure', 'no'];
 const culturalOptions = ['yes', 'no'];
 
 export const InstitutionForm = () => {
-  const { pending } = useFormStatus();
   const [state, formAction] = useFormState<ContactUsState, FormData>(
     getContactUs,
     null
@@ -52,6 +52,7 @@ export const InstitutionForm = () => {
     control,
     formState: { isValid, errors },
     setError,
+    reset,
   } = useForm<InstitutionFormData>({
     mode: 'all',
     resolver: zodResolver(InstitutionsContactSchema),
@@ -76,7 +77,10 @@ export const InstitutionForm = () => {
     if (state.status === 'INTERNAL_ERROR') {
       setServerError(true);
     }
-  }, [state, setError]);
+    if (state.status === 'SUCCESS') {
+      reset();
+    }
+  }, [state, setError, reset]);
 
   const parseDateRangeStr = (
     value: string
@@ -99,6 +103,7 @@ export const InstitutionForm = () => {
         className='flex flex-col justify-center gap-8 desktop:flex-row desktop:gap-16'
         action={formAction}
       >
+        <FormLoadingPopup />
         <input type='hidden' name='language' value={locale} />
         <input type='hidden' name='type' value='INSTITUTION' />
         <div className='flex flex-col gap-9 desktop:flex-[0_0_50%]'>
@@ -411,16 +416,7 @@ export const InstitutionForm = () => {
               message={t.rich('input.terms.error')}
             />
           </div>
-          <button
-            className={clsx(
-              'self-end',
-              buttonTypes({ intent: 'secondary-light' })
-            )}
-            type='submit'
-            disabled={pending || !isValid}
-          >
-            {t('submit')}
-          </button>
+          <SubmitButton isValid={isValid} />
         </div>
       </form>
     </>
