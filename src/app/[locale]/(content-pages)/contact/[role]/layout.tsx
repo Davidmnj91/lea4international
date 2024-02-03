@@ -37,28 +37,26 @@ export default function RootDestinationsLayout({
           {t('message')}
         </Typography>
       </div>
-      <div className='sticky top-[80px] z-20 flex flex-col items-center gap-6 overflow-auto border-y border-y-basics-disabled bg-basics-white px-6 py-6 desktop:flex-row desktop:overflow-hidden desktop:px-16'>
+      <div className='sticky top-[80px] z-20 flex flex-row items-center gap-6 overflow-auto border-y border-y-basics-disabled bg-basics-white px-6 py-6 desktop:overflow-hidden desktop:px-16'>
         <Typography
           as='span'
           size='body-lg'
           color='europe-dark'
-          className='sticky left-0'
+          className='flex-shrink-0'
         >
           {t('who-are-you')}
         </Typography>
-        <div className='flex gap-6'>
-          {roles.map((role) => (
-            <Link
-              href={`/contact/${role}`}
-              key={role}
-              className={tagButtonTypes({
-                intent: role === pathname ? 'selected' : 'enabled',
-              })}
-            >
-              {t(`roles.${role}`)}
-            </Link>
-          ))}
-        </div>
+        {roles.map((role) => (
+          <Link
+            href={`/contact/${role}`}
+            key={role}
+            className={tagButtonTypes({
+              intent: role === pathname ? 'selected' : 'enabled',
+            })}
+          >
+            {t(`roles.${role}`)}
+          </Link>
+        ))}
       </div>
       <div className='flex justify-center p-6 desktop:px-24 desktop:py-12'>
         {children}

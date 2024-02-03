@@ -14,6 +14,10 @@ export default function LocaleSwitcher() {
   const pathname = usePathname();
   const t = useTranslations('locale-switcher');
 
+  const setCookie = (locale: string) => {
+    document.cookie = `NEXT_LOCALE=${locale}; max-age=31536000; path=/`;
+  };
+
   const languageOptions = [
     { language: 'en' as Language, icon: <EnglandFlag size={16} /> },
     { language: 'es' as Language, icon: <SpainFlag size={16} /> },
@@ -21,6 +25,7 @@ export default function LocaleSwitcher() {
 
   const changeLanguage = (language: Language) => {
     startTransition(() => {
+      setCookie(language);
       router.replace(pathname, { locale: language });
     });
   };

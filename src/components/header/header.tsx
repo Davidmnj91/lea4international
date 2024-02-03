@@ -6,23 +6,30 @@ import { Popover, Transition } from '@headlessui/react';
 import { ArrowDown, CaretRight, List, X } from '@phosphor-icons/react';
 import { Menu } from '@/components/menu/menu';
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { typographyClasses } from '@/components/typography/typography';
 import clsx from 'clsx';
 import { FullLogo } from '@/components/logo/fullLogo';
+import { usePathname } from 'next/navigation';
 
 export const MobileMenu = ({
   onStateChange,
 }: {
   onStateChange?: (open: boolean) => void;
 }) => {
+  const language = useLocale();
   const t = useTranslations('pages');
 
-  const fullClassName = typographyClasses({
-    size: 'body-lg',
-    color: 'basics-white',
-    weight: 'light',
-  });
+  const pathname = usePathname();
+
+  const isActive = (path: string) => `/${language}/${path}` === pathname;
+
+  const fullClassName = (path: string) =>
+    typographyClasses({
+      size: 'body-lg',
+      color: isActive(path) ? 'gold' : 'basics-white',
+      weight: 'light',
+    });
 
   const triggerCallBack = useCallback(
     (open: boolean) => {
@@ -51,11 +58,13 @@ export const MobileMenu = ({
               leaveFrom='opacity-100 translate-y-0'
               leaveTo='opacity-0 translate-y-1'
             >
-              <Popover.Panel className='absolute left-0 top-[80px] z-50 flex h-[calc(100vh-80px)] w-full transform flex-col'>
-                <nav className='flex h-full flex-col gap-3.5 bg-europe p-6'>
+              <Popover.Panel className='absolute left-0 top-[80px] z-50 flex h-[calc(100dvh-80px)] w-full transform flex-col'>
+                <nav className='flex h-full flex-col gap-3.5 overflow-y-auto bg-europe p-6'>
                   <LocaleSwitcher />
                   <Link
-                    className={`flex items-center gap-2 ${fullClassName}`}
+                    className={`flex items-center gap-2 ${fullClassName(
+                      'services'
+                    )}`}
                     href={`/services`}
                     onClick={() => close()}
                   >
@@ -64,28 +73,28 @@ export const MobileMenu = ({
                   </Link>
                   <div className='ml-6 flex flex-col gap-3.5'>
                     <Link
-                      className={fullClassName}
+                      className={fullClassName('services/erasmus')}
                       href={`/services/erasmus`}
                       onClick={() => close()}
                     >
                       {t('services.erasmus')}
                     </Link>
                     <Link
-                      className={fullClassName}
+                      className={fullClassName('services/language-courses')}
                       href={`/services/language-courses`}
                       onClick={() => close()}
                     >
                       {t('services.language-courses')}
                     </Link>
                     <Link
-                      className={fullClassName}
+                      className={fullClassName('services/student-exchange')}
                       href={`/services/student-exchange`}
                       onClick={() => close()}
                     >
                       {t('services.student-exchange')}
                     </Link>
                     <Link
-                      className={fullClassName}
+                      className={fullClassName('services/concierge')}
                       href={`/services/concierge`}
                       onClick={() => close()}
                     >
@@ -93,35 +102,35 @@ export const MobileMenu = ({
                     </Link>
                   </div>
                   <Link
-                    className={fullClassName}
+                    className={fullClassName('about-us')}
                     href={`/about-us`}
                     onClick={() => close()}
                   >
                     {t('about-us')}
                   </Link>
                   <Link
-                    className={fullClassName}
+                    className={fullClassName('destinations')}
                     href={`/destinations`}
                     onClick={() => close()}
                   >
                     {t('destinations')}
                   </Link>
                   <Link
-                    className={fullClassName}
+                    className={fullClassName('accommodations')}
                     href={`/accommodations`}
                     onClick={() => close()}
                   >
                     {t('accommodations')}
                   </Link>
                   <Link
-                    className={fullClassName}
+                    className={fullClassName('faq')}
                     href={`/faq`}
                     onClick={() => close()}
                   >
                     {t('faq')}
                   </Link>
                   <Link
-                    className={fullClassName}
+                    className={fullClassName('blog')}
                     href={`/blog`}
                     onClick={() => close()}
                   >

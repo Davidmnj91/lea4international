@@ -32,7 +32,7 @@
     },
     "our-principles": {
       "title": "Our Principles",
-      "description": "We <b>firmly</b> believe that having an experience abroad is <b>an excellent</b> opportunity to <b>broaden one's mind</b>, explore different cultures and speak other languages. Thanks to globalization we live in a connected world that offers many<br></br>opportunities to travel and explore <b>beyond our</b> home country."
+      "description": "We <b>firmly</b> believe that having an experience abroad is <b>an excellent</b> opportunity to <b>broaden one's mind</b>, explore different cultures and speak other languages. Thanks to globalization we live in a connected world that offers many opportunities to travel and explore <b>beyond our</b> home country."
     },
     "coming-challenges": {
       "title": "Overcoming Challenges",
@@ -56,7 +56,7 @@
       "title": "Frequently Asked Questions",
       "see-more": "See more questions"
     },
-    "help-you": "<b>We are eager to assist you in enjoying</b> your educational adventure.",
+    "help-you": "<b>We are eager to assist you in enjoying </b> your educational adventure.",
     "see-more": "See more"
   },
   "services-page": {
@@ -77,7 +77,7 @@
             "title": "Work Experience",
             "description": "Erasmus+ can help you gain valuable work experience abroad. By participating in the Erasmus+ traineeship program you will improve your interpersonal and foreign language skills, and you will develop intercultural skills that will help you find a job after your studies. Erasmus+ supports work placements or study periods abroad for students currently enrolled in vocational education and training (VET) and for recent graduates.",
             "with": "Work <br></br>experience <br></br>with <br></br>LEA 4 Int.",
-            "message": "We offer a diverse range of professional sectors in which you can do your internship experience. We understand the significance of gaining valuable professional work experience that is why we offer high quality internships tailored to each individual's needs. Our team of experts is dedicated to reviewing and analyzing your CV and motivational letter, ensuring a precise match with the right company. Throughout the process, you'll receive support during interviews, be assigned a supervisor to monitor your performance, and guarantee optimal results. We are committed to providing you with a learning agreement and comprehensive assistance both before and during your internship.<br></br><br></br>Discover the array of professional sectors we offer and take the first step towards a rewarding internship experience.",
+            "message": "We offer a diverse range of professional sectors in which you can do your internship experience. We understand the significance of gaining valuable professional work experience that is why we offer high quality internships tailored to each individual's needs. Our team of experts is dedicated to reviewing and analyzing your CV and motivational letter, ensuring a precise match with the right company. Throughout the process, you'll receive support during interviews, be assigned a supervisor to monitor your performance, and guarantee optimal results. We are committed to providing you with a learning agreement and comprehensive assistance both before and during your internship.<br></br>Discover the array of professional sectors we offer and take the first step towards a rewarding internship experience.",
             "we-offer": {
               "title": "Find out what professional sectors we offer",
               "IT": {
@@ -101,7 +101,7 @@
           },
           "job-shadowing": {
             "title": "Job Shadowing",
-            "description": "Job shadowing programmes offer participants the chance to spend a period of time at a hosting organization in another country. The aim of this programme is to learn new practices and gather new ideas through observation and interaction with peers, experts or other practitioners in their daily work at the hosting organization.<br></br>Eligible participants include teachers, trainers, and all other non-teaching experts and staff in adult education.<br></br>Eligible non-teaching staff includes staff working in adult education, either in adult education providers or in other organizations active in adult education.",
+            "description": "Job shadowing programme offers participants the chance to spend a period of time at a hosting organization in another country. The aim of this programme is to learn new practices and gather new ideas through observation and interaction with peers, experts or other practitioners in their daily work at the hosting organization.<br></br>Eligible participants include teachers, trainers, and all other non-teaching experts and staff in adult education.<br></br>Eligible non-teaching staff includes staff working in adult education, either in adult education providers or in other organizations active in adult education.",
             "with": "Job <br></br>shadowing <br></br>with <br></br>LEA 4 Int.",
             "message": "We collaborate with a large number of hosting schools that have been carefully selected. These schools include primary, secondary and high schools. Additionally, we collaborate with technical and vocational schools as well as schools with special needs. <br></br>There are different topics to choose from for job shadowing, including but not limited to inclusion, diversity, digitalization in schools, teaching sustainability, promoting STEM. <br></br>By the end of the job shadowing programme, participants are exposed to several teaching practices focused on the chosen topics. <br></br>We also provide the sending organizations with the necessary learning agreement."
           },
@@ -270,7 +270,7 @@
       "concierge": {
         "title": "Student concierge services",
         "description": "Studying abroad is an exciting experience but can be a worrying journey for many international students. Participants, as well as their families, are often concerned and a bit stressed about the uncertainty of the new experience abroad.<br></br>Our commitment is to help students and their families to get familiar with the new country and its customs. We offer 24/7 emergency support to our students.",
-        "includes": "Our services includes:",
+        "includes": "Our services include:",
         "services": {
           "meeting-greeting": "Meeting and greeting at arrival",
           "airport-transfer": "Airport transfer",

@@ -61,13 +61,13 @@
   },
   "services-page": {
     "title": "Nuestros Servicios",
-    "message": "Seleccione y descubre nuestros servicios para conocer <br></br>más sobre ellos.",
+    "message": "Selecciona y descubre nuestros servicios para conocer <br></br>más sobre ellos.",
     "services": {
       "see-more": "Ver más",
       "back-to-services": "Volver a nuestros servicios",
       "other-services": {
         "title": "Otros servicios",
-        "description": "Seleccione y descubre nuestros servicios para conocer <br></br>más sobre ellos."
+        "description": "Selecciona y descubre nuestros servicios para conocer <br></br>más sobre ellos."
       },
       "erasmus": {
         "title": "Proyectos Erasmus+",
@@ -101,13 +101,13 @@
           },
           "job-shadowing": {
             "title": "Observación de profesionales",
-            "description": "Los programas de observación de profesionales ofrecen a los participantes la<br></br>oportunidad de pasar un período de tiempo en una organización anfitriona en otro país.<br></br>El objetivo de este programa es aprender nuevas prácticas y recopilar nuevas ideas a<br></br>través de la observación e interacción con profesores, expertos u otros profesionales en<br></br>su trabajo diario en la organización anfitriona. Los participantes elegibles incluyen a<br></br>docentes, formadores y todos los demás expertos y personal no docente en educación<br></br>para adultos. El personal no docente elegible incluye al personal que trabaja en<br></br>educación para adultos, ya sea en proveedores de educación para adultos u otras<br></br>organizaciones activas en educación para adultos. Los participantes adquieren nuevas<br></br>técnicas de enseñanza y descubren recursos que pueden aplicar a sus metodologías<br></br>de enseñanza.",
+            "description": "El programa de observación de profesionales ofrece a los participantes la<br></br>oportunidad de pasar un período de tiempo en una organización anfitriona en otro país.<br></br>El objetivo de este programa es aprender nuevas prácticas y recopilar nuevas ideas a<br></br>través de la observación e interacción con profesores, expertos u otros profesionales en<br></br>su trabajo diario en la organización anfitriona. Los participantes elegibles incluyen a<br></br>docentes, formadores y todos los demás expertos y personal no docente en educación<br></br>para adultos. El personal no docente elegible incluye al personal que trabaja en<br></br>educación para adultos, ya sea en proveedores de educación para adultos u otras<br></br>organizaciones activas en educación para adultos. Los participantes adquieren nuevas<br></br>técnicas de enseñanza y descubren recursos que pueden aplicar a sus metodologías<br></br>de enseñanza.",
             "with": "Observación <br></br>profesionales <br></br>con <br></br>LEA 4 Int.",
             "message": "En LEA 4 International colaboramos con un gran número de escuelas anfitrionas que han sido cuidadosamente seleccionadas. Estas escuelas abarcan desde educación primaria, secundaria y bachillerato hasta escuelas de formación profesional y régimen especial, así como escuelas con necesidades especiales.Hay diferentes temas para elegir para el seguimiento laboral, que incluyen, entre otros, inclusión, diversidad, digitalización en las escuelas, enseñanza de la sostenibilidad y promoción de STEM. Al final del programa de seguimiento laboral, los participantes quedan expuestos a varias prácticas docentes centradas en los temas elegidos. También proporcionamos a las organizaciones de envío el acuerdo de aprendizaje necesario."
           },
           "school-exchange": {
             "title": "Intercambio escolar",
-            "description": "El intercambio escolar permite a un grupo de alumnos de diferentes países pasar<br></br>tiempo aprendiendo junto con sus compañeros en otro país. Maestros u otras personas<br></br>autorizadas de la escuela de origen acompañarán al grupo durante toda la duración de<br></br>la actividad. La movilidad del grupo de alumnos/as de la escuela puede durar hasta un mes,<br></br>excluyendo el tiempo de viaje.\", Colaboramos con un gran número de escuelas anfitrionas cuidadosamente<br></br>seleccionadas para el intercambio escolar, que incluyen escuelas de educación<br></br>primaria, secundarias y bachillerato. El programa de intercambio escolar brinda a los<br></br>estudiantes extranjeros una excelente oportunidad para participar en una amplia<br></br>variedad de actividades, como presentaciones de países, talleres culturales o sesiones<br></br>de idiomas con estudiantes locales. Además, brindamos apoyo logístico y local durante<br></br>todo el programa de intercambio escolar.",
+            "description": "El intercambio escolar permite a un grupo de alumnos de diferentes países pasar<br></br>tiempo aprendiendo junto con sus compañeros en otro país. Maestros u otras personas<br></br>autorizadas de la escuela de origen acompañarán al grupo durante toda la duración de<br></br>la actividad. La movilidad del grupo de alumnos de la escuela puede durar hasta un mes,<br></br>excluyendo el tiempo de viaje. Colaboramos con un gran número de escuelas anfitrionas cuidadosamente<br></br>seleccionadas para el intercambio escolar, que incluyen escuelas de educación<br></br>primaria, secundarias y bachillerato. El programa de intercambio escolar brinda a los<br></br>estudiantes extranjeros una excelente oportunidad para participar en una amplia<br></br>variedad de actividades, como presentaciones de países, talleres culturales o sesiones<br></br>de idiomas con estudiantes locales. Además, brindamos apoyo logístico y local durante<br></br>todo el programa de intercambio escolar.",
             "with": "Intercambio escolar <br></br>con <br></br>LEA 4 Int.",
             "message": "En LEA 4 International colaboramos con un gran número de escuelas anfitrionas para intercambio escolar que han sido cuidadosamente seleccionadas, estas escuelas incluyen escuelas primarias, secundarias y preparatorias. El intercambio escolar es una gran oportunidad para que los estudiantes extranjeros realicen una amplia gama de actividades que incluyen presentaciones de países, talleres culturales o sesiones de idiomas con estudiantes locales.<br></br>En LEA 4 International también brindamos apoyo logístico y local a través del programa de intercambio escolar."
           },
@@ -115,7 +115,7 @@
             "title": "Erasmus Mundus",
             "description": "Esta acción tiene como objetivo fomentar la excelencia y la internacionalización mundial de las instituciones de educación superior a través de programas de estudio (a nivel de maestría) impartidos y reconocidos conjuntamente por instituciones de educación superior (IES) establecidas en Europa y abiertos a instituciones de otros países del mundo.",
             "with": "Erasmus <br></br>Mundus <br></br>con <br></br>LEA 4 Int.",
-            "message": "Entendemos los desafíos que enfrentan los estudiantes internacionales al buscar un<br></br>nuevo hogar en el extranjero. En LEA 4 International, ayudamos a los estudiantes a<br></br>encontrar alojamiento que cumpla con sus expectativas y se ajuste a su presupuesto.<br></br>Brindamos asistencia con preguntas y ofrecemos asesoramiento general. Además,<br></br>organizamos seminarios de Orientación Previa a la Partida para proporcionar apoyo e<br></br>información útil a los estudiantes internacionales."
+            "message": "Entendemos los desafíos que enfrentan los estudiantes internacionales al buscar un nuevo hogar en el extranjero. En LEA 4 International, ayudamos a los estudiantes a encontrar alojamiento que cumpla con sus expectativas y se ajuste a su presupuesto.<br></br>Brindamos asistencia con preguntas y ofrecemos asesoramiento general. Además, organizamos seminarios de Orientación Previa a la Partida para proporcionar apoyo e información útil a los estudiantes internacionales."
           },
           "KA-2": {
             "title": "KA2 - Buscamos socios colaboradores",
@@ -133,7 +133,7 @@
       },
       "language-courses": {
         "title": "Cursos de idiomas y formaciones",
-        "sub-title": "Cursos de idioma",
+        "sub-title": "Cursos de idiomas",
         "description": "En LEA 4 International, puedes aprender inglés o español con nuestros profesores nativos calificados. Clases atractivas y dinámicas te harán sentir cómodo desde el principio. Aprende y mejora tus habilidades lingüísticas mientras te diviertes.",
         "overview": "Descripción general",
         "categories": {
@@ -174,8 +174,8 @@
             }
           },
           "spanish-courses": {
-            "title": "Cursos de español conversacional",
-            "description": "Curso de español conversacional<br></br><br></br>¿Has pasado años aprendiendo español en la escuela pero aún te falta fluidez y confianza para hablar español?<br></br><br></br>Entonces este es el curso adecuado para ti.",
+            "title": "Curso de español conversacional",
+            "description": "¿Has pasado años aprendiendo español en la escuela pero aún te falta fluidez y confianza para hablar español?<br></br><br></br>Entonces este es el curso adecuado para ti.",
             "we-offer": {
               "focus": {
                 "title": "Durante este curso nuestros profesores de español <br></br>Se centrarán en:",
@@ -192,7 +192,7 @@
             }
           },
           "business-spanish-courses": {
-            "title": "Cursos de español de negocios",
+            "title": "Curso de español de negocios",
             "description": "¿Sientes que te falta confianza y vocabulario cuando tienes que hablar español en tu lugar de trabajo?<br></br><br></br>Entonces este es el curso adecuado para ti.",
             "we-offer": {
               "focus": {
@@ -210,7 +210,7 @@
             }
           },
           "ai-trainings": {
-            "title": "Formacíones de IA",
+            "title": "Formaciones & Trainings",
             "description": "La Inteligencia Artificial (IA) se define como la inteligencia exhibida por máquinas o software. Es un campo de estudio dentro de la informática que se centra en el desarrollo y estudio de máquinas inteligentes. La IA está transformando prácticamente todas las industrias y está lista para tener un impacto significativo en el mercado laboral y en la sociedad en los próximos años. En LEA 4 International, nuestro objetivo es ayudar a individuos y empresas a mejorar su comprensión y conocimiento de la IA. Ofrecemos capacitación en las siguientes áreas:"
           },
           "machine-learning": {
@@ -245,13 +245,13 @@
         }
       },
       "student-exchange": {
-        "title": "Programas inmersión linguística",
+        "title": "Programas de inmersión lingüística",
         "overview": "Descripción general",
         "categories": {
           "immersion-program": {
-            "title": "Programa de inmersión",
+            "title": "Programa de inmersión lingüística",
             "description": "Un programa de inmersión lingüística es una excelente oportunidad para explorar una<br></br>cultura diferente y practicar un nuevo idioma con hablantes nativos. Durante el<br></br>programa, los participantes vivirán inmersos en una nueva cultura, conviviendo con<br></br>una familia anfitriona que les enseñará más sobre su país y sus tradiciones.",
-            "includes": "El programa de immersión lingüistica con LEA 4 International incluye:"
+            "includes": "El programa de immersión lingüística con LEA 4 International incluye:"
           },
           "exchange-program": {
             "title": "Programa de intercambio de estudiantes",
@@ -305,7 +305,7 @@
   },
   "destinations-page": {
     "title": "Destinos populares",
-    "message": "Seleccione y descubre nuestros destinos populares para saber más sobre ellos.",
+    "message": "Selecciona y descubre nuestros destinos populares para saber más sobre ellos.",
     "contact-us": "Contáctanos",
     "see-more": "Ver más",
     "back-to-destinations": "Volver a destinos populares",
@@ -371,7 +371,7 @@
       "work-experience": "Prácticas profesionales",
       "job-shadowing": "Observación de profesionales",
       "language-courses": "Cursos de Idiomas y formaciones",
-      "student-exchange": "Programas de inmersión lingüistica",
+      "student-exchange": "Programas de inmersión lingüística",
       "concierge": "Servicios de apoyo a estudiantes"
     }
   },
@@ -409,10 +409,10 @@
   "faq-page": {
     "title": "Preguntas frecuentes",
     "categories": {
-      "erasmus": "Programas Erasmus",
-      "language-courses": "Cursos de idiomas y formación",
-      "language-immersion": "Programas immersión lingüistica",
-      "concierge": "Servicios de conserjería"
+      "erasmus": "Programas Erasmus+",
+      "language-courses": "Cursos de idiomas y formaciónes",
+      "language-immersion": "Programas de immersión lingüística",
+      "concierge": "Servicios de apoyo"
     }
   },
   "contact-page": {
@@ -474,10 +474,10 @@
     "input": {
       "service": {
         "label": "¿Qué tipo de servicio está interesado?",
-        "placeholder": "Seleccione uno",
+        "placeholder": "Selecciona uno",
         "options": {
           "erasmus": "Proyectos Erasmus+",
-          "language-courses": "Cursos de idioma",
+          "language-courses": "Cursos de idiomas",
           "conversational-english-course": "Curso Inglés conversacional",
           "business-english-course": "Curso Inglés empresarial",
           "conversational-spanish-course": "Curso Español conversacional",
@@ -487,7 +487,7 @@
           "business-ai": "AI para empresas",
           "concierge": "Servicios de conserjería y tutoría"
         },
-        "error": "Por favor seleccione un servicio en el que esté interesado"
+        "error": "Por favor selecciona un servicio en el que esté interesado"
       },
       "name": {
         "label": "Nombre",
@@ -512,7 +512,7 @@
       "nationality": {
         "label": "Nacionalidad",
         "placeholder": "Introduzca su nacionalidad",
-        "error": "Por favor seleccione una nacionalidad"
+        "error": "Por favor selecciona una nacionalidad"
       },
       "message": {
         "label": "Cuéntanos más, ¿qué te gustaría saber?",
@@ -555,7 +555,7 @@
       },
       "accommodationType": {
         "label": "Tipo de alojamiento",
-        "placeholder": "Seleccione uno",
+        "placeholder": "Selecciona uno",
         "error": "Por favor especifique el tipo de alojamiento",
         "options": {
           "apartment": "Apartamento",
@@ -568,7 +568,7 @@
       },
       "roomType": {
         "label": "Tipo de habitación",
-        "placeholder": "Seleccione uno",
+        "placeholder": "a uno",
         "error": "Por favor especifique el tipo de habitación",
         "options": {
           "single": "Habitación individual",
@@ -579,7 +579,7 @@
       },
       "boardType": {
         "label": "Régimen",
-        "placeholder": "Seleccione uno",
+        "placeholder": "Selecciona uno",
         "error": "Por favor especifique el régimen",
         "options": {
           "self-catering": "Sin servicio de comidas",
@@ -590,7 +590,7 @@
       },
       "roundTripIncluded": {
         "label": "¿Le gustaría incluir un traslado de ida y vuelta al aeropuerto en su cotización?",
-        "placeholder": "Seleccione uno",
+        "placeholder": "Selecciona uno",
         "error": "Por favor especifica si el transporte está incluido.",
         "options": {
           "yes": "Llegada y salida incluidas",
@@ -601,7 +601,7 @@
       },
       "culturalActivitiesIncluded": {
         "label": "¿Quieres incluir algún tipo de actividades culturales?",
-        "placeholder": "Seleccione uno",
+        "placeholder": "Selecciona uno",
         "error": "Por favor especifique si se incluyen actividades culturales.",
         "options": {
           "yes": "Sí",
@@ -725,7 +725,7 @@
     "concierge": {
       "what-included": {
         "title": "¿Qué está incluido en los servicios de apoyo para estudiantes?",
-        "description": "Student Concierge Services brinda servicios de apoyo personalizados para estudiantes internacionales que estudian en un país extranjero. Nuestro objetivo es brindar al estudiante la mejor y más cómoda experiencia de vida en el extranjero. Sabemos que dejar que su hijo vaya al extranjero para estudiar en un país extranjero puede ser estresante, para facilitar este proceso que nos mantengamos conectados con el estudiante."
+        "description": "Brindamos servicios de apoyo personalizados para estudiantes internacionales que estudian en un país extranjero. Nuestro objetivo es brindar al estudiante la mejor y más cómoda experiencia de vida en el extranjero. Sabemos que dejar que su hijo vaya al extranjero para estudiar en un país extranjero puede ser estresante, para facilitar este proceso nos mantendremos conectados con el estudiante durante toda su estancia."
       }
     }
   },

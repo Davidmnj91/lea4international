@@ -197,7 +197,7 @@ export default function Page({
               alt={`${destination}_1`}
               width={650}
               height={402}
-              style={{ height: '100%', width: '100%' }}
+              style={{ height: '100%', width: '100%', objectFit: 'cover' }}
             />
           </div>
           <div className='h-[402px] flex-grow'>
@@ -206,7 +206,7 @@ export default function Page({
               alt={`${destination}_2`}
               width={650}
               height={402}
-              style={{ height: '100%', width: '100%' }}
+              style={{ height: '100%', width: '100%', objectFit: 'cover' }}
             />
           </div>
         </div>

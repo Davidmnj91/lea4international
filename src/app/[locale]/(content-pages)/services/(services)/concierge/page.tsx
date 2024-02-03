@@ -2,13 +2,13 @@ import { LanguagePageProps } from '@/i18n';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import concierge_services_bg from '../../../../../../../public/images/services/concierge/concierge_services_bg.webp';
-import { AirplaneTilt } from '@phosphor-icons/react/dist/ssr/AirplaneTilt';
 import { FirstAidKit } from '@phosphor-icons/react/dist/ssr/FirstAidKit';
 import { Globe } from '@phosphor-icons/react/dist/ssr/Globe';
 import { MapPin } from '@phosphor-icons/react/dist/ssr/MapPin';
 import { MapTrifold } from '@phosphor-icons/react/dist/ssr/MapTrifold';
 import { Ticket } from '@phosphor-icons/react/dist/ssr/Ticket';
 import { Translate } from '@phosphor-icons/react/dist/ssr/Translate';
+import { Taxi } from '@phosphor-icons/react/dist/ssr/Taxi';
 import { Typography } from '@/components/typography/typography';
 import {
   InformationCategories,
@@ -24,7 +24,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
 
   const services = {
     'meeting-greeting': <MapPin size={32} />,
-    'airport-transfer': <AirplaneTilt size={32} />,
+    'airport-transfer': <Taxi size={32} />,
     'local-transport': <Ticket size={32} />,
     'immigration-services': <Globe size={32} />,
     'city-tour': <MapTrifold size={32} />,

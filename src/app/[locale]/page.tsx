@@ -84,7 +84,7 @@ export default function HomePage() {
           ref={ref}
           style={{
             position: 'absolute',
-            height: '100vh',
+            height: '100dvh',
             width: '100%',
             zIndex: '-1',
             backgroundImage: `url(${main_bg.src}), linear-gradient(#0308227F,#0308227F)`,
@@ -278,7 +278,9 @@ export default function HomePage() {
                   <Typography as='span' size='heading-4xl' color='gold-dark'>
                     &ldquo;
                   </Typography>
-                  {t.rich('help-you')}
+                  <Typography as='span' size='heading-lg' color='basics-white'>
+                    {t.rich('help-you')}
+                  </Typography>
                   <Typography as='span' size='heading-4xl' color='gold-dark'>
                     &rdquo;
                   </Typography>

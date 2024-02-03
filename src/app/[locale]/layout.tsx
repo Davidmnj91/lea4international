@@ -32,6 +32,7 @@ export default function RootLayout({
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'EducationalOrganization',
+    name: 'LEA 4 International',
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': 'https://lea4int.com',
@@ -138,13 +139,12 @@ export default function RootLayout({
           sizes='16x16'
           href='/favicon-16x16.png'
         />
-        <link rel='manifest' href='/site.webmanifest' />
         <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#2f3c49' />
         <meta name='msapplication-TileColor' content='#2b5797' />
         <meta name='theme-color' content='#ffffff' />
         <script
           type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd, null, 2) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body className='relative mx-auto bg-basics-white'>
