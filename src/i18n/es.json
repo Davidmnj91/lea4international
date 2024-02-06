@@ -76,7 +76,7 @@
           "work-experience": {
             "title": "Prácticas profesionales",
             "description": "Erasmus+ puede ayudarte a adquirir una valiosa experiencia laboral en el extranjero. Al participar en el programa de prácticas Erasmus+ mejorarás tus habilidades interpersonales y de idiomas extranjeros, y desarrollarás habilidades interculturales que te ayudarán a encontrar un trabajo después de tus estudios.<br></br>Erasmus+ apoya las prácticas laborales o los períodos de estudio en el extranjero para estudiantes actualmente matriculados en educación y formación profesional (FP) y para recién graduados.",
-            "with": "Experiencia <br></br>laboral <br></br>con <br></br>LEA 4 Int.",
+            "with": "Prácticas <br></br>profesionales <br></br>con <br></br>LEA 4 Int.",
             "message": "En LEA 4 International ofrecemos una variedad de sectores profesionales en los que podrás realizar tu experiencia de prácticas. Sabemos lo importante que es adquirir experiencia profesional, por eso ofrecemos pasantías de alta calidad adaptadas a cada individuo.<br></br>Contamos con un equipo de expertos que revisarán y estudiarán tu CV y carta de motivación para encontrarte con la empresa adecuada. Recibirás apoyo durante el proceso de entrevista, se te asignará un supervisor para monitorear su desempeño y asegurarse de lograr los mejores resultados. Te proporcionaremos el acuerdo de aprendizaje y toda la ayuda que necesites antes y durante tus prácticas.",
             "we-offer": {
               "title": "Descubre los sectores profesionales que ofrecemos",
@@ -210,7 +210,7 @@
             }
           },
           "ai-trainings": {
-            "title": "Formaciones & Trainings",
+            "title": "Formaciones",
             "description": "La Inteligencia Artificial (IA) se define como la inteligencia exhibida por máquinas o software. Es un campo de estudio dentro de la informática que se centra en el desarrollo y estudio de máquinas inteligentes. La IA está transformando prácticamente todas las industrias y está lista para tener un impacto significativo en el mercado laboral y en la sociedad en los próximos años. En LEA 4 International, nuestro objetivo es ayudar a individuos y empresas a mejorar su comprensión y conocimiento de la IA. Ofrecemos capacitación en las siguientes áreas:"
           },
           "machine-learning": {
@@ -311,7 +311,7 @@
     "back-to-destinations": "Volver a destinos populares",
     "inspired": {
       "title": "¿Te sientes inspirado?",
-      "description": "Descubra infinitas posibilidades: <br></br><br></br> Su puerta de entrada a experiencias y conexiones inolvidables",
+      "description": "Descubre infinitas posibilidades: <br></br><br></br> Tu puerta de entrada a experiencias y conexiones inolvidables",
       "join": "Quiero unirme",
       "accommodations": "Alojamientos"
     },
@@ -484,8 +484,8 @@
           "business-spanish-course": "Curso Español empresarial",
           "machine-learning": "Machine learning",
           "data-mining": "Data mining",
-          "business-ai": "AI para empresas",
-          "concierge": "Servicios de conserjería y tutoría"
+          "business-ai": "IA para empresas",
+          "concierge": "Servicios de apoyo a estudiantes"
         },
         "error": "Por favor selecciona un servicio en el que esté interesado"
       },
