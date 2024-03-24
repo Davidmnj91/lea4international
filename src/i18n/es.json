@@ -147,7 +147,7 @@
               },
               "help": {
                 "title": "Este curso te ayudará a:",
-                "description": "<li>Mejorar tu fluidez al hablar inglés</li><li>Aumentar tu confianza al hablar inglés.</li><li>Mejorar tu pronunciación y acento.</li><li>Amplíar tu vocabulario en inglés.</li>"
+                "description": "<li>Mejorar tu fluidez al hablar inglés.</li><li>Aumentar tu confianza al hablar inglés.</li><li>Mejorar tu pronunciación y acento.</li><li>Amplíar tu vocabulario en inglés.</li>"
               },
               "details": {
                 "title": "Detalles:",
@@ -165,11 +165,11 @@
               },
               "help": {
                 "title": "Este curso te ayudará a:",
-                "description": "<li>Mejorar tu fluidez al hablar inglés</li><li>Aumentar tu confianza al hablar español.</li><li>Mejorar tu pronunciación y acento.</li><li>Ampliar tu vocabulario en inglés.</li>"
+                "description": "<li>Mejorar tu fluidez al hablar inglés.</li><li>Aumentar tu confianza al hablar español.</li><li>Mejorar tu pronunciación y acento.</li><li>Ampliar tu vocabulario en inglés.</li>"
               },
               "details": {
                 "title": "Detalles:",
-                "description": "<li>Horario flexible: cursos de mañana, tarde y fin de semana.</li><li>Tamaño del grupo: máximo 10 estudiantes por clase</li><li>Duración: de 1 a 20 semanas.</li><li>Precio: Si quieres conocer nuestros precios, <contact>¡contáctanos!</contact></li>"
+                "description": "<li>Horario flexible: cursos de mañana, tarde y fin de semana.</li><li>Tamaño del grupo: máximo 10 estudiantes por clase.</li><li>Duración: de 1 a 20 semanas.</li><li>Precio: Si quieres conocer nuestros precios, <contact>¡contáctanos!</contact></li>"
               }
             }
           },
@@ -187,7 +187,7 @@
               },
               "details": {
                 "title": "Detalles:",
-                "description": "<li>Horario flexible: cursos de mañana, tarde y fin de semana.</li><li>Tamaño del grupo: máximo 10 estudiantes por clase</li><li>Duración: de 1 a 20 semanas.</li><li>Precio: ¡Si quieres conocer nuestros precios, <contact>¡contáctanos!</contact></li>"
+                "description": "<li>Horario flexible: cursos de mañana, tarde y fin de semana.</li><li>Tamaño del grupo: máximo 10 estudiantes por clase.</li><li>Duración: de 1 a 20 semanas.</li><li>Precio: ¡Si quieres conocer nuestros precios, <contact>¡contáctanos!</contact></li>"
               }
             }
           },
