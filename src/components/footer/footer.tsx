@@ -15,6 +15,8 @@ import { Typography } from '@/components/typography/typography';
 import { FullLogo, Logo } from '@/components/logo/fullLogo';
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import erasmus_quality_standards from '../../../public/images/erasmus_quality_standards.webp';
 
 const MobileFooter = () => {
   const t = useTranslations('footer');
@@ -26,6 +28,13 @@ const MobileFooter = () => {
         <LocaleSwitcher />
         <Menu />
       </div>
+      <Image
+        unoptimized
+        src={erasmus_quality_standards.src}
+        alt='eramus_quality_standards'
+        width={125}
+        height={125}
+      />
       <div className='flex w-full flex-col items-center justify-center gap-2'>
         <div className='flex items-center gap-6 text-basics-white'>
           <Envelope size={32} weight='thin' />
@@ -123,6 +132,13 @@ const DesktopFooter = () => {
               </Typography>
             </div>
           </div>
+          <Image
+            unoptimized
+            src={erasmus_quality_standards.src}
+            alt='eramus_quality_standards'
+            width={125}
+            height={125}
+          />
           <div className='flex gap-4 text-basics-white'>
             <Typography as='span' size='body-md' color='basics-white'>
               {t('follow-us')}
