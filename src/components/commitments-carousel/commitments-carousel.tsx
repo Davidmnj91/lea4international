@@ -1,12 +1,12 @@
-// prettier-ignore
 'use client';
 
-import useEmblaCarousel, { EmblaCarouselType } from 'embla-carousel-react';
+import useEmblaCarousel from 'embla-carousel-react';
 import { useTranslations } from 'next-intl';
 import { buttonTypes } from '@/components/button/button';
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useCallback, useEffect, useState } from 'react';
 import { Typography } from '@/components/typography/typography';
+import { EmblaCarouselType } from 'embla-carousel';
 
 export const CommitmentsCarousel = () => {
   const [carouselRef, carouselApi] = useEmblaCarousel({ loop: true });
