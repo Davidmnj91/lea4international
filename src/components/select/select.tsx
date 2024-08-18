@@ -1,14 +1,22 @@
 'use client';
 
 import { Fragment, useState } from 'react';
-import { Combobox, Transition } from '@headlessui/react';
+import {
+  Combobox,
+  ComboboxButton,
+  ComboboxInput,
+  ComboboxOption,
+  ComboboxOptions,
+  Label,
+  Transition,
+} from '@headlessui/react';
 import { CaretDown, CaretUp, CheckCircle } from '@phosphor-icons/react';
 import { inputStyles, labelStyles } from '@/components/form/form';
 import clsx from 'clsx';
 import { Typography } from '@/components/typography/typography';
 
 type ComboboxProps = {
-  value: string | number;
+  value: string;
   onChange: any;
   onBlur: any;
   label: string;
@@ -36,7 +44,7 @@ export default function ComboBoxWrapper({
           return option.label.toLowerCase().includes(query.toLowerCase());
         });
 
-  const getNameFromValue = (value: string | number) => {
+  const getNameFromValue = (value: string) => {
     const option = options.find((option) => option.value === value);
     return option ? option.label : '';
   };
@@ -46,7 +54,7 @@ export default function ComboBoxWrapper({
       <Combobox value={value} onChange={onChange}>
         {({ open }) => (
           <>
-            <Combobox.Label className={labelStyles}>{label}</Combobox.Label>
+            <Label className={labelStyles}>{label}</Label>
             <div className='relative mt-3'>
               <div
                 className={clsx(
@@ -54,18 +62,18 @@ export default function ComboBoxWrapper({
                   'relative w-full cursor-default overflow-hidden bg-transparent text-left focus:outline-none'
                 )}
               >
-                <Combobox.Button className='inset-y-0 right-0 flex w-full items-center pr-2'>
-                  <Combobox.Input
+                <ComboboxButton className='inset-y-0 right-0 flex w-full items-center pr-2'>
+                  <ComboboxInput
                     className='w-full bg-transparent text-europe-light placeholder-europe-light hover:outline-none focus:outline-none'
                     onChange={(event) => setQuery(event.target.value)}
-                    displayValue={(optionValue: string | number) =>
+                    displayValue={(optionValue: string) =>
                       getNameFromValue(optionValue)
                     }
                     placeholder={placeholder}
                     onBlur={onBlur}
                   />
                   {open ? <CaretUp size={24} /> : <CaretDown size={24} />}
-                </Combobox.Button>
+                </ComboboxButton>
               </div>
               <Transition
                 as={Fragment}
@@ -74,18 +82,18 @@ export default function ComboBoxWrapper({
                 leaveTo='opacity-0'
                 afterLeave={() => setQuery('')}
               >
-                <Combobox.Options className='absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-basics-white py-1 text-base shadow-lg ring-1 ring-europe-dark ring-opacity-5 focus:outline-none sm:text-b-sm'>
+                <ComboboxOptions className='sm:text-b-sm absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-basics-white py-1 text-base shadow-lg ring-1 ring-europe-dark ring-opacity-5 focus:outline-none'>
                   {filteredOptions.map((option) => (
-                    <Combobox.Option
+                    <ComboboxOption
                       key={option.id}
-                      className={({ active }) =>
+                      className={({ focus }) =>
                         `relative mx-1 cursor-default rounded-md py-2 pl-10 pr-4 ${
-                          active && 'bg-basics-gray'
+                          focus && 'bg-basics-gray'
                         }`
                       }
                       value={option.value}
                     >
-                      {({ selected, active }) => (
+                      {({ selected }) => (
                         <>
                           {selected && (
                             <Typography
@@ -100,9 +108,9 @@ export default function ComboBoxWrapper({
                           <span className='block truncate'>{option.label}</span>
                         </>
                       )}
-                    </Combobox.Option>
+                    </ComboboxOption>
                   ))}
-                </Combobox.Options>
+                </ComboboxOptions>
               </Transition>
             </div>
           </>
