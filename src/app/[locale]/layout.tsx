@@ -46,7 +46,7 @@ export default function RootLayout({
     dateModified: '2024-01-11T11:35:00+07:00',
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Valladoliz, Spain',
+      addressLocality: 'Valladolid, Spain',
       postalCode: 'F47007',
     },
     email: Contact.mail,
@@ -120,7 +120,7 @@ export default function RootLayout({
           property='article:author'
           content='https://www.linkedin.com/in/david-manjavacas-santos/'
         />
-        <link rel='canonical' href='https://lea4int.com' />
+        <link rel='canonical' href={process.env.APP_DOMAIN} />
         <link rel='icon' href='/favicon.ico' type='image/x-icon' />
         <link
           rel='apple-touch-icon'

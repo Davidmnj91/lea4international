@@ -344,11 +344,7 @@ export default function HomePage() {
               </Link>
               <span className='w-[76px] border-b border-b-europe desktop:w-[250px]' />
             </div>
-            <div
-              className='max-w-[1440px] desktop:my-14'
-              itemScope
-              itemType='https://schema.org/FAQPage'
-            >
+            <div className='max-w-[1440px] desktop:my-14'>
               {Object.entries(FaqsHome)
                 .flatMap(([category, faqs]) =>
                   faqs.map((faq) => `${category}.${faq}`)
@@ -357,8 +353,6 @@ export default function HomePage() {
                   <div
                     key={faq}
                     className='border-b-2 border-t-0 border-basics-disabled px-3.5 py-6 first-of-type:border-t-2 desktop:px-12'
-                    itemProp='mainEntity'
-                    itemType='https://schema.org/Question'
                   >
                     <FaqList faqKey={faq} />
                   </div>

@@ -63,16 +63,32 @@ const MobileFooter = () => {
         <Typography as='span' size='body-md' color='basics-white'>
           {t('follow-us')}
         </Typography>
-        <Link href={Contact.instagram} target='_blank'>
+        <Link
+          aria-label='lea4int instagram'
+          href={Contact.instagram}
+          target='_blank'
+        >
           <InstagramIcon size={24} />
         </Link>
-        <Link href={Contact.linkedin} target='_blank'>
+        <Link
+          aria-label='lea4int linkedin'
+          href={Contact.linkedin}
+          target='_blank'
+        >
           <LinkedinIcon size={24} />
         </Link>
-        <Link href={Contact.facebook} target='_blank'>
+        <Link
+          aria-label='lea4int facebook'
+          href={Contact.facebook}
+          target='_blank'
+        >
           <FacebookIcon size={24} />
         </Link>
-        <Link href={Contact.youtube} target='_blank'>
+        <Link
+          aria-label='lea4int youtube'
+          href={Contact.youtube}
+          target='_blank'
+        >
           <YoutubeIcon size={24} />
         </Link>
       </div>
@@ -85,7 +101,11 @@ const MobileFooter = () => {
         <Typography as='span' size='body-sm' color='basics-white'>
           {t('copyright')}
         </Typography>
-        <Link href={'/privacy-policy'} target={'_blank'}>
+        <Link
+          aria-label='privacy policy'
+          href={'/privacy-policy'}
+          target={'_blank'}
+        >
           <Typography
             as='span'
             size='body-sm'
@@ -109,7 +129,7 @@ const DesktopFooter = () => {
         <div className='flex flex-col justify-between gap-12'>
           <FullLogo width={129} height={50} />
           <div className='flex flex-col gap-2'>
-            <div className='flex items-center  gap-6 text-basics-white'>
+            <div className='flex items-center gap-6 text-basics-white'>
               <Envelope size={32} weight='thin' />
               <Typography
                 as='a'
@@ -120,7 +140,7 @@ const DesktopFooter = () => {
                 {Contact.mail}
               </Typography>
             </div>
-            <div className='flex items-center  gap-6 text-basics-white'>
+            <div className='flex items-center gap-6 text-basics-white'>
               <Phone size={32} weight='thin' />
               <Typography
                 as='a'
@@ -143,16 +163,32 @@ const DesktopFooter = () => {
             <Typography as='span' size='body-md' color='basics-white'>
               {t('follow-us')}
             </Typography>
-            <Link href={Contact.instagram} target='_blank'>
+            <Link
+              aria-label='lea4int instagram'
+              href={Contact.instagram}
+              target='_blank'
+            >
               <InstagramIcon size={24} />
             </Link>
-            <Link href={Contact.linkedin} target='_blank'>
+            <Link
+              aria-label='lea4int linkedin'
+              href={Contact.linkedin}
+              target='_blank'
+            >
               <LinkedinIcon size={24} />
             </Link>
-            <Link href={Contact.facebook} target='_blank'>
+            <Link
+              aria-label='lea4int facebook'
+              href={Contact.facebook}
+              target='_blank'
+            >
               <FacebookIcon size={24} />
             </Link>
-            <Link href={Contact.youtube} target='_blank'>
+            <Link
+              aria-label='lea4int youtube'
+              href={Contact.youtube}
+              target='_blank'
+            >
               <YoutubeIcon size={24} />
             </Link>
           </div>
@@ -173,7 +209,11 @@ const DesktopFooter = () => {
         <Typography as='span' size='body-sm' color='basics-white'>
           {t('copyright')}
         </Typography>
-        <Link href={'/privacy-policy'} target={'_blank'}>
+        <Link
+          aria-label='privacy policy'
+          href={'/privacy-policy'}
+          target={'_blank'}
+        >
           <Typography
             as='span'
             size='body-sm'

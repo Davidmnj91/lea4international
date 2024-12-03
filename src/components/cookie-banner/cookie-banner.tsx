@@ -45,6 +45,7 @@ export const CookieBanner = () => {
       )}
       <Transition appear show={showBanner} as={Fragment}>
         <Dialog
+          aria-label='cookie banner'
           as='div'
           className='relative z-50'
           onClose={() => {}}

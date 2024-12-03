@@ -14,7 +14,12 @@ export const FormLoadingPopup = () => {
 
   return (
     <Transition appear show={pending} as={Fragment}>
-      <Dialog as='div' className='relative z-50' onClose={() => {}}>
+      <Dialog
+        aria-label='loading form'
+        as='div'
+        className='relative z-50'
+        onClose={() => {}}
+      >
         <Transition.Child
           as={Fragment}
           enter='ease-out duration-300'

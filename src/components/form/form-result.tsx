@@ -17,7 +17,12 @@ export const FormResultPopup = ({ state, open, onClose }: FormResultProps) => {
 
   return (
     <Transition appear show={open} as={Fragment}>
-      <Dialog as='div' className='relative z-50' onClose={onClose}>
+      <Dialog
+        aria-label='form result'
+        as='div'
+        className='relative z-50'
+        onClose={onClose}
+      >
         <Transition.Child
           as={Fragment}
           enter='ease-out duration-300'
