@@ -41,6 +41,7 @@ export const VideoBlog = ({ videos }: VideoBlogProps) => {
     <div className='flex flex-col gap-6 px-6 py-12 desktop:gap-9 desktop:px-12 desktop:py-24'>
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog
+          aria-label='vieo player'
           as='div'
           className='relative z-10'
           onClose={() => setIsOpen(false)}
@@ -80,29 +81,32 @@ export const VideoBlog = ({ videos }: VideoBlogProps) => {
       </Transition>
 
       <div className='grid grid-cols-1 gap-6 desktop:grid-cols-2 desktop:gap-9'>
-        {currentItems().map((item) => (
-          <div key={item.id?.videoId} className='flex h-[348px]'>
-            <a
-              href={`https://www.youtube.com/watch?v=${item?.id?.videoId}`}
-              target={'_blank'}
-              className='flex flex-auto items-center justify-center bg-cover bg-center bg-no-repeat desktop:hidden'
-              style={{
-                backgroundImage: `url(${
-                  item.snippet?.thumbnails?.high?.url || ''
-                })`,
-              }}
-            />
-            <button
-              onClick={() => selectVideo(item)}
-              className='hidden flex-auto items-center justify-center bg-cover bg-center bg-no-repeat desktop:flex'
-              style={{
-                backgroundImage: `url(${
-                  item.snippet?.thumbnails?.high?.url || ''
-                })`,
-              }}
-            />
-          </div>
-        ))}
+        {currentItems()
+          .filter((item) => item.id?.videoId !== undefined)
+          .map((item) => (
+            <div key={item.id?.videoId} className='flex h-[348px]'>
+              <a
+                aria-label={item.snippet?.title ?? 'youtube video'}
+                href={`https://www.youtube.com/watch?v=${item?.id?.videoId}`}
+                target={'_blank'}
+                className='flex flex-auto items-center justify-center bg-cover bg-center bg-no-repeat desktop:hidden'
+                style={{
+                  backgroundImage: `url(${
+                    item.snippet?.thumbnails?.high?.url ?? ''
+                  })`,
+                }}
+              />
+              <button
+                onClick={() => selectVideo(item)}
+                className='hidden flex-auto items-center justify-center bg-cover bg-center bg-no-repeat desktop:flex'
+                style={{
+                  backgroundImage: `url(${
+                    item.snippet?.thumbnails?.high?.url ?? ''
+                  })`,
+                }}
+              />
+            </div>
+          ))}
       </div>
       <div className='flex flex-col items-center gap-6 desktop:flex-row desktop:justify-between desktop:gap-0'>
         {totalPages() > 1 && (
@@ -143,6 +147,7 @@ export const VideoBlog = ({ videos }: VideoBlogProps) => {
           </nav>
         )}
         <a
+          aria-label='lea4int youtube'
           href={Contact.youtube}
           target={'_blank'}
           className={buttonTypes({ intent: 'primary' })}

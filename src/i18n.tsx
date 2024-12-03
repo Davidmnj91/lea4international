@@ -31,12 +31,13 @@ export const defaultTranslationVales: RichTranslationValues = {
     </a>
   ),
   email: (chunks: ReactNode) => (
-    <a className='underline' href={`mailto:${chunks}`}>
+    <a aria-label='mail' className='underline' href={`mailto:${chunks}`}>
       {chunks}
     </a>
   ),
   policy: (chunks: ReactNode) => (
     <Link
+      aria-label='privacy policy'
       className='font-bold underline'
       href={'/privacy-policy'}
       target={'_blank'}
@@ -46,6 +47,7 @@ export const defaultTranslationVales: RichTranslationValues = {
   ),
   contact: (chunks: ReactNode) => (
     <Link
+      aria-label='contact'
       className='font-bold underline'
       href={'/contact/individual'}
       target={'_blank'}
