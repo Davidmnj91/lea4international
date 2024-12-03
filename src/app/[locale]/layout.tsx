@@ -142,6 +142,10 @@ export default function RootLayout({
         <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#2f3c49' />
         <meta name='msapplication-TileColor' content='#2b5797' />
         <meta name='theme-color' content='#ffffff' />
+        <meta
+          name='google-site-verification'
+          content='6TLnwupP2uv_SwtWptJfYpYCDXZZOMqDHyGfceP4Exw'
+        />
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
