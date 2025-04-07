@@ -11,6 +11,7 @@ import {
   Row,
   Section,
   Tailwind,
+  TailwindConfig,
   Text,
 } from '@react-email/components';
 import config from '../../tailwind.config';
@@ -40,7 +41,7 @@ export const AdminEmail = ({ props = previewProps }) => {
         <title>{previewText}</title>
       </Head>
       <Preview>{previewText}</Preview>
-      <Tailwind config={config}>
+      <Tailwind config={config as TailwindConfig}>
         <Body className='mx-auto' style={bodyStyle}>
           <Section className='bg-basics-white py-8'>
             <Container className='max-w-[490px]'>

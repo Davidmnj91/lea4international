@@ -1,6 +1,11 @@
 import { useTranslations } from 'next-intl';
 import React, { Fragment } from 'react';
-import { Dialog, Transition } from '@headlessui/react';
+import {
+  Dialog,
+  DialogPanel,
+  Transition,
+  TransitionChild,
+} from '@headlessui/react';
 import { CheckCircle, WarningCircle, X } from '@phosphor-icons/react';
 import { Typography } from '@/components/typography/typography';
 import { buttonTypes } from '@/components/button/button';
@@ -23,7 +28,7 @@ export const FormResultPopup = ({ state, open, onClose }: FormResultProps) => {
         className='relative z-50'
         onClose={onClose}
       >
-        <Transition.Child
+        <TransitionChild
           as={Fragment}
           enter='ease-out duration-300'
           enterFrom='opacity-0'
@@ -33,11 +38,11 @@ export const FormResultPopup = ({ state, open, onClose }: FormResultProps) => {
           leaveTo='opacity-0'
         >
           <div className='fixed inset-0 bg-black/25' />
-        </Transition.Child>
+        </TransitionChild>
 
         <div className='fixed inset-0 overflow-y-auto'>
           <div className='flex min-h-full items-center justify-center p-4 text-center'>
-            <Transition.Child
+            <TransitionChild
               as={Fragment}
               enter='ease-out duration-300'
               enterFrom='opacity-0 scale-95'
@@ -46,7 +51,7 @@ export const FormResultPopup = ({ state, open, onClose }: FormResultProps) => {
               leaveFrom='opacity-100 scale-100'
               leaveTo='opacity-0 scale-95'
             >
-              <Dialog.Panel className='flex w-[354px] transform flex-col gap-4 overflow-hidden rounded-2xl bg-white px-6 py-4 text-left align-middle shadow-xl transition-all'>
+              <DialogPanel className='flex w-[354px] transform flex-col gap-4 overflow-hidden rounded-2xl bg-white px-6 py-4 text-left align-middle shadow-xl transition-all'>
                 <button onClick={onClose} className='self-end text-europe'>
                   <X size={32} />
                 </button>
@@ -73,8 +78,8 @@ export const FormResultPopup = ({ state, open, onClose }: FormResultProps) => {
                     {t('close')}
                   </button>
                 </div>
-              </Dialog.Panel>
-            </Transition.Child>
+              </DialogPanel>
+            </TransitionChild>
           </div>
         </div>
       </Dialog>

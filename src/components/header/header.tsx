@@ -2,7 +2,12 @@
 
 import LocaleSwitcher from '@/components/locale-switcher/locale-switcher';
 import React, { Fragment, useCallback } from 'react';
-import { Popover, Transition } from '@headlessui/react';
+import {
+  Popover,
+  PopoverButton,
+  PopoverPanel,
+  Transition,
+} from '@headlessui/react';
 import { ArrowDown, CaretRight, List, X } from '@phosphor-icons/react';
 import { Menu } from '@/components/menu/menu';
 import Link from 'next/link';
@@ -46,9 +51,9 @@ export const MobileMenu = ({
         triggerCallBack(open);
         return (
           <>
-            <Popover.Button className='group text-basics-white hover:text-basics-gray focus:outline-none'>
+            <PopoverButton className='group text-basics-white hover:text-basics-gray focus:outline-none'>
               {open ? <X size={32} /> : <List size={32} />}
-            </Popover.Button>
+            </PopoverButton>
             <Transition
               as={Fragment}
               enter='transition ease-out duration-300'
@@ -58,7 +63,7 @@ export const MobileMenu = ({
               leaveFrom='opacity-100 translate-y-0'
               leaveTo='opacity-0 translate-y-1'
             >
-              <Popover.Panel className='absolute left-0 top-[80px] z-50 flex h-[calc(100dvh-80px)] w-full transform flex-col'>
+              <PopoverPanel className='absolute left-0 top-[80px] z-50 flex h-[calc(100dvh-80px)] w-full transform flex-col'>
                 <nav className='flex h-full flex-col gap-3.5 overflow-y-auto bg-europe p-6'>
                   <LocaleSwitcher />
                   <Link
@@ -151,7 +156,7 @@ export const MobileMenu = ({
                   <span>Contact us</span>
                   <CaretRight size={16} />
                 </Link>
-              </Popover.Panel>
+              </PopoverPanel>
             </Transition>
           </>
         );

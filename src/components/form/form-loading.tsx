@@ -2,7 +2,12 @@
 
 import { useTranslations } from 'next-intl';
 import React, { Fragment } from 'react';
-import { Dialog, Transition } from '@headlessui/react';
+import {
+  Dialog,
+  DialogPanel,
+  Transition,
+  TransitionChild,
+} from '@headlessui/react';
 import { SpinnerGap } from '@phosphor-icons/react';
 import { Typography } from '@/components/typography/typography';
 import { useFormStatus } from 'react-dom';
@@ -20,7 +25,7 @@ export const FormLoadingPopup = () => {
         className='relative z-50'
         onClose={() => {}}
       >
-        <Transition.Child
+        <TransitionChild
           as={Fragment}
           enter='ease-out duration-300'
           enterFrom='opacity-0'
@@ -30,11 +35,11 @@ export const FormLoadingPopup = () => {
           leaveTo='opacity-0'
         >
           <div className='fixed inset-0 bg-black/25' />
-        </Transition.Child>
+        </TransitionChild>
 
         <div className='fixed inset-0 overflow-y-auto'>
           <div className='flex min-h-full items-center justify-center p-4 text-center'>
-            <Transition.Child
+            <TransitionChild
               as={Fragment}
               enter='ease-out duration-300'
               enterFrom='opacity-0 scale-95'
@@ -43,7 +48,7 @@ export const FormLoadingPopup = () => {
               leaveFrom='opacity-100 scale-100'
               leaveTo='opacity-0 scale-95'
             >
-              <Dialog.Panel className='flex w-[354px] transform flex-col gap-4 overflow-hidden rounded-2xl bg-white px-6 py-4 text-left align-middle shadow-xl transition-all'>
+              <DialogPanel className='flex w-[354px] transform flex-col gap-4 overflow-hidden rounded-2xl bg-white px-6 py-4 text-left align-middle shadow-xl transition-all'>
                 <div className='flex flex-col items-center justify-center gap-4 py-8 text-center'>
                   <SpinnerGap size={48} className='animate-spin' />
                   <Typography as='h3' size='heading-lg' color='europe-dark'>
@@ -53,8 +58,8 @@ export const FormLoadingPopup = () => {
                     {t('description')}
                   </Typography>
                 </div>
-              </Dialog.Panel>
-            </Transition.Child>
+              </DialogPanel>
+            </TransitionChild>
           </div>
         </div>
       </Dialog>

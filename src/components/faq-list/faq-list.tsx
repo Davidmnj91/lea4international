@@ -1,7 +1,11 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Disclosure } from '@headlessui/react';
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+} from '@headlessui/react';
 import { Minus, Plus } from '@phosphor-icons/react';
 import { Typography } from '@/components/typography/typography';
 
@@ -15,7 +19,7 @@ export const FaqList = ({ faqKey }: FaqProps) => {
     <Disclosure>
       {({ open }) => (
         <>
-          <Disclosure.Button className='flex w-full justify-between gap-8'>
+          <DisclosureButton className='flex w-full justify-between gap-8'>
             <Typography
               as='span'
               size='heading-lg'
@@ -25,12 +29,12 @@ export const FaqList = ({ faqKey }: FaqProps) => {
               {t(`${faqKey}.title`)}
             </Typography>
             <div>{open ? <Minus size={32} /> : <Plus size={32} />}</div>
-          </Disclosure.Button>
-          <Disclosure.Panel className='mt-4'>
+          </DisclosureButton>
+          <DisclosurePanel className='mt-4'>
             <Typography as='p' size='body-lg' color='europe' weight='light'>
               {t.rich(`${faqKey}.description`)}
             </Typography>
-          </Disclosure.Panel>
+          </DisclosurePanel>
         </>
       )}
     </Disclosure>
