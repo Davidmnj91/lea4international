@@ -5,7 +5,7 @@ import {
   InstitutionsContactSchema,
   PartnerContactSchema,
 } from '@/schemas/contactSchemas';
-import { Language } from '@/i18n';
+import { Language } from '@/i18n/config';
 
 export const Contact = {
   companyName: 'LEA 4 International',

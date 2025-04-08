@@ -14,9 +14,9 @@ import { sendMail } from '@/services/mail.service';
 import { render } from '@react-email/render';
 import AdminEmail from '../emails/admin-email';
 import ClientEmail from '../emails/client-email';
-import emails from '../i18n/emails.json';
-import { defaultLanguage, Language } from '@/i18n';
+import emails from '../messages/emails.json';
 import { ContactData, ContactEmailProps } from '@/types/contact';
+import { defaultLanguage, Language } from '@/i18n/config';
 
 type ContactUsSuccess = {
   status: 'SUCCESS';

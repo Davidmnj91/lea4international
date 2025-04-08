@@ -1,7 +1,7 @@
-// @ts-check
-import withNextIntl from 'next-intl/plugin';
+import { NextConfig } from 'next';
+import createNextIntlPlugin from 'next-intl/plugin';
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig: NextConfig = {};
 
-module.exports = withNextIntl()(nextConfig);
+const withNextIntl = createNextIntlPlugin();
+export default withNextIntl(nextConfig);

@@ -8,6 +8,7 @@ import {
 } from '@headlessui/react';
 import { Minus, Plus } from '@phosphor-icons/react';
 import { Typography } from '@/components/typography/typography';
+import { defaultTranslationVales } from '@/i18n/translation-values';
 
 type FaqProps = {
   faqKey: string;
@@ -32,7 +33,7 @@ export const FaqList = ({ faqKey }: FaqProps) => {
           </DisclosureButton>
           <DisclosurePanel className='mt-4'>
             <Typography as='p' size='body-lg' color='europe' weight='light'>
-              {t.rich(`${faqKey}.description`)}
+              {t.rich(`${faqKey}.description`, defaultTranslationVales)}
             </Typography>
           </DisclosurePanel>
         </>

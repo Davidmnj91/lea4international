@@ -23,8 +23,8 @@ import { EuropeMapMadrid } from '@/components/maps/madrid';
 import { EuropeMapMalaga } from '@/components/maps/malaga';
 import { EuropeMapKrakow } from '@/components/maps/krakow';
 import { EuropeMapDublin } from '@/components/maps/dublin';
-import { LanguagePageProps } from '@/i18n';
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { LanguagePageProps } from '@/i18n/config';
+import { setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import { ArrowDown } from '@phosphor-icons/react/dist/ssr/ArrowDown';
 import Image from 'next/image';
@@ -36,6 +36,7 @@ import { Typography } from '@/components/typography/typography';
 import { EuropeMapGhent } from '@/components/maps/ghent';
 import Link from 'next/link';
 import { Route } from 'next';
+import { defaultTranslationVales } from '@/i18n/translation-values';
 
 export const dynamicParams = false;
 
@@ -140,8 +141,7 @@ export default function Page(
   const { name, mainImageSrc, sampleImages, servicesAvailable, mapComponent } =
     destinationsProps[destination];
 
-  // Enable static rendering
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
 
   const t = useTranslations(`destinations-page.destinations.${name}`);
   const tServices = useTranslations('destinations-page.services');
@@ -177,7 +177,7 @@ export default function Page(
             </Typography>
           </div>
           <Typography as='p' size='body-lg' color='europe-dark'>
-            {t.rich('reason')}
+            {t.rich('reason', defaultTranslationVales)}
           </Typography>
         </div>
         {mapComponent}

@@ -16,7 +16,7 @@ import {
 } from '@react-email/components';
 import config from '../../tailwind.config';
 import { Contact, ContactEmailProps, ContactServices } from '../types/contact';
-import emails from '../i18n/emails.json';
+import emails from '../messages/emails.json';
 import { FormSummary } from './components/form-summary';
 import logo from '../../public/images/email/logo.png';
 import linkedin from '../../public/images/email/linkedin.png';

@@ -1,7 +1,6 @@
 import React, { use } from 'react';
-import { Language, languages } from '@/i18n';
 import { notFound } from 'next/navigation';
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import { cormorant, ubuntu } from '@/app/fonts';
 import { useMessages } from 'next-intl';
 import { ContactUs } from '@/components/contact-us/contact-us';
@@ -10,6 +9,7 @@ import { Contact } from '@/types/contact';
 import lea4international from '../../../public/images/lea4international.png';
 import { CookieBanner } from '@/components/cookie-banner/cookie-banner';
 import IntlClientProvider from '@/providers/IntlClientProvider';
+import { Language, languages } from '@/i18n/config';
 
 export async function generateStaticParams() {
   return languages.map((locale) => ({ locale }));
@@ -20,17 +20,12 @@ type RootLayoutProps = {
   params: Promise<{ locale: Language }>;
 };
 
-export default function RootLayout(props: RootLayoutProps) {
-  const params = use(props.params);
+export default function RootLayout({ params, children }: RootLayoutProps) {
+  const { locale } = use(params);
 
-  const { locale } = params;
-
-  const { children } = props;
-
-  // Validate that the incoming `locale` parameter is valid
   if (!languages.includes(locale)) notFound();
 
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
   const messages = useMessages();
 
   const jsonLd = {

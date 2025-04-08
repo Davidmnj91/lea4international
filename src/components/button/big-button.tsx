@@ -4,7 +4,7 @@ import { Typography } from '@/components/typography/typography';
 import Link, { LinkProps } from 'next/link';
 
 type BigButtonProps = {
-  subject: RichTranslation;
+  subject: string;
   caption: RichTranslation;
 } & LinkProps;
 export const BigButton = ({

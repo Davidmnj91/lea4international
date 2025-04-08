@@ -1,5 +1,5 @@
-import { LanguagePageProps } from '@/i18n';
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { LanguagePageProps } from '@/i18n/config';
+import { setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import concierge_services_bg from '../../../../../../../public/images/services/concierge/concierge_services_bg.webp';
 import { FirstAidKit } from '@phosphor-icons/react/dist/ssr/FirstAidKit';
@@ -15,12 +15,12 @@ import {
   MoreInfo,
 } from '@/components/more-info/more-info';
 import React, { use } from 'react';
+import { defaultTranslationVales } from '@/i18n/translation-values';
 
 export default function Page({ params }: LanguagePageProps) {
   const { locale } = use(params);
 
-  // Enable static rendering
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
 
   const t = useTranslations('services-page.services.concierge');
 
@@ -51,7 +51,7 @@ export default function Page({ params }: LanguagePageProps) {
           color='europe-dark'
           className='text-center'
         >
-          {t.rich('description')}
+          {t.rich('description', defaultTranslationVales)}
         </Typography>
       </div>
       <div className='flex flex-col-reverse desktop:flex-row'>

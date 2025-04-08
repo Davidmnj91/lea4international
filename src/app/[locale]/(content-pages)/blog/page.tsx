@@ -1,5 +1,5 @@
-import { LanguagePageProps } from '@/i18n';
-import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { LanguagePageProps } from '@/i18n/config';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Typography } from '@/components/typography/typography';
 import React, { Suspense } from 'react';
 import { unstable_cache } from 'next/cache';
@@ -15,8 +15,7 @@ const getData = unstable_cache(
 export default async function Page({ params }: LanguagePageProps) {
   const { locale } = await params;
 
-  // Enable static rendering
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
 
   const videos = await getData();
 

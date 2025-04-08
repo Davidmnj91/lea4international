@@ -17,4 +17,4 @@ export type Subset<K> = {
         : K[attr];
 };
 
-export type RichTranslation = string | ReactElement | ReactNode[];
+export type RichTranslation = string | ReactElement | ReactNode | ReactNode[];

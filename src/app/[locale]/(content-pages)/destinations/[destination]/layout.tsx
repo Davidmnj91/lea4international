@@ -4,6 +4,7 @@ import { CaretLeft } from '@phosphor-icons/react/dist/ssr/CaretLeft';
 import { BigButton } from '@/components/button/big-button';
 import { Typography } from '@/components/typography/typography';
 import React from 'react';
+import { defaultTranslationVales } from '@/i18n/translation-values';
 
 type RootDestinationsLayoutProps = {
   children: React.ReactNode;
@@ -31,7 +32,7 @@ export default function RootDestinationsLayout({
             {t('inspired.title')}
           </Typography>
           <Typography as='p' size='body-lg' color='basics-white'>
-            {t.rich('inspired.description')}
+            {t.rich('inspired.description', defaultTranslationVales)}
           </Typography>
           <div className='flex flex-col gap-6 desktop:flex-row desktop:gap-8'>
             <BigButton

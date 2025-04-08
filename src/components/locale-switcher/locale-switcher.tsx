@@ -11,8 +11,8 @@ import {
 import React, { Fragment, startTransition } from 'react';
 import { CaretDown, CheckCircle } from '@phosphor-icons/react';
 import { EnglandFlag, SpainFlag } from '@/components/icons/flags-icons';
-import { usePathname, useRouter } from '@/navigation';
-import { Language } from '@/i18n';
+import { usePathname, useRouter } from '@/i18n/navigation';
+import { Language } from '@/i18n/config';
 
 export default function LocaleSwitcher() {
   const router = useRouter();

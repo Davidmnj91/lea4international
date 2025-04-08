@@ -1,6 +1,6 @@
-import { Language, languages } from '@/i18n';
+import { Language, languages } from '@/i18n/config';
 import { notFound } from 'next/navigation';
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import { Header } from '@/components/header/header';
 import React from 'react';
 
@@ -18,7 +18,7 @@ export default async function RootLayout(props: RootLayoutProps) {
   // Validate that the incoming `locale` parameter is valid
   if (!languages.includes(locale)) notFound();
 
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
 
   return (
     <>

@@ -1,7 +1,7 @@
 import { use } from 'react';
-import { LanguagePageProps } from '@/i18n';
+import { LanguagePageProps } from '@/i18n/config';
 import { useTranslations } from 'next-intl';
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import { AnimatedCard } from '@/components/destination-card/animated-card';
 import prague_bg from '../../../../../public/images/destinations/prague_bg.webp';
@@ -12,12 +12,12 @@ import dublin_bg from '../../../../../public/images/destinations/dublin_bg.webp'
 import ghent_bg from '../../../../../public/images/destinations/ghent_bg.webp';
 import { Typography } from '@/components/typography/typography';
 import { Route } from 'next';
+import { defaultTranslationVales } from '@/i18n/translation-values';
 
 export default function Page({ params }: LanguagePageProps) {
   const { locale } = use(params);
 
-  // Enable static rendering
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
 
   const t = useTranslations('destinations-page');
 
@@ -43,7 +43,7 @@ export default function Page({ params }: LanguagePageProps) {
           weight='light'
           className='text-center'
         >
-          {t.rich('message')}
+          {t.rich('message', defaultTranslationVales)}
         </Typography>
       </div>
       <div className='mt-[-160px] flex flex-wrap items-center justify-center gap-4 overflow-auto p-6 desktop:mt-[-160px] desktop:overflow-hidden'>

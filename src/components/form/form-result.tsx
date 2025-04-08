@@ -9,6 +9,7 @@ import {
 import { CheckCircle, WarningCircle, X } from '@phosphor-icons/react';
 import { Typography } from '@/components/typography/typography';
 import { buttonTypes } from '@/components/button/button';
+import { defaultTranslationVales } from '@/i18n/translation-values';
 
 type FormResultProps = {
   state: 'success' | 'error';
@@ -65,11 +66,14 @@ export const FormResultPopup = ({ state, open, onClose }: FormResultProps) => {
                     {t(`${state}.title`)}
                   </Typography>
                   <Typography size='body-md' color='europe'>
-                    {t.rich(`${state}.description`)}
+                    {t.rich(`${state}.description`, defaultTranslationVales)}
                   </Typography>
                   <span className='h-1 w-full flex-grow border-b border-b-europe-light' />
                   <Typography size='body-md' color='europe'>
-                    {t.rich(`${state}.sub-description`)}
+                    {t.rich(
+                      `${state}.sub-description`,
+                      defaultTranslationVales
+                    )}
                   </Typography>
                   <button
                     className={buttonTypes({ intent: 'secondary-light' })}

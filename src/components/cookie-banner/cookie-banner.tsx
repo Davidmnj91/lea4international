@@ -11,6 +11,7 @@ import {
 import { Typography } from '@/components/typography/typography';
 import { buttonTypes } from '@/components/button/button';
 import { GoogleAnalytics } from '@next/third-parties/google';
+import { defaultTranslationVales } from '@/i18n/translation-values';
 
 const COOKIE_CONSENT = 'COOKIE_CONSENT';
 
@@ -81,7 +82,7 @@ export const CookieBanner = () => {
               <DialogPanel className='absolute bottom-0 w-[375px] transform overflow-hidden shadow-xl transition-all desktop:w-full'>
                 <div className='flex flex-col items-center gap-5 bg-europe-light px-6 py-10 desktop:flex-row desktop:justify-around desktop:gap-24 desktop:py-5'>
                   <Typography size='body-sm' color='basics-white'>
-                    {t.rich('message')}
+                    {t.rich('message', defaultTranslationVales)}
                   </Typography>
                   <div className='flex w-full gap-8 desktop:w-auto'>
                     <button

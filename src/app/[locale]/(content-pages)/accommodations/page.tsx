@@ -1,5 +1,5 @@
-import { LanguagePageProps } from '@/i18n';
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { LanguagePageProps } from '@/i18n/config';
+import { setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { buttonTypes, tagButtonTypes } from '@/components/button/button';
@@ -19,8 +19,7 @@ import { Destinations } from '@/types/destinations';
 export default function Page({ params }: LanguagePageProps) {
   const { locale } = use(params);
 
-  // Enable static rendering
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
 
   const t = useTranslations('accommodations-page');
 

@@ -1,6 +1,6 @@
-import { LanguagePageProps } from '@/i18n';
+import { LanguagePageProps } from '@/i18n/config';
 import { useTranslations } from 'next-intl';
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import { tagButtonTypes } from '@/components/button/button';
 import { FaqList } from '@/components/faq-list/faq-list';
 import Link from 'next/link';
@@ -13,8 +13,7 @@ import { Head } from '@react-email/components';
 export default function Page({ params }: LanguagePageProps) {
   const { locale } = use(params);
 
-  // Enable static rendering
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
 
   const t = useTranslations('faq-page');
   const tfaqs = useTranslations('faqs');

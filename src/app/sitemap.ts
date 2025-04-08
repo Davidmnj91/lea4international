@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { languages } from '@/i18n';
+import { languages } from '@/i18n/config';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const domain = process.env.APP_DOMAIN;
