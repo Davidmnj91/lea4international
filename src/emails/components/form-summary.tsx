@@ -5,8 +5,8 @@ import {
   InstitutionFormData,
   PartnerFormData,
 } from '@/types/contact';
-import { Language } from '../../i18n';
-import emails from '../../i18n/emails.json';
+import { Language } from '@/i18n/config';
+import emails from '../../messages/emails.json';
 import { Column, Text } from '@react-email/components';
 
 type GeneralContactDetailsProps = {

@@ -1,5 +1,5 @@
-import { LanguagePageProps } from '@/i18n';
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { LanguagePageProps } from '@/i18n/config';
+import { setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { buttonTypes, tagButtonTypes } from '@/components/button/button';
@@ -14,14 +14,16 @@ import { Airplane } from '@phosphor-icons/react/dist/ssr/Airplane';
 import { Bank } from '@phosphor-icons/react/dist/ssr/Bank';
 import { FlowerLotus } from '@phosphor-icons/react/dist/ssr/FlowerLotus';
 import { Monitor } from '@phosphor-icons/react/dist/ssr/Monitor';
-import { JSX } from 'react';
+import { JSX, use } from 'react';
 import { ServiceItem } from '@/components/service-item/service-item';
 import { BecomePartner } from '@/components/partners/become-partner';
 import { Typography } from '@/components/typography/typography';
+import { defaultTranslationVales } from '@/i18n/translation-values';
 
-export default function Page({ params: { locale } }: LanguagePageProps) {
-  // Enable static rendering
-  unstable_setRequestLocale(locale);
+export default function Page({ params }: LanguagePageProps) {
+  const { locale } = use(params);
+
+  setRequestLocale(locale);
 
   const t = useTranslations('services-page.services.erasmus');
 
@@ -39,7 +41,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
           as='h1'
           size='heading-2xl'
           color='europe-dark'
-          className='text-center '
+          className='text-center'
         >
           {t('title')}
         </Typography>
@@ -80,7 +82,10 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
             color='europe-dark'
             className='text-center'
           >
-            {t.rich('categories.work-experience.description')}
+            {t.rich(
+              'categories.work-experience.description',
+              defaultTranslationVales
+            )}
           </Typography>
         </div>
         <div className='flex flex-col desktop:h-[893px] desktop:flex-row'>
@@ -93,7 +98,10 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
             <div className='absolute left-[50%] top-[50%] flex h-[240px] w-[245px] flex-[0_0_40%] translate-x-[-50%] translate-y-[-50%] items-center justify-center bg-europe p-6 desktop:left-auto desktop:right-[-90px] desktop:top-16 desktop:translate-x-0 desktop:translate-y-0'>
               <div className='flex-grow border border-basics-white p-2.5'>
                 <Typography as='span' size='heading-lg' color='basics-white'>
-                  {t.rich('categories.work-experience.with')}
+                  {t.rich(
+                    'categories.work-experience.with',
+                    defaultTranslationVales
+                  )}
                 </Typography>
               </div>
             </div>
@@ -101,7 +109,10 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
           <div className='flex flex-col justify-end p-6 text-center desktop:flex-[0_0_40%] desktop:px-12 desktop:text-left'>
             <div className='z-10 bg-basics-white'>
               <Typography as='p' size='body-lg' color='europe-dark'>
-                {t.rich('categories.work-experience.message')}
+                {t.rich(
+                  'categories.work-experience.message',
+                  defaultTranslationVales
+                )}
               </Typography>
             </div>
           </div>
@@ -120,7 +131,8 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
                     `categories.work-experience.we-offer.${title}.title`
                   )}
                   description={t.rich(
-                    `categories.work-experience.we-offer.${title}.description`
+                    `categories.work-experience.we-offer.${title}.description`,
+                    defaultTranslationVales
                   )}
                 />
               ))}
@@ -163,7 +175,10 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
             color='europe-dark'
             className='text-center'
           >
-            {t.rich('categories.job-shadowing.description')}
+            {t.rich(
+              'categories.job-shadowing.description',
+              defaultTranslationVales
+            )}
           </Typography>
         </div>
         <div className='flex flex-col desktop:h-[1012px] desktop:flex-row'>
@@ -176,7 +191,10 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
             <div className='absolute left-[50%] top-[50%] flex h-[240px] w-[245px] flex-[0_0_40%] translate-x-[-50%] translate-y-[-50%] items-center justify-center bg-europe p-6 desktop:left-auto desktop:right-[-90px] desktop:top-16 desktop:translate-x-0 desktop:translate-y-0'>
               <div className='flex-grow border border-basics-white p-2.5'>
                 <Typography as='span' size='heading-lg' color='basics-white'>
-                  {t.rich('categories.job-shadowing.with')}
+                  {t.rich(
+                    'categories.job-shadowing.with',
+                    defaultTranslationVales
+                  )}
                 </Typography>
               </div>
             </div>
@@ -184,7 +202,10 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
           <div className='flex flex-col justify-end p-6 text-center desktop:flex-[0_0_40%] desktop:px-12 desktop:text-left'>
             <div className='z-10 bg-basics-white'>
               <Typography as='p' size='body-lg' color='europe-dark'>
-                {t.rich('categories.job-shadowing.message')}
+                {t.rich(
+                  'categories.job-shadowing.message',
+                  defaultTranslationVales
+                )}
               </Typography>
             </div>
           </div>
@@ -211,7 +232,10 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
             color='europe-dark'
             className='text-center'
           >
-            {t.rich('categories.school-exchange.description')}
+            {t.rich(
+              'categories.school-exchange.description',
+              defaultTranslationVales
+            )}
           </Typography>
         </div>
         <div className='flex flex-col desktop:h-[782px] desktop:flex-row'>
@@ -224,7 +248,10 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
             <div className='absolute left-[50%] top-[50%] flex h-[240px] w-[245px] flex-[0_0_40%] translate-x-[-50%] translate-y-[-50%] items-center justify-center bg-europe p-6 desktop:left-auto desktop:right-[-90px] desktop:top-16 desktop:translate-x-0 desktop:translate-y-0'>
               <div className='flex-grow border border-basics-white p-2.5'>
                 <Typography as='span' size='heading-lg' color='basics-white'>
-                  {t.rich('categories.school-exchange.with')}
+                  {t.rich(
+                    'categories.school-exchange.with',
+                    defaultTranslationVales
+                  )}
                 </Typography>
               </div>
             </div>
@@ -232,7 +259,10 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
           <div className='flex flex-col justify-end p-6 text-center desktop:flex-[0_0_40%] desktop:px-12 desktop:text-left'>
             <div className='z-10 bg-basics-white'>
               <Typography as='p' size='body-lg' color='europe-dark'>
-                {t.rich('categories.school-exchange.message')}
+                {t.rich(
+                  'categories.school-exchange.message',
+                  defaultTranslationVales
+                )}
               </Typography>
             </div>
           </div>
@@ -272,7 +302,10 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
             <div className='absolute left-[50%] top-[50%] flex h-[240px] w-[245px] flex-[0_0_40%] translate-x-[-50%] translate-y-[-50%] items-center justify-center bg-europe p-6 desktop:left-auto desktop:right-[-90px] desktop:top-16 desktop:translate-x-0 desktop:translate-y-0'>
               <div className='flex-grow border border-basics-white p-2.5'>
                 <Typography as='span' size='heading-lg' color='basics-white'>
-                  {t.rich('categories.erasmus-mundus.with')}
+                  {t.rich(
+                    'categories.erasmus-mundus.with',
+                    defaultTranslationVales
+                  )}
                 </Typography>
               </div>
             </div>
@@ -280,7 +313,10 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
           <div className='flex flex-col justify-end p-6 text-center desktop:flex-[0_0_40%] desktop:px-12 desktop:text-left'>
             <div className='z-10 bg-basics-white'>
               <Typography as='p' size='body-lg' color='europe-dark'>
-                {t.rich('categories.erasmus-mundus.message')}
+                {t.rich(
+                  'categories.erasmus-mundus.message',
+                  defaultTranslationVales
+                )}
               </Typography>
             </div>
           </div>
@@ -307,7 +343,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
             color='europe-dark'
             className='text-center'
           >
-            {t.rich('categories.KA-2.description')}
+            {t.rich('categories.KA-2.description', defaultTranslationVales)}
           </Typography>
           <div className='mx-auto flex flex-col gap-8 desktop:flex-row desktop:gap-16'>
             <div
@@ -321,7 +357,10 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
                 </Typography>
                 <ul>
                   <Typography as='span' size='body-lg' color='europe-dark'>
-                    {t.rich('categories.KA-2.priority-topics.description')}
+                    {t.rich(
+                      'categories.KA-2.priority-topics.description',
+                      defaultTranslationVales
+                    )}
                   </Typography>
                 </ul>
               </div>
@@ -331,7 +370,10 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
                 </Typography>
                 <ul>
                   <Typography as='span' size='body-lg' color='europe-dark'>
-                    {t.rich('categories.KA-2.eligible.description')}
+                    {t.rich(
+                      'categories.KA-2.eligible.description',
+                      defaultTranslationVales
+                    )}
                   </Typography>
                 </ul>
               </div>

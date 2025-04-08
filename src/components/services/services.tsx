@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { AnimatedCard } from '@/components/destination-card/animated-card';
 import { Typography } from '@/components/typography/typography';
 import { Route } from 'next';
+import { defaultTranslationVales } from '@/i18n/translation-values';
 
 type OtherServicesProps = {
   services: Array<ServicesCategories>;
@@ -24,7 +25,7 @@ export const OtherServices = ({ services }: OtherServicesProps) => {
           weight='light'
           className='text-center'
         >
-          {t.rich('other-services.description')}
+          {t.rich('other-services.description', defaultTranslationVales)}
         </Typography>
       </div>
       <div className='mt-[-160px] flex items-center gap-4 overflow-auto p-6 desktop:justify-center desktop:overflow-hidden'>

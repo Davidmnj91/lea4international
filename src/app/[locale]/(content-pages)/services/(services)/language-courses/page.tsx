@@ -1,8 +1,8 @@
-import { LanguagePageProps } from '@/i18n';
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { LanguagePageProps } from '@/i18n/config';
+import { setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import { Services } from '@/types/services';
-import React, { JSX } from 'react';
+import React, { JSX, use } from 'react';
 import { CubeFocus } from '@phosphor-icons/react/dist/ssr/CubeFocus';
 import { Lifebuoy } from '@phosphor-icons/react/dist/ssr/Lifebuoy';
 import { MagnifyingGlassPlus } from '@phosphor-icons/react/dist/ssr/MagnifyingGlassPlus';
@@ -33,10 +33,12 @@ import {
   MoreInfo,
 } from '@/components/more-info/more-info';
 import Image from 'next/image';
+import { defaultTranslationVales } from '@/i18n/translation-values';
 
-export default function Page({ params: { locale } }: LanguagePageProps) {
-  // Enable static rendering
-  unstable_setRequestLocale(locale);
+export default function Page({ params }: LanguagePageProps) {
+  const { locale } = use(params);
+
+  setRequestLocale(locale);
 
   const t = useTranslations('services-page.services.language-courses');
 
@@ -128,7 +130,10 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
                 {t(`categories.${section}.title`)}
               </Typography>
               <Typography as='p' size='body-lg' color='europe-dark'>
-                {t.rich(`categories.${section}.description`)}
+                {t.rich(
+                  `categories.${section}.description`,
+                  defaultTranslationVales
+                )}
               </Typography>
               <div className='flex flex-col gap-4'>
                 {Object.entries(courses).map(([title, icon]) => (
@@ -136,10 +141,12 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
                     key={title}
                     icon={icon}
                     title={t.rich(
-                      `categories.${section}.we-offer.${title}.title`
+                      `categories.${section}.we-offer.${title}.title`,
+                      defaultTranslationVales
                     )}
                     description={t.rich(
-                      `categories.${section}.we-offer.${title}.description`
+                      `categories.${section}.we-offer.${title}.description`,
+                      defaultTranslationVales
                     )}
                   />
                 ))}
@@ -175,7 +182,10 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
             color='europe-dark'
             className='text-center'
           >
-            {t.rich(`categories.ai-trainings.description`)}
+            {t.rich(
+              `categories.ai-trainings.description`,
+              defaultTranslationVales
+            )}
           </Typography>
         </div>
       </section>
@@ -187,7 +197,10 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
                 {t(`categories.${section}.title`)}
               </Typography>
               <Typography as='p' size='body-lg' color='europe-dark'>
-                {t.rich(`categories.${section}.description`)}
+                {t.rich(
+                  `categories.${section}.description`,
+                  defaultTranslationVales
+                )}
               </Typography>
             </div>
             <div
@@ -206,7 +219,10 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
               {t('categories.business-ia.title')}
             </Typography>
             <Typography as='p' size='body-lg' color='europe-dark'>
-              {t.rich('categories.business-ia.description')}
+              {t.rich(
+                'categories.business-ia.description',
+                defaultTranslationVales
+              )}
             </Typography>
             <div className='flex flex-col gap-4'>
               {Object.entries(iaResources).map(([title, icon]) => (
@@ -214,14 +230,18 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
                   key={title}
                   icon={icon}
                   description={t.rich(
-                    `categories.business-ia.we-offer.${title}`
+                    `categories.business-ia.we-offer.${title}`,
+                    defaultTranslationVales
                   )}
                   mobileDirection='HORIZONTAL'
                 />
               ))}
             </div>
             <Typography as='p' size='body-lg' color='europe-dark'>
-              {t.rich('categories.business-ia.sub-description')}
+              {t.rich(
+                'categories.business-ia.sub-description',
+                defaultTranslationVales
+              )}
             </Typography>
           </div>
           <div
@@ -253,7 +273,10 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
             color='europe-dark'
             className='text-center'
           >
-            {t.rich(`categories.business-development.description`)}
+            {t.rich(
+              `categories.business-development.description`,
+              defaultTranslationVales
+            )}
           </Typography>
         </div>
         <Image

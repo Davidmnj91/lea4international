@@ -1,11 +1,10 @@
 'use client';
 
 import { FieldPath, useForm } from 'react-hook-form';
-import { useFormState } from 'react-dom';
 import { useLocale, useTranslations } from 'next-intl';
 import { ContactUsState, getContactUs } from '@/actions/contactUs';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useEffect, useState } from 'react';
+import { useActionState, useEffect, useState } from 'react';
 import { IndividualContactSchema } from '@/schemas/contactSchemas';
 import {
   checkboxStyles,
@@ -19,9 +18,10 @@ import { ContactServices, IndividualFormData } from '@/types/contact';
 import { FormResultPopup } from '@/components/form/form-result';
 import { FormLoadingPopup } from '@/components/form/form-loading';
 import { SubmitButton } from '@/components/form/submit-button';
+import { defaultTranslationVales } from '@/i18n/translation-values';
 
 export const IndividualForm = () => {
-  const [state, formAction] = useFormState<ContactUsState, FormData>(
+  const [state, formAction] = useActionState<ContactUsState, FormData>(
     getContactUs,
     null
   );
@@ -213,13 +213,13 @@ export const IndividualForm = () => {
                 className={checkboxStyles}
               />
               <label htmlFor='terms' className={clsx('text-b-sm', labelStyles)}>
-                {t.rich('input.terms.label')}
+                {t.rich('input.terms.label', defaultTranslationVales)}
               </label>
             </div>
             <ErrorField
               name='terms'
               errors={errors}
-              message={t.rich('input.terms.error')}
+              message={t.rich('input.terms.error', defaultTranslationVales)}
             />
           </div>
           <SubmitButton isValid={isValid} />

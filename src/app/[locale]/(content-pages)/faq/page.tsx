@@ -1,18 +1,19 @@
-import { LanguagePageProps } from '@/i18n';
+import { LanguagePageProps } from '@/i18n/config';
 import { useTranslations } from 'next-intl';
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import { tagButtonTypes } from '@/components/button/button';
 import { FaqList } from '@/components/faq-list/faq-list';
 import Link from 'next/link';
 import { FAQCategories, Faqs } from '@/types/faq';
 import { MoreInfo } from '@/components/more-info/more-info';
-import React from 'react';
+import React, { use } from 'react';
 import { Typography } from '@/components/typography/typography';
 import { Head } from '@react-email/components';
 
-export default function Page({ params: { locale } }: LanguagePageProps) {
-  // Enable static rendering
-  unstable_setRequestLocale(locale);
+export default function Page({ params }: LanguagePageProps) {
+  const { locale } = use(params);
+
+  setRequestLocale(locale);
 
   const t = useTranslations('faq-page');
   const tfaqs = useTranslations('faqs');

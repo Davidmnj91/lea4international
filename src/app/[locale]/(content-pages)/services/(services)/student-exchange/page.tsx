@@ -1,5 +1,5 @@
-import { LanguagePageProps } from '@/i18n';
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { LanguagePageProps } from '@/i18n/config';
+import { setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { tagButtonTypes } from '@/components/button/button';
@@ -16,12 +16,14 @@ import {
   InformationCategories,
   MoreInfo,
 } from '@/components/more-info/more-info';
-import React from 'react';
+import React, { use } from 'react';
 import { Taxi } from '@phosphor-icons/react/dist/ssr/Taxi';
+import { defaultTranslationVales } from '@/i18n/translation-values';
 
-export default function Page({ params: { locale } }: LanguagePageProps) {
-  // Enable static rendering
-  unstable_setRequestLocale(locale);
+export default function Page({ params }: LanguagePageProps) {
+  const { locale } = use(params);
+
+  setRequestLocale(locale);
 
   const t = useTranslations('services-page.services.student-exchange');
 
@@ -86,7 +88,10 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
               color='europe-dark'
               className='text-center'
             >
-              {t.rich(`categories.${section}.description`)}
+              {t.rich(
+                `categories.${section}.description`,
+                defaultTranslationVales
+              )}
             </Typography>
           </div>
           <div className={clsx('flex', index % 2 !== 0 && 'flex-row-reverse')}>

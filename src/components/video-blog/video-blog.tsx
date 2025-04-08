@@ -8,7 +8,12 @@ import { CaretRight } from '@phosphor-icons/react/dist/ssr/CaretRight';
 import { Contact } from '@/types/contact';
 import { useTranslations } from 'next-intl';
 import { usePagination } from '@/hooks/usePagination';
-import { Dialog, Transition } from '@headlessui/react';
+import {
+  Dialog,
+  DialogPanel,
+  Transition,
+  TransitionChild,
+} from '@headlessui/react';
 import ReactPlayer from 'react-player';
 
 const VIDEOS_PER_PAGE = 4;
@@ -46,7 +51,7 @@ export const VideoBlog = ({ videos }: VideoBlogProps) => {
           className='relative z-10'
           onClose={() => setIsOpen(false)}
         >
-          <Transition.Child
+          <TransitionChild
             as={Fragment}
             enter='ease-out duration-300'
             enterFrom='opacity-0'
@@ -56,11 +61,11 @@ export const VideoBlog = ({ videos }: VideoBlogProps) => {
             leaveTo='opacity-0'
           >
             <div className='fixed inset-0 bg-black/25' />
-          </Transition.Child>
+          </TransitionChild>
 
           <div className='fixed inset-0 overflow-y-auto'>
             <div className='flex min-h-full items-center justify-center p-4 text-center'>
-              <Transition.Child
+              <TransitionChild
                 as={Fragment}
                 enter='ease-out duration-300'
                 enterFrom='opacity-0 scale-95'
@@ -69,12 +74,12 @@ export const VideoBlog = ({ videos }: VideoBlogProps) => {
                 leaveFrom='opacity-100 scale-100'
                 leaveTo='opacity-0 scale-95'
               >
-                <Dialog.Panel className='transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all'>
+                <DialogPanel className='transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all'>
                   <ReactPlayer
                     url={`https://www.youtube.com/watch?v=${selectedVideo?.id?.videoId}`}
                   />
-                </Dialog.Panel>
-              </Transition.Child>
+                </DialogPanel>
+              </TransitionChild>
             </div>
           </div>
         </Dialog>

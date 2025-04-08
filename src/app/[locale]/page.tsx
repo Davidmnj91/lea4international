@@ -24,6 +24,7 @@ import { Destinations } from '@/types/destinations';
 import Link from 'next/link';
 import { Contact } from '@/types/contact';
 import { FullLogo } from '@/components/logo/fullLogo';
+import { defaultTranslationVales } from '@/i18n/translation-values';
 
 const FaqsHome: Subset<typeof Faqs> = {
   [FAQCategories.erasmus]: [
@@ -127,7 +128,7 @@ export default function HomePage() {
               color='basics-white'
               className='max-w-[336px] text-center desktop:max-w-[840px]'
             >
-              {t.rich('slogan')}
+              {t.rich('slogan', defaultTranslationVales)}
             </Typography>
           </div>
           <Link
@@ -279,7 +280,7 @@ export default function HomePage() {
                     &ldquo;
                   </Typography>
                   <Typography as='span' size='heading-lg' color='basics-white'>
-                    {t.rich('help-you')}
+                    {t.rich('help-you', defaultTranslationVales)}
                   </Typography>
                   <Typography as='span' size='heading-4xl' color='gold-dark'>
                     &rdquo;

@@ -3,27 +3,29 @@
 @tailwind utilities;
 
 * {
-    scroll-margin-top: 80px;
+  scroll-margin-top: 80px;
 }
 
 .react-datepicker__input-container > input {
-    border-bottom: 1px solid #45586A !important;
-    height: 40px !important;
-    width: 100% !important;
-    background-color: transparent !important;
-    color: #45586A !important;
+  border-bottom: 1px solid #45586a !important;
+  height: 40px !important;
+  width: 100% !important;
+  background-color: transparent !important;
+  color: #45586a !important;
 
-    &:focus, &:hover {
-        border-bottom: 2px solid #030822 !important;
-        color: #030822;
-        outline: none;
-    }
+  &:focus,
+  &:hover {
+    border-bottom: 2px solid #030822 !important;
+    color: #030822;
+    outline: none;
+  }
 }
 
-.react-datepicker__day--selected, .react-datepicker__day--in-range {
-    background-color: #2E3B48 !important;
+.react-datepicker__day--selected,
+.react-datepicker__day--in-range {
+  background-color: #2e3b48 !important;
 }
 
 .react-datepicker__day--in-selecting-range {
-    background-color: #45586A !important;
+  background-color: #45586a !important;
 }

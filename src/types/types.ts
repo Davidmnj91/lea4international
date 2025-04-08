@@ -1,4 +1,4 @@
-import { ReactElement, ReactNode, ReactNodeArray } from 'react';
+import { ReactElement, ReactNode } from 'react';
 
 export type Nullable<T> = T | null;
 
@@ -17,8 +17,4 @@ export type Subset<K> = {
         : K[attr];
 };
 
-export type RichTranslation =
-  | string
-  | ReactElement
-  | ReactNodeArray
-  | ReactNode[];
+export type RichTranslation = string | ReactElement | ReactNode | ReactNode[];

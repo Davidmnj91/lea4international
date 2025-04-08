@@ -1,5 +1,5 @@
-import { LanguagePageProps } from '@/i18n';
-import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { LanguagePageProps } from '@/i18n/config';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Typography } from '@/components/typography/typography';
 import React, { Suspense } from 'react';
 import { unstable_cache } from 'next/cache';
@@ -12,9 +12,11 @@ const getData = unstable_cache(
   { revalidate: 7200 } // Re-fetch videos each 2 hour, do not exceed google cuota
 );
 
-export default async function Page({ params: { locale } }: LanguagePageProps) {
-  // Enable static rendering
-  unstable_setRequestLocale(locale);
+export default async function Page({ params }: LanguagePageProps) {
+  const { locale } = await params;
+
+  setRequestLocale(locale);
+
   const videos = await getData();
 
   const t = await getTranslations('blog-page');

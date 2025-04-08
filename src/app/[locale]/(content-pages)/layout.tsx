@@ -1,20 +1,24 @@
-import { Language, languages } from '@/i18n';
+import { Language, languages } from '@/i18n/config';
 import { notFound } from 'next/navigation';
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import { Header } from '@/components/header/header';
+import React from 'react';
 
 type RootLayoutProps = {
   children: React.ReactNode;
-  params: { locale: Language };
+  params: Promise<{ locale: Language }>;
 };
-export default function RootLayout({
-  children,
-  params: { locale },
-}: RootLayoutProps) {
-  // Validate that the incoming `locale` parameter is valid
-  if (!languages.includes(locale as any)) notFound();
+export default async function RootLayout(props: RootLayoutProps) {
+  const params = await props.params;
 
-  unstable_setRequestLocale(locale);
+  const { locale } = params;
+
+  const { children } = props;
+
+  // Validate that the incoming `locale` parameter is valid
+  if (!languages.includes(locale)) notFound();
+
+  setRequestLocale(locale);
 
   return (
     <>

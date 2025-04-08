@@ -1,5 +1,5 @@
-import { LanguagePageProps } from '@/i18n';
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { LanguagePageProps } from '@/i18n/config';
+import { setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import lucia_bg from '../../../../../public/images/partners/lucia_bg.webp';
 import my_abroad_ally_owner from '../../../../../public/images/partners/my_abroad_ally_owner.webp';
@@ -14,14 +14,16 @@ import { PuzzlePiece } from '@phosphor-icons/react/dist/ssr/PuzzlePiece';
 import { SealCheck } from '@phosphor-icons/react/dist/ssr/SealCheck';
 import { Users } from '@phosphor-icons/react/dist/ssr/Users';
 import { UsersFour } from '@phosphor-icons/react/dist/ssr/UsersFour';
-import React from 'react';
+import React, { use } from 'react';
 import { Partners } from '@/components/partners/partners';
 import clsx from 'clsx';
 import { Typography } from '@/components/typography/typography';
+import { defaultTranslationVales } from '@/i18n/translation-values';
 
-export default function Page({ params: { locale } }: LanguagePageProps) {
-  // Enable static rendering
-  unstable_setRequestLocale(locale);
+export default function Page({ params }: LanguagePageProps) {
+  const { locale } = use(params);
+
+  setRequestLocale(locale);
 
   const t = useTranslations('about-us-page');
 
@@ -50,7 +52,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
       </div>
       <div className='flex flex-col items-center justify-center gap-14 p-6 desktop:flex-row desktop:p-24'>
         <div
-          className='relative flex h-[272px] w-full flex-col items-end bg-contain bg-center bg-no-repeat desktop:h-[346px] desktop:w-[422px] desktop:bg-cover '
+          className='relative flex h-[272px] w-full flex-col items-end bg-contain bg-center bg-no-repeat desktop:h-[346px] desktop:w-[422px] desktop:bg-cover'
           style={{ backgroundImage: `url(${lucia_bg.src}` }}
         >
           <span
@@ -82,7 +84,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
         </svg>
         <div className='flex flex-col items-center gap-8 desktop:flex-[0_0_647px] desktop:items-start desktop:justify-center'>
           <Typography as='p' size='body-lg' color='europe-dark'>
-            {t.rich('description')}
+            {t.rich('description', defaultTranslationVales)}
           </Typography>
         </div>
       </div>
@@ -114,7 +116,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
               &ldquo;
             </Typography>
             <span className='w-[297px] capitalize desktop:w-[706px]'>
-              {t.rich('quote')}
+              {t.rich('quote', defaultTranslationVales)}
             </span>
             <Typography as='span' size='heading-4xl' color='gold-dark'>
               &rdquo;

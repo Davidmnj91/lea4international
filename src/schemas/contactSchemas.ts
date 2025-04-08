@@ -1,10 +1,7 @@
 import { z } from 'zod';
 import { ContactServices } from '@/types/contact';
 
-const checkboxValidation = z.union([
-  z.literal(true),
-  z.literal('on').transform(() => true),
-]);
+const checkboxValidation = z.coerce.boolean();
 export const IndividualContactSchema = z.object({
   service: z.nativeEnum(ContactServices),
   name: z.string().min(1),

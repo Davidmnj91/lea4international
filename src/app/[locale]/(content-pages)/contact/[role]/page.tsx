@@ -3,8 +3,8 @@ import { IndividualForm } from '@/components/general-form/individual-form';
 import { FamilyForm } from '@/components/family-form/family-form';
 import { InstitutionForm } from '@/components/institution-form/institution-form';
 import { PartnerForm } from '@/components/partner-form/partner-form';
-import { LanguagePageProps } from '@/i18n';
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { LanguagePageProps } from '@/i18n/config';
+import { setRequestLocale } from 'next-intl/server';
 
 export const dynamicParams = false;
 
@@ -21,13 +21,16 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function Page({
-  params: { locale, role },
-}: LanguagePageProps<{ role: keyof typeof roles }>) {
+export default async function Page(
+  props: LanguagePageProps<{ role: keyof typeof roles }>
+) {
+  const params = await props.params;
+
+  const { locale, role } = params;
+
   const coercedRole = roles[role] || <IndividualForm />;
 
-  // Enable static rendering
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
 
   return <>{coercedRole}</>;
 }

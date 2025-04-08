@@ -2,10 +2,16 @@
 
 import { useTranslations } from 'next-intl';
 import { Fragment, useEffect, useRef, useState } from 'react';
-import { Dialog, Transition } from '@headlessui/react';
+import {
+  Dialog,
+  DialogPanel,
+  Transition,
+  TransitionChild,
+} from '@headlessui/react';
 import { Typography } from '@/components/typography/typography';
 import { buttonTypes } from '@/components/button/button';
 import { GoogleAnalytics } from '@next/third-parties/google';
+import { defaultTranslationVales } from '@/i18n/translation-values';
 
 const COOKIE_CONSENT = 'COOKIE_CONSENT';
 
@@ -51,7 +57,7 @@ export const CookieBanner = () => {
           onClose={() => {}}
           initialFocus={acceptCookiesButtonRef}
         >
-          <Transition.Child
+          <TransitionChild
             as={Fragment}
             enter='ease-out duration-300'
             enterFrom='opacity-0'
@@ -61,10 +67,10 @@ export const CookieBanner = () => {
             leaveTo='opacity-0'
           >
             <div className='fixed inset-0 bg-black/25' />
-          </Transition.Child>
+          </TransitionChild>
 
           <div className='fixed inset-0 flex w-screen items-center justify-center p-4'>
-            <Transition.Child
+            <TransitionChild
               as={Fragment}
               enter='transform transition ease-in-out duration-300'
               enterFrom='translate-x-full'
@@ -73,10 +79,10 @@ export const CookieBanner = () => {
               leaveFrom='translate-x-0'
               leaveTo='translate-x-full'
             >
-              <Dialog.Panel className='absolute bottom-0 w-[375px] transform overflow-hidden shadow-xl transition-all desktop:w-full'>
+              <DialogPanel className='absolute bottom-0 w-[375px] transform overflow-hidden shadow-xl transition-all desktop:w-full'>
                 <div className='flex flex-col items-center gap-5 bg-europe-light px-6 py-10 desktop:flex-row desktop:justify-around desktop:gap-24 desktop:py-5'>
                   <Typography size='body-sm' color='basics-white'>
-                    {t.rich('message')}
+                    {t.rich('message', defaultTranslationVales)}
                   </Typography>
                   <div className='flex w-full gap-8 desktop:w-auto'>
                     <button
@@ -94,8 +100,8 @@ export const CookieBanner = () => {
                     </button>
                   </div>
                 </div>
-              </Dialog.Panel>
-            </Transition.Child>
+              </DialogPanel>
+            </TransitionChild>
           </div>
         </Dialog>
       </Transition>

@@ -1,16 +1,19 @@
-import { LanguagePageProps } from '@/i18n';
+import { use } from 'react';
+import { LanguagePageProps } from '@/i18n/config';
 import { useTranslations } from 'next-intl';
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import { AnimatedCard } from '@/components/destination-card/animated-card';
 import { Partners } from '@/components/partners/partners';
 import Link from 'next/link';
 import { servicesCardConfig } from '@/types/services';
 import { Typography } from '@/components/typography/typography';
 import { Route } from 'next';
+import { defaultTranslationVales } from '@/i18n/translation-values';
 
-export default function Page({ params: { locale } }: LanguagePageProps) {
-  // Enable static rendering
-  unstable_setRequestLocale(locale);
+export default function Page({ params }: LanguagePageProps) {
+  const { locale } = use(params);
+
+  setRequestLocale(locale);
 
   const t = useTranslations('services-page');
 
@@ -27,7 +30,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
           weight='light'
           className='text-center'
         >
-          {t.rich('message')}
+          {t.rich('message', defaultTranslationVales)}
         </Typography>
       </div>
       <div className='mt-[-180px] flex items-center gap-4 overflow-auto p-6 desktop:mt-[-160px] desktop:justify-center desktop:overflow-hidden'>

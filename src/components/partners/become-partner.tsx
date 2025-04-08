@@ -1,6 +1,7 @@
 import { BigButton } from '@/components/button/big-button';
 import { useTranslations } from 'next-intl';
 import { Typography } from '@/components/typography/typography';
+import { defaultTranslationVales } from '@/i18n/translation-values';
 
 export const BecomePartner = () => {
   const t = useTranslations('become-partner');
@@ -17,10 +18,10 @@ export const BecomePartner = () => {
           {t('title')}
         </Typography>
         <Typography as='p' size='body-lg' color='basics-white'>
-          {t.rich('description')}
+          {t.rich('description', defaultTranslationVales)}
         </Typography>
         <BigButton
-          subject={t.raw('button.title')}
+          subject={t('button.title')}
           caption={t('button.caption')}
           href={'/contact/partner'}
         />

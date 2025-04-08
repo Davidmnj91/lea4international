@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import { headers } from 'next/headers';
 import { ServicesCategories } from '@/types/services';
 import { OtherServices } from '@/components/services/services';
-import React from 'react';
+import React, { use } from 'react';
 import { Typography } from '@/components/typography/typography';
 
 type RootServicesLayoutProps = {
@@ -16,7 +16,7 @@ export default function RootServicesLayout({
 }: RootServicesLayoutProps) {
   const t = useTranslations('services-page.services');
 
-  const heads = headers();
+  const heads = use(headers());
   const pathname = heads.get('next-url')?.split('/').pop();
 
   return (

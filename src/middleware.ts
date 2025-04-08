@@ -1,18 +1,10 @@
-import { defaultLanguage, languages } from '@/i18n';
-
 import createMiddleware from 'next-intl/middleware';
+import { routing } from '@/i18n/routing';
 
-export default createMiddleware({
-  // A list of all locales that are supported
-  locales: languages,
-
-  // Used when no locale matches
-  defaultLocale: defaultLanguage,
-});
+export default createMiddleware(routing);
 
 export const config = {
-  // matcher: '/:lng*'
   matcher: [
-    '/((?!api|_next/static|_next/image|assets|favicon.ico|sw.js|sitemap|robots).*)',
+    '/((?!api|images|_next/static|_next/image|assets|favicon.ico|sw.js|sitemap|robots).*)',
   ],
 };
