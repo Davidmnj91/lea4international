@@ -18,11 +18,6 @@ import config from '../../tailwind.config';
 import { Contact, ContactEmailProps, ContactServices } from '../types/contact';
 import emails from '../messages/emails.json';
 import { FormSummary } from './components/form-summary';
-import logo from '../../public/images/email/logo.png';
-import linkedin from '../../public/images/email/linkedin.png';
-import youtube from '../../public/images/email/youtube.png';
-import facebook from '../../public/images/email/facebook.png';
-import instagram from '../../public/images/email/instagram.png';
 
 const baseUrl = process.env.BASE_URL;
 
@@ -47,9 +42,7 @@ export const ClientEmail = ({ props = previewProps }) => {
             <Container className='max-w-[490px]'>
               <Link href='https://www.lea4int.com'>
                 <Img
-                  src={`${baseUrl}/_next/image?url=${encodeURIComponent(
-                    logo.src
-                  )}&w=256&q=100`}
+                  src={`${baseUrl}/images/email/logo.png`}
                   width={132}
                   height={50}
                   alt='LEA4International'
@@ -80,9 +73,7 @@ export const ClientEmail = ({ props = previewProps }) => {
                 <Column className='pr-2'>
                   <Link href={Contact.instagram}>
                     <Img
-                      src={`${baseUrl}/_next/image?url=${encodeURIComponent(
-                        instagram.src
-                      )}&w=256&q=100`}
+                      src={`${baseUrl}/images/email/instagram.png`}
                       width={24}
                       height={24}
                       alt='Instagram'
@@ -92,9 +83,7 @@ export const ClientEmail = ({ props = previewProps }) => {
                 <Column className='pr-2'>
                   <Link href={Contact.linkedin}>
                     <Img
-                      src={`${baseUrl}/_next/image?url=${encodeURIComponent(
-                        linkedin.src
-                      )}&w=256&q=100`}
+                      src={`${baseUrl}/images/email/linkedin.png`}
                       width={24}
                       height={24}
                       alt='LinkedIn'
@@ -104,9 +93,7 @@ export const ClientEmail = ({ props = previewProps }) => {
                 <Column className='pr-2'>
                   <Link href={Contact.facebook}>
                     <Img
-                      src={`${baseUrl}/_next/image?url=${encodeURIComponent(
-                        facebook.src
-                      )}&w=256&q=100`}
+                      src={`${baseUrl}/images/email/facebook.png`}
                       width={24}
                       height={24}
                       alt='Facebook'
@@ -116,9 +103,7 @@ export const ClientEmail = ({ props = previewProps }) => {
                 <Column className='pr-2'>
                   <Link href={Contact.youtube}>
                     <Img
-                      src={`${baseUrl}/_next/image?url=${encodeURIComponent(
-                        youtube.src
-                      )}&w=256&q=100`}
+                      src={`${baseUrl}/images/email/youtube.png`}
                       width={24}
                       height={24}
                       alt='Youtube'
