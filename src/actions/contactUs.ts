@@ -47,7 +47,7 @@ export async function getContactUs(
   data: FormData
 ): Promise<ContactUsState> {
   try {
-    let language: Language =
+    const language: Language =
       (data.get('language') as Language) || defaultLanguage;
     let contactData: ContactData;
 

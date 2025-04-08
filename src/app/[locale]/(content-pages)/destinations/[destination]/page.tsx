@@ -1,4 +1,4 @@
-import React, { JSX } from 'react';
+import React, { JSX, use } from 'react';
 import { AvailableServices, Destinations } from '@/types/destinations';
 import prague_main_bg from '../../../../../../public/images/destinations/prague_main_bg.webp';
 import prague_1_bg from '../../../../../../public/images/destinations/prague_1_bg.webp';
@@ -126,9 +126,13 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function Page({
-  params: { locale, destination },
-}: LanguagePageProps<{ destination: Destinations }>) {
+export default function Page(
+  props: LanguagePageProps<{ destination: Destinations }>
+) {
+  const params = use(props.params);
+
+  const { locale, destination } = params;
+
   if (!destinationsProps[destination]) {
     notFound();
   }

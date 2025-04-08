@@ -2,9 +2,11 @@ import { LanguagePageProps } from '@/i18n';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import { Typography } from '@/components/typography/typography';
-import React from 'react';
+import React, { use } from 'react';
 
-export default function Page({ params: { locale } }: LanguagePageProps) {
+export default function Page({ params }: LanguagePageProps) {
+  const { locale } = use(params);
+
   // Enable static rendering
   unstable_setRequestLocale(locale);
 

@@ -14,12 +14,14 @@ import { Airplane } from '@phosphor-icons/react/dist/ssr/Airplane';
 import { Bank } from '@phosphor-icons/react/dist/ssr/Bank';
 import { FlowerLotus } from '@phosphor-icons/react/dist/ssr/FlowerLotus';
 import { Monitor } from '@phosphor-icons/react/dist/ssr/Monitor';
-import { JSX } from 'react';
+import { JSX, use } from 'react';
 import { ServiceItem } from '@/components/service-item/service-item';
 import { BecomePartner } from '@/components/partners/become-partner';
 import { Typography } from '@/components/typography/typography';
 
-export default function Page({ params: { locale } }: LanguagePageProps) {
+export default function Page({ params }: LanguagePageProps) {
+  const { locale } = use(params);
+
   // Enable static rendering
   unstable_setRequestLocale(locale);
 
@@ -39,7 +41,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
           as='h1'
           size='heading-2xl'
           color='europe-dark'
-          className='text-center '
+          className='text-center'
         >
           {t('title')}
         </Typography>

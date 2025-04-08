@@ -3,7 +3,7 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { buttonTypes, tagButtonTypes } from '@/components/button/button';
-import React from 'react';
+import React, { use } from 'react';
 import apartment_bg from '../../../../../public/images/accommodations/apartment_bg.webp';
 import student_residence_bg from '../../../../../public/images/accommodations/student_residence_bg.webp';
 import host_family_bg from '../../../../../public/images/accommodations/host_family_bg.webp';
@@ -16,7 +16,9 @@ import { Typography } from '@/components/typography/typography';
 import { TopDestinations } from '@/components/top-destinations/top-destinations';
 import { Destinations } from '@/types/destinations';
 
-export default function Page({ params: { locale } }: LanguagePageProps) {
+export default function Page({ params }: LanguagePageProps) {
+  const { locale } = use(params);
+
   // Enable static rendering
   unstable_setRequestLocale(locale);
 

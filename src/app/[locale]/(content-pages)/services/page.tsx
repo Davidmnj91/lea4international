@@ -1,3 +1,4 @@
+import { use } from 'react';
 import { LanguagePageProps } from '@/i18n';
 import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
@@ -8,7 +9,9 @@ import { servicesCardConfig } from '@/types/services';
 import { Typography } from '@/components/typography/typography';
 import { Route } from 'next';
 
-export default function Page({ params: { locale } }: LanguagePageProps) {
+export default function Page({ params }: LanguagePageProps) {
+  const { locale } = use(params);
+
   // Enable static rendering
   unstable_setRequestLocale(locale);
 

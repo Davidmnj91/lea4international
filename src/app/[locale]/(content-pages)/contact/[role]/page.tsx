@@ -21,9 +21,13 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function Page({
-  params: { locale, role },
-}: LanguagePageProps<{ role: keyof typeof roles }>) {
+export default async function Page(
+  props: LanguagePageProps<{ role: keyof typeof roles }>
+) {
+  const params = await props.params;
+
+  const { locale, role } = params;
+
   const coercedRole = roles[role] || <IndividualForm />;
 
   // Enable static rendering

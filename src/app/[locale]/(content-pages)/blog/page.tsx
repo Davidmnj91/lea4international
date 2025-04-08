@@ -12,9 +12,12 @@ const getData = unstable_cache(
   { revalidate: 7200 } // Re-fetch videos each 2 hour, do not exceed google cuota
 );
 
-export default async function Page({ params: { locale } }: LanguagePageProps) {
+export default async function Page({ params }: LanguagePageProps) {
+  const { locale } = await params;
+
   // Enable static rendering
   unstable_setRequestLocale(locale);
+
   const videos = await getData();
 
   const t = await getTranslations('blog-page');

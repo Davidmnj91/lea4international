@@ -2,7 +2,7 @@ import { LanguagePageProps } from '@/i18n';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import { Services } from '@/types/services';
-import React, { JSX } from 'react';
+import React, { JSX, use } from 'react';
 import { CubeFocus } from '@phosphor-icons/react/dist/ssr/CubeFocus';
 import { Lifebuoy } from '@phosphor-icons/react/dist/ssr/Lifebuoy';
 import { MagnifyingGlassPlus } from '@phosphor-icons/react/dist/ssr/MagnifyingGlassPlus';
@@ -34,7 +34,9 @@ import {
 } from '@/components/more-info/more-info';
 import Image from 'next/image';
 
-export default function Page({ params: { locale } }: LanguagePageProps) {
+export default function Page({ params }: LanguagePageProps) {
+  const { locale } = use(params);
+
   // Enable static rendering
   unstable_setRequestLocale(locale);
 

@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Typography } from '@/components/typography/typography';
 import { tagButtonTypes } from '@/components/button/button';
-import React from 'react';
+import React, { use } from 'react';
 import { Envelope } from '@phosphor-icons/react/dist/ssr/Envelope';
 import { Contact } from '@/types/contact';
 import { Phone } from '@phosphor-icons/react/dist/ssr/Phone';
@@ -19,7 +19,7 @@ export default function RootDestinationsLayout({
 }: RootContactLayoutProps) {
   const t = useTranslations('contact-page');
 
-  const heads = headers();
+  const heads = use(headers());
   const pathname = heads.get('next-url')?.split('/').pop();
 
   return (

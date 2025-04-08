@@ -6,11 +6,13 @@ import { FaqList } from '@/components/faq-list/faq-list';
 import Link from 'next/link';
 import { FAQCategories, Faqs } from '@/types/faq';
 import { MoreInfo } from '@/components/more-info/more-info';
-import React from 'react';
+import React, { use } from 'react';
 import { Typography } from '@/components/typography/typography';
 import { Head } from '@react-email/components';
 
-export default function Page({ params: { locale } }: LanguagePageProps) {
+export default function Page({ params }: LanguagePageProps) {
+  const { locale } = use(params);
+
   // Enable static rendering
   unstable_setRequestLocale(locale);
 

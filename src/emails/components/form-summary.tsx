@@ -5,7 +5,7 @@ import {
   InstitutionFormData,
   PartnerFormData,
 } from '@/types/contact';
-import { Language } from '../../i18n';
+import { Language } from '@/i18n';
 import emails from '../../i18n/emails.json';
 import { Column, Text } from '@react-email/components';
 

@@ -14,12 +14,14 @@ import { PuzzlePiece } from '@phosphor-icons/react/dist/ssr/PuzzlePiece';
 import { SealCheck } from '@phosphor-icons/react/dist/ssr/SealCheck';
 import { Users } from '@phosphor-icons/react/dist/ssr/Users';
 import { UsersFour } from '@phosphor-icons/react/dist/ssr/UsersFour';
-import React from 'react';
+import React, { use } from 'react';
 import { Partners } from '@/components/partners/partners';
 import clsx from 'clsx';
 import { Typography } from '@/components/typography/typography';
 
-export default function Page({ params: { locale } }: LanguagePageProps) {
+export default function Page({ params }: LanguagePageProps) {
+  const { locale } = use(params);
+
   // Enable static rendering
   unstable_setRequestLocale(locale);
 
@@ -50,7 +52,7 @@ export default function Page({ params: { locale } }: LanguagePageProps) {
       </div>
       <div className='flex flex-col items-center justify-center gap-14 p-6 desktop:flex-row desktop:p-24'>
         <div
-          className='relative flex h-[272px] w-full flex-col items-end bg-contain bg-center bg-no-repeat desktop:h-[346px] desktop:w-[422px] desktop:bg-cover '
+          className='relative flex h-[272px] w-full flex-col items-end bg-contain bg-center bg-no-repeat desktop:h-[346px] desktop:w-[422px] desktop:bg-cover'
           style={{ backgroundImage: `url(${lucia_bg.src}` }}
         >
           <span

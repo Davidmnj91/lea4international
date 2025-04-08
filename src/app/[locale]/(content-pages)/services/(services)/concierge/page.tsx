@@ -14,9 +14,11 @@ import {
   InformationCategories,
   MoreInfo,
 } from '@/components/more-info/more-info';
-import React from 'react';
+import React, { use } from 'react';
 
-export default function Page({ params: { locale } }: LanguagePageProps) {
+export default function Page({ params }: LanguagePageProps) {
+  const { locale } = use(params);
+
   // Enable static rendering
   unstable_setRequestLocale(locale);
 

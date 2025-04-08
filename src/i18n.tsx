@@ -5,10 +5,12 @@ import Link from 'next/link';
 
 export type Language = 'en' | 'es';
 
-export type LanguagePageProps<T = {}> = {
-  params: {
-    locale: Language;
-  } & T;
+export type LanguagePageProps<T = object> = {
+  params: Promise<
+    {
+      locale: Language;
+    } & T
+  >;
 };
 
 export const defaultTranslationVales: RichTranslationValues = {

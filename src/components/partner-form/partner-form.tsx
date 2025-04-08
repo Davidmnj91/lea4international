@@ -1,11 +1,10 @@
 'use client';
 
 import { FieldPath, useForm } from 'react-hook-form';
-import { useFormState } from 'react-dom';
 import { useLocale, useTranslations } from 'next-intl';
 import { ContactUsState, getContactUs } from '@/actions/contactUs';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useEffect, useState } from 'react';
+import { useActionState, useEffect, useState } from 'react';
 import { PartnerContactSchema } from '@/schemas/contactSchemas';
 import {
   checkboxStyles,
@@ -20,7 +19,7 @@ import { FormLoadingPopup } from '@/components/form/form-loading';
 import { SubmitButton } from '@/components/form/submit-button';
 
 export const PartnerForm = () => {
-  const [state, formAction] = useFormState<ContactUsState, FormData>(
+  const [state, formAction] = useActionState<ContactUsState, FormData>(
     getContactUs,
     null
   );

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { CaretLeft } from '@phosphor-icons/react/dist/ssr/CaretLeft';
 import { BigButton } from '@/components/button/big-button';
 import { Typography } from '@/components/typography/typography';
+import React from 'react';
 
 type RootDestinationsLayoutProps = {
   children: React.ReactNode;
