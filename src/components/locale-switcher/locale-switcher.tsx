@@ -13,16 +13,14 @@ import { CaretDown, CheckCircle } from '@phosphor-icons/react';
 import { EnglandFlag, SpainFlag } from '@/components/icons/flags-icons';
 import { usePathname, useRouter } from '@/i18n/navigation';
 import { Language } from '@/i18n/config';
+import { useParams } from 'next/navigation';
 
 export default function LocaleSwitcher() {
   const router = useRouter();
   const locale = useLocale();
   const pathname = usePathname();
+  const params = useParams();
   const t = useTranslations('locale-switcher');
-
-  const setCookie = (locale: string) => {
-    document.cookie = `NEXT_LOCALE=${locale}; max-age=31536000; path=/`;
-  };
 
   const languageOptions = [
     { language: 'en' as Language, icon: <EnglandFlag size={16} /> },
@@ -31,8 +29,10 @@ export default function LocaleSwitcher() {
 
   const changeLanguage = (language: Language) => {
     startTransition(() => {
-      setCookie(language);
-      router.replace(pathname, { locale: language });
+      // @ts-expect-error -- TypeScript will validate that only known `params`
+      // are used in combination with a given `pathname`. Since the two will
+      // always match for the current route, we can skip runtime checks.
+      router.replace({ pathname, params }, { locale: language });
     });
   };
 
