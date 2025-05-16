@@ -10,6 +10,7 @@ export default function NotFound() {
   return (
     <html lang='en'>
       <body>
+        <h1>HOLA</h1>
         <Error statusCode={404} />
       </body>
     </html>
