@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import LocaleSwitcher from '@/components/locale-switcher/locale-switcher';
-import { Envelope, Phone } from '@phosphor-icons/react';
+import { EnvelopeIcon, PhoneIcon } from '@phosphor-icons/react';
 import {
   FacebookIcon,
   InstagramIcon,
@@ -22,7 +22,7 @@ const MobileFooter = () => {
   const t = useTranslations('footer');
 
   return (
-    <footer className='flex flex-col items-center justify-center gap-11 bg-europe px-4 py-10'>
+    <footer className='bg-europe flex flex-col items-center justify-center gap-11 px-4 py-10'>
       <FullLogo width={129} height={50} />
       <div className='flex flex-col items-center justify-center gap-4'>
         <LocaleSwitcher />
@@ -36,8 +36,8 @@ const MobileFooter = () => {
         height={125}
       />
       <div className='flex w-full flex-col items-center justify-center gap-2'>
-        <div className='flex items-center gap-6 text-basics-white'>
-          <Envelope size={32} weight='thin' />
+        <div className='text-basics-white flex items-center gap-6'>
+          <EnvelopeIcon size={32} weight='thin' />
           <Typography
             as='a'
             size='body-md'
@@ -47,8 +47,8 @@ const MobileFooter = () => {
             {Contact.mail}
           </Typography>
         </div>
-        <div className='flex items-center gap-6 text-basics-white'>
-          <Phone size={32} weight='thin' />
+        <div className='text-basics-white flex items-center gap-6'>
+          <PhoneIcon size={32} weight='thin' />
           <Typography
             as='a'
             size='body-md'
@@ -59,7 +59,7 @@ const MobileFooter = () => {
           </Typography>
         </div>
       </div>
-      <div className='flex gap-4 text-basics-white'>
+      <div className='text-basics-white flex gap-4'>
         <Typography as='span' size='body-md' color='basics-white'>
           {t('follow-us')}
         </Typography>
@@ -93,9 +93,9 @@ const MobileFooter = () => {
         </Link>
       </div>
       <div className='flex w-full items-center justify-between gap-6'>
-        <span className='h-1 w-[250px] flex-1 border-b border-b-gold-dark' />
+        <span className='border-b-gold-dark h-1 w-[250px] flex-1 border-b' />
         <Logo width={60} height={46} />
-        <span className='h-1 w-[250px] flex-1 border-b border-b-gold-dark' />
+        <span className='border-b-gold-dark h-1 w-[250px] flex-1 border-b' />
       </div>
       <div className='flex flex-col items-center justify-center gap-6'>
         <Typography as='span' size='body-sm' color='basics-white'>
@@ -124,13 +124,13 @@ const DesktopFooter = () => {
   const t = useTranslations('footer');
 
   return (
-    <footer className='flex flex-col gap-11 bg-europe p-10'>
+    <footer className='bg-europe flex flex-col gap-11 p-10'>
       <div className='flex w-full justify-between gap-11'>
         <div className='flex flex-col justify-between gap-12'>
           <FullLogo width={129} height={50} />
           <div className='flex flex-col gap-2'>
-            <div className='flex items-center gap-6 text-basics-white'>
-              <Envelope size={32} weight='thin' />
+            <div className='text-basics-white flex items-center gap-6'>
+              <EnvelopeIcon size={32} weight='thin' />
               <Typography
                 as='a'
                 size='body-md'
@@ -140,8 +140,8 @@ const DesktopFooter = () => {
                 {Contact.mail}
               </Typography>
             </div>
-            <div className='flex items-center gap-6 text-basics-white'>
-              <Phone size={32} weight='thin' />
+            <div className='text-basics-white flex items-center gap-6'>
+              <PhoneIcon size={32} weight='thin' />
               <Typography
                 as='a'
                 size='body-md'
@@ -159,7 +159,7 @@ const DesktopFooter = () => {
             width={125}
             height={125}
           />
-          <div className='flex gap-4 text-basics-white'>
+          <div className='text-basics-white flex gap-4'>
             <Typography as='span' size='body-md' color='basics-white'>
               {t('follow-us')}
             </Typography>
@@ -201,9 +201,9 @@ const DesktopFooter = () => {
         </div>
       </div>
       <div className='flex w-full items-center justify-between gap-6'>
-        <span className='h-1 w-[250px] flex-1 border-b border-b-gold-dark' />
+        <span className='border-b-gold-dark h-1 w-[250px] flex-1 border-b' />
         <Logo width={60} height={46} />
-        <span className='h-1 w-[250px] flex-1 border-b border-b-gold-dark' />
+        <span className='border-b-gold-dark h-1 w-[250px] flex-1 border-b' />
       </div>
       <div className='flex w-full flex-col'>
         <Typography as='span' size='body-sm' color='basics-white'>
@@ -233,7 +233,7 @@ export const Footer = () => (
     <div className='desktop:hidden'>
       <MobileFooter />
     </div>
-    <div className='hidden desktop:block'>
+    <div className='desktop:block hidden'>
       <DesktopFooter />
     </div>
   </>

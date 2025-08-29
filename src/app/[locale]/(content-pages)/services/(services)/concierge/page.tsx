@@ -2,13 +2,15 @@ import { LanguagePageProps } from '@/i18n/config';
 import { setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import concierge_services_bg from '../../../../../../../public/images/services/concierge/concierge_services_bg.webp';
-import { FirstAidKit } from '@phosphor-icons/react/dist/ssr/FirstAidKit';
-import { Globe } from '@phosphor-icons/react/dist/ssr/Globe';
-import { MapPin } from '@phosphor-icons/react/dist/ssr/MapPin';
-import { MapTrifold } from '@phosphor-icons/react/dist/ssr/MapTrifold';
-import { Ticket } from '@phosphor-icons/react/dist/ssr/Ticket';
-import { Translate } from '@phosphor-icons/react/dist/ssr/Translate';
-import { Taxi } from '@phosphor-icons/react/dist/ssr/Taxi';
+import {
+  FirstAidKitIcon,
+  GlobeIcon,
+  MapPinIcon,
+  MapTrifoldIcon,
+  TaxiIcon,
+  TicketIcon,
+  TranslateIcon,
+} from '@phosphor-icons/react/dist/ssr';
 import { Typography } from '@/components/typography/typography';
 import {
   InformationCategories,
@@ -25,23 +27,23 @@ export default function Page({ params }: LanguagePageProps) {
   const t = useTranslations('services-page.services.concierge');
 
   const services = {
-    'meeting-greeting': <MapPin size={32} />,
-    'airport-transfer': <Taxi size={32} />,
-    'local-transport': <Ticket size={32} />,
-    'immigration-services': <Globe size={32} />,
-    'city-tour': <MapTrifold size={32} />,
-    'emergency-support': <FirstAidKit size={32} />,
-    'language-support': <Translate size={32} />,
+    'meeting-greeting': <MapPinIcon size={32} />,
+    'airport-transfer': <TaxiIcon size={32} />,
+    'local-transport': <TicketIcon size={32} />,
+    'immigration-services': <GlobeIcon size={32} />,
+    'city-tour': <MapTrifoldIcon size={32} />,
+    'emergency-support': <FirstAidKitIcon size={32} />,
+    'language-support': <TranslateIcon size={32} />,
   };
 
   return (
     <div>
-      <div className='flex flex-col items-center justify-center gap-8 p-6 desktop:gap-28 desktop:px-12 desktop:py-24'>
+      <div className='desktop:gap-28 desktop:px-12 desktop:py-24 flex flex-col items-center justify-center gap-8 p-6'>
         <Typography
           as='h1'
           size='heading-2xl'
           color='europe-dark'
-          className='text-center desktop:text-left'
+          className='desktop:text-left text-center'
         >
           {t('title')}
         </Typography>
@@ -54,15 +56,15 @@ export default function Page({ params }: LanguagePageProps) {
           {t.rich('description', defaultTranslationVales)}
         </Typography>
       </div>
-      <div className='flex flex-col-reverse desktop:flex-row'>
-        <div className='flex flex-col gap-8 p-6 desktop:flex-[0_0_60%] desktop:justify-between desktop:px-12 desktop:py-24'>
+      <div className='desktop:flex-row flex flex-col-reverse'>
+        <div className='desktop:flex-[0_0_60%] desktop:justify-between desktop:px-12 desktop:py-24 flex flex-col gap-8 p-6'>
           <Typography as='h2' size='heading-xl' color='europe-dark'>
             {t(`includes`)}
           </Typography>
           <ul className='flex flex-col gap-4'>
             {Object.entries(services).map(([title, icon]) => (
-              <li key={title} className='flex items-center border border-gold'>
-                <div className='border-r border-r-gold p-4'>{icon}</div>
+              <li key={title} className='border-gold flex items-center border'>
+                <div className='border-r-gold border-r p-4'>{icon}</div>
                 <Typography
                   as='p'
                   size='body-lg'
@@ -76,7 +78,7 @@ export default function Page({ params }: LanguagePageProps) {
           </ul>
         </div>
         <div
-          className='h-[283px] w-full bg-contain bg-center bg-no-repeat desktop:h-[858px] desktop:flex-[0_0_40%]'
+          className='desktop:h-[858px] desktop:flex-[0_0_40%] h-[283px] w-full bg-contain bg-center bg-no-repeat'
           style={{
             backgroundImage: `url(${concierge_services_bg.src})`,
           }}

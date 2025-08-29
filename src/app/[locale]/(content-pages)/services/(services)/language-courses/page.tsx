@@ -3,18 +3,20 @@ import { setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import { Services } from '@/types/services';
 import React, { JSX, use } from 'react';
-import { CubeFocus } from '@phosphor-icons/react/dist/ssr/CubeFocus';
-import { Lifebuoy } from '@phosphor-icons/react/dist/ssr/Lifebuoy';
-import { MagnifyingGlassPlus } from '@phosphor-icons/react/dist/ssr/MagnifyingGlassPlus';
-import { Robot } from '@phosphor-icons/react/dist/ssr/Robot';
-import { HardDrives } from '@phosphor-icons/react/dist/ssr/HardDrives';
-import { Chats } from '@phosphor-icons/react/dist/ssr/Chats';
-import { ChartLine } from '@phosphor-icons/react/dist/ssr/ChartLine';
-import { UserFocus } from '@phosphor-icons/react/dist/ssr/UserFocus';
-import { Kanban } from '@phosphor-icons/react/dist/ssr/Kanban';
-import { Detective } from '@phosphor-icons/react/dist/ssr/Detective';
-import { Person } from '@phosphor-icons/react/dist/ssr/Person';
-import { GlobeSimple } from '@phosphor-icons/react/dist/ssr/GlobeSimple';
+import {
+  ChartLineIcon,
+  ChatsIcon,
+  CubeFocusIcon,
+  DetectiveIcon,
+  GlobeSimpleIcon,
+  HardDrivesIcon,
+  KanbanIcon,
+  LifebuoyIcon,
+  MagnifyingGlassPlusIcon,
+  PersonIcon,
+  RobotIcon,
+  UserFocusIcon,
+} from '@phosphor-icons/react/dist/ssr';
 import Link from 'next/link';
 import { tagButtonTypes } from '@/components/button/button';
 import { ServiceItem } from '@/components/service-item/service-item';
@@ -57,27 +59,27 @@ export default function Page({ params }: LanguagePageProps) {
   };
 
   const courses: Record<string, JSX.Element> = {
-    focus: <CubeFocus size={32} />,
-    help: <Lifebuoy size={32} />,
-    details: <MagnifyingGlassPlus size={32} />,
+    focus: <CubeFocusIcon size={32} />,
+    help: <LifebuoyIcon size={32} />,
+    details: <MagnifyingGlassPlusIcon size={32} />,
   };
 
   const iaResources: Record<string, JSX.Element> = {
-    automation: <Robot size={32} />,
-    'data-analysis': <HardDrives size={32} />,
-    'customer-service': <Chats size={32} />,
-    'predictive-analytics': <ChartLine size={32} />,
-    personalization: <UserFocus size={32} />,
-    'supply-chain': <Kanban size={32} />,
-    'fraud-detection': <Detective size={32} />,
-    'human-resources': <Person size={32} />,
-    'decision-support': <Lifebuoy size={32} />,
-    nlp: <GlobeSimple size={32} />,
+    automation: <RobotIcon size={32} />,
+    'data-analysis': <HardDrivesIcon size={32} />,
+    'customer-service': <ChatsIcon size={32} />,
+    'predictive-analytics': <ChartLineIcon size={32} />,
+    personalization: <UserFocusIcon size={32} />,
+    'supply-chain': <KanbanIcon size={32} />,
+    'fraud-detection': <DetectiveIcon size={32} />,
+    'human-resources': <PersonIcon size={32} />,
+    'decision-support': <LifebuoyIcon size={32} />,
+    nlp: <GlobeSimpleIcon size={32} />,
   };
 
   return (
     <div>
-      <div className='flex items-center justify-center px-2.5 py-16 desktop:py-24'>
+      <div className='desktop:py-24 flex items-center justify-center px-2.5 py-16'>
         <Typography
           as='h1'
           size='heading-2xl'
@@ -87,7 +89,7 @@ export default function Page({ params }: LanguagePageProps) {
           {t('title')}
         </Typography>
       </div>
-      <div className='sticky top-[80px] z-20 flex items-center gap-6 overflow-auto border-y border-y-basics-disabled bg-basics-white px-6 py-6 desktop:justify-center desktop:overflow-hidden desktop:px-12'>
+      <div className='border-y-basics-disabled bg-basics-white desktop:justify-center desktop:overflow-hidden desktop:px-12 sticky top-[80px] z-20 flex items-center gap-6 overflow-auto border-y px-6 py-6'>
         {languageCoursesServices.map((service) => (
           <Link
             href={`#${service}`}
@@ -99,7 +101,7 @@ export default function Page({ params }: LanguagePageProps) {
           </Link>
         ))}
       </div>
-      <div className='flex flex-col items-center justify-center gap-8 p-6 desktop:gap-32 desktop:px-12 desktop:py-24'>
+      <div className='desktop:gap-32 desktop:px-12 desktop:py-24 flex flex-col items-center justify-center gap-8 p-6'>
         <div className='flex flex-col items-center justify-center'>
           <Typography
             as='span'
@@ -125,7 +127,7 @@ export default function Page({ params }: LanguagePageProps) {
       {Object.entries(sections).map(([section, imgSrc], index) => (
         <section key={section} id={section}>
           <div className={clsx('flex', index % 2 !== 0 && 'flex-row-reverse')}>
-            <div className='flex flex-auto flex-col gap-8 p-6 desktop:flex-[0_0_60%] desktop:gap-14 desktop:px-12 desktop:py-24'>
+            <div className='desktop:flex-[0_0_60%] desktop:gap-14 desktop:px-12 desktop:py-24 flex flex-auto flex-col gap-8 p-6'>
               <Typography as='h2' size='heading-xl' color='europe-dark'>
                 {t(`categories.${section}.title`)}
               </Typography>
@@ -153,7 +155,7 @@ export default function Page({ params }: LanguagePageProps) {
               </div>
             </div>
             <div
-              className='hidden bg-cover bg-no-repeat desktop:inline-block desktop:flex-[0_0_40%]'
+              className='desktop:inline-block desktop:flex-[0_0_40%] hidden bg-cover bg-no-repeat'
               style={{
                 backgroundImage: `url(${imgSrc})`,
               }}
@@ -162,7 +164,7 @@ export default function Page({ params }: LanguagePageProps) {
         </section>
       ))}
       <section id='ai-trainings'>
-        <div className='flex flex-col items-center justify-center gap-8 p-6 desktop:gap-32 desktop:px-12 desktop:py-24'>
+        <div className='desktop:gap-32 desktop:px-12 desktop:py-24 flex flex-col items-center justify-center gap-8 p-6'>
           <div className='flex flex-col items-center justify-center'>
             <Typography
               as='span'
@@ -192,7 +194,7 @@ export default function Page({ params }: LanguagePageProps) {
       {Object.entries(iaSections).map(([section, imgSrc], index) => (
         <section key={section} id={section}>
           <div className={clsx('flex', index % 2 !== 0 && 'flex-row-reverse')}>
-            <div className='flex flex-auto flex-col gap-8 p-6 desktop:flex-[0_0_60%] desktop:gap-14 desktop:px-12 desktop:py-24'>
+            <div className='desktop:flex-[0_0_60%] desktop:gap-14 desktop:px-12 desktop:py-24 flex flex-auto flex-col gap-8 p-6'>
               <Typography as='h2' size='heading-xl' color='europe-dark'>
                 {t(`categories.${section}.title`)}
               </Typography>
@@ -204,7 +206,7 @@ export default function Page({ params }: LanguagePageProps) {
               </Typography>
             </div>
             <div
-              className='hidden bg-cover bg-no-repeat desktop:inline-block desktop:flex-[0_0_40%]'
+              className='desktop:inline-block desktop:flex-[0_0_40%] hidden bg-cover bg-no-repeat'
               style={{
                 backgroundImage: `url(${imgSrc})`,
               }}
@@ -214,7 +216,7 @@ export default function Page({ params }: LanguagePageProps) {
       ))}
       <section id='business-ia'>
         <div className='flex'>
-          <div className='flex flex-auto flex-col gap-8 p-6 desktop:flex-[0_0_60%] desktop:gap-14 desktop:px-12 desktop:py-24'>
+          <div className='desktop:flex-[0_0_60%] desktop:gap-14 desktop:px-12 desktop:py-24 flex flex-auto flex-col gap-8 p-6'>
             <Typography as='h2' size='heading-xl' color='europe-dark'>
               {t('categories.business-ia.title')}
             </Typography>
@@ -245,7 +247,7 @@ export default function Page({ params }: LanguagePageProps) {
             </Typography>
           </div>
           <div
-            className='hidden bg-cover bg-no-repeat desktop:inline-block desktop:flex-[0_0_40%]'
+            className='desktop:inline-block desktop:flex-[0_0_40%] hidden bg-cover bg-no-repeat'
             style={{
               backgroundImage: `url(${business_ia_bg.src})`,
             }}
@@ -253,7 +255,7 @@ export default function Page({ params }: LanguagePageProps) {
         </div>
       </section>
       <section id='business-development'>
-        <div className='flex flex-col items-center justify-center gap-8 p-6 desktop:gap-32 desktop:px-12 desktop:py-24'>
+        <div className='desktop:gap-32 desktop:px-12 desktop:py-24 flex flex-col items-center justify-center gap-8 p-6'>
           <div className='flex flex-col items-center justify-center'>
             <Typography
               as='span'

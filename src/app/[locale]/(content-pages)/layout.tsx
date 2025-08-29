@@ -6,17 +6,16 @@ import React from 'react';
 
 type RootLayoutProps = {
   children: React.ReactNode;
-  params: Promise<{ locale: Language }>;
+  params: Promise<{ locale: string }>;
 };
-export default async function RootLayout(props: RootLayoutProps) {
-  const params = await props.params;
 
-  const { locale } = params;
-
-  const { children } = props;
-
+export default async function RootLayout({
+  children,
+  params,
+}: RootLayoutProps) {
+  const { locale } = await params;
   // Validate that the incoming `locale` parameter is valid
-  if (!languages.includes(locale)) notFound();
+  if (!languages.includes(locale as Language)) notFound();
 
   setRequestLocale(locale);
 

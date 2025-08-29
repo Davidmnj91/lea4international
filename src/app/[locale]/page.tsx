@@ -46,11 +46,11 @@ export default function HomePage() {
   const headerVariants: Variants = {
     transparent: {
       backgroundColor: '#2E3B4800',
-      transition: { duration: 0.3, easings: ['easeIn'] },
+      transition: { duration: 0.3, ease: ['easeIn'] },
     },
     opaque: {
       backgroundColor: '#2E3B48',
-      transition: { duration: 0.3, easings: ['easeOut'] },
+      transition: { duration: 0.3, ease: ['easeOut'] },
     },
   };
 
@@ -69,13 +69,13 @@ export default function HomePage() {
       <motion.header
         variants={headerVariants}
         animate={inView && !menuOpen ? 'transparent' : 'opaque'}
-        className='sticky top-0 z-50 flex h-[80px] items-center justify-between px-6 py-2.5 desktop:p-10'
+        className='desktop:p-10 sticky top-0 z-50 flex h-[80px] items-center justify-between px-6 py-2.5'
       >
         <FullLogo width={129} height={50} />
         <div className='desktop:hidden'>
           <MobileMenu onStateChange={handleMenuOpen} />
         </div>
-        <nav className='hidden items-center gap-[70px] desktop:flex'>
+        <nav className='desktop:flex hidden items-center gap-[70px]'>
           <Menu />
           <LocaleSwitcher />
         </nav>
@@ -126,7 +126,7 @@ export default function HomePage() {
               as='h2'
               size='body-md'
               color='basics-white'
-              className='max-w-[336px] text-center desktop:max-w-[840px]'
+              className='desktop:max-w-[840px] max-w-[336px] text-center'
             >
               {t.rich('slogan', defaultTranslationVales)}
             </Typography>
@@ -140,13 +140,13 @@ export default function HomePage() {
         </div>
         <section id='who-we-are'>
           <div
-            className='w-full bg-cover bg-center desktop:mt-14'
+            className='desktop:mt-14 w-full bg-cover bg-center'
             style={{
               backgroundImage: `url(${who_we_are_bg.src})`,
             }}
           >
-            <div className='flex w-full flex-col justify-center desktop:flex-row'>
-              <div className='flex flex-col justify-between gap-8 bg-star-light px-6 py-9 desktop:mt-[-28px] desktop:h-[550px] desktop:max-w-[416px] desktop:gap-0'>
+            <div className='desktop:flex-row flex w-full flex-col justify-center'>
+              <div className='bg-star-light desktop:mt-[-28px] desktop:h-[550px] desktop:max-w-[416px] desktop:gap-0 flex flex-col justify-between gap-8 px-6 py-9'>
                 <div>
                   <Typography
                     as='span'
@@ -177,7 +177,7 @@ export default function HomePage() {
                   </Link>
                 </div>
               </div>
-              <div className='flex flex-col justify-between gap-8 bg-basics-white px-6 py-9 desktop:h-[550px] desktop:max-w-[416px] desktop:gap-0'>
+              <div className='bg-basics-white desktop:h-[550px] desktop:max-w-[416px] desktop:gap-0 flex flex-col justify-between gap-8 px-6 py-9'>
                 <div>
                   <Typography
                     as='span'
@@ -201,22 +201,22 @@ export default function HomePage() {
                 />
               </div>
               <div
-                className='h-[130px] w-full bg-cover bg-center desktop:hidden'
+                className='desktop:hidden h-[130px] w-full bg-cover bg-center'
                 style={{
                   backgroundImage: `url(${who_we_are_bg.src})`,
                 }}
               />
             </div>
           </div>
-          <div className='w-full desktop:mt-[176px]'>
+          <div className='desktop:mt-[176px] w-full'>
             <div
-              className='w-full bg-europe bg-no-repeat'
+              className='bg-europe w-full bg-no-repeat'
               style={{
                 backgroundImage: `url(${our_beliefs_bg.src})`,
               }}
             >
-              <div className='flex w-full flex-col justify-center desktop:flex-row desktop:gap-20'>
-                <div className='flex flex-col justify-between gap-8 bg-basics-white p-6 desktop:mt-[-128px] desktop:h-[478px] desktop:max-w-[490px] desktop:gap-0'>
+              <div className='desktop:flex-row desktop:gap-20 flex w-full flex-col justify-center'>
+                <div className='bg-basics-white desktop:mt-[-128px] desktop:h-[478px] desktop:max-w-[490px] desktop:gap-0 flex flex-col justify-between gap-8 p-6'>
                   <div>
                     <Typography
                       as='span'
@@ -240,12 +240,12 @@ export default function HomePage() {
                   />
                 </div>
                 <div
-                  className='h-[130px] w-full bg-cover bg-center desktop:hidden'
+                  className='desktop:hidden h-[130px] w-full bg-cover bg-center'
                   style={{
                     backgroundImage: `url(${our_beliefs_bg.src})`,
                   }}
                 />
-                <div className='flex flex-col justify-between gap-8 bg-basics-white p-6 desktop:h-[542px] desktop:max-w-[490px] desktop:gap-0'>
+                <div className='bg-basics-white desktop:h-[542px] desktop:max-w-[490px] desktop:gap-0 flex flex-col justify-between gap-8 p-6'>
                   <div>
                     <Typography
                       as='span'
@@ -274,7 +274,7 @@ export default function HomePage() {
                   as='h3'
                   size='heading-lg'
                   color='basics-white'
-                  className='flex w-[242px] flex-col items-center text-center desktop:w-[816px] desktop:flex-row'
+                  className='desktop:w-[816px] desktop:flex-row flex w-[242px] flex-col items-center text-center'
                 >
                   <Typography as='span' size='heading-4xl' color='gold-dark'>
                     &ldquo;
@@ -291,15 +291,15 @@ export default function HomePage() {
           </div>
         </section>
         <section id='our-commitment'>
-          <div className='mx-0 mt-14 desktop:mx-12 desktop:my-14'>
-            <div className='flex flex-col-reverse gap-6 desktop:flex-row desktop:justify-center desktop:gap-20'>
+          <div className='desktop:mx-12 desktop:my-14 mx-0 mt-14'>
+            <div className='desktop:flex-row desktop:justify-center desktop:gap-20 flex flex-col-reverse gap-6'>
               <CommitmentsCarousel />
               <div>
                 <Typography
                   as='h3'
                   size='heading-2xl'
                   color='europe-dark'
-                  className='mx-2.5 border-b-2 border-b-europe-light text-center desktop:mx-0 desktop:text-left'
+                  className='border-b-europe-light desktop:mx-0 desktop:text-left mx-2.5 border-b-2 text-center'
                 >
                   {t('our-commitment.title')}
                 </Typography>
@@ -307,7 +307,7 @@ export default function HomePage() {
             </div>
           </div>
           <div
-            className='h-[172px] w-full bg-cover bg-center bg-no-repeat desktop:mt-[-280px] desktop:h-[496px]'
+            className='desktop:mt-[-280px] desktop:h-[496px] h-[172px] w-full bg-cover bg-center bg-no-repeat'
             style={{
               backgroundImage: `url(${our_commitment_bg.src})`,
             }}
@@ -323,17 +323,17 @@ export default function HomePage() {
           />
         </section>
         <section id='faq'>
-          <div className='flex flex-col items-center justify-center px-2.5 pt-16 desktop:mt-14'>
+          <div className='desktop:mt-14 flex flex-col items-center justify-center px-2.5 pt-16'>
             <Typography
               as='h3'
               size='heading-2xl'
               color='europe-dark'
-              className='text-center desktop:text-left'
+              className='desktop:text-left text-center'
             >
               {t('faq.title')}
             </Typography>
             <div className='my-14 flex items-center justify-center'>
-              <span className='w-[76px] border-b border-b-europe desktop:w-[250px]' />
+              <span className='border-b-europe desktop:w-[250px] w-[76px] border-b' />
               <Link
                 href={'/faq'}
                 className={clsx(
@@ -343,9 +343,9 @@ export default function HomePage() {
               >
                 {t('faq.see-more')}
               </Link>
-              <span className='w-[76px] border-b border-b-europe desktop:w-[250px]' />
+              <span className='border-b-europe desktop:w-[250px] w-[76px] border-b' />
             </div>
-            <div className='max-w-[1440px] desktop:my-14'>
+            <div className='desktop:my-14 max-w-[1440px]'>
               {Object.entries(FaqsHome)
                 .flatMap(([category, faqs]) =>
                   faqs.map((faq) => `${category}.${faq}`)
@@ -353,7 +353,7 @@ export default function HomePage() {
                 .map((faq) => (
                   <div
                     key={faq}
-                    className='border-b-2 border-t-0 border-basics-disabled px-3.5 py-6 first-of-type:border-t-2 desktop:px-12'
+                    className='border-basics-disabled desktop:px-12 border-t-0 border-b-2 px-3.5 py-6 first-of-type:border-t-2'
                   >
                     <FaqList faqKey={faq} />
                   </div>
@@ -362,7 +362,7 @@ export default function HomePage() {
           </div>
         </section>
         <section id='more-info'>
-          <div className='flex items-center justify-center desktop:my-14'>
+          <div className='desktop:my-14 flex items-center justify-center'>
             <MoreInfo />
           </div>
         </section>

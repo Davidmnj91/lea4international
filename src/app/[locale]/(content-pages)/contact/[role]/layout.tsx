@@ -2,9 +2,8 @@ import { useTranslations } from 'next-intl';
 import { Typography } from '@/components/typography/typography';
 import { tagButtonTypes } from '@/components/button/button';
 import React, { use } from 'react';
-import { Envelope } from '@phosphor-icons/react/dist/ssr/Envelope';
+import { EnvelopeIcon, PhoneIcon } from '@phosphor-icons/react/dist/ssr';
 import { Contact } from '@/types/contact';
-import { Phone } from '@phosphor-icons/react/dist/ssr/Phone';
 import { headers } from 'next/headers';
 import Link from 'next/link';
 
@@ -24,7 +23,7 @@ export default function RootDestinationsLayout({
 
   return (
     <div>
-      <div className='my-14 flex flex-col items-center justify-center gap-6 desktop:my-24 desktop:gap-1.5'>
+      <div className='desktop:my-24 desktop:gap-1.5 my-14 flex flex-col items-center justify-center gap-6'>
         <Typography as='h1' size='heading-2xl' color='europe-dark'>
           {t('title')}
         </Typography>
@@ -32,17 +31,17 @@ export default function RootDestinationsLayout({
           as='p'
           size='body-lg'
           color='europe-dark'
-          className='text-center desktop:text-left'
+          className='desktop:text-left text-center'
         >
           {t('message')}
         </Typography>
       </div>
-      <div className='sticky top-[80px] z-20 flex flex-row items-center gap-6 overflow-auto border-y border-y-basics-disabled bg-basics-white px-6 py-6 desktop:overflow-hidden desktop:px-16'>
+      <div className='border-y-basics-disabled bg-basics-white desktop:overflow-hidden desktop:px-16 sticky top-[80px] z-20 flex flex-row items-center gap-6 overflow-auto border-y px-6 py-6'>
         <Typography
           as='span'
           size='body-lg'
           color='europe-dark'
-          className='flex-shrink-0'
+          className='shrink-0'
         >
           {t('who-are-you')}
         </Typography>
@@ -58,12 +57,12 @@ export default function RootDestinationsLayout({
           </Link>
         ))}
       </div>
-      <div className='flex justify-center p-6 desktop:px-24 desktop:py-12'>
+      <div className='desktop:px-24 desktop:py-12 flex justify-center p-6'>
         {children}
       </div>
-      <div className='flex flex-col items-center justify-center gap-3 pb-14 pt-8 desktop:pb-24'>
+      <div className='desktop:pb-24 flex flex-col items-center justify-center gap-3 pt-8 pb-14'>
         <div className='flex items-center justify-center gap-6'>
-          <Envelope size={32} weight='thin' />
+          <EnvelopeIcon size={32} weight='thin' />
           <Typography
             as='a'
             size='body-lg'
@@ -74,7 +73,7 @@ export default function RootDestinationsLayout({
           </Typography>
         </div>
         <div className='flex items-center justify-center gap-6'>
-          <Phone size={32} weight='thin' />
+          <PhoneIcon size={32} weight='thin' />
           <Typography
             as='a'
             size='body-lg'

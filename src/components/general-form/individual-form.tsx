@@ -1,6 +1,6 @@
 'use client';
 
-import { FieldPath, useForm } from 'react-hook-form';
+import { FieldPath, Resolver, useForm } from 'react-hook-form';
 import { useLocale, useTranslations } from 'next-intl';
 import { ContactUsState, getContactUs } from '@/actions/contactUs';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -35,7 +35,9 @@ export const IndividualForm = () => {
     reset,
   } = useForm<IndividualFormData>({
     mode: 'all',
-    resolver: zodResolver(IndividualContactSchema),
+    resolver: zodResolver(
+      IndividualContactSchema
+    ) as Resolver<IndividualFormData>,
   });
 
   const t = useTranslations('forms');
@@ -70,13 +72,13 @@ export const IndividualForm = () => {
         onClose={() => setShowPopup(false)}
       />
       <form
-        className='flex flex-col justify-center gap-8 desktop:flex-row desktop:gap-16'
+        className='desktop:flex-row desktop:gap-16 flex flex-col justify-center gap-8'
         action={formAction}
       >
         <FormLoadingPopup />
         <input type='hidden' name='language' value={locale} />
         <input type='hidden' name='type' value='INDIVIDUAL' />
-        <div className='flex flex-col gap-9 desktop:flex-[0_0_50%]'>
+        <div className='desktop:flex-[0_0_50%] flex flex-col gap-9'>
           <div>
             <label htmlFor='service' className={labelStyles}>
               {t('input.service.label')}
@@ -164,7 +166,7 @@ export const IndividualForm = () => {
           </div>
         </div>
 
-        <div className='flex flex-col gap-9 desktop:flex-[0_0_50%]'>
+        <div className='desktop:flex-[0_0_50%] flex flex-col gap-9'>
           <div>
             <label htmlFor='nationality' className={labelStyles}>
               {t('input.nationality.label')}

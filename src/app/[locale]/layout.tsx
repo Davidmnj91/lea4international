@@ -17,13 +17,13 @@ export async function generateStaticParams() {
 
 type RootLayoutProps = {
   children: React.ReactNode;
-  params: Promise<{ locale: Language }>;
+  params: Promise<{ locale: string }>;
 };
 
 export default function RootLayout({ params, children }: RootLayoutProps) {
   const { locale } = use(params);
 
-  if (!languages.includes(locale)) notFound();
+  if (!languages.includes(locale as Language)) notFound();
 
   setRequestLocale(locale);
   const messages = useMessages();
@@ -150,7 +150,7 @@ export default function RootLayout({ params, children }: RootLayoutProps) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className='relative mx-auto bg-basics-white'>
+      <body className='bg-basics-white relative mx-auto'>
         <IntlClientProvider
           locale={locale}
           messages={messages}

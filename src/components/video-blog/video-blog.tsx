@@ -3,8 +3,6 @@
 import { youtube_v3 } from 'googleapis';
 import React, { Fragment, useState } from 'react';
 import { buttonTypes } from '@/components/button/button';
-import { CaretLeft } from '@phosphor-icons/react/dist/ssr/CaretLeft';
-import { CaretRight } from '@phosphor-icons/react/dist/ssr/CaretRight';
 import { Contact } from '@/types/contact';
 import { useTranslations } from 'next-intl';
 import { usePagination } from '@/hooks/usePagination';
@@ -15,6 +13,7 @@ import {
   TransitionChild,
 } from '@headlessui/react';
 import ReactPlayer from 'react-player';
+import { CaretLeftIcon, CaretRightIcon } from '@phosphor-icons/react/dist/ssr';
 
 const VIDEOS_PER_PAGE = 4;
 
@@ -43,7 +42,7 @@ export const VideoBlog = ({ videos }: VideoBlogProps) => {
   };
 
   return (
-    <div className='flex flex-col gap-6 px-6 py-12 desktop:gap-9 desktop:px-12 desktop:py-24'>
+    <div className='desktop:gap-9 desktop:px-12 flex flex-col gap-6 px-6'>
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog
           aria-label='vieo player'
@@ -76,7 +75,13 @@ export const VideoBlog = ({ videos }: VideoBlogProps) => {
               >
                 <DialogPanel className='transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all'>
                   <ReactPlayer
-                    url={`https://www.youtube.com/watch?v=${selectedVideo?.id?.videoId}`}
+                    style={{
+                      width: '90vw',
+                      height: 'auto',
+                      aspectRatio: '16/9',
+                    }}
+                    autoPlay
+                    src={`https://www.youtube.com/watch?v=${selectedVideo?.id?.videoId}`}
                   />
                 </DialogPanel>
               </TransitionChild>
@@ -85,7 +90,7 @@ export const VideoBlog = ({ videos }: VideoBlogProps) => {
         </Dialog>
       </Transition>
 
-      <div className='grid grid-cols-1 gap-6 desktop:grid-cols-2 desktop:gap-9'>
+      <div className='desktop:grid-cols-2 desktop:gap-9 grid grid-cols-1 gap-6'>
         {currentItems()
           .filter((item) => item.id?.videoId !== undefined)
           .map((item) => (
@@ -94,7 +99,7 @@ export const VideoBlog = ({ videos }: VideoBlogProps) => {
                 aria-label={item.snippet?.title ?? 'youtube video'}
                 href={`https://www.youtube.com/watch?v=${item?.id?.videoId}`}
                 target={'_blank'}
-                className='flex flex-auto items-center justify-center bg-cover bg-center bg-no-repeat desktop:hidden'
+                className='desktop:hidden flex flex-auto items-center justify-center bg-cover bg-center bg-no-repeat'
                 style={{
                   backgroundImage: `url(${
                     item.snippet?.thumbnails?.high?.url ?? ''
@@ -103,7 +108,7 @@ export const VideoBlog = ({ videos }: VideoBlogProps) => {
               />
               <button
                 onClick={() => selectVideo(item)}
-                className='hidden flex-auto items-center justify-center bg-cover bg-center bg-no-repeat desktop:flex'
+                className='desktop:flex hidden flex-auto items-center justify-center bg-cover bg-center bg-no-repeat'
                 style={{
                   backgroundImage: `url(${
                     item.snippet?.thumbnails?.high?.url ?? ''
@@ -113,7 +118,7 @@ export const VideoBlog = ({ videos }: VideoBlogProps) => {
             </div>
           ))}
       </div>
-      <div className='flex flex-col items-center gap-6 desktop:flex-row desktop:justify-between desktop:gap-0'>
+      <div className='desktop:flex-row desktop:justify-between desktop:gap-0 flex flex-col items-center gap-6'>
         {totalPages() > 1 && (
           <nav className='flex gap-2.5'>
             <button
@@ -124,7 +129,7 @@ export const VideoBlog = ({ videos }: VideoBlogProps) => {
                 intent: 'secondary-light',
               })}
             >
-              <CaretLeft size={22} />
+              <CaretLeftIcon size={22} />
             </button>
             {paginationLinks().map((i) => (
               <button
@@ -147,7 +152,7 @@ export const VideoBlog = ({ videos }: VideoBlogProps) => {
                 intent: 'secondary-light',
               })}
             >
-              <CaretRight size={22} />
+              <CaretRightIcon size={22} />
             </button>
           </nav>
         )}

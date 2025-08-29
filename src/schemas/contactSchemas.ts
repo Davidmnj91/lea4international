@@ -1,12 +1,20 @@
 import { z } from 'zod';
 import { ContactServices } from '@/types/contact';
 
-const checkboxValidation = z.coerce.boolean().and(z.literal(true));
+const checkboxValidation = z.union([
+  z.literal('on').transform(() => true),
+  z.coerce
+    .boolean()
+    .and(z.literal(true))
+    .transform(() => true),
+  z.literal(undefined).transform(() => false),
+]);
+
 export const IndividualContactSchema = z.object({
-  service: z.nativeEnum(ContactServices),
+  service: z.enum(ContactServices),
   name: z.string().min(1),
   lastname: z.string().min(1).optional().or(z.literal('')),
-  email: z.string().email().min(1),
+  email: z.email().min(1),
   phone: z
     .string()
     .regex(/^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/)
@@ -20,7 +28,7 @@ export const IndividualContactSchema = z.object({
 export const HostFamilyContactSchema = z.object({
   name: z.string().min(1),
   lastname: z.string().min(1).optional().or(z.literal('')),
-  email: z.string().email().min(1),
+  email: z.email().min(1),
   phone: z
     .string()
     .regex(/^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/)
@@ -36,7 +44,7 @@ export const HostFamilyContactSchema = z.object({
 export const InstitutionsContactSchema = z.object({
   name: z.string().min(1),
   lastname: z.string().min(1).optional().or(z.literal('')),
-  email: z.string().email().min(1),
+  email: z.email().min(1),
   phone: z
     .string()
     .regex(/^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/)
@@ -60,7 +68,7 @@ export const PartnerContactSchema = z.object({
   name: z.string().min(1),
   lastname: z.string().min(1).optional().or(z.literal('')),
   applicantName: z.string().min(1).optional().or(z.literal('')),
-  email: z.string().email().min(1),
+  email: z.email().min(1),
   projectDescription: z.string().min(1).max(255).optional().or(z.literal('')),
   terms: checkboxValidation,
 });

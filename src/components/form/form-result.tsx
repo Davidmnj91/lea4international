@@ -6,7 +6,11 @@ import {
   Transition,
   TransitionChild,
 } from '@headlessui/react';
-import { CheckCircle, WarningCircle, X } from '@phosphor-icons/react';
+import {
+  CheckCircleIcon,
+  WarningCircleIcon,
+  XIcon,
+} from '@phosphor-icons/react';
 import { Typography } from '@/components/typography/typography';
 import { buttonTypes } from '@/components/button/button';
 import { defaultTranslationVales } from '@/i18n/translation-values';
@@ -53,14 +57,20 @@ export const FormResultPopup = ({ state, open, onClose }: FormResultProps) => {
               leaveTo='opacity-0 scale-95'
             >
               <DialogPanel className='flex w-[354px] transform flex-col gap-4 overflow-hidden rounded-2xl bg-white px-6 py-4 text-left align-middle shadow-xl transition-all'>
-                <button onClick={onClose} className='self-end text-europe'>
-                  <X size={32} />
+                <button onClick={onClose} className='text-europe self-end'>
+                  <XIcon size={32} />
                 </button>
-                <div className='flex flex-col items-center justify-center gap-4 pb-16 pt-4 text-center'>
+                <div className='flex flex-col items-center justify-center gap-4 pt-4 pb-16 text-center'>
                   {state === 'success' ? (
-                    <CheckCircle size={38} className='text-status-success' />
+                    <CheckCircleIcon
+                      size={38}
+                      className='text-status-success'
+                    />
                   ) : (
-                    <WarningCircle size={38} className='text-status-error' />
+                    <WarningCircleIcon
+                      size={38}
+                      className='text-status-error'
+                    />
                   )}
                   <Typography as='h3' size='heading-lg' color='europe-dark'>
                     {t(`${state}.title`)}
@@ -68,7 +78,7 @@ export const FormResultPopup = ({ state, open, onClose }: FormResultProps) => {
                   <Typography size='body-md' color='europe'>
                     {t.rich(`${state}.description`, defaultTranslationVales)}
                   </Typography>
-                  <span className='h-1 w-full flex-grow border-b border-b-europe-light' />
+                  <span className='border-b-europe-light h-1 w-full grow border-b' />
                   <Typography size='body-md' color='europe'>
                     {t.rich(
                       `${state}.sub-description`,

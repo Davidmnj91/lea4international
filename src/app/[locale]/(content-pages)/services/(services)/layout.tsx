@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { CaretLeft } from '@phosphor-icons/react/dist/ssr/CaretLeft';
+import { CaretLeftIcon } from '@phosphor-icons/react/dist/ssr';
 import { useTranslations } from 'next-intl';
 import { headers } from 'next/headers';
 import { ServicesCategories } from '@/types/services';
@@ -21,9 +21,9 @@ export default function RootServicesLayout({
 
   return (
     <>
-      <div className='flex border-b border-basics-disabled px-6 py-2.5 desktop:px-12'>
+      <div className='border-basics-disabled desktop:px-12 flex border-b px-6 py-2.5'>
         <Link href={'/services'} className='flex items-center gap-4'>
-          <CaretLeft size={32} weight='thin' />
+          <CaretLeftIcon size={32} weight='thin' />
           <Typography as='span' size='body-lg' color='europe-dark'>
             {t('back-to-services')}
           </Typography>

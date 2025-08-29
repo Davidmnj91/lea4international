@@ -10,10 +10,12 @@ import job_shadowing_bg from '../../../../../../../public/images/services/erasmu
 import school_exchange_bg from '../../../../../../../public/images/services/erasmus/school_exchange_bg.webp';
 import erasmus_mundus_bg from '../../../../../../../public/images/services/erasmus/erasmus_mundus_bg.webp';
 import ka_2_bg from '../../../../../../../public/images/services/erasmus/ka_2_bg.webp';
-import { Airplane } from '@phosphor-icons/react/dist/ssr/Airplane';
-import { Bank } from '@phosphor-icons/react/dist/ssr/Bank';
-import { FlowerLotus } from '@phosphor-icons/react/dist/ssr/FlowerLotus';
-import { Monitor } from '@phosphor-icons/react/dist/ssr/Monitor';
+import {
+  AirplaneIcon,
+  BankIcon,
+  FlowerLotusIcon,
+  MonitorIcon,
+} from '@phosphor-icons/react/dist/ssr';
 import { JSX, use } from 'react';
 import { ServiceItem } from '@/components/service-item/service-item';
 import { BecomePartner } from '@/components/partners/become-partner';
@@ -29,14 +31,14 @@ export default function Page({ params }: LanguagePageProps) {
 
   const erasmusServices = Services.erasmus;
   const professions: Record<string, JSX.Element> = {
-    IT: <Monitor size={32} />,
-    business: <Bank size={32} />,
-    tourism: <Airplane size={32} />,
-    beauty: <FlowerLotus size={32} />,
+    IT: <MonitorIcon size={32} />,
+    business: <BankIcon size={32} />,
+    tourism: <AirplaneIcon size={32} />,
+    beauty: <FlowerLotusIcon size={32} />,
   };
   return (
     <div>
-      <div className='flex items-center justify-center px-2.5 py-16 desktop:py-24'>
+      <div className='desktop:py-24 flex items-center justify-center px-2.5 py-16'>
         <Typography
           as='h1'
           size='heading-2xl'
@@ -46,7 +48,7 @@ export default function Page({ params }: LanguagePageProps) {
           {t('title')}
         </Typography>
       </div>
-      <div className='sticky top-[80px] z-20 flex items-center gap-6 overflow-auto border-y border-y-basics-disabled bg-basics-white px-6 py-6 desktop:justify-center desktop:overflow-hidden desktop:px-12'>
+      <div className='border-y-basics-disabled bg-basics-white desktop:justify-center desktop:overflow-hidden desktop:px-12 sticky top-[80px] z-20 flex items-center gap-6 overflow-auto border-y px-6 py-6'>
         {erasmusServices.map((service) => (
           <Link
             href={`#${service}`}
@@ -62,7 +64,7 @@ export default function Page({ params }: LanguagePageProps) {
         </Link>
       </div>
       <section id='work-experience'>
-        <div className='flex flex-col items-center justify-center gap-8 p-6 desktop:gap-28 desktop:px-12 desktop:py-24'>
+        <div className='desktop:gap-28 desktop:px-12 desktop:py-24 flex flex-col items-center justify-center gap-8 p-6'>
           <div className='text-center'>
             <Typography
               as='span'
@@ -88,15 +90,15 @@ export default function Page({ params }: LanguagePageProps) {
             )}
           </Typography>
         </div>
-        <div className='flex flex-col desktop:h-[893px] desktop:flex-row'>
+        <div className='desktop:h-[893px] desktop:flex-row flex flex-col'>
           <div
-            className='relative h-[380px] bg-cover bg-center desktop:h-full desktop:flex-[0_0_60%]'
+            className='desktop:h-full desktop:flex-[0_0_60%] relative h-[380px] bg-cover bg-center'
             style={{
               backgroundImage: `url(${work_experience_bg.src})`,
             }}
           >
-            <div className='absolute left-[50%] top-[50%] flex h-[240px] w-[245px] flex-[0_0_40%] translate-x-[-50%] translate-y-[-50%] items-center justify-center bg-europe p-6 desktop:left-auto desktop:right-[-90px] desktop:top-16 desktop:translate-x-0 desktop:translate-y-0'>
-              <div className='flex-grow border border-basics-white p-2.5'>
+            <div className='bg-europe desktop:left-auto desktop:right-[-90px] desktop:top-16 desktop:translate-x-0 desktop:translate-y-0 absolute top-[50%] left-[50%] flex h-[240px] w-[245px] flex-[0_0_40%] translate-x-[-50%] translate-y-[-50%] items-center justify-center p-6'>
+              <div className='border-basics-white grow border p-2.5'>
                 <Typography as='span' size='heading-lg' color='basics-white'>
                   {t.rich(
                     'categories.work-experience.with',
@@ -106,8 +108,8 @@ export default function Page({ params }: LanguagePageProps) {
               </div>
             </div>
           </div>
-          <div className='flex flex-col justify-end p-6 text-center desktop:flex-[0_0_40%] desktop:px-12 desktop:text-left'>
-            <div className='z-10 bg-basics-white'>
+          <div className='desktop:flex-[0_0_40%] desktop:px-12 desktop:text-left flex flex-col justify-end p-6 text-center'>
+            <div className='bg-basics-white z-10'>
               <Typography as='p' size='body-lg' color='europe-dark'>
                 {t.rich(
                   'categories.work-experience.message',
@@ -118,7 +120,7 @@ export default function Page({ params }: LanguagePageProps) {
           </div>
         </div>
         <div className='flex'>
-          <div className='flex flex-col gap-8 p-6 desktop:flex-[0_0_60%] desktop:justify-between desktop:px-12 desktop:py-24'>
+          <div className='desktop:flex-[0_0_60%] desktop:justify-between desktop:px-12 desktop:py-24 flex flex-col gap-8 p-6'>
             <Typography as='h2' size='heading-xl' color='europe-dark'>
               {t('categories.work-experience.we-offer.title')}
             </Typography>
@@ -147,7 +149,7 @@ export default function Page({ params }: LanguagePageProps) {
             </div>
           </div>
           <div
-            className='hidden bg-cover bg-bottom bg-no-repeat desktop:block desktop:flex-[0_0_40%]'
+            className='desktop:block desktop:flex-[0_0_40%] hidden bg-cover bg-bottom bg-no-repeat'
             style={{
               backgroundImage: `url(${we_offer_bg.src})`,
             }}
@@ -155,7 +157,7 @@ export default function Page({ params }: LanguagePageProps) {
         </div>
       </section>
       <section id='job-shadowing'>
-        <div className='flex flex-col items-center justify-center gap-8 p-6 desktop:gap-28 desktop:px-12 desktop:py-24'>
+        <div className='desktop:gap-28 desktop:px-12 desktop:py-24 flex flex-col items-center justify-center gap-8 p-6'>
           <div className='text-center'>
             <Typography
               as='span'
@@ -181,15 +183,15 @@ export default function Page({ params }: LanguagePageProps) {
             )}
           </Typography>
         </div>
-        <div className='flex flex-col desktop:h-[1012px] desktop:flex-row'>
+        <div className='desktop:h-[1012px] desktop:flex-row flex flex-col'>
           <div
-            className='relative h-[380px] bg-cover bg-center desktop:h-full desktop:flex-[0_0_60%]'
+            className='desktop:h-full desktop:flex-[0_0_60%] relative h-[380px] bg-cover bg-center'
             style={{
               backgroundImage: `url(${job_shadowing_bg.src})`,
             }}
           >
-            <div className='absolute left-[50%] top-[50%] flex h-[240px] w-[245px] flex-[0_0_40%] translate-x-[-50%] translate-y-[-50%] items-center justify-center bg-europe p-6 desktop:left-auto desktop:right-[-90px] desktop:top-16 desktop:translate-x-0 desktop:translate-y-0'>
-              <div className='flex-grow border border-basics-white p-2.5'>
+            <div className='bg-europe desktop:left-auto desktop:right-[-90px] desktop:top-16 desktop:translate-x-0 desktop:translate-y-0 absolute top-[50%] left-[50%] flex h-[240px] w-[245px] flex-[0_0_40%] translate-x-[-50%] translate-y-[-50%] items-center justify-center p-6'>
+              <div className='border-basics-white grow border p-2.5'>
                 <Typography as='span' size='heading-lg' color='basics-white'>
                   {t.rich(
                     'categories.job-shadowing.with',
@@ -199,8 +201,8 @@ export default function Page({ params }: LanguagePageProps) {
               </div>
             </div>
           </div>
-          <div className='flex flex-col justify-end p-6 text-center desktop:flex-[0_0_40%] desktop:px-12 desktop:text-left'>
-            <div className='z-10 bg-basics-white'>
+          <div className='desktop:flex-[0_0_40%] desktop:px-12 desktop:text-left flex flex-col justify-end p-6 text-center'>
+            <div className='bg-basics-white z-10'>
               <Typography as='p' size='body-lg' color='europe-dark'>
                 {t.rich(
                   'categories.job-shadowing.message',
@@ -212,7 +214,7 @@ export default function Page({ params }: LanguagePageProps) {
         </div>
       </section>
       <section id='school-exchange'>
-        <div className='flex flex-col items-center justify-center gap-8 p-6 desktop:gap-28 desktop:px-12 desktop:py-24'>
+        <div className='desktop:gap-28 desktop:px-12 desktop:py-24 flex flex-col items-center justify-center gap-8 p-6'>
           <div className='text-center'>
             <Typography
               as='span'
@@ -238,15 +240,15 @@ export default function Page({ params }: LanguagePageProps) {
             )}
           </Typography>
         </div>
-        <div className='flex flex-col desktop:h-[782px] desktop:flex-row'>
+        <div className='desktop:h-[782px] desktop:flex-row flex flex-col'>
           <div
-            className='relative h-[380px] bg-cover bg-center desktop:h-full desktop:flex-[0_0_60%]'
+            className='desktop:h-full desktop:flex-[0_0_60%] relative h-[380px] bg-cover bg-center'
             style={{
               backgroundImage: `url(${school_exchange_bg.src})`,
             }}
           >
-            <div className='absolute left-[50%] top-[50%] flex h-[240px] w-[245px] flex-[0_0_40%] translate-x-[-50%] translate-y-[-50%] items-center justify-center bg-europe p-6 desktop:left-auto desktop:right-[-90px] desktop:top-16 desktop:translate-x-0 desktop:translate-y-0'>
-              <div className='flex-grow border border-basics-white p-2.5'>
+            <div className='bg-europe desktop:left-auto desktop:right-[-90px] desktop:top-16 desktop:translate-x-0 desktop:translate-y-0 absolute top-[50%] left-[50%] flex h-[240px] w-[245px] flex-[0_0_40%] translate-x-[-50%] translate-y-[-50%] items-center justify-center p-6'>
+              <div className='border-basics-white grow border p-2.5'>
                 <Typography as='span' size='heading-lg' color='basics-white'>
                   {t.rich(
                     'categories.school-exchange.with',
@@ -256,8 +258,8 @@ export default function Page({ params }: LanguagePageProps) {
               </div>
             </div>
           </div>
-          <div className='flex flex-col justify-end p-6 text-center desktop:flex-[0_0_40%] desktop:px-12 desktop:text-left'>
-            <div className='z-10 bg-basics-white'>
+          <div className='desktop:flex-[0_0_40%] desktop:px-12 desktop:text-left flex flex-col justify-end p-6 text-center'>
+            <div className='bg-basics-white z-10'>
               <Typography as='p' size='body-lg' color='europe-dark'>
                 {t.rich(
                   'categories.school-exchange.message',
@@ -269,7 +271,7 @@ export default function Page({ params }: LanguagePageProps) {
         </div>
       </section>
       <section id='erasmus-mundus'>
-        <div className='flex flex-col items-center justify-center gap-8 p-6 desktop:gap-28 desktop:px-12 desktop:py-24'>
+        <div className='desktop:gap-28 desktop:px-12 desktop:py-24 flex flex-col items-center justify-center gap-8 p-6'>
           <div className='text-center'>
             <Typography
               as='span'
@@ -292,15 +294,15 @@ export default function Page({ params }: LanguagePageProps) {
             {t('categories.erasmus-mundus.description')}
           </Typography>
         </div>
-        <div className='flex flex-col desktop:h-[698px] desktop:flex-row'>
+        <div className='desktop:h-[698px] desktop:flex-row flex flex-col'>
           <div
-            className='relative h-[380px] bg-cover bg-center desktop:h-full desktop:flex-[0_0_60%]'
+            className='desktop:h-full desktop:flex-[0_0_60%] relative h-[380px] bg-cover bg-center'
             style={{
               backgroundImage: `url(${erasmus_mundus_bg.src})`,
             }}
           >
-            <div className='absolute left-[50%] top-[50%] flex h-[240px] w-[245px] flex-[0_0_40%] translate-x-[-50%] translate-y-[-50%] items-center justify-center bg-europe p-6 desktop:left-auto desktop:right-[-90px] desktop:top-16 desktop:translate-x-0 desktop:translate-y-0'>
-              <div className='flex-grow border border-basics-white p-2.5'>
+            <div className='bg-europe desktop:left-auto desktop:right-[-90px] desktop:top-16 desktop:translate-x-0 desktop:translate-y-0 absolute top-[50%] left-[50%] flex h-[240px] w-[245px] flex-[0_0_40%] translate-x-[-50%] translate-y-[-50%] items-center justify-center p-6'>
+              <div className='border-basics-white grow border p-2.5'>
                 <Typography as='span' size='heading-lg' color='basics-white'>
                   {t.rich(
                     'categories.erasmus-mundus.with',
@@ -310,8 +312,8 @@ export default function Page({ params }: LanguagePageProps) {
               </div>
             </div>
           </div>
-          <div className='flex flex-col justify-end p-6 text-center desktop:flex-[0_0_40%] desktop:px-12 desktop:text-left'>
-            <div className='z-10 bg-basics-white'>
+          <div className='desktop:flex-[0_0_40%] desktop:px-12 desktop:text-left flex flex-col justify-end p-6 text-center'>
+            <div className='bg-basics-white z-10'>
               <Typography as='p' size='body-lg' color='europe-dark'>
                 {t.rich(
                   'categories.erasmus-mundus.message',
@@ -323,7 +325,7 @@ export default function Page({ params }: LanguagePageProps) {
         </div>
       </section>
       <section id='KA-2'>
-        <div className='flex flex-col items-center justify-center gap-8 p-6 desktop:gap-28 desktop:px-12 desktop:py-24'>
+        <div className='desktop:gap-28 desktop:px-12 desktop:py-24 flex flex-col items-center justify-center gap-8 p-6'>
           <div className='text-center'>
             <Typography
               as='span'
@@ -345,12 +347,12 @@ export default function Page({ params }: LanguagePageProps) {
           >
             {t.rich('categories.KA-2.description', defaultTranslationVales)}
           </Typography>
-          <div className='mx-auto flex flex-col gap-8 desktop:flex-row desktop:gap-16'>
+          <div className='desktop:flex-row desktop:gap-16 mx-auto flex flex-col gap-8'>
             <div
-              className='mx-auto h-[153px] w-[325px] bg-cover bg-no-repeat desktop:h-[478px] desktop:w-[275px]'
+              className='desktop:h-[478px] desktop:w-[275px] mx-auto h-[153px] w-[325px] bg-cover bg-no-repeat'
               style={{ backgroundImage: `url(${ka_2_bg.src})` }}
             />
-            <div className='flex flex-col gap-8 desktop:py-4'>
+            <div className='desktop:py-4 flex flex-col gap-8'>
               <div className='flex flex-col gap-6'>
                 <Typography as='h3' size='heading-lg' color='europe-dark'>
                   {t('categories.KA-2.priority-topics.title')}

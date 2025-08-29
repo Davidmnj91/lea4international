@@ -8,7 +8,12 @@ import {
   PopoverPanel,
   Transition,
 } from '@headlessui/react';
-import { ArrowDown, CaretRight, List, X } from '@phosphor-icons/react';
+import {
+  ArrowDownIcon,
+  CaretRightIcon,
+  ListIcon,
+  XIcon,
+} from '@phosphor-icons/react';
 import { Menu } from '@/components/menu/menu';
 import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
@@ -51,8 +56,8 @@ export const MobileMenu = ({
         triggerCallBack(open);
         return (
           <>
-            <PopoverButton className='group text-basics-white hover:text-basics-gray focus:outline-none'>
-              {open ? <X size={32} /> : <List size={32} />}
+            <PopoverButton className='group text-basics-white hover:text-basics-gray focus:outline-hidden'>
+              {open ? <XIcon size={32} /> : <ListIcon size={32} />}
             </PopoverButton>
             <Transition
               as={Fragment}
@@ -63,8 +68,8 @@ export const MobileMenu = ({
               leaveFrom='opacity-100 translate-y-0'
               leaveTo='opacity-0 translate-y-1'
             >
-              <PopoverPanel className='absolute left-0 top-[80px] z-50 flex h-[calc(100dvh-80px)] w-full transform flex-col'>
-                <nav className='flex h-full flex-col gap-3.5 overflow-y-auto bg-europe p-6'>
+              <PopoverPanel className='absolute top-[80px] left-0 z-50 flex h-[calc(100dvh-80px)] w-full transform flex-col'>
+                <nav className='bg-europe flex h-full flex-col gap-3.5 overflow-y-auto p-6'>
                   <LocaleSwitcher />
                   <Link
                     className={`flex items-center gap-2 ${fullClassName(
@@ -74,7 +79,7 @@ export const MobileMenu = ({
                     onClick={() => close()}
                   >
                     {t('services.main')}
-                    <ArrowDown size={16} />
+                    <ArrowDownIcon size={16} />
                   </Link>
                   <div className='ml-6 flex flex-col gap-3.5'>
                     <Link
@@ -149,12 +154,12 @@ export const MobileMenu = ({
                       size: 'body-sm',
                       color: 'europe-dark',
                     }),
-                    'flex items-center gap-3 bg-star px-9 py-5'
+                    'bg-star flex items-center gap-3 px-9 py-5'
                   )}
                   onClick={() => close()}
                 >
                   <span>Contact us</span>
-                  <CaretRight size={16} />
+                  <CaretRightIcon size={16} />
                 </Link>
               </PopoverPanel>
             </Transition>
@@ -166,14 +171,14 @@ export const MobileMenu = ({
 };
 export const Header = () => {
   return (
-    <header className='sticky top-0 z-50 flex h-[80px] items-center justify-between bg-europe px-6 py-2.5 desktop:p-10'>
+    <header className='bg-europe desktop:p-10 sticky top-0 z-50 flex h-[80px] items-center justify-between px-6 py-2.5'>
       <Link href='/'>
         <FullLogo width={129} height={50} />
       </Link>
       <div className='desktop:hidden'>
         <MobileMenu />
       </div>
-      <nav className='hidden items-center gap-[70px] desktop:flex'>
+      <nav className='desktop:flex hidden items-center gap-[70px]'>
         <Menu />
         <LocaleSwitcher />
       </nav>

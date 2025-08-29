@@ -9,7 +9,7 @@ import {
   Transition,
 } from '@headlessui/react';
 import React, { Fragment, startTransition } from 'react';
-import { CaretDown, CheckCircle } from '@phosphor-icons/react';
+import { CaretDownIcon, CheckCircleIcon } from '@phosphor-icons/react';
 import { EnglandFlag, SpainFlag } from '@/components/icons/flags-icons';
 import { usePathname, useRouter } from '@/i18n/navigation';
 import { Language } from '@/i18n/config';
@@ -45,7 +45,7 @@ export default function LocaleSwitcher() {
           ) : (
             <SpainFlag size={34} />
           )}
-          <CaretDown className='ml-2 text-basics-white' size={24} />
+          <CaretDownIcon className='text-basics-white ml-2' size={24} />
         </MenuButton>
         <Transition
           as={Fragment}
@@ -56,18 +56,18 @@ export default function LocaleSwitcher() {
           leaveFrom='transform opacity-100 scale-100'
           leaveTo='transform opacity-0 scale-95'
         >
-          <MenuItems className='absolute left-0 mt-12 origin-top-left divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none desktop:left-auto desktop:right-0 desktop:origin-top-right'>
+          <MenuItems className='desktop:left-auto desktop:right-0 desktop:origin-top-right absolute left-0 mt-12 origin-top-left divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-hidden'>
             <div className='relative p-2'>
               {languageOptions.map(({ language, icon }) => (
                 <MenuItem key={language}>
                   <button
-                    className='text-b-sm group flex w-full items-center gap-2 rounded-md bg-basics-white px-2 py-2 text-europe-dark hover:bg-basics-gray'
+                    className='text-b-sm group bg-basics-white text-europe-dark hover:bg-basics-gray flex w-full items-center gap-2 rounded-md px-2 py-2'
                     onClick={() => changeLanguage(language)}
                   >
                     {icon}
                     <span className='text-b-sm'>{t(language)}</span>
                     {locale === language && (
-                      <CheckCircle
+                      <CheckCircleIcon
                         size={16}
                         className='text-europe-dark'
                         aria-hidden='true'
