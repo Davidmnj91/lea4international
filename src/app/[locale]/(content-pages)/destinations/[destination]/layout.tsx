@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { CaretLeft } from '@phosphor-icons/react/dist/ssr/CaretLeft';
+import { CaretLeftIcon } from '@phosphor-icons/react/dist/ssr';
 import { BigButton } from '@/components/button/big-button';
 import { Typography } from '@/components/typography/typography';
 import React from 'react';
@@ -17,24 +17,24 @@ export default function RootDestinationsLayout({
 
   return (
     <>
-      <div className='flex border-b border-basics-disabled px-6 py-2.5 desktop:px-12'>
+      <div className='border-basics-disabled desktop:px-12 flex border-b px-6 py-2.5'>
         <Link href={'/destinations'} className='flex items-center gap-4'>
-          <CaretLeft size={32} weight='thin' />
+          <CaretLeftIcon size={32} weight='thin' />
           <Typography as='span' size='body-lg' color='europe-dark'>
             {t('back-to-destinations')}
           </Typography>
         </Link>
       </div>
       {children}
-      <div className='flex justify-center desktop:py-14'>
-        <div className='flex flex-col gap-6 bg-europe px-6 py-14 desktop:gap-9 desktop:p-14'>
+      <div className='desktop:py-14 flex justify-center'>
+        <div className='bg-europe desktop:gap-9 desktop:p-14 flex flex-col gap-6 px-6 py-14'>
           <Typography as='h3' size='heading-2xl' color='basics-white'>
             {t('inspired.title')}
           </Typography>
           <Typography as='p' size='body-lg' color='basics-white'>
             {t.rich('inspired.description', defaultTranslationVales)}
           </Typography>
-          <div className='flex flex-col gap-6 desktop:flex-row desktop:gap-8'>
+          <div className='desktop:flex-row desktop:gap-8 flex flex-col gap-6'>
             <BigButton
               subject={t('inspired.join')}
               caption={t('contact-us')}

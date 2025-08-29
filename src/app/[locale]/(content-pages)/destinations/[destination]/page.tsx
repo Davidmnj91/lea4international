@@ -26,11 +26,10 @@ import { EuropeMapDublin } from '@/components/maps/dublin';
 import { LanguagePageProps } from '@/i18n/config';
 import { setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
-import { ArrowDown } from '@phosphor-icons/react/dist/ssr/ArrowDown';
+import { ArrowDownIcon, ArrowRightIcon } from '@phosphor-icons/react/dist/ssr';
 import Image from 'next/image';
 import clsx from 'clsx';
 import { buttonTypes } from '@/components/button/button';
-import { ArrowRight } from '@phosphor-icons/react/dist/ssr/ArrowRight';
 import { notFound } from 'next/navigation';
 import { Typography } from '@/components/typography/typography';
 import { EuropeMapGhent } from '@/components/maps/ghent';
@@ -149,7 +148,7 @@ export default function Page(
   return (
     <div>
       <div
-        className='flex h-[545px] w-full items-center justify-center bg-cover bg-center desktop:h-[716px]'
+        className='desktop:h-[716px] flex h-[545px] w-full items-center justify-center bg-cover bg-center'
         style={{
           backgroundImage: `url(${mainImageSrc}), linear-gradient(#0308227F,#0308227F)`,
           backgroundBlendMode: 'overlay',
@@ -160,14 +159,14 @@ export default function Page(
             {t('title')}
           </Typography>
           <div className='flex items-center gap-4'>
-            <span className='w-[116px] border-b border-b-europe-light desktop:w-[250px]' />
-            <ArrowDown className='text-gold' size={32} />
-            <span className='w-[116px] border-b border-b-europe-light desktop:w-[250px]' />
+            <span className='border-b-europe-light desktop:w-[250px] w-[116px] border-b' />
+            <ArrowDownIcon className='text-gold' size={32} />
+            <span className='border-b-europe-light desktop:w-[250px] w-[116px] border-b' />
           </div>
         </div>
       </div>
-      <div className='flex flex-col items-center justify-between desktop:flex-row desktop:px-12 desktop:py-16'>
-        <div className='flex max-w-[614px] flex-col gap-8 p-6 desktop:gap-16 desktop:p-0'>
+      <div className='desktop:flex-row desktop:px-12 desktop:py-16 flex flex-col items-center justify-between'>
+        <div className='desktop:gap-16 desktop:p-0 flex max-w-[614px] flex-col gap-8 p-6'>
           <div className='gap-1 text-center'>
             <Typography as='span' size='heading-sm' color='gold-dark'>
               {t('destinations')}
@@ -182,20 +181,20 @@ export default function Page(
         </div>
         {mapComponent}
       </div>
-      <div className='flex flex-col gap-2.5 py-6 desktop:px-12'>
-        <div className='flex items-center justify-center gap-20 pb-6 pt-2 desktop:justify-between desktop:p-0'>
-          <span className='hidden h-1 flex-grow border-b border-b-europe desktop:inline' />
+      <div className='desktop:px-12 flex flex-col gap-2.5 py-6'>
+        <div className='desktop:justify-between desktop:p-0 flex items-center justify-center gap-20 pt-2 pb-6'>
+          <span className='border-b-europe desktop:inline hidden h-1 grow border-b' />
           <Typography
             as='h2'
             size='heading-xl'
             color='europe-dark'
-            className='text-center desktop:text-left'
+            className='desktop:text-left text-center'
           >
             {t('know')}
           </Typography>
         </div>
-        <div className='flex flex-col gap-4 px-8 desktop:flex-row desktop:gap-12 desktop:px-0'>
-          <div className='h-[402px] flex-grow'>
+        <div className='desktop:flex-row desktop:gap-12 desktop:px-0 flex flex-col gap-4 px-8'>
+          <div className='h-[402px] grow'>
             <Image
               src={sampleImages[0]}
               alt={`${destination}_1`}
@@ -204,7 +203,7 @@ export default function Page(
               style={{ height: '100%', width: '100%', objectFit: 'cover' }}
             />
           </div>
-          <div className='h-[402px] flex-grow'>
+          <div className='h-[402px] grow'>
             <Image
               src={sampleImages[1]}
               alt={`${destination}_2`}
@@ -215,12 +214,12 @@ export default function Page(
           </div>
         </div>
       </div>
-      <div className='flex flex-col desktop:mt-16'>
+      <div className='desktop:mt-16 flex flex-col'>
         <Typography
           as='h2'
           size='heading-xl'
           color='europe-dark'
-          className='px-6 py-6 desktop:px-12'
+          className='desktop:px-12 px-6 py-6'
         >
           {tServices('title', { city: t('title') })}
         </Typography>
@@ -228,7 +227,7 @@ export default function Page(
           {servicesAvailable.map(([service, href]) => (
             <li
               key={service}
-              className='flex items-center justify-between border-b-2 border-t-0 border-basics-disabled p-6 first-of-type:border-t-2 desktop:px-0 desktop:py-6'
+              className='border-basics-disabled desktop:px-0 desktop:py-6 flex items-center justify-between border-t-0 border-b-2 p-6 first-of-type:border-t-2'
             >
               <Typography as='h3' size='heading-lg' color='europe-dark'>
                 {tServices(`${service}`)}
@@ -237,12 +236,12 @@ export default function Page(
                 href={href as Route}
                 className={clsx(
                   buttonTypes({ intent: 'secondary-light' }),
-                  'hidden desktop:inline-block'
+                  'desktop:inline-block hidden'
                 )}
               >
                 {tServices(`see-more`)}
               </Link>
-              <ArrowRight className='desktop:hidden' size={32} />
+              <ArrowRightIcon className='desktop:hidden' size={32} />
             </li>
           ))}
         </ul>

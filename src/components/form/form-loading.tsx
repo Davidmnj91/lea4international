@@ -8,7 +8,7 @@ import {
   Transition,
   TransitionChild,
 } from '@headlessui/react';
-import { SpinnerGap } from '@phosphor-icons/react';
+import { SpinnerGapIcon } from '@phosphor-icons/react';
 import { Typography } from '@/components/typography/typography';
 import { useFormStatus } from 'react-dom';
 
@@ -50,7 +50,7 @@ export const FormLoadingPopup = () => {
             >
               <DialogPanel className='flex w-[354px] transform flex-col gap-4 overflow-hidden rounded-2xl bg-white px-6 py-4 text-left align-middle shadow-xl transition-all'>
                 <div className='flex flex-col items-center justify-center gap-4 py-8 text-center'>
-                  <SpinnerGap size={48} className='animate-spin' />
+                  <SpinnerGapIcon size={48} className='animate-spin' />
                   <Typography as='h3' size='heading-lg' color='europe-dark'>
                     {t('title')}
                   </Typography>

@@ -6,14 +6,16 @@ import my_abroad_ally_owner from '../../../../../public/images/partners/my_abroa
 import my_abroad_ally_logo from '../../../../../public/images/partners/my_abroad_ally_logo.webp';
 import Image from 'next/image';
 import { tagButtonTypes } from '@/components/button/button';
-import { Eye } from '@phosphor-icons/react/dist/ssr/Eye';
-import { Gear } from '@phosphor-icons/react/dist/ssr/Gear';
-import { HandHeart } from '@phosphor-icons/react/dist/ssr/HandHeart';
-import { Leaf } from '@phosphor-icons/react/dist/ssr/Leaf';
-import { PuzzlePiece } from '@phosphor-icons/react/dist/ssr/PuzzlePiece';
-import { SealCheck } from '@phosphor-icons/react/dist/ssr/SealCheck';
-import { Users } from '@phosphor-icons/react/dist/ssr/Users';
-import { UsersFour } from '@phosphor-icons/react/dist/ssr/UsersFour';
+import {
+  EyeIcon,
+  GearIcon,
+  HandHeartIcon,
+  LeafIcon,
+  PuzzlePieceIcon,
+  SealCheckIcon,
+  UsersFourIcon,
+  UsersIcon,
+} from '@phosphor-icons/react/dist/ssr';
 import React, { use } from 'react';
 import { Partners } from '@/components/partners/partners';
 import clsx from 'clsx';
@@ -28,44 +30,44 @@ export default function Page({ params }: LanguagePageProps) {
   const t = useTranslations('about-us-page');
 
   const values = {
-    inclusion: <PuzzlePiece size={54} weight='thin' />,
-    diversity: <UsersFour size={54} weight='thin' />,
-    respect: <HandHeart size={54} weight='thin' />,
-    quality: <SealCheck size={54} weight='thin' />,
-    honesty: <Eye size={54} weight='thin' />,
-    innovation: <Gear size={54} weight='thin' />,
-    sustainability: <Leaf size={54} weight='thin' />,
-    collaboration: <Users size={54} weight='thin' />,
+    inclusion: <PuzzlePieceIcon size={54} weight='thin' />,
+    diversity: <UsersFourIcon size={54} weight='thin' />,
+    respect: <HandHeartIcon size={54} weight='thin' />,
+    quality: <SealCheckIcon size={54} weight='thin' />,
+    honesty: <EyeIcon size={54} weight='thin' />,
+    innovation: <GearIcon size={54} weight='thin' />,
+    sustainability: <LeafIcon size={54} weight='thin' />,
+    collaboration: <UsersIcon size={54} weight='thin' />,
   };
 
   return (
     <div>
-      <div className='flex items-center justify-center py-14 desktop:py-24'>
+      <div className='desktop:py-24 flex items-center justify-center py-14'>
         <Typography
           as='h1'
           size='heading-2xl'
           color='europe-dark'
-          className='text-center desktop:text-left'
+          className='desktop:text-left text-center'
         >
           {t('title')}
         </Typography>
       </div>
-      <div className='flex flex-col items-center justify-center gap-14 p-6 desktop:flex-row desktop:p-24'>
+      <div className='desktop:flex-row desktop:p-24 flex flex-col items-center justify-center gap-14 p-6'>
         <div
-          className='relative flex h-[272px] w-full flex-col items-end bg-contain bg-center bg-no-repeat desktop:h-[346px] desktop:w-[422px] desktop:bg-cover'
+          className='desktop:h-[346px] desktop:w-[422px] desktop:bg-cover relative flex h-[272px] w-full flex-col items-end bg-contain bg-center bg-no-repeat'
           style={{ backgroundImage: `url(${lucia_bg.src}` }}
         >
           <span
             className={clsx(
               tagButtonTypes({ intent: 'selected' }),
-              'absolute left-1/2 ml-10 mt-5 flex-grow-0 translate-x-1/2 desktop:left-auto desktop:right-12 desktop:ml-auto'
+              'desktop:left-auto desktop:right-12 desktop:ml-auto absolute left-1/2 mt-5 ml-10 grow-0 translate-x-1/2'
             )}
           >
             {t('role.director')}
           </span>
         </div>
         <svg
-          className='hidden desktop:inline-block'
+          className='desktop:inline-block hidden'
           width='2'
           height='569'
           viewBox='0 0 2 569'
@@ -82,21 +84,21 @@ export default function Page({ params }: LanguagePageProps) {
         >
           <path d='M175 1L-2.29478e-06 0.999985' stroke='#45586A' />
         </svg>
-        <div className='flex flex-col items-center gap-8 desktop:flex-[0_0_647px] desktop:items-start desktop:justify-center'>
+        <div className='desktop:flex-[0_0_647px] desktop:items-start desktop:justify-center flex flex-col items-center gap-8'>
           <Typography as='p' size='body-lg' color='europe-dark'>
             {t.rich('description', defaultTranslationVales)}
           </Typography>
         </div>
       </div>
-      <div className='flex flex-col items-center gap-14 bg-europe py-14'>
+      <div className='bg-europe flex flex-col items-center gap-14 py-14'>
         <Typography as='h2' size='heading-2xl' color='basics-white'>
           {t('values.title')}
         </Typography>
-        <div className='grid grid-cols-2 gap-6 desktop:grid-cols-4'>
+        <div className='desktop:grid-cols-4 grid grid-cols-2 gap-6'>
           {Object.entries(values).map(([value, icon]) => (
             <div
               key={value}
-              className='flex h-[140px] w-[140px] flex-col items-center justify-center gap-2.5 rounded-full border border-dashed border-basics-white desktop:h-[200px] desktop:w-[200px]'
+              className='border-basics-white desktop:h-[200px] desktop:w-[200px] flex h-[140px] w-[140px] flex-col items-center justify-center gap-2.5 rounded-full border border-dashed'
             >
               <Typography as='span' size='heading-md' color='basics-white'>
                 {t(`values.${value}`)}
@@ -110,12 +112,12 @@ export default function Page({ params }: LanguagePageProps) {
             as='h3'
             size='heading-lg'
             color='basics-white'
-            className='flex flex-col items-center text-center desktop:w-[850px] desktop:flex-row'
+            className='desktop:w-[850px] desktop:flex-row flex flex-col items-center text-center'
           >
             <Typography as='span' size='heading-4xl' color='gold-dark'>
               &ldquo;
             </Typography>
-            <span className='w-[297px] capitalize desktop:w-[706px]'>
+            <span className='desktop:w-[706px] w-[297px] capitalize'>
               {t.rich('quote', defaultTranslationVales)}
             </span>
             <Typography as='span' size='heading-4xl' color='gold-dark'>
@@ -126,7 +128,7 @@ export default function Page({ params }: LanguagePageProps) {
       </div>
       <div className='py-14'>
         <Partners />
-        <div className='flex flex-col items-center justify-center gap-12 px-12 py-4 desktop:flex-row desktop:py-24'>
+        <div className='desktop:flex-row desktop:py-24 flex flex-col items-center justify-center gap-12 px-12 py-4'>
           <div className='flex flex-col items-end gap-8'>
             <div
               className='flex h-[346px] w-[236px] flex-col'
@@ -134,7 +136,7 @@ export default function Page({ params }: LanguagePageProps) {
             />
           </div>
           <svg
-            className='hidden desktop:inline-block'
+            className='desktop:inline-block hidden'
             width='2'
             height='343'
             viewBox='0 0 2 343 '

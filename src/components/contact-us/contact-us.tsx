@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import { buttonTypes } from '@/components/button/button';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { ChatCircleText } from '@phosphor-icons/react/dist/ssr/ChatCircleText';
+import { ChatCircleTextIcon } from '@phosphor-icons/react/dist/ssr';
 
 export const ContactUs = () => {
   const t = useTranslations('contact-us');
@@ -13,17 +13,17 @@ export const ContactUs = () => {
       <Link
         href={'/contact/individual'}
         className={clsx(
-          'fixed bottom-10 right-6 z-20 desktop:hidden',
+          'desktop:hidden fixed right-6 bottom-10 z-20',
           buttonTypes({ intent: 'primary', type: 'icon' })
         )}
       >
-        <ChatCircleText size={24} />
+        <ChatCircleTextIcon size={24} />
       </Link>
       {/*Desktop version*/}
       <Link
         href={'/contact/individual'}
         className={clsx(
-          'fixed bottom-10 right-10 z-20 hidden desktop:flex',
+          'desktop:flex fixed right-10 bottom-10 z-20 hidden',
           buttonTypes({ intent: 'primary' })
         )}
       >

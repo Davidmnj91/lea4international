@@ -6,7 +6,7 @@ import {
   DisclosureButton,
   DisclosurePanel,
 } from '@headlessui/react';
-import { Minus, Plus } from '@phosphor-icons/react';
+import { MinusIcon, PlusIcon } from '@phosphor-icons/react';
 import { Typography } from '@/components/typography/typography';
 import { defaultTranslationVales } from '@/i18n/translation-values';
 
@@ -25,11 +25,11 @@ export const FaqList = ({ faqKey }: FaqProps) => {
               as='span'
               size='heading-lg'
               color='europe-dark'
-              className='flex-grow-0 text-left'
+              className='grow-0 text-left'
             >
               {t(`${faqKey}.title`)}
             </Typography>
-            <div>{open ? <Minus size={32} /> : <Plus size={32} />}</div>
+            <div>{open ? <MinusIcon size={32} /> : <PlusIcon size={32} />}</div>
           </DisclosureButton>
           <DisclosurePanel className='mt-4'>
             <Typography as='p' size='body-lg' color='europe' weight='light'>

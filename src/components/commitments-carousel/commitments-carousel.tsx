@@ -3,7 +3,7 @@
 import useEmblaCarousel from 'embla-carousel-react';
 import { useTranslations } from 'next-intl';
 import { buttonTypes } from '@/components/button/button';
-import { CaretLeft, CaretRight } from '@phosphor-icons/react';
+import { CaretLeftIcon, CaretRightIcon } from '@phosphor-icons/react';
 import { useCallback, useEffect, useState } from 'react';
 import { Typography } from '@/components/typography/typography';
 import { EmblaCarouselType } from 'embla-carousel';
@@ -54,11 +54,11 @@ export const CommitmentsCarousel = () => {
 
   return (
     <div className='overflow-hidden' ref={carouselRef}>
-      <div className='flex w-full desktop:min-h-[337px] desktop:w-[440px]'>
+      <div className='desktop:min-h-[337px] desktop:w-[440px] flex w-full'>
         {slides.map(({ title, description }, index) => (
           <div
             key={index}
-            className='flex min-w-0 flex-[0_0_100%] flex-col justify-between bg-basics-gray p-6'
+            className='bg-basics-gray flex min-w-0 flex-[0_0_100%] flex-col justify-between p-6'
           >
             <div>
               <Typography as='span' size='heading-sm' color='gold-dark'>
@@ -81,7 +81,7 @@ export const CommitmentsCarousel = () => {
           </div>
         ))}
       </div>
-      <div className='flex justify-center gap-6 bg-basics-gray p-6 desktop:justify-start'>
+      <div className='bg-basics-gray desktop:justify-start flex justify-center gap-6 p-6'>
         <button
           onClick={scrollPrev}
           disabled={prevBtnDisabled}
@@ -90,7 +90,7 @@ export const CommitmentsCarousel = () => {
             type: 'icon',
           })}
         >
-          <CaretLeft size={32} />
+          <CaretLeftIcon size={32} />
         </button>
         <button
           onClick={scrollNext}
@@ -100,7 +100,7 @@ export const CommitmentsCarousel = () => {
             type: 'icon',
           })}
         >
-          <CaretRight size={32} />
+          <CaretRightIcon size={32} />
         </button>
       </div>
     </div>

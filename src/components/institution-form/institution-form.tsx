@@ -1,17 +1,12 @@
 'use client';
 
-import { Controller, FieldPath, useForm } from 'react-hook-form';
+import { Controller, FieldPath, Resolver, useForm } from 'react-hook-form';
 import { useLocale, useTranslations } from 'next-intl';
 import { ContactUsState, getContactUs } from '@/actions/contactUs';
 import { zodResolver } from '@hookform/resolvers/zod';
 import React, { useActionState, useEffect, useState } from 'react';
 import { InstitutionsContactSchema } from '@/schemas/contactSchemas';
-import {
-  checkboxStyles,
-  ErrorField,
-  inputStyles,
-  labelStyles,
-} from '@/components/form/form';
+import { checkboxStyles, ErrorField, inputStyles, labelStyles, } from '@/components/form/form';
 import clsx from 'clsx';
 import countries from '../../../public/countries.json';
 import DatePicker from 'react-datepicker';
@@ -55,7 +50,9 @@ export const InstitutionForm = () => {
     reset,
   } = useForm<InstitutionFormData>({
     mode: 'all',
-    resolver: zodResolver(InstitutionsContactSchema),
+    resolver: zodResolver(
+      InstitutionsContactSchema
+    ) as Resolver<InstitutionFormData>,
   });
 
   const t = useTranslations('forms');
@@ -100,13 +97,13 @@ export const InstitutionForm = () => {
         onClose={() => setShowPopup(false)}
       />
       <form
-        className='flex flex-col justify-center gap-8 desktop:flex-row desktop:gap-16'
+        className='desktop:flex-row desktop:gap-16 flex flex-col justify-center gap-8'
         action={formAction}
       >
         <FormLoadingPopup />
         <input type='hidden' name='language' value={locale} />
         <input type='hidden' name='type' value='INSTITUTION' />
-        <div className='flex flex-col gap-9 desktop:flex-[0_0_50%]'>
+        <div className='desktop:flex-[0_0_50%] flex flex-col gap-9'>
           <div>
             <label htmlFor='name' className={labelStyles}>
               {t('input.name.label')}
@@ -244,7 +241,7 @@ export const InstitutionForm = () => {
             />
           </div>
         </div>
-        <div className='flex flex-col gap-9 desktop:flex-[0_0_50%]'>
+        <div className='desktop:flex-[0_0_50%] flex flex-col gap-9'>
           <div>
             <div className='flex flex-col'>
               <label htmlFor='dateRange' className={labelStyles}>
@@ -283,7 +280,7 @@ export const InstitutionForm = () => {
               type='number'
               min='1'
               step='1'
-              {...register('supervisorNumber')}
+              {...register('supervisorNumber', { valueAsNumber: true })}
               className={inputStyles}
               placeholder={t('input.supervisorNumber.placeholder')}
             />

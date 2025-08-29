@@ -1,6 +1,6 @@
 'use client';
 
-import { FieldPath, useForm } from 'react-hook-form';
+import { FieldPath, Resolver, useForm } from 'react-hook-form';
 import { useLocale, useTranslations } from 'next-intl';
 import { ContactUsState, getContactUs } from '@/actions/contactUs';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -34,7 +34,7 @@ export const PartnerForm = () => {
     reset,
   } = useForm<PartnerFormData>({
     mode: 'all',
-    resolver: zodResolver(PartnerContactSchema),
+    resolver: zodResolver(PartnerContactSchema) as Resolver<PartnerFormData>,
   });
 
   const t = useTranslations('forms');

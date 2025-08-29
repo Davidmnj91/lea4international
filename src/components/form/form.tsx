@@ -10,10 +10,10 @@ export const labelStyles = typographyClasses({
   color: 'europe-dark',
 });
 export const inputStyles = clsx(
-  'border-b-1 h-10 w-full border-b border-europe-light bg-transparent text-europe-light placeholder-europe-light',
+  'border-b h-10 w-full border-b border-europe-light bg-transparent text-europe-light placeholder-europe-light',
   [
-    'focus:border-b-2 focus:border-europe-dark focus:text-europe-dark focus:outline-none',
-    'hover:border-b-2 hover:border-europe-dark hover:text-europe-dark hover:outline-none',
+    'focus:border-b-2 focus:border-europe-dark focus:text-europe-dark focus:outline-hidden',
+    'hover:border-b-2 hover:border-europe-dark hover:text-europe-dark hover:outline-hidden',
   ]
 );
 
