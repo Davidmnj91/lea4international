@@ -8,7 +8,7 @@ import { FAQCategories, Faqs } from '@/types/faq';
 import { MoreInfo } from '@/components/more-info/more-info';
 import React, { use } from 'react';
 import { Typography } from '@/components/typography/typography';
-import { Head } from '@react-email/components';
+import Head from 'next/head';
 
 export default function Page({ params }: LanguagePageProps) {
   const { locale } = use(params);
@@ -42,17 +42,17 @@ export default function Page({ params }: LanguagePageProps) {
       </Head>
       <div>
         <div>
-          <div className='flex items-center justify-center py-14 desktop:py-24'>
+          <div className='desktop:py-24 flex items-center justify-center py-14'>
             <Typography
               as='h1'
               size='heading-2xl'
               color='europe-dark'
-              className='text-center desktop:text-left'
+              className='desktop:text-left text-center'
             >
               {t('title')}
             </Typography>
           </div>
-          <div className='sticky top-20 flex items-center gap-6 overflow-auto border-y border-y-basics-disabled bg-basics-white px-6 py-6 desktop:justify-center desktop:overflow-hidden desktop:px-12'>
+          <div className='border-y-basics-disabled bg-basics-white desktop:justify-center desktop:overflow-hidden desktop:px-12 sticky top-20 flex items-center gap-6 overflow-auto border-y px-6 py-6'>
             {Object.values(FAQCategories).map((category) => (
               <Link
                 href={`#${category}`}
@@ -66,7 +66,7 @@ export default function Page({ params }: LanguagePageProps) {
           </div>
           {Object.entries(Faqs).map(([category, items]) => (
             <section key={category} id={category} className='scroll-mt-[164px]'>
-              <div className='border-b border-b-basics-disabled px-6 pb-2 pt-6 desktop:px-12 desktop:pb-6 desktop:pt-12'>
+              <div className='border-b-basics-disabled desktop:px-12 desktop:pb-6 desktop:pt-12 border-b px-6 pt-6 pb-2'>
                 <Typography
                   as='h2'
                   size='heading-xl'
@@ -79,7 +79,7 @@ export default function Page({ params }: LanguagePageProps) {
               {items.map((faq) => (
                 <div
                   key={faq}
-                  className='border-b-2 border-t-0 border-basics-disabled px-12 py-6 first-of-type:border-t-2'
+                  className='border-basics-disabled border-t-0 border-b-2 px-12 py-6 first-of-type:border-t-2'
                 >
                   <FaqList key={faq} faqKey={`${category}.${faq}`} />
                 </div>

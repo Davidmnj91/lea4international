@@ -2,9 +2,6 @@ import { LanguagePageProps } from '@/i18n/config';
 import { setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import lucia_bg from '../../../../../public/images/partners/lucia_bg.webp';
-import my_abroad_ally_owner from '../../../../../public/images/partners/my_abroad_ally_owner.webp';
-import my_abroad_ally_logo from '../../../../../public/images/partners/my_abroad_ally_logo.webp';
-import Image from 'next/image';
 import { tagButtonTypes } from '@/components/button/button';
 import {
   EyeIcon,
@@ -128,38 +125,6 @@ export default function Page({ params }: LanguagePageProps) {
       </div>
       <div className='py-14'>
         <Partners />
-        <div className='desktop:flex-row desktop:py-24 flex flex-col items-center justify-center gap-12 px-12 py-4'>
-          <div className='flex flex-col items-end gap-8'>
-            <div
-              className='flex h-[346px] w-[236px] flex-col'
-              style={{ backgroundImage: `url(${my_abroad_ally_owner.src})` }}
-            />
-          </div>
-          <svg
-            className='desktop:inline-block hidden'
-            width='2'
-            height='343'
-            viewBox='0 0 2 343 '
-            fill='none'
-          >
-            <path d='M1 0.234375L1.00002 528.234' stroke='#45586A' />
-          </svg>
-          <svg
-            className='desktop:hidden'
-            width='175'
-            height='2'
-            viewBox='0 0 175 2'
-            fill='none'
-          >
-            <path d='M175 1L-2.29478e-06 0.999985' stroke='#45586A' />
-          </svg>
-          <Image
-            src={my_abroad_ally_logo.src}
-            alt='my_abroad_ally'
-            width='200'
-            height='200'
-          />
-        </div>
       </div>
     </div>
   );
