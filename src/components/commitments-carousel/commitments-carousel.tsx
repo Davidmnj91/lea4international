@@ -17,11 +17,11 @@ export const CommitmentsCarousel = () => {
 
   const scrollPrev = useCallback(
     () => carouselApi && carouselApi.scrollPrev(),
-    [carouselApi]
+    [carouselApi],
   );
   const scrollNext = useCallback(
     () => carouselApi && carouselApi.scrollNext(),
-    [carouselApi]
+    [carouselApi],
   );
 
   const onSelect = useCallback((emblaApi: EmblaCarouselType) => {
@@ -32,6 +32,7 @@ export const CommitmentsCarousel = () => {
   useEffect(() => {
     if (!carouselApi) return;
 
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     onSelect(carouselApi);
     carouselApi.on('reInit', onSelect);
     carouselApi.on('select', onSelect);
@@ -53,35 +54,35 @@ export const CommitmentsCarousel = () => {
   ];
 
   return (
-    <div className='overflow-hidden' ref={carouselRef}>
-      <div className='desktop:min-h-[337px] desktop:w-[440px] flex w-full'>
+    <div className="overflow-hidden" ref={carouselRef}>
+      <div className="desktop:min-h-[337px] desktop:w-[440px] flex w-full">
         {slides.map(({ title, description }, index) => (
           <div
             key={index}
-            className='bg-basics-gray flex min-w-0 flex-[0_0_100%] flex-col justify-between p-6'
+            className="bg-basics-gray flex min-w-0 flex-[0_0_100%] flex-col justify-between p-6"
           >
             <div>
-              <Typography as='span' size='heading-sm' color='gold-dark'>
+              <Typography as="span" size="heading-sm" color="gold-dark">
                 {`${(index + 1).toLocaleString('en-US', {
                   minimumIntegerDigits: 2,
                   useGrouping: false,
                 })}/${slides.length}`}
               </Typography>
-              <Typography as='h3' size='heading-lg' color='europe-dark'>
+              <Typography as="h3" size="heading-lg" color="europe-dark">
                 {title}
               </Typography>
               <Typography
-                as='p'
-                size='body-lg'
-                color='europe-dark'
-                className='mt-9'
+                as="p"
+                size="body-lg"
+                color="europe-dark"
+                className="mt-9"
                 dangerouslySetInnerHTML={{ __html: description }}
               ></Typography>
             </div>
           </div>
         ))}
       </div>
-      <div className='bg-basics-gray desktop:justify-start flex justify-center gap-6 p-6'>
+      <div className="bg-basics-gray desktop:justify-start flex justify-center gap-6 p-6">
         <button
           onClick={scrollPrev}
           disabled={prevBtnDisabled}

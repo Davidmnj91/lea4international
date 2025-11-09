@@ -52,6 +52,7 @@ export const PartnerForm = () => {
       });
       return;
     }
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setShowPopup(true);
     if (state.status === 'INTERNAL_ERROR') {
       setServerError(true);
