@@ -59,8 +59,5 @@
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.2"
   },
-  "engines": {
-    "node": ">=22",
-    "pnpm": ">=10"
-  }
+  "packageManager": "pnpm@10.13.1"
 }
