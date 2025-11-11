@@ -70,8 +70,8 @@ importers:
         specifier: 19.2.0
         version: 19.2.0(react@19.2.0)
       react-email:
-        specifier: 4.2.8
-        version: 4.2.8
+        specifier: 4.3.2
+        version: 4.3.2
       react-hook-form:
         specifier: ^7.66.0
         version: 7.66.0(react@19.2.0)
@@ -273,10 +273,6 @@ packages:
     resolution: {integrity: sha512-e7jT4DxYvIDLk1ZHmU/m/mB19rex9sv0c2ftBtjSBv+kVM/902eh0fINUzD7UwLLNR+jU585GxUJ8/EBfAM5fw==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/generator@7.28.3':
-    resolution: {integrity: sha512-3lSpxGgvnmZznmBkCRnVREPUFJv2wrv9iAoFDvADJc0ypmdOxdUtcLeBgBJ6zE0PMeTKnxeQzyk0xTBq4Ep7zw==}
-    engines: {node: '>=6.9.0'}
-
   '@babel/generator@7.28.5':
     resolution: {integrity: sha512-3EwLFhZ38J4VyIP6WNtt2kUdW9dokXA9Cr4IVIFHuCpZ3H8/YFOl5JjZHisrn1fATPBmKKqXzDFvh9fUwHz6CQ==}
     engines: {node: '>=6.9.0'}
@@ -331,10 +327,6 @@ packages:
 
   '@babel/template@7.27.2':
     resolution: {integrity: sha512-LPDZ85aEJyYSd18/DkjNh4/y1ntkE5KwUHWTiqgRxruuZL2F1yuHligVHLvcHY2vMHXttKFpJn6LwfI7cw7ODw==}
-    engines: {node: '>=6.9.0'}
-
-  '@babel/traverse@7.28.3':
-    resolution: {integrity: sha512-7w4kZYHneL3A6NP2nxzHvT3HCZ7puDZZjFMqDpBPECub79sTtSO5CGXDkKrTQq8ksAwfD/XI2MRFX23njdDaIQ==}
     engines: {node: '>=6.9.0'}
 
   '@babel/traverse@7.28.5':
@@ -3051,8 +3043,8 @@ packages:
     peerDependencies:
       react: ^19.2.0
 
-  react-email@4.2.8:
-    resolution: {integrity: sha512-Eqzs/xZnS881oghPO/4CQ1cULyESuUhEjfYboXmYNOokXnJ6QP5GKKJZ6zjkg9SnKXxSrIxSo5PxzCI5jReJMA==}
+  react-email@4.3.2:
+    resolution: {integrity: sha512-WaZcnv9OAIRULY236zDRdk+8r511ooJGH5UOb7FnVsV33hGPI+l5aIZ6drVjXi4QrlLTmLm8PsYvmXRSv31MPA==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -3896,7 +3888,7 @@ snapshots:
 
   '@babel/code-frame@7.27.1':
     dependencies:
-      '@babel/helper-validator-identifier': 7.27.1
+      '@babel/helper-validator-identifier': 7.28.5
       js-tokens: 4.0.0
       picocolors: 1.1.1
 
@@ -3921,14 +3913,6 @@ snapshots:
       semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
-
-  '@babel/generator@7.28.3':
-    dependencies:
-      '@babel/parser': 7.28.3
-      '@babel/types': 7.28.2
-      '@jridgewell/gen-mapping': 0.3.13
-      '@jridgewell/trace-mapping': 0.3.30
-      jsesc: 3.1.0
 
   '@babel/generator@7.28.5':
     dependencies:
@@ -3988,20 +3972,8 @@ snapshots:
   '@babel/template@7.27.2':
     dependencies:
       '@babel/code-frame': 7.27.1
-      '@babel/parser': 7.28.3
-      '@babel/types': 7.28.2
-
-  '@babel/traverse@7.28.3':
-    dependencies:
-      '@babel/code-frame': 7.27.1
-      '@babel/generator': 7.28.3
-      '@babel/helper-globals': 7.28.0
-      '@babel/parser': 7.28.3
-      '@babel/template': 7.27.2
-      '@babel/types': 7.28.2
-      debug: 4.3.7
-    transitivePeerDependencies:
-      - supports-color
+      '@babel/parser': 7.28.5
+      '@babel/types': 7.28.5
 
   '@babel/traverse@7.28.5':
     dependencies:
@@ -6937,11 +6909,10 @@ snapshots:
       react: 19.2.0
       scheduler: 0.27.0
 
-  react-email@4.2.8:
+  react-email@4.3.2:
     dependencies:
-      '@babel/parser': 7.28.3
-      '@babel/traverse': 7.28.3
-      chalk: 5.6.0
+      '@babel/parser': 7.28.5
+      '@babel/traverse': 7.28.5
       chokidar: 4.0.3
       commander: 13.1.0
       debounce: 2.2.0
